@@ -1,0 +1,39 @@
+@use "sass:math";
+// =========================================
+@use "_reset";
+@use "_components";
+@use "_settings" as *;
+// =========================================
+@use "_header";
+@use "_home";
+@use "_footer";
+// =========================================
+html {
+   scroll-behavior: smooth;
+}
+$fontSize: toRem(16);
+body {
+   // @include typography("S");
+   & {
+      color: $mainColor;
+      background-color: $bgColor;
+      font-family: $fontFamily;
+      font-size: $fontSize;
+   }
+}
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   overflow: clip;
+   min-height: 100%;
+}
+.wrapper > main {
+   flex-grow: 1;
+}
+// =========================================
+[class*="__container"] {
+   max-width: toRem($containerWidth);
+   padding-inline: toRem(math.div($containerPadding, 2));
+   margin: 0 auto;
+}
+// =========================================
