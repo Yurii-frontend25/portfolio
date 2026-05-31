@@ -446,10 +446,6 @@ label {
   transition: opacity 0.5s ease;
 }
 .menu__link {
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-.menu__link {
   font-weight: 700;
 }
 @media (min-width: 81.25em) {
@@ -466,6 +462,10 @@ label {
   .menu__link {
     font-size: 16px;
   }
+}
+.menu__link {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 @media (min-width: 81.25em) {
   .actions-menu {
@@ -574,9 +574,9 @@ label {
 .icon-menu span {
   top: 50%;
   width: 1.5rem;
-  -webkit-transform: 0%, -50%;
-      -ms-transform: 0%, -50%;
-          transform: 0%, -50%;
+  -webkit-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
 }
 .icon-menu::after {
   top: 0.1875rem;
@@ -920,9 +920,7 @@ body.menu-open {
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(91.57deg, #c0b7e8 -1.02%, #8176af 36.25%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 @media (min-width: 81.25em) {
   .hero__title span {
@@ -1583,11 +1581,11 @@ body.menu-open {
     display: none;
   }
 }
-.introduction__text--bottom {
-  max-width: 630px;
-}
 .introduction__text--bottom:not(:last-child) {
   margin-bottom: 1.75rem;
+}
+.introduction__text--bottom {
+  max-width: 630px;
 }
 @media (max-width: 61.99875rem) {
   .introduction__text--bottom {
