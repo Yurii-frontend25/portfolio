@@ -1,0 +1,63 @@
+@use "sass:math";
+@use "reset";
+@use "vars" as *;
+@use "fonts/iconfonts";
+@use "fonts/font";
+@use "settings" as *;
+// =========================================
+// Pages
+@use "pages/index";
+// =========================================
+// Components
+@use "components";
+// =========================================
+// Parts
+@use "header";
+@use "footer";
+// =========================================
+// =========================================
+html {
+	scroll-behavior: smooth;
+}
+[class*="__container"] {
+	max-width: toRem($containerWidth);
+	padding-inline: toRem(math.div($containerPadding, 2));
+	margin: 0 auto;
+}
+[class*="--width"] {
+	max-width: toRem(1230);
+}
+[class*="--container"] {
+	max-width: toRem(1200);
+	margin: 0 auto;
+}
+[class*="--container-narrow"] {
+	max-width: toRem(1100);
+	margin: 0 auto;
+}
+[class*="--wide"] {
+	max-width: toRem(1350);
+	margin: 0 auto;
+}
+// =========================================
+body {
+	font-family: var(--mainFont);
+	background-color: var(--body-bg);
+
+	.menu-open & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+	overflow-x: hidden;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: clip;
+	min-height: 100%;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+// =========================================
