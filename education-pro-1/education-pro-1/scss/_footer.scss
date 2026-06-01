@@ -1,0 +1,196 @@
+@use "sass:math";
+@use "settings" as *;
+@use "vars" as *;
+// =======================================================================================================================
+.footer {
+	// .footer__container
+	&__container {
+	}
+	// .footer__inner
+	&__inner {
+		@include adaptiveValue("margin-bottom", 66, 30);
+	}
+	// .footer__top-content
+	&__top-content {
+		max-width: toRem(1040);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 20);
+		}
+	}
+	// .footer__body
+	&__body {
+		display: flex;
+		column-gap: toRem(32);
+		row-gap: toRem(20);
+		flex-wrap: wrap;
+	}
+	// .footer__logo
+	&__logo {
+		flex-shrink: 0;
+	}
+	// .footer__box
+	&__box {
+		flex-grow: 1;
+		display: flex;
+		justify-content: space-between;
+		column-gap: toRem(30);
+		row-gap: toRem(30);
+		@media (width < toEm(640)) {
+			flex-wrap: wrap;
+		}
+	}
+	// .footer__contacts
+	&__contacts {
+	}
+	// .footer__links
+	&__links {
+		display: flex;
+		@include adaptiveValue("column-gap", 90, 20);
+		@media (width < toEm(942)) {
+			justify-content: space-evenly;
+			flex-grow: 1;
+		}
+	}
+	// .footer__list
+	&__list {
+		&:nth-child(1) {
+			flex: 0 0 toRem(105);
+			@media (width < toEm(640)) {
+				flex: 0 1 toRem(105);
+			}
+			@media (max-width: toEm($mobileSmall)) {
+				flex: 1 1 100%;
+			}
+		}
+		&:nth-child(2) {
+			flex: 0 0 toRem(190);
+			@media (width < toEm(640)) {
+				flex: 0 1 toRem(190);
+			}
+			@media (max-width: toEm($mobileSmall)) {
+				flex: 1 1 100%;
+			}
+		}
+	}
+	// .footer__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .footer__link
+	&__link {
+		font-size: toRem(12);
+		text-transform: uppercase;
+		color: var(--dark-blue);
+		line-height: 1.66;
+		opacity: 0.75;
+		transition: color 0.3s ease;
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				color: var(--orange-color);
+			}
+		}
+		&:focus-visible {
+			outline: toRem(2) solid var(--orange-color);
+			outline-offset: toRem(2);
+			border-radius: toRem(10);
+		}
+	}
+	// .footer__bottom
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		@include adaptiveValue("column-gap", 250, 20);
+		@media (max-width: toEm($mobile)) {
+			justify-content: space-between;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			flex-direction: column-reverse;
+			row-gap: toRem(20);
+			&:has(.footer__button) {
+				align-items: flex-end;
+			}
+			.footer__copy {
+				width: 100%;
+			}
+		}
+	}
+	// .footer__copy
+	&__copy {
+		font-size: toRem(12);
+		line-height: 1.66;
+		opacity: 0.65;
+	}
+	// .footer__button
+	&__button {
+	}
+}
+.contacts-footer {
+	max-width: toRem(300);
+	@media (width <= toEm(640)) {
+		max-width: 100%;
+	}
+	> * {
+		&:not(:last-child):first-child {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 26, 15);
+		}
+	}
+	// .contacts-footer__item
+	&__item {
+	}
+	// .contacts-footer__link-address
+	&__link-location {
+		@include adaptiveValue("font-size", 22, 16);
+		line-height: 1.45;
+		font-style: normal;
+		transition: color 0.3s ease;
+		&:focus-visible {
+			outline: toRem(2) solid var(--orange-color);
+			outline-offset: toRem(2);
+			border-radius: toRem(10);
+		}
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				color: var(--orange-color);
+			}
+		}
+	}
+	// .contacts-footer__address
+	&__location {
+	}
+	// .contacts-footer__link-phone
+	&__link-phone,
+	&__link-email {
+		@include adaptiveValue("font-size", 18, 16);
+		text-decoration-line: underline;
+		text-decoration-color: var(--orange-light);
+		text-underline-offset: toRem(6);
+		text-decoration-thickness: toRem(1);
+		font-style: normal;
+		transition: color 0.3s ease;
+		&:focus-visible {
+			outline: toRem(2) solid var(--orange-color);
+			outline-offset: toRem(2);
+			border-radius: toRem(10);
+		}
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				color: var(--orange-color);
+			}
+		}
+	}
+	// .contacts-footer__phone
+	&__phone {
+	}
+	// .contacts-footer__link-email
+	&__link-email {
+	}
+	// .contacts-footer__email
+	&__email {
+	}
+}
