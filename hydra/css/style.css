@@ -122,8 +122,8 @@ label {
   font-size: 0.75rem;
   line-height: 1.25;
   position: relative;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 @media (any-hover: hover), (any-pointer: fine) {
   .btn:hover {
@@ -475,6 +475,16 @@ label {
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
+@property --gradient-start {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+@property --gradient-end {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
 @media (min-width: 81.25em) {
   .actions-menu {
     gap: 38px;
@@ -537,16 +547,20 @@ label {
 .actions-menu__link {
   padding: 1rem 2.25rem;
   border-radius: 2.5rem;
-  border: 0.125rem solid #fff;
-  -webkit-transition: border-color 0.3s ease, color 0.3s ease;
-  transition: border-color 0.3s ease, color 0.3s ease;
+  border: 0.125rem solid transparent;
+  border-color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(var(--gradient-start)), to(var(--gradient-end)));
+  background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  --gradient-start: transparent;
+  --gradient-end: transparent;
+  transition: --gradient-start 0.3s ease, --gradient-end 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 @media (any-hover: hover), (any-pointer: fine) {
   .actions-menu__link:hover {
-    background: -webkit-gradient(linear, left top, right top, from(#8176af), to(#c0b7e8));
-    background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
     color: #302c42;
     border-color: transparent;
+    --gradient-start: #8176af;
+    --gradient-end: #c0b7e8;
   }
 }
 @media (max-width: 61.99875em) {
