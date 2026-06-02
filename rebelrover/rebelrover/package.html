@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Packages</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header--margin hero">
+			<section class="hero__section">
+				<div class="hero__container hero__container--width">
+					<div class="hero__body">
+						<div class="hero__header hero__header--width">
+							<div class="hero__logo logo">
+								<a class="logo__link" href="#">
+									<img class="logo__image" src="img/logo-3x.png" alt="Logo">
+								</a>
+							</div>
+							<div class="hero__menu menu">
+								<!-- <nav class="menu__body">
+									<ul class="menu__list block one">
+										<li class="menu__item">
+											<a class="menu__link" href="#">Home</a>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">About Us</a>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Package</a>
+											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
+											<ul class="menu__sub-menu sub-menu block__text">
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Destination</a>
+											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
+											<ul class="menu__sub-menu sub-menu block__text">
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Blog</a>
+											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
+											<ul class="menu__sub-menu sub-menu block__text">
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Contact</a>
+										</li>
+									</ul>
+								</nav> -->
+								<nav class="menu__body">
+									<ul class="menu__list">
+										<li class="menu__item">
+											<a class="menu__link" href="#">Home</a>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">About Us</a>
+										</li>
+										<!-- Чекбокс нужен для клика на мобилках -->
+										<li class="menu__dropdown">
+											<input type="checkbox" id="menu-toggle-1">
+											<label for="menu-toggle-1" class="menu__label">
+												<a class="menu__anchor" href="#">Package </a>
+												<span class="menu__arrow _icon-s-arrow"></span>
+											</label>
+											<div class="menu__submenu submenu">
+												<ul class="submenu__inner">
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="menu__dropdown">
+											<input type="checkbox" id="menu-toggle-2">
+											<label for="menu-toggle-2" class="menu__label">
+												<a class="menu__anchor" href="#"> Destination </a>
+												<span class="menu__arrow _icon-s-arrow"></span>
+											</label>
+											<div class="menu__submenu submenu">
+												<ul class="submenu__inner">
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="menu__dropdown">
+											<input type="checkbox" id="menu-toggle-3">
+											<label for="menu-toggle-3" class="menu__label">
+												<a class="menu__anchor" href="#"> Blog </a>
+												<span class="menu__arrow _icon-s-arrow"></span>
+											</label>
+											<div class="menu__submenu submenu">
+												<ul class="submenu__inner">
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+									</ul>
+								</nav>
+								<a class="menu__search" href="#"><img src="img/icons/search.svg" alt="icon"></a>
+								<button class="menu__icon icon-menu" type="button"><span></span></button>
+							</div>
+						</div>
+					</div>
+					<div class="hero__content">
+						<h1 class="hero__title hero__title--center">Travel Packages</h1>
+						<ul class="hero__items hero__items--package">
+							<li class="hero__item">
+								<a class="hero__link" href="#">Home</a>
+							</li>
+							<li class="hero__item">
+								<img src="img/about/arrow.svg" alt="Icon of arrow">
+							</li>
+							<li class="hero__item">
+								<a class="hero__link" href="#">Package</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<figure>
+					<picture>
+						<source srcset="img/package/package-hero.webp" type="image/webp">
+						<img class="hero__image hero__image--package" src="img/package/package-hero.jpg" alt="image">
+					</picture>
+				</figure>
+			</section>
+		</header>
+		<main class="page">
+			<section class="page__popular popular">
+				<div class="popular__container popular__container--width">
+					<div class="popular__top">
+						<div class="popular__title block-head block-head--start">
+							<h2 class="block-head__title block-head__title--start">Popular Destination</h2>
+							<div class="block-head__descr block-head__descr--start block-head__descr--start-light">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+							</div>
+						</div>
+						<a class="popular__link btn" href="#">Discover more</a>
+					</div>
+					<div class="popular__cards cards-popular">
+						<div class="cards-popular__items">
+							<article class="cards-popular__item">
+								<div class="cards-popular__image">
+									<a class="cards-popular__img-link" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/package/popular/01.webp" type="image/webp">
+												<img src="img/package/popular/01.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+								</div>
+								<div class="cards-popular__body">
+									<div class="cards-popular__info">
+										<h3 class="cards-popular__title">
+											<a class="cards-popular__link-title" href="#">Paris</a>
+										</h3>
+										<div class="cards-popular__price">$299.00/<span>2days</span></div>
+									</div>
+									<div class="cards-popular__text">
+										<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+									</div>
+									<div class="cards-popular__box">
+										<div class="cards-popular__rating rating">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+										</div>
+										<form class="form" action="#">
+											<button class="form__btn btn" type="submit">Booking now</button>
+										</form>
+									</div>
+								</div>
+							</article>
+							<article class="cards-popular__item">
+								<div class="cards-popular__image">
+									<a class="cards-popular__img-link" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/package/popular/02.webp" type="image/webp">
+												<img src="img/package/popular/02.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+								</div>
+								<div class="cards-popular__body">
+									<div class="cards-popular__info">
+										<h3 class="cards-popular__title">
+											<a class="cards-popular__link-title" href="#">Swiss</a>
+										</h3>
+										<div class="cards-popular__price">$299.00/<span>3days</span></div>
+									</div>
+									<div class="cards-popular__text">
+										<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore </p>
+									</div>
+									<div class="cards-popular__box">
+										<div class="cards-popular__rating rating">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+										</div>
+										<form class="form" action="#">
+											<button class="form__btn btn" type="submit">Booking now</button>
+										</form>
+									</div>
+								</div>
+							</article>
+							<article class="cards-popular__item">
+								<div class="cards-popular__image">
+									<a class="cards-popular__img-link" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/package/popular/03.webp" type="image/webp">
+												<img src="img/package/popular/03.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+								</div>
+								<div class="cards-popular__body">
+									<div class="cards-popular__info">
+										<h3 class="cards-popular__title">
+											<a class="cards-popular__link-title" href="#">Thailand</a>
+										</h3>
+										<div class="cards-popular__price">$299.00/<span>3days</span></div>
+									</div>
+									<div class="cards-popular__text">
+										<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+									</div>
+									<div class="cards-popular__box">
+										<div class="cards-popular__rating rating">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+										</div>
+										<form class="form" action="#">
+											<button class="form__btn btn" type="submit">Booking now</button>
+										</form>
+									</div>
+								</div>
+							</article>
+							<article class="cards-popular__item">
+								<div class="cards-popular__image">
+									<a class="cards-popular__img-link" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/package/popular/04.webp" type="image/webp">
+												<img src="img/package/popular/04.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+								</div>
+								<div class="cards-popular__body">
+									<div class="cards-popular__info">
+										<h3 class="cards-popular__title">
+											<a class="cards-popular__link-title" href="#">Taiwan</a>
+										</h3>
+										<div class="cards-popular__price">$299.00/<span>3days</span></div>
+									</div>
+									<div class="cards-popular__text">
+										<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+									</div>
+									<div class="cards-popular__box">
+										<div class="cards-popular__rating rating">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+										</div>
+										<form class="form" action="#">
+											<button class="form__btn btn" type="submit">Booking now</button>
+										</form>
+									</div>
+								</div>
+							</article>
+							<article class="cards-popular__item">
+								<div class="cards-popular__image">
+									<a class="cards-popular__img-link" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/package/popular/05.webp" type="image/webp">
+												<img src="img/package/popular/05.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+								</div>
+								<div class="cards-popular__body">
+									<div class="cards-popular__info">
+										<h3 class="cards-popular__title">
+											<a class="cards-popular__link-title" href="#">Indonesi</a>
+										</h3>
+										<div class="cards-popular__price">$299.00/<span>3days</span></div>
+									</div>
+									<div class="cards-popular__text">
+										<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+									</div>
+									<div class="cards-popular__box">
+										<div class="cards-popular__rating rating">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+										</div>
+										<form class="form" action="#">
+											<button class="form__btn btn" type="submit">Booking now</button>
+										</form>
+									</div>
+								</div>
+							</article>
+							<article class="cards-popular__item">
+								<div class="cards-popular__image">
+									<a class="cards-popular__img-link" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/package/popular/06.webp" type="image/webp">
+												<img src="img/package/popular/06.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+								</div>
+								<div class="cards-popular__body">
+									<div class="cards-popular__info">
+										<h3 class="cards-popular__title">
+											<a class="cards-popular__link-title" href="#">Singapore</a>
+										</h3>
+										<div class="cards-popular__price">$299.00/<span>3days</span></div>
+									</div>
+									<div class="cards-popular__text">
+										<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+									</div>
+									<div class="cards-popular__box">
+										<div class="cards-popular__rating rating">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+										</div>
+										<form class="form" action="#">
+											<button class="form__btn btn" type="submit">Booking now</button>
+										</form>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="page__background background">
+				<figure>
+					<picture>
+						<source srcset="img/package/plane-img.webp" type="image/webp">
+						<img class="background__img" src="img/package/plane-img.jpg" alt="image">
+					</picture>
+				</figure>
+			</div>
+			<section class="page__tips tips">
+				<div class="tips__container tips__container--width">
+					<div class="tips__top">
+						<div class="tips__title block-head block-head--start">
+							<h2 class="block-head__title block-head__title--start-margin">Tips & Article</h2>
+							<div class="block-head__descr block-head__descr--start block-head__descr--start-light">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+							</div>
+						</div>
+						<a class="tips__link btn" href="#">View more</a>
+					</div>
+					<div class="tips__content">
+						<div class="tips__columns columns-tips">
+							<div class="columns-tips__column">
+								<div class="columns-tips__item">
+									<div class="columns-tips__body">
+										<div class="columns-tips__label">Perfect | Tips</div>
+										<h3 class="columns-tips__title">
+											<a class="columns-tips__anchor-title" href="#">
+												<span>9 Popular Travel Destintion on Sale in 2022</span>
+											</a>
+										</h3>
+										<div class="columns-tips__text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+										</div>
+										<a class="columns-tips__link btn" href="#">Read More</a>
+									</div>
+								</div>
+								<div class="columns-tips__item">
+									<div class="columns-tips__body">
+										<div class="columns-tips__label">Tips | Travel</div>
+										<h3 class="columns-tips__title">
+											<a class="columns-tips__anchor-title" href="#">
+												<span>How Are We Going to Travel in 2022</span>
+											</a>
+										</h3>
+										<div class="columns-tips__text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+										</div>
+										<a class="columns-tips__link btn" href="#">Read More</a>
+									</div>
+								</div>
+							</div>
+							<div class="columns-tips__column">
+								<div class="columns-tips__item">
+									<figure>
+										<picture>
+											<source srcset="img/package/tips/image.webp" type="image/webp">
+											<img class="columns-tips__img" src="img/package/tips/image.jpg" alt="image">
+										</picture>
+									</figure>
+									<div class="columns-tips__body">
+										<div class="columns-tips__label">Stories | Tips</div>
+										<h3 class="columns-tips__title">
+											<a class="columns-tips__anchor-title" href="#"> Travel Stories For Now and the Future </a>
+										</h3>
+										<div class="columns-tips__text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+										</div>
+										<a class="columns-tips__link btn" href="#">Read More</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__top">
+				<h2 class="footer__title">Subcribe to get special price</h2>
+				<div class="footer__descr">
+					<p>Dont wanna miss something? subscribe right now and get special promotion and monthly newsletter</p>
+				</div>
+				<form class="footer__form form" action="#" enctype="multipart/form-data">
+					<div class="form__item">
+						<input class="form__input" type="email" placeholder="Type your  email here" name="form[]" required autocomplete="off">
+					</div>
+					<button class="form__button" type="submit">Subscribe</button>
+				</form>
+				<figure>
+					<picture>
+						<source srcset="img/footer/footer-bg-1x.webp 1x, img/footer/footer-bg-2x.webp 2x, img/footer/footer-bg-3x.webp 3x" type="image/webp">
+						<img class="footer__image" src="img/footer/footer-bg.webp" alt="image">
+					</picture>
+				</figure>
+			</div>
+			<div class="footer__container footer__container--width">
+				<div class="footer__content">
+					<div class="footer__body">
+						<div class="footer__box">
+							<div class="footer__logo">
+								<a class="footer__link" href="#" id="#top">
+									<img src="img/footer/footer-logo.webp" alt="Logo">
+								</a>
+							</div>
+							<div class="footer__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra condimentum.</p>
+							</div>
+						</div>
+						<div class="footer__items">
+							<div class="footer__item item-footer">
+								<h4 class="item-footer__title">Contact Information</h4>
+								<ul class="item-footer__list contact-list">
+									<li class="contact-list__item">
+										<div class="contact-list__icon">
+											<img src="img/icons/location.svg" alt="Icon">
+										</div>
+										<a class="contact-list__link" href="#">732 Despard St, Atlanta</a>
+									</li>
+									<li class="contact-list__item">
+										<div class="contact-list__icon">
+											<img src="img/icons/phone.svg" alt="Icon">
+										</div>
+										<a class="contact-list__link" href="tel:+978888888">+97 888 8888</a>
+									</li>
+									<li class="contact-list__item">
+										<div class="contact-list__icon">
+											<img src="img/icons/email.svg" alt="Icon">
+										</div>
+										<a class="contact-list__link" href="mailto:info@traveller.com">info@traveller.com</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__item item-footer">
+								<h4 class="item-footer__title">Quick Link</h4>
+								<ul class="item-footer__list about-list">
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">Home</a>
+									</li>
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">About Us</a>
+									</li>
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">Tours</a>
+									</li>
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">Contact</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__item item-footer">
+								<h4 class="item-footer__title">Follow Us</h4>
+								<ul class="item-footer__list social-list">
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-facebook" href="#"></a>
+									</li>
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-twitter" href="#"></a>
+									</li>
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-youtube" href="#"></a>
+									</li>
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-instagram" href="#"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copy">
+				<p>Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="js/main.js"></script>
+
+</html>

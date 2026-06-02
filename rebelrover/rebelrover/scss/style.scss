@@ -1,0 +1,58 @@
+@use "sass:math";
+@use "reset";
+@use "colors" as *;
+@use "fonts/iconfonts";
+@use "settings" as *;
+// =========================================
+// Pages
+@use "pages/about";
+@use "pages/contacts";
+@use "pages/blog";
+@use "pages/package";
+@use "pages/index";
+// =========================================
+// Components
+@use "components";
+// =========================================
+// Parts
+@use "header";
+@use "footer";
+// =========================================
+// =========================================
+html {
+	scroll-behavior: smooth;
+}
+[class*="__container"] {
+	max-width: toRem($containerWidth);
+	padding-inline: toRem(math.div($containerPadding, 2));
+	margin: 0 auto;
+}
+[class*="__container--width"],
+[class*="__header--width"] {
+	max-width: toRem(1400);
+	margin: 0 auto;
+	padding-inline: toRem(15);
+}
+// =========================================
+body {
+	@include typography("def");
+	& {
+		font-family: $fontFamily;
+		color: $mainColor;
+	}
+	.menu-open & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: clip;
+	min-height: 100%;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+// =========================================

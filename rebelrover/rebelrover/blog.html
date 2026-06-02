@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Blog</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header--margin hero">
+			<section class="hero__section">
+				<div class="hero__container hero__container--width">
+					<div class="hero__body">
+						<div class="hero__header hero__header--width">
+							<div class="hero__logo logo">
+								<a class="logo__link" href="#">
+									<img class="logo__image" src="img/logo-3x.png" alt="Logo">
+								</a>
+							</div>
+							<div class="hero__menu menu">
+								<!-- <nav class="menu__body">
+									<ul class="menu__list block one">
+										<li class="menu__item">
+											<a class="menu__link" href="#">Home</a>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">About Us</a>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Package</a>
+											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
+											<ul class="menu__sub-menu sub-menu block__text">
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Destination</a>
+											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
+											<ul class="menu__sub-menu sub-menu block__text">
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Blog</a>
+											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
+											<ul class="menu__sub-menu sub-menu block__text">
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Contact</a>
+										</li>
+									</ul>
+								</nav> -->
+								<nav class="menu__body">
+									<ul class="menu__list">
+										<li class="menu__item">
+											<a class="menu__link" href="#">Home</a>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">About Us</a>
+										</li>
+										<!-- Чекбокс нужен для клика на мобилках -->
+										<li class="menu__dropdown">
+											<input type="checkbox" id="menu-toggle-1">
+											<label for="menu-toggle-1" class="menu__label">
+												<a class="menu__anchor" href="#">Package </a>
+												<span class="menu__arrow _icon-s-arrow"></span>
+											</label>
+											<div class="menu__submenu submenu">
+												<ul class="submenu__inner">
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="menu__dropdown">
+											<input type="checkbox" id="menu-toggle-2">
+											<label for="menu-toggle-2" class="menu__label">
+												<a class="menu__anchor" href="#"> Destination </a>
+												<span class="menu__arrow _icon-s-arrow"></span>
+											</label>
+											<div class="menu__submenu submenu">
+												<ul class="submenu__inner">
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="menu__dropdown">
+											<input type="checkbox" id="menu-toggle-3">
+											<label for="menu-toggle-3" class="menu__label">
+												<a class="menu__anchor" href="#"> Blog </a>
+												<span class="menu__arrow _icon-s-arrow"></span>
+											</label>
+											<div class="menu__submenu submenu">
+												<ul class="submenu__inner">
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+									</ul>
+								</nav>
+								<a class="menu__search" href="#"><img src="img/icons/search.svg" alt="icon"></a>
+								<button class="menu__icon icon-menu" type="button"><span></span></button>
+							</div>
+						</div>
+					</div>
+					<div class="hero__content">
+						<h1 class="hero__title hero__title--center hero__title--center-blog">Travel Stories For Now <br> and the Future </h1>
+						<ul class="hero__items hero__items--blog">
+							<li class="hero__item">
+								<img src="img/blog/icons/icon-01.svg" alt="icon">
+								<a class="hero__link" href="#">Hasmar</a>
+							</li>
+							<li class="hero__item">
+								<img src="img/blog/icons/icon-02.svg" alt="icon">
+								<a class="hero__link" href="#">January 18, 2021</a>
+							</li>
+							<li class="hero__item">
+								<img src="img/blog/icons/icon-03.svg" alt="icon">
+								<a class="hero__link" href="#">Stories, Tips</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<figure>
+					<picture>
+						<source srcset="img/blog/blog-hero.webp" type="image/webp">
+						<img class="hero__image" src="img/blog/blog-hero.jpg" alt="image">
+					</picture>
+				</figure>
+			</section>
+		</header>
+		<main class="page">
+			<div class="page__container page__container--width">
+				<article class="page__article article">
+					<div class="article__items">
+						<div class="article__item">
+							<div class="article__head">
+								<figure class="article__top-image">
+									<picture>
+										<source srcset="img/blog/blog-01.webp" type="image/webp">
+										<img src="img/blog/blog-01.jpg" alt="image">
+									</picture>
+								</figure>
+								<div class="article__text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+								</div>
+							</div>
+							<section class="article__content content-article">
+								<h2 class="content-article__title">Rice Terraces, Tegallalang</h3>
+									<div class="content-article__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+									</div>
+									<figure class="content-article__image">
+										<picture>
+											<source srcset="img/blog/blog-02.webp" type="image/webp">
+											<img src="img/blog/blog-02.jpg" alt="image">
+										</picture>
+									</figure>
+									<div class="content-article__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+									</div>
+							</section>
+							<div class="article__bottom">
+								<div class="article__labels">
+									<span>Tags:</span>Destintion, Travel
+								</div>
+								<div class="article__box">
+									<span>Share This:</span>
+									<ul class="article__social social-article">
+										<li class="social-article__item">
+											<a class="social-article__link" href="#" rel="noopener norefererer" target="_blank" aria-label="facebook profile">
+												<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M25.0031 12.5781C25.0031 5.63125 19.4062 0 12.5031 0C5.59687 0.0015625 0 5.63125 0 12.5797C0 18.8563 4.57187 24.0594 10.5469 25.0031V16.2141H7.375V12.5797H10.55V9.80625C10.55 6.65469 12.4172 4.91406 15.2719 4.91406C16.6406 4.91406 18.0703 5.15938 18.0703 5.15938V8.25313H16.4937C14.9422 8.25313 14.4578 9.22344 14.4578 10.2188V12.5781H17.9234L17.3703 16.2125H14.4562V25.0016C20.4312 24.0578 25.0031 18.8547 25.0031 12.5781Z" fill="" />
+												</svg>
+											</a>
+										</li>
+										<li class="social-article__item">
+											<a class="social-article__link" href="#" rel="noopener norefererer" target="_blank" aria-label="twitter profile">
+												<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12.6875 0C5.68106 0 0 5.68106 0 12.6875C0 19.6939 5.68106 25.375 12.6875 25.375C19.6939 25.375 25.375 19.6939 25.375 12.6875C25.375 5.68106 19.6939 0 12.6875 0ZM18.7849 9.56377C18.7934 9.69688 18.7934 9.83564 18.7934 9.97158C18.7934 14.129 15.6271 18.918 9.84131 18.918C8.05713 18.918 6.40322 18.3997 5.00986 17.5076C5.26475 17.5359 5.5083 17.5473 5.76885 17.5473C7.2415 17.5473 8.59521 17.0488 9.67422 16.2049C8.29219 16.1766 7.13105 15.2703 6.73457 14.0242C7.21885 14.095 7.65498 14.095 8.15342 13.9676C7.4418 13.823 6.80219 13.4365 6.34323 12.8738C5.88427 12.3111 5.63429 11.6068 5.63574 10.8807V10.841C6.05205 11.0761 6.54199 11.2205 7.05459 11.2403C6.62367 10.9531 6.27028 10.5641 6.02574 10.1076C5.78121 9.65114 5.65308 9.14138 5.65273 8.62354C5.65273 8.0373 5.80566 7.50205 6.08037 7.0376C6.87023 8.00994 7.85586 8.80519 8.97319 9.37166C10.0905 9.93813 11.3146 10.2632 12.5657 10.3256C12.1211 8.1874 13.7184 6.45703 15.6385 6.45703C16.5447 6.45703 17.3604 6.83652 17.9353 7.44824C18.6461 7.31514 19.3258 7.04893 19.9318 6.69209C19.6968 7.41992 19.204 8.03447 18.5498 8.42246C19.1842 8.35449 19.7959 8.17891 20.3623 7.93252C19.9347 8.56123 19.3994 9.11914 18.7849 9.56377Z" fill="" />
+												</svg>
+											</a>
+										</li>
+										<li class="social-article__item">
+											<a class="social-article__link" href="#" rel="noopener norefererer" target="_blank" aria-label="linkedin profile">
+												<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14 0C6.26792 0 0 6.26792 0 14C0 21.7321 6.26792 28 14 28C21.7321 28 28 21.7321 28 14C28 6.26792 21.7321 0 14 0ZM10.5729 19.8027H7.73792V10.6794H10.5729V19.8027ZM9.13792 9.55937C8.2425 9.55937 7.66354 8.925 7.66354 8.14042C7.66354 7.33979 8.26 6.72437 9.17437 6.72437C10.0887 6.72437 10.6487 7.33979 10.6662 8.14042C10.6662 8.925 10.0887 9.55937 9.13792 9.55937ZM20.9271 19.8027H18.0921V14.7467C18.0921 13.5698 17.6808 12.7706 16.6556 12.7706C15.8725 12.7706 15.4073 13.3117 15.2017 13.8323C15.1258 14.0175 15.1069 14.28 15.1069 14.541V19.8012H12.2704V13.5888C12.2704 12.4498 12.234 11.4975 12.196 10.6779H14.6592L14.789 11.9452H14.8458C15.2192 11.3502 16.1335 10.4723 17.6633 10.4723C19.5285 10.4723 20.9271 11.7221 20.9271 14.4083V19.8027Z" fill="" />
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="article__item">
+							<aside class="article__aside aside">
+								<section class="aside__recent recent">
+									<div class="recent__body">
+										<h3 class="recent__title">Recent Post</h3>
+										<ul class="recent__list">
+											<li class="recent__item">
+												<article class="recent__article">
+													<a class="recent__link" href="#">
+														<figure class="recent__picture">
+															<picture>
+																<source srcset="img/blog/recent/img-01-3x.webp" type="image/webp">
+																<img src="img/blog/recent/img-01-3x.jpg" alt="">
+															</picture>
+														</figure>
+														<div class="recent__box">
+															<h4 class="recent__heading">Travel Stories for Now and the Future</h4>
+															<div class="recent__date">
+																<time datetime="2022-12-14">14 Dec 2022</time>
+															</div>
+														</div>
+													</a>
+												</article>
+											</li>
+											<li class="recent__item">
+												<article class="recent__article">
+													<a class="recent__link" href="#">
+														<figure class="recent__picture">
+															<picture>
+																<source srcset="img/blog/recent/img-02-3x.webp" type="image/webp">
+																<img src="img/blog/recent/img-02-3x.jpg" alt="">
+															</picture>
+														</figure>
+														<div class="recent__box">
+															<h4 class="recent__heading">9 Popular Travel Destintion on Sale in 2022</h4>
+															<div class="recent__date">
+																<time datetime="2022-12-14">14 Dec 2022</time>
+															</div>
+														</div>
+													</a>
+												</article>
+											</li>
+											<li class="recent__item">
+												<article class="recent__article">
+													<a class="recent__link" href="#">
+														<figure class="recent__picture">
+															<picture>
+																<source srcset="img/blog/recent/img-03-3x.webp" type="image/webp">
+																<img src="img/blog/recent/img-03-3x.jpg" alt="">
+															</picture>
+														</figure>
+														<div class="recent__box">
+															<h4 class="recent__heading">How Are We Going to Travel in 2022?</h4>
+															<div class="recent__date">
+																<time datetime="2022-12-14">14 Dec 2022</time>
+															</div>
+														</div>
+													</a>
+												</article>
+											</li>
+										</ul>
+									</div>
+								</section>
+								<section class="aside__categories categories">
+									<div class="categories__body">
+										<h3 class="categories__title">Catagories</h3>
+										<ul class="categories__list">
+											<li class="categories__item">
+												<a class="categories__link" href="#" target="_blank"> <span>Travel</span> </a>
+											</li>
+											<li class="categories__item">
+												<a class="categories__link" href="#" target="_blank"> <span>Tips</span> </a>
+											</li>
+											<li class="categories__item">
+												<a class="categories__link" href="#" target="_blank"> <span>Stories</span> </a>
+											</li>
+											<li class="categories__item">
+												<a class="categories__link" href="#" target="_blank"> <span>Destination</span> </a>
+											</li>
+										</ul>
+									</div>
+								</section>
+								<div class="aside__contacts contacts">
+									<div class="contacts__body">
+										<div class="contacts__label">Have Any Question?</div>
+										<div class="contacts__text">
+											<p>Do not hesitage to give us a call. We are an expert team and we are happy to talk to you.</p>
+										</div>
+										<ul class="contacts__list">
+											<li class="contacts__item">
+												<img src="img/blog/icons/phone.svg" alt="icon of phone">
+												<a class="contacts__link" href="tel:+6269436956">+62 6943 6956</a>
+											</li>
+											<li class="contacts__item">
+												<img src="img/blog/icons/envelope.svg" alt="icon of envelope">
+												<address>
+													<a class="contacts__link" href="mailto:contact@domain.com">contact@domain.com</a>
+												</address>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</aside>
+						</div>
+					</div>
+					<section class="article__section-form section-form">
+						<h3 class="section-form__title">Leave a Reply</h3>
+						<div class="section-form__text">
+							<p>Your email address will not be published. Required fields are marked <span></span></p>
+						</div>
+						<form class="section-form__body form-section" action="#" enctype="multipart/form-data">
+							<div class="form-section__body">
+								<div class="form-section__group">
+									<label class="form-section__label" for="comment">Comment</label>
+									<textarea class="form-section__textarea" name="form[]" id="comment"></textarea>
+								</div>
+								<div class="form-section__group">
+									<label class="form-section__label" for="name"><span>Name</span></label>
+									<input class="form-section__input" name="form[]" type="text" id="name" autocomplete="off" required></input>
+								</div>
+								<div class="form-section__group">
+									<label class="form-section__label" for="email"><span>Email</span></label>
+									<input class="form-section__input" type="email" name="form[email]" id="email" autocomplete="off" required></input>
+								</div>
+								<div class="form-section__group form-section__group--margin">
+									<label class="form-section__label" for="website">Website</label>
+									<input class="form-section__input" name="form[]" type="text" id="website" autocomplete="off"></input>
+								</div>
+								<div class="form-section__group">
+									<label class="checkbox">
+										<input class="checkbox__input" type="checkbox">
+										<span class="checkbox__label">Save my name, email, and website in this browser for the next time I comment.</span>
+									</label>
+								</div>
+							</div>
+							<button class="form-section__button btn" type="submit">Post Comment</button>
+						</form>
+					</section>
+				</article>
+				<!-- <aside class="page__aside aside">
+					<section class="aside__recent recent">
+						<div class="recent__body">
+							<h3 class="recent__title">Recent Post</h3>
+							<ul class="recent__list">
+								<li class="recent__item">
+									<article>
+										<a class="recent__link" href="#">
+											<figure class="recent__picture">
+												<img src="img/blog/recent/img-01.jpg" alt="image">
+												<figcaption>
+													<h4 class="recent__heading">Travel Stories for Now and the Future</h4>
+													<div class="recent__date">
+														<time datetime="2022-12-14">14 Dec 2022</time>
+													</div>
+												</figcaption>
+											</figure>
+										</a>
+									</article>
+								</li>
+								<li class="recent__item">
+									<article>
+										<a class="recent__link" href="#">
+											<figure class="recent__picture">
+												<img src="img/blog/recent/img-02.jpg" alt="">
+												<figcaption>
+													<h4 class="recent__heading">9 Popular Travel Destintion on Sale in 2022</h4>
+													<div class="recent__date">
+														<time datetime="2022-12-14">14 Dec 2022</time>
+													</div>
+												</figcaption>
+											</figure>
+										</a>
+									</article>
+								</li>
+								<li class="recent__item">
+									<article>
+										<a class="recent__link" href="#">
+											<figure class="recent__picture">
+												<img src="img/blog/recent/img-03.jpg" alt="">
+												<figcaption>
+													<h4 class="recent__heading">How Are We Going to Travel in 2022?</h4>
+													<div class="recent__date">
+														<time datetime="2022-12-14">14 Dec 2022</time>
+													</div>
+												</figcaption>
+											</figure>
+										</a>
+									</article>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section class="aside__categories categories">
+						<div class="categories__body">
+							<h3 class="categories__title">Catagories</h3>
+							<ul class="categories__list">
+								<li class="categories__item">
+									<a class="categories__link" href="#" target="_blank"> <span>Travel</span> </a>
+								</li>
+								<li class="categories__item">
+									<a class="categories__link" href="#" target="_blank"> <span>Tips</span> </a>
+								</li>
+								<li class="categories__item">
+									<a class="categories__link" href="#" target="_blank"> <span>Stories</span> </a>
+								</li>
+								<li class="categories__item">
+									<a class="categories__link" href="#" target="_blank"> <span>Destination</span> </a>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<div class="aside__contacts contacts">
+						<div class="contacts__body">
+							<div class="contacts__label">Have Any Question?</div>
+							<div class="contacts__text">
+								<p>Do not hesitage to give us a call. We are an expert team and we are happy to talk to you.</p>
+							</div>
+							<ul class="contacts__list">
+								<li class="contacts__item">
+									<img src="img/blog/icons/phone.svg" alt="icon of phone">
+									<a class="contacts__link" href="tel:+6269436956">+62 6943 6956</a>
+								</li>
+								<li class="contacts__item">
+									<img src="img/blog/icons/envelope.svg" alt="icon of envelope">
+									<address>
+										<a class="contacts__link" href="mailto:contact@domain.com">contact@domain.com</a>
+									</address>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</aside> -->
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__top">
+				<h2 class="footer__title">Subcribe to get special price</h2>
+				<div class="footer__descr">
+					<p>Dont wanna miss something? subscribe right now and get special promotion and monthly newsletter</p>
+				</div>
+				<form class="footer__form form" action="#" enctype="multipart/form-data">
+					<div class="form__item">
+						<input class="form__input" type="email" placeholder="Type your  email here" name="form[]" required autocomplete="off">
+					</div>
+					<button class="form__button" type="submit">Subscribe</button>
+				</form>
+				<figure>
+					<picture>
+						<source srcset="img/footer/footer-bg-1x.webp 1x, img/footer/footer-bg-2x.webp 2x, img/footer/footer-bg-3x.webp 3x" type="image/webp">
+						<img class="footer__image" src="img/footer/footer-bg.webp" alt="image">
+					</picture>
+				</figure>
+			</div>
+			<div class="footer__container footer__container--width">
+				<div class="footer__content">
+					<div class="footer__body">
+						<div class="footer__box">
+							<div class="footer__logo">
+								<a class="footer__link" href="#" id="#top">
+									<img src="img/footer/footer-logo.webp" alt="Logo">
+								</a>
+							</div>
+							<div class="footer__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra condimentum.</p>
+							</div>
+						</div>
+						<div class="footer__items">
+							<div class="footer__item item-footer">
+								<h4 class="item-footer__title">Contact Information</h4>
+								<ul class="item-footer__list contact-list">
+									<li class="contact-list__item">
+										<div class="contact-list__icon">
+											<img src="img/icons/location.svg" alt="Icon">
+										</div>
+										<a class="contact-list__link" href="#">732 Despard St, Atlanta</a>
+									</li>
+									<li class="contact-list__item">
+										<div class="contact-list__icon">
+											<img src="img/icons/phone.svg" alt="Icon">
+										</div>
+										<a class="contact-list__link" href="tel:+978888888">+97 888 8888</a>
+									</li>
+									<li class="contact-list__item">
+										<div class="contact-list__icon">
+											<img src="img/icons/email.svg" alt="Icon">
+										</div>
+										<a class="contact-list__link" href="mailto:info@traveller.com">info@traveller.com</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__item item-footer">
+								<h4 class="item-footer__title">Quick Link</h4>
+								<ul class="item-footer__list about-list">
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">Home</a>
+									</li>
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">About Us</a>
+									</li>
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">Tours</a>
+									</li>
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">Contact</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__item item-footer">
+								<h4 class="item-footer__title">Follow Us</h4>
+								<ul class="item-footer__list social-list">
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-facebook" href="#" rel="noopener norefererer" target="_blank" aria-label="facebook profile"></a>
+									</li>
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-twitter" href="#" rel="noopener norefererer" target="_blank" aria-label="twitter profile"></a>
+									</li>
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-youtube" href="#" rel="noopener norefererer" target="_blank" aria-label="youtube profile"></a>
+									</li>
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-instagram" href="#" rel="noopener norefererer" target="_blank" aria-label="instagram profile"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copy">
+				<p>Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="js/main.js"></script>
+
+</html>

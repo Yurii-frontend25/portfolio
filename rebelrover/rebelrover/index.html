@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Home page</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header--margin-home hero">
+			<section class="hero__section">
+				<div class="hero__container">
+					<div class="hero__body">
+						<div class="hero__header">
+							<div class="hero__logo logo">
+								<img src="img/logo-3x.webp" alt="Logo">
+							</div>
+							<div class="hero__menu menu">
+								<!-- <nav class="menu__body">
+									<ul class="menu__list">
+										<li class="menu__item">
+											<a class="menu__link" href="#">Home</a>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">About Us</a>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Package</a>
+											<button class="menu__button _icon-s-arrow" type="button"></button>
+											<ul class="menu__sub-menu sub-menu">
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Destination</a>
+											<button class="menu__button _icon-s-arrow" type="button"></button>
+											<ul class="menu__sub-menu sub-menu">
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Blog</a>
+											<button class="menu__button _icon-s-arrow" type="button"></button>
+											<ul class="menu__sub-menu sub-menu">
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Some link</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">Contact</a>
+										</li>
+									</ul>
+								</nav> -->
+								<nav class="menu__body">
+									<ul class="menu__list">
+										<li class="menu__item">
+											<a class="menu__link" href="#">Home</a>
+										</li>
+										<li class="menu__item">
+											<a class="menu__link" href="#">About Us</a>
+										</li>
+										<!-- Чекбокс нужен для клика на мобилках -->
+										<li class="menu__dropdown">
+											<input type="checkbox" id="menu-toggle-1">
+											<label for="menu-toggle-1" class="menu__label">
+												<a class="menu__anchor" href="#">Package </a>
+												<span class="menu__arrow _icon-s-arrow"></span>
+											</label>
+											<div class="menu__submenu submenu">
+												<ul class="submenu__inner">
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="menu__dropdown">
+											<input type="checkbox" id="menu-toggle-2">
+											<label for="menu-toggle-2" class="menu__label">
+												<a class="menu__anchor" href="#"> Destination </a>
+												<span class="menu__arrow _icon-s-arrow"></span>
+											</label>
+											<div class="menu__submenu submenu">
+												<ul class="submenu__inner">
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">Bali</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">Istanbul</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">Paris</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">Rome</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="menu__dropdown">
+											<input type="checkbox" id="menu-toggle-3">
+											<label for="menu-toggle-3" class="menu__label">
+												<a class="menu__anchor" href="#"> Blog </a>
+												<span class="menu__arrow _icon-s-arrow"></span>
+											</label>
+											<div class="menu__submenu submenu">
+												<ul class="submenu__inner">
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+													<li class="submenu__item">
+														<a class="submenu__link" href="#">some link</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+									</ul>
+								</nav>
+								<a class="menu__search" href="#" aria-label="Search"><img src="img/icons/search.svg" alt="icon of search"></a>
+								<button class="menu__icon icon-menu" type="button"><span></span></button>
+							</div>
+						</div>
+					</div>
+					<div class="hero__content hero__content--home">
+						<h1 class="hero__title hero__title--margin">Make in <br> your journey.</h1>
+						<div class="hero__descr">
+							<p>Explore the world with what you love beautiful natural beauty.</p>
+						</div>
+						<div class="hero__choice choice-hero">
+							<div class="choice-hero__items">
+								<label class="choice-hero__item">
+									<select class="choice-hero__select" name="form[location]">
+										<option class="choice-hero__element" value disabled selected hidden>Location</option>
+										<option class="choice-hero__element" value="country">Bali</option>
+										<option class="choice-hero__element" value="country">Istanbul</option>
+										<option class="choice-hero__element" value="country">Rome</option>
+									</select>
+								</label>
+								<label class="choice-hero__item">
+									<select class="choice-hero__select" name="form[date]">
+										<option class="choice-hero__element" value disabled selected hidden>Date</option>
+										<option class="choice-hero__element" value="date">3</option>
+										<option class="choice-hero__element" value="date">7</option>
+										<option class="choice-hero__element" value="date">10</option>
+									</select>
+								</label>
+								<label class="choice-hero__item">
+									<select class="choice-hero__select" name="form[people]">
+										<option class="choice-hero__element" value disabled selected hidden>People</option>
+										<option class="choice-hero__element" value="date">2</option>
+										<option class="choice-hero__element" value="date">4</option>
+										<option class="choice-hero__element" value="date">6</option>
+									</select>
+								</label>
+							</div>
+							<a class="choice-hero__link" href="#">Explore now</a>
+						</div>
+						<div class="hero__places"> Popular Place: <span>Bali, Istanbul, Rome, Paris.</span></div>
+					</div>
+				</div>
+				<figure>
+					<picture>
+						<source srcset="img/hero/hero-bg.webp" type="image/webp">
+						<img class="hero__image" src="img/hero/hero-bg.jpg" alt="image">
+					</picture>
+				</figure>
+			</section>
+		</header>
+		<main class="page">
+			<section class="page__explore explore">
+				<div class="explore__container">
+					<div class="explore__title block-head block-head--col">
+						<h2 class="block-head__title block-head__title--margin">Explore new worlds with exotic natural scenery</h2>
+						<div class="block-head__descr">Explore the world with what you love beautiful natural beauty.</div>
+					</div>
+					<div class="explore__controls">
+						<button class="explore__arrow explore__arrow--left _icon-s-arrow-slider" type="button"></button>
+						<button class="explore__arrow explore__arrow--right _icon-s-arrow-slider" type="button"></button>
+					</div>
+					<div class="explore__slider swiper">
+						<div class="explore__wrapper swiper-wrapper">
+							<div class="explore__slide swiper-slide">
+								<div class="item-explore">
+									<a class="item-explore__image" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/explore/01.webp" type="image/webp">
+												<img src="img/explore/01.jpg" alt="Image">
+											</picture>
+										</figure>
+									</a>
+								</div>
+							</div>
+							<div class="explore__slide swiper-slide">
+								<div class="item-explore item-explore--border">
+									<a class="item-explore__image item-explore__image--small" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/explore/02.webp" type="image/webp">
+												<img src="img/explore/02.jpg" alt="Image">
+											</picture>
+										</figure>
+									</a>
+									<div class="item-explore__body">
+										<h4 class="item-explore__title">
+											<a class="item-explore__link" href="#">Bali, Indonesia.</a>
+										</h4>
+										<div class="item-explore__info">
+											<p>Bali is a beautiful tourist spot and is visited by many travelers. </p>
+										</div>
+									</div>
+									<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="Icon of qoute">
+								</div>
+							</div>
+							<div class="explore__slide swiper-slide">
+								<div class="item-explore">
+									<a class="item-explore__image" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/explore/03.webp" type="image/webp">
+												<img src="img/explore/03.jpg" alt="Image">
+											</picture>
+										</figure>
+									</a>
+								</div>
+							</div>
+							<div class="explore__slide swiper-slide">
+								<div class="item-explore">
+									<a class="item-explore__image" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/explore/01.webp" type="image/webp">
+												<img src="img/explore/01.jpg" alt="Image">
+											</picture>
+										</figure>
+									</a>
+								</div>
+							</div>
+							<div class="explore__slide swiper-slide">
+								<div class="item-explore item-explore--border">
+									<a class="item-explore__image item-explore__image--small" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/explore/02.webp" type="image/webp">
+												<img src="img/explore/02.jpg" alt="Image">
+											</picture>
+										</figure>
+									</a>
+									<div class="item-explore__body">
+										<h4 class="item-explore__title">
+											<a class="item-explore__link" href="#">Bali, Indonesia.</a>
+										</h4>
+										<div class="item-explore__info">
+											<p>Bali is a beautiful tourist spot and is visited by many travelers. </p>
+										</div>
+									</div>
+									<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="Icon of qoute">
+								</div>
+							</div>
+							<div class="explore__slide swiper-slide">
+								<div class="item-explore">
+									<a class="item-explore__image" href="#">
+										<figure>
+											<picture>
+												<source srcset="img/explore/03.webp" type="image/webp">
+												<img src="img/explore/03.jpg" alt="Image">
+											</picture>
+										</figure>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__why why">
+				<div class="why__container">
+					<div class="why__title block-head block-head--col">
+						<h2 class="block-head__title block-head__title--white">Why choose Us?</h2>
+						<div class="block-head__descr block-head__descr--white">our services have been trusted by world travelers.</div>
+					</div>
+					<div class="why__controls">
+						<button class="why__arrow why__arrow--left _icon-s-arrow-slider" type="button"></button>
+						<button class="why__arrow why__arrow--right _icon-s-arrow-slider" type="button"></button>
+					</div>
+					<div class="why__slider swiper">
+						<div class="why__wrapper swiper-wrapper">
+							<div class="why__slide swiper-slide">
+								<div class="why__item item-why">
+									<div class="item-why__body">
+										<div class="item-why__image">
+											<img src="img/why/icons/01.svg" alt="Icon">
+										</div>
+										<h3 class="item-why__title">
+											<a class="item-why__anchor" href="#">Best Service</a>
+										</h3>
+										<div class="item-why__text">
+											<p>our service is reliable and convenient, our service is quality.</p>
+										</div>
+										<div class="item-why__box">
+											<a class="item-why__link" href="#">Leaern more <svg width="30" height="12" viewBox="0 0 30 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="why__slide swiper-slide">
+								<div class="why__item item-why">
+									<div class="item-why__body">
+										<div class="item-why__image">
+											<img src="img/why/icons/02.svg" alt="Icon">
+										</div>
+										<h3 class="item-why__title">
+											<a class="item-why__anchor" href="#">Price Guarantee</a>
+										</h3>
+										<div class="item-why__text">
+											<p>our service is reliable and convenient, our service is quality.</p>
+										</div>
+										<div class="item-why__box">
+											<a class="item-why__link" href="#">Leaern more <svg width="30" height="12" viewBox="0 0 30 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="why__slide swiper-slide">
+								<div class="why__item item-why">
+									<div class="item-why__body">
+										<div class="item-why__image">
+											<img src="img/why/icons/03.svg" alt="Icon">
+										</div>
+										<h3 class="item-why__title">
+											<a class="item-why__anchor" href="#">Handpicked Hotels</a>
+										</h3>
+										<div class="item-why__text">
+											<p>our service is reliable and convenient, our service is quality.</p>
+										</div>
+										<div class="item-why__box">
+											<a class="item-why__link" href="#">Leaern more <svg width="30" height="12" viewBox="0 0 30 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="why__slide swiper-slide">
+								<div class="why__item item-why">
+									<div class="item-why__body">
+										<div class="item-why__image">
+											<img src="img/why/icons/01.svg" alt="Icon">
+										</div>
+										<h3 class="item-why__title">
+											<a class="item-why__anchor" href="#">Best Service</a>
+										</h3>
+										<div class="item-why__text">
+											<p>our service is reliable and convenient, our service is quality.</p>
+										</div>
+										<div class="item-why__box">
+											<a class="item-why__link" href="#">Leaern more <svg width="30" height="12" viewBox="0 0 30 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="why__slide swiper-slide">
+								<div class="why__item item-why">
+									<div class="item-why__body">
+										<div class="item-why__image">
+											<img src="img/why/icons/02.svg" alt="Icon">
+										</div>
+										<h3 class="item-why__title">
+											<a class="item-why__anchor" href="#">Price Guarantee</a>
+										</h3>
+										<div class="item-why__text">
+											<p>our service is reliable and convenient, our service is quality.</p>
+										</div>
+										<div class="item-why__box">
+											<a class="item-why__link" href="#">Leaern more <svg width="30" height="12" viewBox="0 0 30 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="why__slide swiper-slide">
+								<div class="why__item item-why">
+									<div class="item-why__body">
+										<div class="item-why__image">
+											<img src="img/why/icons/03.svg" alt="Icon">
+										</div>
+										<h3 class="item-why__title">
+											<a class="item-why__anchor" href="#">Handpicked Hotels</a>
+										</h3>
+										<div class="item-why__text">
+											<p>our service is reliable and convenient, our service is quality.</p>
+										</div>
+										<div class="item-why__box">
+											<a class="item-why__link" href="#">Leaern more <svg width="30" height="12" viewBox="0 0 30 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<figure>
+					<picture>
+						<source srcset="img/why/why-bg-2x.webp" type="image/webp">
+						<img class="why__image" src="img/why/why-bg-2x.jpg" alt="Image">
+					</picture>
+				</figure>
+			</section>
+			<section class="page__partners partners">
+				<div class="partners__container">
+					<div class="partners__title block-head block-head--col">
+						<h2 class="block-head__title block-head__title--margin-m">Our tour partner</h2>
+						<div class="block-head__descr block-head__descr--width">There are many variation of passage of lorem ipsum available but the majority have suffered alteration </div>
+					</div>
+					<div class="partners__items">
+						<div class="partners__item">
+							<picture>
+								<img src="img/partners/01.svg" alt="image">
+							</picture>
+						</div>
+						<div class="partners__item">
+							<picture>
+								<img src="img/partners/02.svg" alt="image">
+							</picture>
+						</div>
+						<div class="partners__item">
+							<picture>
+								<img src="img/partners/03.svg" alt="image">
+							</picture>
+						</div>
+						<div class="partners__item">
+							<picture>
+								<img src="img/partners/04.svg" alt="image">
+							</picture>
+						</div>
+						<div class="partners__item">
+							<picture>
+								<img src="img/partners/05.svg" alt="image">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__testimonial testimonial">
+				<div class="testimonial__container">
+					<div class="testimonial__title block-head block-head--start">
+						<div class="block-head__label">TESTIMONIAL</div>
+						<h2 class="block-head__title block-head__title--start">What our client say</h2>
+						<div class="block-head__descr block-head__descr--start">
+							<p>Create a visual identity for your company and a overall brand</p>
+						</div>
+					</div>
+					<div class="testimonial__controls">
+						<button class="testimonial__arrow testimonial__arrow--left _icon-s-arrow-slider" type="button"></button>
+						<button class="testimonial__arrow testimonial__arrow--right _icon-s-arrow-slider" type="button"></button>
+					</div>
+					<div class="testimonial__slider swiper">
+						<div class="testimonial__wrapper swiper-wrapper">
+							<div class="testimonial__slide swiper-slide">
+								<article class="testimonial__item item-testimonial">
+									<div class="item-testimonial__body">
+										<div class="item-testimonial__top">
+											<div class="item-testimonial__image">
+												<figure>
+													<picture>
+														<source srcset="img/testimonial/01.webp" type="image/webp">
+														<img src="img/testimonial/01.jpg" alt="Image">
+													</picture>
+												</figure>
+											</div>
+											<div class="item-testimonial__head">
+												<h4 class="item-testimonial__name">Sara Jay</h4>
+												<div class="item-testimonial__label">Treveller</div>
+											</div>
+										</div>
+										<div class="item-testimonial__rating rating">
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item"></div>
+										</div>
+										<div class="item-testimonial__text">
+											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="testimonial__slide swiper-slide">
+								<article class="testimonial__item item-testimonial">
+									<div class="item-testimonial__body">
+										<div class="item-testimonial__top">
+											<div class="item-testimonial__image">
+												<figure>
+													<picture>
+														<source srcset="img/testimonial/02.webp" type="image/webp">
+														<img src="img/testimonial/02.jpg" alt="Image">
+													</picture>
+												</figure>
+											</div>
+											<div class="item-testimonial__head">
+												<h4 class="item-testimonial__name">Cristian Daniel</h4>
+												<div class="item-testimonial__label">Treveller</div>
+											</div>
+										</div>
+										<div class="item-testimonial__rating rating">
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item"></div>
+										</div>
+										<div class="item-testimonial__text">
+											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="testimonial__slide swiper-slide">
+								<article class="testimonial__item item-testimonial">
+									<div class="item-testimonial__body">
+										<div class="item-testimonial__top">
+											<div class="item-testimonial__image">
+												<figure>
+													<picture>
+														<source srcset="img/testimonial/03.webp" type="image/webp">
+														<img src="img/testimonial/03.jpg" alt="Image">
+													</picture>
+												</figure>
+											</div>
+											<div class="item-testimonial__head">
+												<h4 class="item-testimonial__name">Kausar Hasan</h4>
+												<div class="item-testimonial__label">Treveller</div>
+											</div>
+										</div>
+										<div class="item-testimonial__rating rating">
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item"></div>
+										</div>
+										<div class="item-testimonial__text">
+											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="testimonial__slide swiper-slide">
+								<article class="testimonial__item item-testimonial">
+									<div class="item-testimonial__body">
+										<div class="item-testimonial__top">
+											<div class="item-testimonial__image">
+												<figure>
+													<picture>
+														<source srcset="img/testimonial/01.webp" type="image/webp">
+														<img src="img/testimonial/01.jpg" alt="Image">
+													</picture>
+												</figure>
+											</div>
+											<div class="item-testimonial__head">
+												<h4 class="item-testimonial__name">Sara Jay</h4>
+												<div class="item-testimonial__label">Treveller</div>
+											</div>
+										</div>
+										<div class="item-testimonial__rating rating">
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item"></div>
+										</div>
+										<div class="item-testimonial__text">
+											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="testimonial__slide swiper-slide">
+								<article class="testimonial__item item-testimonial">
+									<div class="item-testimonial__body">
+										<div class="item-testimonial__top">
+											<div class="item-testimonial__image">
+												<figure>
+													<picture>
+														<source srcset="img/testimonial/02.webp" type="image/webp">
+														<img src="img/testimonial/02.jpg" alt="Image">
+													</picture>
+												</figure>
+											</div>
+											<div class="item-testimonial__head">
+												<h4 class="item-testimonial__name">Sara Jay</h4>
+												<div class="item-testimonial__label">Treveller</div>
+											</div>
+										</div>
+										<div class="item-testimonial__rating rating">
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item rating__item--active"></div>
+											<div class="rating__item"></div>
+										</div>
+										<div class="item-testimonial__text">
+											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="testimonial__slide swiper-slide">
+								<article class="testimonial__item item-testimonial">
+									<div class="item-testimonial__body">
+										<div class="item-testimonial__top">
+											<div class="item-testimonial__image">
+												<figure>
+													<picture>
+														<source srcset="img/testimonial/03.webp" type="image/webp">
+														<img src="img/testimonial/03.jpg" alt="Image">
+													</picture>
+												</figure>
+											</div>
+											<div class="item-testimonial__head">
+												<h4 class="item-testimonial__name">Sara Jay</h4>
+												<div class="item-testimonial__label">Treveller</div>
+											</div>
+										</div>
+										<div class="item-testimonial__rating rating">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+										</div>
+										<div class="item-testimonial__text">
+											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__top">
+				<h2 class="footer__title">Subcribe to get special price</h2>
+				<div class="footer__descr">
+					<p>Dont wanna miss something? subscribe right now and get special promotion and monthly newsletter</p>
+				</div>
+				<form class="footer__form form" action="#" enctype="multipart/form-data">
+					<div class="form__item">
+						<input class="form__input" type="email" placeholder="Type your  email here" name="form[]" required autocomplete="off">
+					</div>
+					<button class="form__button" type="submit">Subscribe</button>
+				</form>
+				<figure>
+					<picture>
+						<source srcset="img/footer/footer-bg-1x.webp 1x, img/footer/footer-bg-2x.webp 2x, img/footer/footer-bg-3x.webp 3x" type="image/webp">
+						<img class="footer__image" src="img/footer/footer-bg.webp" alt="image">
+					</picture>
+				</figure>
+			</div>
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__body">
+						<div class="footer__box">
+							<div class="footer__logo">
+								<a class="footer__link" href="#">
+									<img src="img/footer/footer-logo.webp" alt="Logo">
+								</a>
+							</div>
+							<div class="footer__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra condimentum.</p>
+							</div>
+						</div>
+						<div class="footer__items">
+							<div class="footer__item item-footer">
+								<h4 class="item-footer__title">Contact Information</h4>
+								<ul class="item-footer__list contact-list">
+									<li class="contact-list__item">
+										<div class="contact-list__icon">
+											<img src="img/icons/location.svg" alt="Icon">
+										</div>
+										<a class="contact-list__link" href="#" target="_blank">732 Despard St, Atlanta</a>
+									</li>
+									<li class="contact-list__item">
+										<div class="contact-list__icon">
+											<img src="img/icons/phone.svg" alt="Icon">
+										</div>
+										<a class="contact-list__link" href="tel:+978888888" target="_blank">+97 888 8888</a>
+									</li>
+									<li class="contact-list__item">
+										<div class="contact-list__icon">
+											<img src="img/icons/email.svg" alt="Icon">
+										</div>
+										<a class="contact-list__link" href="mailto:info@traveller.com" target="_blank">info@traveller.com</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__item item-footer">
+								<h4 class="item-footer__title">Quick Link</h4>
+								<ul class="item-footer__list about-list">
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">Home</a>
+									</li>
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">About Us</a>
+									</li>
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">Tours</a>
+									</li>
+									<li class="about-list__item">
+										<a class="about-list__link" href="#">Contact</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__item item-footer">
+								<h4 class="item-footer__title">Follow Us</h4>
+								<ul class="item-footer__list social-list">
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-facebook" href="#" rel="noopener norefererer" target="_blank" aria-label="facebook profile"></a>
+									</li>
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-twitter" href="#" rel="noopener norefererer" target="_blank" aria-label="twitter profile"></a>
+									</li>
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-youtube" href="#" rel="noopener norefererer" target="_blank" aria-label="youtube profile"></a>
+									</li>
+									<li class="social-list__item">
+										<a class="social-list__link _icon-s-instagram" href="#" rel="noopener norefererer" target="_blank" aria-label="instagram profile"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copy">
+				<p>Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
