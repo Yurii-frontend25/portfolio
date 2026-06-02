@@ -623,13 +623,13 @@
 		display: flex;
 		background-color: $white;
 		@include adaptiveValue("gap", 87, 5);
-		flex: 1 1 1;
+		flex: 1 1 auto;
 		justify-content: space-between;
 		padding-right: toRem(10);
 		padding-top: toRem(11);
 		padding-bottom: toRem(10);
 		@media (max-width: toEm(486)) {
-			flex: 1 1 auto;
+			// flex: 1 1 auto;
 			padding-inline: toRem(15);
 			padding-block: toRem(15);
 			border: toRem(1) solid #cbcaca;

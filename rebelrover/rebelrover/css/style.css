@@ -5304,8 +5304,8 @@ label {
 }
 .choice-hero__items {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 1;
-          flex: 1 1 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -5315,9 +5315,6 @@ label {
 }
 @media (max-width: 30.375em) {
   .choice-hero__items {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
     padding-inline: 0.9375rem;
     padding-block: 0.9375rem;
     border: 0.0625rem solid #cbcaca;
