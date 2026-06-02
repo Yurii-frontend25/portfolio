@@ -20,6 +20,9 @@
 		@media (width <= toEm(790)) {
 			grid-template-columns: 2fr;
 		}
+		@media (width <= toEm(561)) {
+			grid-template-columns: 1fr;
+		}
 		@media (width > toEm(790)) {
 			display: flex;
 			justify-content: space-between;
@@ -83,7 +86,6 @@
 			text-transform: capitalize;
 		}
 		@media (width <= toEm(790)) {
-			// order: 3;
 			justify-content: flex-end;
 			display: flex;
 		}
@@ -102,7 +104,7 @@
 		@media (width <= toEm(790)) {
 			grid-column: 1 / 3;
 			padding-right: 0;
-			margin-top: toRem(0);
+			margin-top: 0;
 		}
 		@media (width <= toEm(561)) {
 			grid-column: 1 / 2;
