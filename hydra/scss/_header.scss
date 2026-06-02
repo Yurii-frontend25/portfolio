@@ -92,19 +92,6 @@
 	}
 }
 // ==================================================================
-// Реєструємо першу точку градієнта як колір
-@property --gradient-start {
-	syntax: "<color>";
-	initial-value: transparent;
-	inherits: false;
-}
-
-// Реєструємо другу точку градієнта як колір
-@property --gradient-end {
-	syntax: "<color>";
-	initial-value: transparent;
-	inherits: false;
-}
 .actions-menu {
 	@include adaptiveValue("gap", 38, 20);
 	display: flex;
@@ -120,28 +107,37 @@
 	}
 	// .actions-menu__link
 	&__link {
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
 		@include typography("T");
-
 		padding: toRem(16) toRem(36);
 		border-radius: toRem(40);
 		border: toRem(2) solid transparent;
 		border-color: #fff;
-		background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-		--gradient-start: transparent;
-		--gradient-end: transparent;
 		transition:
-			--gradient-start 0.3s ease,
-			--gradient-end 0.3s ease,
 			border-color 0.3s ease,
 			color 0.3s ease;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+			opacity: 0;
+			z-index: -1;
+			transition: opacity 0.3s ease;
+		}
 		@media (any-hover: hover), (any-pointer: fine) {
 			&:hover {
-				// background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
 				color: $bgColor;
 				border-color: transparent;
-
-				--gradient-start: #8176af;
-				--gradient-end: #c0b7e8;
+				&::before {
+					opacity: 1;
+				}
 			}
 		}
 		@media (max-width: toEm(991.98)) {

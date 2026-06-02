@@ -475,16 +475,6 @@ label {
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-@property --gradient-start {
-  syntax: "<color>";
-  initial-value: transparent;
-  inherits: false;
-}
-@property --gradient-end {
-  syntax: "<color>";
-  initial-value: transparent;
-  inherits: false;
-}
 @media (min-width: 81.25em) {
   .actions-menu {
     gap: 38px;
@@ -527,6 +517,11 @@ label {
   }
 }
 .actions-menu__link {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.actions-menu__link {
   font-weight: 700;
 }
 @media (min-width: 81.25em) {
@@ -549,18 +544,30 @@ label {
   border-radius: 2.5rem;
   border: 0.125rem solid transparent;
   border-color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(var(--gradient-start)), to(var(--gradient-end)));
-  background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-  --gradient-start: transparent;
-  --gradient-end: transparent;
-  transition: --gradient-start 0.3s ease, --gradient-end 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  -webkit-transition: border-color 0.3s ease, color 0.3s ease;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+.actions-menu__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#8176af), to(#c0b7e8));
+  background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 @media (any-hover: hover), (any-pointer: fine) {
   .actions-menu__link:hover {
     color: #302c42;
     border-color: transparent;
-    --gradient-start: #8176af;
-    --gradient-end: #c0b7e8;
+  }
+  .actions-menu__link:hover::before {
+    opacity: 1;
   }
 }
 @media (max-width: 61.99875em) {
