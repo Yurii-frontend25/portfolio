@@ -551,8 +551,8 @@
 	@media (max-width: toEm($tablet)) {
 		z-index: 1;
 		position: relative;
-		left: toRem(0);
-		top: toRem(0);
+		left: 0;
+		top: 0;
 		padding-top: toRem(0);
 		padding-left: toRem(0);
 		opacity: 1;
@@ -629,7 +629,6 @@
 		padding-top: toRem(11);
 		padding-bottom: toRem(10);
 		@media (max-width: toEm(486)) {
-			// flex: 1 1 auto;
 			padding-inline: toRem(15);
 			padding-block: toRem(15);
 			border: toRem(1) solid #cbcaca;
