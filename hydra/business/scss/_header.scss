@@ -1,0 +1,243 @@
+@use "sass:math";
+@use "settings" as *;
+@use "vars" as *;
+@use "fonts/font";
+// =======================================================================================================================
+.header {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition:
+			opacity 0.4s ease,
+			backdrop-filter 0.4s ease,
+			background-color 0.4s ease;
+		backdrop-filter: blur(toRem(0));
+		-webkit-backdrop-filter: blur(toRem(0));
+		background-color: rgba(255, 255, 255, 0);
+	}
+	&.scroll::before {
+		opacity: 1;
+		background-color: rgba(255, 255, 255, 0.7);
+		backdrop-filter: blur(toRem(7));
+		-webkit-backdrop-filter: blur(toRem(7));
+	}
+	// .header__container
+	&__container {
+	}
+	// .header__body
+	&__body {
+		position: relative;
+		z-index: 5;
+		@include adaptiveValue("column-gap", 20, 5);
+		color: var(--accent-color);
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("min-height", 85, 60);
+		@include adaptiveValue("padding-top", 10, 0);
+	}
+	// .header__logo
+	&__logo {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 12, 5);
+		flex-shrink: 0;
+		position: relative;
+		z-index: 11;
+		&:focus-visible {
+			outline-offset: toRem(2);
+			outline: toRem(2) solid var(--accent-color);
+		}
+	}
+	// .header__menu
+	&__menu {
+		position: relative;
+		z-index: 10;
+		flex: 1 0 auto;
+		justify-items: center;
+	}
+	// .header__actions
+	&__actions {
+		position: relative;
+		z-index: 15;
+	}
+	// .header__icon
+	&__icon {
+	}
+}
+.logo {
+	// .logo__figure
+	&__figure {
+	}
+	// .logo__label
+	&__label {
+		@media (max-width: toEm(1080)) and (min-width: toEm(941)) {
+			display: none;
+		}
+	}
+}
+.menu {
+	// .menu__body
+	&__body {
+		@media (max-width: toEm(940)) {
+			position: fixed;
+			left: -100%;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: var(--accent-color);
+			padding-inline: toRem(15);
+			padding-bottom: toRem(40);
+			padding-top: toRem(100);
+			transition: left 0.3s ease;
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				@include adaptiveValue("height", 85, 60);
+				top: 0;
+				left: -100%;
+				background-color: var(--white-color);
+				z-index: -1;
+				transition: left 0.3s ease;
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		row-gap: toRem(5);
+		font-weight: 500;
+		line-height: 1.1667;
+		@include adaptiveValue("column-gap", 34, 10);
+		@include adaptiveValue("padding-top", 13, 0);
+		@include adaptiveValue("padding-bottom", 14, 0);
+		@media (max-width: toEm(940)) {
+			display: flex;
+			flex-direction: column;
+			gap: toRem(20);
+			font-size: toRem(22);
+			font-weight: 300;
+			align-items: flex-start;
+			align-self: self-start;
+			color: var(--white-color);
+			&:not(:last-child) {
+				margin-bottom: toRem(40);
+			}
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+	}
+}
+.actions-header {
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 10;
+	@include adaptiveValue("column-gap", 30, 10);
+	@media (max-width: toEm(380)) {
+		display: flex;
+		flex-direction: column;
+		row-gap: toRem(10);
+	}
+	// .actions-header__link
+	&__link {
+		font-weight: 500;
+		text-align: center;
+		line-height: 1.1667;
+		&:focus-visible {
+			outline-offset: toRem(2);
+			outline: toRem(2) solid var(--accent-color);
+		}
+		@media (max-width: toEm(580)) {
+			flex-grow: 1;
+		}
+		@media (max-width: toEm(380)) {
+			align-self: stretch;
+		}
+		&--login {
+			@media (max-width: toEm(580)) {
+				color: var(--white-color);
+			}
+		}
+	}
+	// .actions-header__icon
+	&__icon {
+	}
+}
+//========================================================================================================================
+//Burger==================================================================================================================
+.icon-menu {
+	display: none;
+	@media (max-width: toEm(940)) {
+		display: block;
+		position: relative;
+		width: toRem(26);
+		height: toRem(20);
+		z-index: 20;
+		flex: 0 0 toRem(26);
+		// @media (any-hover: none) {
+		// 	cursor: default;
+		// }
+		span,
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			right: 0;
+			background-color: var(--accent-color);
+			transition:
+				transform 0.3s ease,
+				top 0.3s ease,
+				width 0.3s ease,
+				background-color 0.3s ease;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				top: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
