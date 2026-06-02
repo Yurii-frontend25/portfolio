@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Shanti:wght@400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Carme:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Product-card</title>
+</head>
+
+<body>
+	<div class="wrapper" id="start">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<div class="header__menu menu">
+						<button class="menu__icon icon-menu" type="button"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a class="menu__link link" href="#"><span>About Us</span></a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link link" href="#"><span>Catalog</span></a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link link" href="#"><span>Contacts</span></a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__logo logo">
+						<img class="logo__img" src="img/logo.svg" alt="Logo Blossomia">
+					</div>
+					<div class="header__actions actions">
+						<ul class="actions__items">
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--search" src="img/action/search.svg" alt="Icon search">
+								</a>
+							</li>
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--favorite" src="img/action/favorite.svg" alt="Icon heart">
+								</a>
+							</li>
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--user" src="img/action/user.svg" alt="Icon user">
+								</a>
+							</li>
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--cart" src="img/action/cart.svg" alt="Icon cart">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__bottom header__bottom--margin-product">
+					<div class="header__breadcrumbs breadcrumbs-header">
+						<ul class="breadcrumbs-header__list">
+							<li class="breadcrumbs-header__item">
+								<a class="breadcrumbs-header__link" href="#"><span>Home</span></a>
+							</li>
+							<li class="breadcrumbs-header__item">
+								<a class="breadcrumbs-header__link" href="#">
+									<span>Catalog</span>
+								</a>
+							</li>
+							<li class="breadcrumbs-header__item">
+								<a class="breadcrumbs-header__link active-bc" href="#">Blooming Symphony </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__blooming blooming">
+				<div class="blooming__container">
+					<div class="blooming__columns">
+						<div class="blooming__column">
+							<figure class="blooming__image blooming__image--big">
+								<picture>
+									<source srcset="img/products-card/big-img.webp" type="image/webp">
+									<img class="blooming__img blooming__img--big" src="img/products-card/big-img.jpg" alt="image">
+								</picture>
+							</figure>
+						</div>
+						<div class="blooming__column">
+							<h1 class="blooming__title section-title section-title--60 anim-title anim"> Blooming Symphony</h1>
+							<div class="blooming__info">
+								<div class="blooming__price">100 Euro</div>
+								<div class="blooming__box-text">
+									<h5 class="blooming__heading">Composition of the bouquet</h5>
+									<p> Harmonious blend of vibrant roses, fragrant lavender, delicate baby's breath, and elegant eucalyptus leaves, all artfully hand-tied with a satin ribbon.</p>
+								</div>
+								<div class="blooming__box-text">
+									<h5 class="blooming__heading">Delivery</h5>
+									<p> Bouquets are delivered in a stylish craft shipping box with an aqua box for freshness.</p>
+								</div>
+							</div>
+							<div class="blooming__quantity">
+								<h5 class="blooming__heading">Quantity</h5>
+								<form class="blooming__actions actions-blooming" action="#">
+									<div class="actions-blooming__quantity quantity">
+										<button class="quantity__button quantity__button--icon-minus" type="button"></button>
+										<input class="quantity__input" type="number" min="0" value="1">
+										<button class="quantity__button quantity__button--icon-plus" type="button"></button>
+									</div>
+									<button class="actions-blooming__button btn btn--big" type="submit">
+										<span>Add to bag</span>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="page__products products">
+				<div class="products__container">
+					<div class="products__lable">See Also</div>
+					<div class="products__items">
+						<div class="products__item"><!-- anim-blooming-info-->
+							<a class="products__link" href="#">
+								<figure class="products__image products__image--small">
+									<picture>
+										<source srcset="img/products-card/small-01.webp" type="image/webp">
+										<img class="products__img products__img--small" src="img/products-card/small-01.jpg" alt="image">
+									</picture>
+								</figure>
+							</a>
+							<div class="products__info">
+								<h3 class="products__title">
+									<a class="products__link-title" href="#"> Whispering Petals </a>
+								</h3>
+								<div class="products__price">110 Euro</div>
+							</div>
+						</div>
+						<div class="products__item"><!-- anim-blooming-info-->
+							<a class="products__link" href="#">
+								<figure class="products__image products__image--small">
+									<picture>
+										<source srcset="img/products-card/small-02.webp" type="image/webp">
+										<img class="products__img products__img--small" src="img/products-card/small-02.jpg" alt="image">
+									</picture>
+								</figure>
+							</a>
+							<div class="products__info">
+								<h3 class="products__title">
+									<a class="products__link-title" href="#">Enchanting Bloomscape</a>
+								</h3>
+								<div class="products__price">115 Euro</div>
+							</div>
+						</div>
+						<div class="products__item"><!-- anim-blooming-info-->
+							<a class="products__link" href="#">
+								<figure class="products__image products__image--small">
+									<picture>
+										<source srcset="img/products-card/small-03.webp" type="image/webp">
+										<img class="products__img products__img--small" src="img/products-card/small-03.jpg" alt="image">
+									</picture>
+								</figure>
+							</a>
+							<div class="products__info">
+								<h3 class="products__title">
+									<a class="products__link-title" href="#">Floral Symphony</a>
+								</h3>
+								<div class="products__price">90 Euro</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content column">
+					<div class="column__box">
+						<div class="column__image">
+							<a class="column__link" href="#start">
+								<img class="column__img" src="img/logo.svg" alt="Logo Blossomia">
+							</a>
+						</div>
+						<ul class="item-social social">
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Instagram profile" rel="noopener noreferrer">
+									<img src="img/social/instagram.svg" alt="Instagram Icon">
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Facebook profile" rel="noopener noreferrer">
+									<img src="img/social/facebook.svg" alt="Facebook Icon">
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Mail profile" rel="noopener noreferrer">
+									<img src="img/social/mail.svg" alt="Mail Icon">
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Telegram profile" rel="noopener noreferrer">
+									<img src="img/social/telegram.svg" alt="Telegram Icon">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="column__items">
+						<div class="column__item column__item--categories">
+							<h5 class="column__title">Categories</h5>
+							<ul class="column__list list-column">
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">About Us</a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">Catalog</a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">Contact</a>
+								</li>
+							</ul>
+						</div>
+						<div class="column__item column__item--support">
+							<h5 class="column__title">Support</h5>
+							<ul class="column__list list-column">
+								<li class="list-column__item">
+									<a class="list-column__link" href="#"> Delivery & Payment </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#"> Help & Support </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#"> 24/7H Services </a>
+								</li>
+							</ul>
+						</div>
+						<div class="column__item column__item--info">
+							<div class="column__title">+123 456 789</div>
+							<ul class="column__list list-column">
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">blossomia@gmail.com </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link link" href="#"> 789 Spring Lane Roseville, <br> CA 98765 United States </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link link" href="#"> 10:00 - 19:00 </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copy"> Blossomia ©Copyright 2023. All rights reserved. </div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

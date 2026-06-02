@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Shanti:wght@400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Carme:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Catalog</title>
+</head>
+
+<body>
+	<div class="wrapper" id="start">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<div class="header__menu menu">
+						<button class="menu__icon icon-menu" type="button">
+							<span></span>
+						</button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a class="menu__link link" href="#">
+										<span>About Us</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link link" href="#">
+										<span>Catalog</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link link" href="#">
+										<span>Contacts</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__logo logo">
+						<img class="logo__img" src="img/logo.svg" alt="Logo Blossomia">
+					</div>
+					<div class="header__actions actions">
+						<ul class="actions__items">
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--favorite" src="img/action/favorite.svg" alt="Icon heart">
+								</a>
+							</li>
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--user" src="img/action/user.svg" alt="Icon user">
+								</a>
+							</li>
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--cart" src="img/action/cart.svg" alt="Icon cart">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__bottom header__bottom--margin-catalog">
+					<div class="header__breadcrumbs breadcrumbs-header">
+						<ul class="breadcrumbs-header__list">
+							<li class="breadcrumbs-header__item">
+								<a class="breadcrumbs-header__link" href="#"><span>Home</span></a>
+							</li>
+							<li class="breadcrumbs-header__item">
+								<a class="breadcrumbs-header__link active-bc" href="#"> Catalog </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__catalog catalog catalog--margin">
+				<div class="catalog__container">
+					<h2 class="catalog__title section-title section-title--50 anim anim-title"> Catalog </h2>
+					<div class="catalog__categories categories-header">
+						<div class="categories-header__column">
+							<label class="categories-header__item">
+								<select class="categories-header__select" name="form[color]">
+									<option class="categories-header__element">Color</option>
+									<option class="categories-header__element" value="red">color</option>
+									<option class="categories-header__element" value="white">color</option>
+								</select>
+							</label>
+							<label class="categories-header__item">
+								<select class="categories-header__select" name="form[type]">
+									<option class="categories-header__element">Type</option>
+									<option class="categories-header__element" value="type">Type</option>
+									<option class="categories-header__element" value="type">Type</option>
+								</select>
+							</label>
+							<label class="categories-header__item">
+								<select class="categories-header__select" name="form[collection]">
+									<option class="categories-header__element">Collection</option>
+									<option class="categories-header__element" value="type">Collection</option>
+									<option class="categories-header__element" value="type">Collection</option>
+								</select>
+							</label>
+							<label class="categories-header__item">
+								<select class="categories-header__select" name="form[price]">
+									<option class="categories-header__element">Price</option>
+									<option class="categories-header__element" value="type">price</option>
+									<option class="categories-header__element" value="type">price</option>
+								</select>
+							</label>
+						</div>
+						<div class="categories-header__column categories-header__column--right">
+							<label class="categories-header__sort-item">
+								<select class="categories-header__select" name="form[sort]">
+									<option class="categories-header__element" hidden>Sort by</option>
+									<option class="categories-header__element" value="color">Color</option>
+									<option class="categories-header__element" value="type">Type</option>
+									<option class="categories-header__element" value="price">Price</option>
+									<option class="categories-header__element" value="collection">Collection</option>
+								</select>
+							</label>
+						</div>
+					</div>
+					<div class="catalog__gallery gallery-catalog">
+						<div class="gallery-catalog__rows">
+							<div class="gallery-catalog__row-top">
+								<div class="gallery-catalog__inner">
+									<a class="gallery-catalog__link" href="#">
+										<figure class="gallery-catalog__image gallery-catalog__image--small">
+											<picture>
+												<source srcset="img/catalog-main/small-img-01.jpg" type="image/webp">
+												<img class="gallery-catalog__img gallery-catalog__img--small" src="img/catalog-main/small-img-01.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+									<div class="gallery-catalog__info">
+										<h3 class="gallery-catalog__title">
+											<a class="gallery-catalog__link-title" href="#"> Eternal Elegance </a>
+										</h3>
+										<div class="gallery-catalog__price">80 Euro</div>
+									</div>
+								</div>
+								<div class="gallery-catalog__inner">
+									<a class="gallery-catalog__link" href="#">
+										<figure class="gallery-catalog__image gallery-catalog__image--small">
+											<picture>
+												<source srcset="img/catalog-main/small-img-02.jpg" type="image/webp">
+												<img class="gallery-catalog__img gallery-catalog__img--small" src="img/catalog-main/small-img-02.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+									<div class="gallery-catalog__info">
+										<h3 class="gallery-catalog__title">
+											<a class="gallery-catalog__link-title" href="#"> Dazzling Dreams </a>
+										</h3>
+										<div class="gallery-catalog__price">90 Euro</div>
+									</div>
+								</div>
+								<div class="gallery-catalog__inner">
+									<a class="gallery-catalog__link" href="#">
+										<figure class="gallery-catalog__image gallery-catalog__image--small">
+											<picture>
+												<source srcset="img/catalog-main/small-img-03.jpg" type="image/webp">
+												<img class="gallery-catalog__img gallery-catalog__img--small" src="img/catalog-main/small-img-03.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+									<div class="gallery-catalog__info">
+										<h3 class="gallery-catalog__title">
+											<a class="gallery-catalog__link-title" href="#"> Serenity Blooms </a>
+										</h3>
+										<div class="gallery-catalog__price">60 Euro</div>
+									</div>
+								</div>
+							</div>
+							<div class="gallery-catalog__row-middle">
+								<div class="gallery-catalog__inner">
+									<a class="gallery-catalog__link gallery-catalog__link--big" href="#">
+										<figure class="gallery-catalog__image gallery-catalog__image--big">
+											<picture>
+												<source srcset="img/catalog-main/big-img.jpg" type="image/webp">
+												<img class="gallery-catalog__img gallery-catalog__img--big" src="img/catalog-main/big-img.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+									<div class="gallery-catalog__info">
+										<h3 class="gallery-catalog__title">
+											<a class="gallery-catalog__link-title" href="#"> Enchanting Oasis </a>
+										</h3>
+										<div class="gallery-catalog__price">105 Euro</div>
+									</div>
+								</div>
+								<div class="gallery-catalog__inner">
+									<a class="gallery-catalog__link" href="#">
+										<figure class="gallery-catalog__image gallery-catalog__image--nml">
+											<picture>
+												<source srcset="img/catalog-main/small-img-04.jpg" type="image/webp">
+												<img class="gallery-catalog__img gallery-catalog__img--nml" src="img/catalog-main/small-img-04.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+									<div class="gallery-catalog__info">
+										<h3 class="gallery-catalog__title">
+											<a class="gallery-catalog__link-title" href="#"> Radiant Rhapsody </a>
+										</h3>
+										<div class="gallery-catalog__price">55 Euro</div>
+									</div>
+								</div>
+								<div class="gallery-catalog__inner">
+									<a class="gallery-catalog__link" href="#">
+										<figure class="gallery-catalog__image gallery-catalog__image--nml">
+											<picture>
+												<source srcset="img/catalog-main/small-img-05.jpg" type="image/webp">
+												<img class="gallery-catalog__img gallery-catalog__img--nml" src="img/catalog-main/small-img-05.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+									<div class="gallery-catalog__info">
+										<h3 class="gallery-catalog__title">
+											<a class="gallery-catalog__link-title" href="#"> Burst of Bliss </a>
+										</h3>
+										<div class="gallery-catalog__price">95 Euro</div>
+									</div>
+								</div>
+							</div>
+							<div class="gallery-catalog__row-bottom">
+								<div class="gallery-catalog__inner">
+									<a class="gallery-catalog__link" href="#">
+										<figure class="gallery-catalog__image gallery-catalog__image--small">
+											<picture>
+												<source srcset="img/catalog-main/small-img-06.jpg" type="image/webp">
+												<img class="gallery-catalog__img gallery-catalog__img--small" src="img/catalog-main/small-img-06.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+									<div class="gallery-catalog__info">
+										<h3 class="gallery-catalog__title">
+											<a class="gallery-catalog__link-title" href="#"> Scented Splendor </a>
+										</h3>
+										<div class="gallery-catalog__price">77 Euro</div>
+									</div>
+								</div>
+								<div class="gallery-catalog__inner">
+									<a class="gallery-catalog__link" href="#">
+										<figure class="gallery-catalog__image gallery-catalog__image--small">
+											<picture>
+												<source srcset="img/catalog-main/small-img-07.jpg" type="image/webp">
+												<img class="gallery-catalog__img gallery-catalog__img--small" src="img/catalog-main/small-img-07.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+									<div class="gallery-catalog__info">
+										<h3 class="gallery-catalog__title">
+											<a class="gallery-catalog__link-title" href="#"> Harmony Bouquet </a>
+										</h3>
+										<div class="gallery-catalog__price">55 Euro</div>
+									</div>
+								</div>
+								<div class="gallery-catalog__inner">
+									<a class="gallery-catalog__link" href="#">
+										<figure class="gallery-catalog__image gallery-catalog__image--small">
+											<picture>
+												<source srcset="img/catalog-main/small-img-08.jpg" type="image/webp">
+												<img class="gallery-catalog__img gallery-catalog__img--small" src="img/catalog-main/small-img-08.jpg" alt="image">
+											</picture>
+										</figure>
+									</a>
+									<div class="gallery-catalog__info">
+										<h3 class="gallery-catalog__title">
+											<a class="gallery-catalog__link-title" href="#"> Petals of Joy </a>
+										</h3>
+										<div class="gallery-catalog__price">65 Euro</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="gallery-pages pages">
+							<li class="pages__item">
+								<a class="pages__link btn btn--small" href="#"><span></span></a>
+							</li>
+							<li class="pages__item">
+								<a class="pages__link" href="#">1</a>
+							</li>
+							<li class="pages__item">
+								<a class="pages__link" href="#">2</a>
+							</li>
+							<li class="pages__item">
+								<a class="pages__link" href="#">3</a>
+							</li>
+							<li class="pages__item">
+								<a class="pages__link btn btn--small" href="#"><span></span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content column">
+					<div class="column__box">
+						<div class="column__image">
+							<a class="column__link" href="#start">
+								<img class="column__img" src="img/logo.svg" alt="Logo Blossomia">
+							</a>
+						</div>
+						<ul class="item-social social">
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Instagram profile" rel="noopener noreferrer">
+									<img src="img/social/instagram.svg" alt="Instagram Icon">
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Facebook profile" rel="noopener noreferrer">
+									<img src="img/social/facebook.svg" alt="Facebook Icon">
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Mail profile" rel="noopener noreferrer">
+									<img src="img/social/mail.svg" alt="Mail Icon">
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Telegram profile" rel="noopener noreferrer">
+									<img src="img/social/telegram.svg" alt="Telegram Icon">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="column__items">
+						<div class="column__item column__item--categories">
+							<h5 class="column__title">Categories</h5>
+							<ul class="column__list list-column">
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">About Us</a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">Catalog</a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">Contact</a>
+								</li>
+							</ul>
+						</div>
+						<div class="column__item column__item--support">
+							<h5 class="column__title">Support</h5>
+							<ul class="column__list list-column">
+								<li class="list-column__item">
+									<a class="list-column__link" href="#"> Delivery & Payment </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#"> Help & Support </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#"> 24/7H Services </a>
+								</li>
+							</ul>
+						</div>
+						<div class="column__item column__item--info">
+							<div class="column__title">+123 456 789</div>
+							<ul class="column__list list-column">
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">blossomia@gmail.com </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link link" href="#"> 789 Spring Lane Roseville, <br> CA 98765 United States </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link link" href="#"> 10:00 - 19:00 </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copy"> Blossomia ©Copyright 2023. All rights reserved. </div>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="js/main.js"></script>
+
+</html>

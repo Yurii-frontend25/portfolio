@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Shanti:wght@400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Carme:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Basket</title>
+</head>
+
+<body>
+	<div class="wrapper" id="start">
+		<header class="header header--margin">
+			<div class="header__container">
+				<div class="header__body">
+					<div class="header__menu menu">
+						<button class="menu__icon icon-menu" type="button"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a class="menu__link link .anim" href="#"><span>About Us</span></a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link link" href="catalog.html"><span>Catalog</span></a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link link" href="#"><span>Contacts</span></a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__logo logo">
+						<img class="logo__img" src="img/logo.svg" alt="Logo Blossomia">
+					</div>
+					<div class="header__actions actions">
+						<ul class="actions__items">
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--search" src="img/action/search.svg" alt="Icon search">
+								</a>
+							</li>
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--favorite" src="img/action/favorite.svg" alt="Icon heart">
+								</a>
+							</li>
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--user" src="img/action/user.svg" alt="Icon user">
+								</a>
+							</li>
+							<li class="actions__item">
+								<a class="actions__link" href="#">
+									<img class="actions__img actions__img--cart" src="img/action/cart.svg" alt="Icon cart">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="basket">
+			<div class="basket__container">
+				<div class="basket__content">
+					<div class="basket__column column-basket">
+						<div class="column-basket__label anim-title anim">Basket</div>
+						<div class="column-basket__items">
+							<div class="column-basket__item">
+								<div class="column-basket__content">
+									<div class="column-basket__image">
+										<figure class="column-basket__picture">
+											<picture>
+												<source srcset="img/basket/img-01-1x.webp 1x, img/basket/img-01-2x.webp 2x, img/basket/img-01-3x.webp 3x" type="image/webp">
+												<img class="column-basket__img" src="img/basket/img-01.webp" alt="image">
+											</picture>
+										</figure>
+									</div>
+									<div class="column-basket__info">
+										<div class="column-basket__inner">
+											<div class="column-basket__cell">
+												<h3 class="column-basket__name column-basket__name--margin">
+													<a class="column-basket__link-name" href="#">Garden Medley</a>
+												</h3>
+												<div class="column-basket__text">
+													<p>Vibrant roses, delicate lilies, sprigs of fragrant lavender, all wrapped in lush greenery</p>
+												</div>
+											</div>
+											<div class="column-basket__price"> 100€ </div>
+										</div>
+										<form class="column-basket__actions actions-column" action="#">
+											<div class="actions-column__quantity quantity-action">
+												<button class="quantity-action__button quantity-action__button--icon-minus" type="button"></button>
+												<input class="quantity-action__input" value="1" min="0" type="number">
+												<button class="quantity-action__button quantity-action__button--icon-plus" type="button"></button>
+											</div>
+											<button class="actions-column__icon" type="button"><span></span></button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="column-basket__item">
+								<div class="column-basket__content">
+									<div class="column-basket__image">
+										<figure class="column-basket__picture">
+											<picture>
+												<source srcset="img/basket/img-02-1x.webp 1x, img/basket/img-02-2x.webp 2x, img/basket/img-02-3x.webp 3x" type="image/webp">
+												<img class="column-basket__img" src="img/basket/img-02.webp" alt="image">
+											</picture>
+										</figure>
+									</div>
+									<div class="column-basket__info">
+										<div class="column-basket__inner">
+											<div class="column-basket__cell">
+												<h3 class="column-basket__name column-basket__name--margin">
+													<a class="column-basket__link-name" href="#">Bloom Fusion</a>
+												</h3>
+												<div class="column-basket__text">
+													<p> Mix of colorful daisies, elegant tulips, and whimsical baby's breath, complemented by fresh green foliage</p>
+												</div>
+											</div>
+											<div class="column-basket__price">90€</div>
+										</div>
+										<form class="column-basket__actions actions-column" action="#">
+											<div class="actions-column__quantity quantity-action">
+												<button class="quantity-action__button quantity-action__button--icon-minus" type="button"></button>
+												<input class="quantity-action__input" value="1" min="0" type="number">
+												<button class="quantity-action__button quantity-action__button--icon-plus" type="button"></button>
+											</div>
+											<button class="actions-column__icon" type="button"><span></span></button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="basket__column column-basket">
+						<div class="column-basket__label column-basket__label--total anim-title anim">Total</div>
+						<div class="column-basket__box">
+							<div class="column-basket__top-content">
+								<div class="column-basket__info-row">
+									<h3 class="column-basket__name">
+										<a class="column-basket__link-name" href="#">Garden Medley</a>
+									</h3>
+									<div class="column-basket__price">100€</div>
+								</div>
+								<div class="column-basket__info-row">
+									<div class="column-basket__name">
+										<a class="column-basket__link-name" href="#">Bloom Fusion</a>
+									</div>
+									<div class="column-basket__price">90€</div>
+								</div>
+							</div>
+							<div class="column-basket__bottom-content">
+								<div class="column-basket__delivery">
+									<div class="column-basket__name column-basket__name--delivery">Delivery:</div>
+									<div class="column-basket__price">Free</div>
+								</div>
+								<div class="column-basket__sale">
+									<div class="column-basket__name column-basket__name--sale">Sale:</div>
+									<div class="column-basket__price">30€</div>
+								</div>
+								<div class="column-basket__total">
+									<div class="column-basket__name column-basket__name--total">Total:</div>
+									<div class="column-basket__price">160€</div>
+								</div>
+								<div class="column-basket__btn">
+									<button class="column-basket__button btn btn--mid" type="submit"><span>Pay</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content column">
+					<div class="column__box">
+						<div class="column__image">
+							<a class="column__link" href="#start">
+								<img class="column__img" src="img/logo.svg" alt="Logo Blossomia">
+							</a>
+						</div>
+						<ul class="item-social social">
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Instagram profile" rel="noopener noreferrer">
+									<img src="img/social/instagram.svg" alt="Instagram Icon">
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Facebook profile" rel="noopener noreferrer">
+									<img src="img/social/facebook.svg" alt="Facebook Icon">
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Mail profile" rel="noopener noreferrer">
+									<img src="img/social/mail.svg" alt="Mail Icon">
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#" target="_blank" aria-label="Telegram profile" rel="noopener noreferrer">
+									<img src="img/social/telegram.svg" alt="Telegram Icon">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="column__items">
+						<div class="column__item column__item--categories">
+							<h5 class="column__title">Categories</h5>
+							<ul class="column__list list-column">
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">About Us</a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">Catalog</a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">Contact</a>
+								</li>
+							</ul>
+						</div>
+						<div class="column__item column__item--support">
+							<h5 class="column__title">Support</h5>
+							<ul class="column__list list-column">
+								<li class="list-column__item">
+									<a class="list-column__link" href="#"> Delivery & Payment </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#"> Help & Support </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link" href="#"> 24/7H Services </a>
+								</li>
+							</ul>
+						</div>
+						<div class="column__item column__item--info">
+							<div class="column__title">+123 456 789</div>
+							<ul class="column__list list-column">
+								<li class="list-column__item">
+									<a class="list-column__link" href="#">blossomia@gmail.com </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link link" href="#"> 789 Spring Lane Roseville, <br> CA 98765 United States </a>
+								</li>
+								<li class="list-column__item">
+									<a class="list-column__link link" href="#"> 10:00 - 19:00 </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copy"> Blossomia ©Copyright 2023. All rights reserved. </div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="js/main.js">
+	</script>
+</body>
+
+</html>

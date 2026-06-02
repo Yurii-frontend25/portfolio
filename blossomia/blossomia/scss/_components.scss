@@ -1,0 +1,211 @@
+@use "sass:math";
+@use "settings" as *;
+@use "mixins" as *;
+// ==============================================================
+.link {
+   color: $mainColor;
+   & span:hover {
+      // color: rgba(245, 243, 247, 0.558);
+      // color: $btnColor;
+   }
+   span {
+      position: relative;
+      display: inline-block;
+      transition: color 0.4s ease;
+   }
+   span::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: toRem(-2);
+      width: 0%;
+      background-color: $mainColor;
+      height: toRem(2);
+      transition: width 0.3s ease;
+      transform: translate(-50%, 0%);
+   }
+   &:hover span::after {
+      width: 100%;
+   }
+}
+// ==============================================================
+.btn {
+   display: flex;
+   border: toRem(1) solid $btnColor;
+   transition: background-color 0.5s ease;
+   padding: toRem(10);
+   flex-basis: toRem(203);
+   @media (any-hover: hover), (any-pointer: fine) {
+      &:hover {
+         background-color: $btnColor;
+      }
+   }
+   span {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      justify-content: center;
+      background-color: $btnColor;
+      padding: toRem(9) toRem(26);
+      column-gap: toRem(7);
+      line-height: 1.295;
+      font-size: toRem(17);
+   }
+   span::after {
+      content: "";
+      background: url("../img/discover/arrow.svg") center / cover no-repeat;
+      width: toRem(23);
+      height: toRem(14);
+   }
+
+   &--small {
+      padding: toRem(10) toRem(8);
+      span {
+         padding: toRem(7.5) toRem(4);
+      }
+      span::after {
+         content: "";
+         background: url("../img/discover/arrow.svg") center / cover no-repeat;
+         width: toRem(17);
+         height: toRem(10);
+      }
+   }
+   &--big {
+      flex-basis: toRem(328);
+      padding: toRem(9) toRem(15);
+      span::after {
+         content: "";
+         background: url("../img/discover/arrow.svg") center / cover no-repeat;
+         display: none;
+      }
+   }
+   &--mid {
+      padding: toRem(7.8) toRem(13.5);
+      span {
+         padding: toRem(8.5) toRem(82);
+         font-size: toRem(19);
+      }
+      span::after {
+         content: "";
+         background: url("../img/discover/arrow.svg") center / cover no-repeat;
+         display: none;
+      }
+   }
+}
+// ==============================================================
+.section-title {
+   font-family: $fontFamily;
+   color: $mainColor;
+   @include adaptiveValue("font-size", 70, 29);
+   @include adaptiveValue("padding-top", 100, 20);
+   // @include adaptiveValue("padding-bottom", 10, 5);
+   & {
+      line-height: 1.1;
+      font-weight: 300;
+   }
+   &--60 {
+      @include adaptiveValue("font-size", 60, 28);
+      @include adaptiveValue("padding-top", 35, 5);
+      // @include adaptiveValue("padding-bottom", 10, 5);
+      // @include adaptiveValue("margin-bottom", 20, 5);
+      & {
+         line-height: 1.1;
+      }
+   }
+   &--60-margin {
+      // margin-bottom: toRem(20);
+      @include adaptiveValue("margin-bottom", 20, 0);
+   }
+   &--50 {
+      @include adaptiveValue("font-size", 50, 28);
+      // @include adaptiveValue("letter-spacing", 3, 1);
+      & {
+         padding: toRem(0);
+         line-height: 1.1;
+      }
+   }
+}
+// ==============================================================
+.active-bc {
+   color: $linkTitleHover;
+}
+// ==============================================================
+.anim-title {
+   transform: translate(0, 20%);
+   opacity: 0;
+}
+.anim-title.active {
+   transform: translate(0px, 0px);
+   opacity: 1;
+   transition: all 0.8s ease 1s;
+}
+// ==============================================================
+.anim-discover {
+   transform: translate(0, 20%);
+   opacity: 0;
+}
+.anim-discover.active {
+   transform: translate(-100px, 0px);
+   opacity: 1;
+   transition: all 0.7s ease 1s;
+}
+// ==============================================================
+.anim-floral-top {
+   scale: 0;
+}
+.anim-floral-top.active {
+   transition: scale 1.3s ease 1s;
+   scale: 1;
+}
+// ==============================================================
+.anim-blooming-info {
+   transform: translate(50%, 0%);
+   opacity: 0;
+}
+.anim-blooming-info.active {
+   transform: translate(0%, 0%);
+   transition: all 1s ease 1s;
+   opacity: 1;
+}
+// ==============================================================
+.anim-popular-move {
+   transform: translate(50%, 0%);
+   opacity: 0;
+}
+.anim-popular-move.active {
+   transform: translate(0%, 0%);
+   transition: all 1.8s ease;
+   opacity: 1;
+}
+// ==============================================================
+.anim-memories-move {
+   transform: translate(-30%, 0%);
+   opacity: 0;
+}
+.anim-memories-move.active {
+   transform: translate(0%, 0%);
+   transition: all 1.8s ease;
+   opacity: 1;
+}
+// ==============================================================
+.anim-purchase-move {
+   // animation: purchase-move 2s ease;
+   opacity: 0;
+   transition: all 1s ease;
+   transform: translate(0%, 100%);
+   @keyframes purchase-move {
+      0% {
+         translate: 0% 0%;
+         opacity: 0;
+      }
+      100% {
+         translate: 0% 100%;
+         opacity: 1;
+      }
+   }
+}
+.anim-purchase-move.active {
+   transform: translate(0%, 0%);
+   opacity: 1;
+}

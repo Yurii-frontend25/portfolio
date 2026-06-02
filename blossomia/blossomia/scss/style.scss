@@ -1,0 +1,53 @@
+@use "sass:math";
+// =========================================
+@use "_reset";
+@use "_iconfont";
+@use "_fonts";
+@use "_mixins" as *;
+@use "_settings" as *;
+// Parts====================================
+@use "_components";
+@use "_header";
+@use "_footer";
+// Pages====================================
+@use "_home";
+@use "_catalog";
+@use "_product-card";
+@use "_basket";
+// =========================================
+
+// =========================================
+html {
+   scroll-behavior: smooth;
+}
+body {
+   font-family: $fontFamily;
+   color: $mainColor;
+   background-color: $bgColor;
+   // font-size: #{$fontSize}px;
+   @include typography("M");
+}
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   overflow: clip;
+   min-height: 100%;
+}
+.wrapper > main {
+   flex-grow: 1;
+}
+// =========================================
+[class*="__container"] {
+   max-width: toRem($containerWidth);
+   padding-inline: toRem(math.div($containerPadding, 2));
+   margin: 0 auto;
+   @media (max-width: toEm(767.98)) {
+      padding-inline: toRem(40);
+   }
+   @media (max-width: toEm(380)) {
+      padding-inline: toRem(15);
+   }
+}
+[class*="--width"] {
+   max-width: toRem(1600);
+}
