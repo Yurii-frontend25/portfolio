@@ -8,32 +8,37 @@
 @use "_home";
 @use "_footer";
 // =========================================
-html {
-   scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
 }
 $fontSize: toRem(16);
 body {
-   // @include typography("S");
-   & {
-      color: $mainColor;
-      background-color: $bgColor;
-      font-family: $fontFamily;
-      font-size: $fontSize;
-   }
+	color: $mainColor;
+	background-color: $bgColor;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	overflow-x: hidden;
+	.menu-open & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
 }
 .wrapper {
-   display: flex;
-   flex-direction: column;
-   overflow: clip;
-   min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: clip;
+	min-height: 100%;
 }
 .wrapper > main {
-   flex-grow: 1;
+	flex-grow: 1;
 }
 // =========================================
 [class*="__container"] {
-   max-width: toRem($containerWidth);
-   padding-inline: toRem(math.div($containerPadding, 2));
-   margin: 0 auto;
+	max-width: toRem($containerWidth);
+	padding-inline: toRem(math.div($containerPadding, 2));
+	margin: 0 auto;
 }
 // =========================================
