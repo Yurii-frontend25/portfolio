@@ -17,8 +17,8 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: toRem(15);
-		@media (width <= toEm(561)) {
-			grid-template-columns: 1fr;
+		@media (width <= toEm(790)) {
+			grid-template-columns: 2fr;
 		}
 		@media (width > toEm(790)) {
 			display: flex;

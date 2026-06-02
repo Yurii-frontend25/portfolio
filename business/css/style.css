@@ -967,7 +967,6 @@ label {
     left: 0rem;
     width: 9.375rem;
     height: 9.375rem;
-    border: 1.25rem solid rgba(90, 84, 242, 0.1);
     bottom: 0rem;
   }
   .popup:not(:last-child) {
@@ -4681,9 +4680,9 @@ label {
   grid-template-columns: repeat(3, 1fr);
   gap: 0.9375rem;
 }
-@media (width <= 35.0625em) {
+@media (width <= 49.375em) {
   .footer__content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
 }
 @media (width > 49.375em) {
