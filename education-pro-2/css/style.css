@@ -633,6 +633,8 @@ label {
 .solution__learning {
   display: block;
   font-weight: 700;
+  line-height: 1;
+  opacity: 0.15;
 }
 @media (min-width: 76.875em) {
   .solution__learning {
@@ -648,10 +650,6 @@ label {
   .solution__learning {
     font-size: 24px;
   }
-}
-.solution__learning {
-  line-height: 1;
-  opacity: 0.15;
 }
 .solution__reading {
   display: block;
@@ -2616,10 +2614,11 @@ label {
     color: var(--violete-color);
   }
 }
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
-
 [class*=__container] {
   max-width: 76.875rem;
   padding-inline: 0.9375rem;

@@ -16,8 +16,10 @@
 @use "footer";
 // =========================================
 // =========================================
-html {
-	scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
 }
 [class*="__container"] {
 	max-width: toRem($containerWidth);

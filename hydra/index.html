@@ -61,9 +61,9 @@
 							<a class="hero__link btn btn--arrow" href="#">BUILD YOUR WORLD</a>
 						</div>
 						<figure class="hero__image">
-							<picture>
+							<picture class="hero__picture">
 								<source srcset="img/hero/hero-img.webp" type="image/webp">
-								<img src="img/hero/hero-img.jpg" alt="image">
+								<img src="img/hero/hero-img.jpg" alt="A woman donning a headset and headphones, immersed in listening or communicating through her device">
 							</picture>
 						</figure>
 					</div>
@@ -73,47 +73,59 @@
 								<div class="contacts__slide contacts__slide--visit swiper-slide">
 									<div class="contacts__body">
 										<div class="contacts__title"> Pay Us a Visit </div>
-										<a class="contacts__link" href="#"> Union St, Seattle, WA 98101, United States</a>
+										<address>
+											<a class="contacts__link" href="#"> Union St, Seattle, WA 98101, United States</a>
+										</address>
 									</div>
 								</div>
 								<div class="contacts__slide contacts__slide--call swiper-slide">
 									<div class="contacts__body">
 										<div class="contacts__title"> Give Us a Call </div>
-										<a class="contacts__link" href="#"> (110) 1111-1010 </a>
+										<address>
+											<a class="contacts__link" href="tel:+11011111010"> (110) 1111-1010 </a>
+										</address>
 									</div>
 								</div>
 								<div class="contacts__slide contacts__slide--email swiper-slide">
 									<div class="contacts__body">
 										<div class="contacts__title"> Send Us a Message </div>
-										<a class="contacts__link" href="#"> Contact@HydraVTech.com</a>
+										<address>
+											<a class="contacts__link" href="mailto:Contact@HydraVTech.com"> Contact@HydraVTech.com</a>
+										</address>
 									</div>
 								</div>
 								<div class="contacts__slide contacts__slide--visit swiper-slide">
 									<div class="contacts__body">
 										<div class="contacts__title"> Pay Us a Visit </div>
-										<a class="contacts__link" href="#"> Union St, Seattle, WA 98101, United States</a>
+										<address>
+											<a class="contacts__link" href="#"> Union St, Seattle, WA 98101, United States</a>
+										</address>
 									</div>
 								</div>
 								<div class="contacts__slide contacts__slide--call swiper-slide">
 									<div class="contacts__body">
 										<div class="contacts__title"> Give Us a Call </div>
-										<a class="contacts__link" href="#"> (110) 1111-1010 </a>
+										<address>
+											<a class="contacts__link" href="tel:+11011111010"> (110) 1111-1010 </a>
+										</address>
 									</div>
 								</div>
 								<div class="contacts__slide contacts__slide--email swiper-slide">
 									<div class="contacts__body">
 										<div class="contacts__title"> Send Us a Message </div>
-										<a class="contacts__link" href="#"> Contact@HydraVTech.com</a>
+										<address>
+											<a class="contacts__link" href="mailto:Contact@HydraVTech.com"> Contact@HydraVTech.com</a>
+										</address>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="contacts__controls controls-contacts">
-							<button class="controls-contacts__arrow controls-contacts__arrow--prev" type="button">
-								<img src="img/hero/icons/arrow-slider.svg" alt="arrow">
+							<button class="controls-contacts__arrow controls-contacts__arrow--prev" aria-label="Previous slide" type="button">
+								<img src="img/hero/icons/arrow-slider.svg" alt="" aria-hidden="true">
 							</button>
-							<button class="controls-contacts__arrow controls-contacts__arrow--next" type="button">
-								<img src="img/hero/icons/arrow-slider.svg" alt="arrow">
+							<button class="controls-contacts__arrow controls-contacts__arrow--next" aria-label="Next slide" type="button">
+								<img src="img/hero/icons/arrow-slider.svg" alt="" aria-hidden="true">
 							</button>
 						</div>
 					</div>
@@ -133,17 +145,17 @@
 								<figure class="introduction__image">
 									<picture>
 										<source srcset="img/about/hydra-vr.webp" type="image/webp">
-										<img src="img/about/hydra-vr.webp" alt="Hydra VR">
+										<img src="img/about/hydra-vr.jpg" alt="Hydra VR">
 									</picture>
 								</figure>
 							</div>
 							<div class="introduction__item">
 								<div class="introduction__content">
-									<h2 class="introduction__label title">ABOUT <span>HYDRA VR</span></h2>
+									<h3 class="introduction__label introduction__label--about title">ABOUT <span>HYDRA VR</span></h3>
 									<div class="introduction__text introduction__text--bottom">
 										<p>Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pha retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi n tempor.</p>
 									</div>
-									<a class="introduction__link btn" href="#">LET’S GET IN TOUCH</a>
+									<a class="introduction__link btn btn--center" target="_blank" href="#" rel="noopener noreferrer">LET’S GET IN TOUCH</a>
 								</div>
 							</div>
 						</div>
@@ -165,7 +177,7 @@
 									<figure class="cards__image">
 										<picture>
 											<source srcset="img/why/img-01.webp" type="image/webp">
-											<img src="img/why/img-01.jpg" alt="image">
+											<img src="img/why/img-01.jpg" alt="Girl immersed in virtual reality, wearing a VR headset and holding wireless controllers">
 										</picture>
 									</figure>
 									<h3 class="cards__heading">SIMULATION</h3>
@@ -178,7 +190,7 @@
 									<figure class="cards__image">
 										<picture>
 											<source srcset="img/why/img-02.webp" type="image/webp">
-											<img src="img/why/img-02.jpg" alt="image">
+											<img src="img/why/img-02.jpg" alt="Young man in a red hoodie testing virtual reality glasses">
 										</picture>
 									</figure>
 									<h3 class="cards__heading">EDUCATION</h3>
@@ -191,7 +203,7 @@
 									<figure class="cards__image">
 										<picture>
 											<source srcset="img/why/img-03.webp" type="image/webp">
-											<img src="img/why/img-03.jpg" alt="image">
+											<img src="img/why/img-03.jpg" alt="Girl in VR glasses meditating in lotus position">
 										</picture>
 									</figure>
 									<h3 class="cards__heading">SELF-CARE</h3>
@@ -204,7 +216,7 @@
 									<figure class="cards__image">
 										<picture>
 											<source srcset="img/why/img-04.webp" type="image/webp">
-											<img src="img/why/img-04.jpg" alt="image">
+											<img src="img/why/img-04.jpg" alt="Man in VR glasses">
 										</picture>
 									</figure>
 									<h3 class="cards__heading">OUTDOOR</h3>
@@ -282,33 +294,29 @@
 				<div class="partners__container">
 					<div class="partners__top">
 						<h3 class="partners__title title">TECHNOLOGIES & HARDWARE<span>USED BY HYDRA VR.</span></h3>
-						<figure class="partners__image">
-							<picture>
+						<div class="partners__image">
+							<picture class="partners__picture">
 								<source srcset="img/partners/bg-img-2.webp" type="image/webp">
-								<img src="img/partners/bg-img-2.jpg" alt="image">
+								<img class="partners__img" src="img/partners/bg-img-2.jpg" alt="A woman dressed in a black bodysuit is holding a camera, ready to take a photograph, showcasing her artistic intent">
 							</picture>
-						</figure>
-						<a class="partners__popup popup" href="#"><img src="img/arrow-big.svg" alt="image"></a>
+						</div>
+						<button class="partners__popup popup" type="button" aria-label="Open popup"><img src="img/arrow-big.svg" alt="" aria-hidden="true"></button>
 					</div>
 					<div class="partners__bottom">
 						<div class="partners__slider swiper">
 							<div class="partners__items swiper-wrapper">
-								<div class="partners__item swiper-slide"><img src="img/partners/img-01.svg" alt="#"></div>
-								<div class="partners__item swiper-slide"><img src="img/partners/img-02.svg" alt="#"></div>
-								<div class="partners__item swiper-slide"><img src="img/partners/img-03.svg" alt="#"></div>
-								<div class="partners__item swiper-slide"><img src="img/partners/img-04.svg" alt="#"></div>
-								<div class="partners__item swiper-slide"><img src="img/partners/img-01.svg" alt="#"></div>
-								<div class="partners__item swiper-slide"><img src="img/partners/img-02.svg" alt="#"></div>
-								<div class="partners__item swiper-slide"><img src="img/partners/img-03.svg" alt="#"></div>
-								<div class="partners__item swiper-slide"><img src="img/partners/img-03.svg" alt="#"></div>
+								<div class="partners__item swiper-slide"><img src="img/partners/img-01.svg" alt="Unreal company logo"></div>
+								<div class="partners__item swiper-slide"><img src="img/partners/img-02.svg" alt="Unity company logo"></div>
+								<div class="partners__item swiper-slide"><img src="img/partners/img-03.svg" alt="Oculus company logo"></div>
+								<div class="partners__item swiper-slide"><img src="img/partners/img-04.svg" alt="Vive company logo"></div>
 							</div>
 						</div>
 						<div class="partners__controls controls-partners">
-							<button class="controls-partners__arrow controls-partners__arrow--prev" type="button">
-								<img src="img/why/icon/arrow.svg" alt="arrow">
+							<button class="controls-partners__arrow controls-partners__arrow--prev" type="button" aria-label="Previous slide">
+								<img src="img/why/icon/arrow.svg" alt="" aria-hidden="true">
 							</button>
-							<button class="controls-partners__arrow controls-partners__arrow--next" type="button">
-								<img src="img/why/icon/arrow.svg" alt="arrow">
+							<button class="controls-partners__arrow controls-partners__arrow--next" type="button" aria-label="Next slide">
+								<img src="img/why/icon/arrow.svg" alt="" aria-hidden="true">
 							</button>
 						</div>
 					</div>
@@ -360,11 +368,11 @@
 							</div>
 						</div>
 						<div class="build__controls controls-build">
-							<button class="controls-build__arrow controls-build__arrow--prev" type="button">
-								<img src="img/why/icon/arrow.svg" alt="arrow">
+							<button class="controls-build__arrow controls-build__arrow--prev" type="button" aria-label="Previous slide">
+								<img src="img/why/icon/arrow.svg" alt="" aria-hidden="true">
 							</button>
-							<button class="controls-build__arrow controls-build__arrow--next" type="button">
-								<img src="img/why/icon/arrow.svg" alt="arrow">
+							<button class="controls-build__arrow controls-build__arrow--next" type="button" aria-label="Next slide">
+								<img src="img/why/icon/arrow.svg" alt="" aria-hidden="true">
 							</button>
 						</div>
 					</div>
@@ -377,21 +385,21 @@
 							<h2 class="experience__title title">JOIN HYDRA</h2>
 							<h3 class="experience__subtitle">Let’s Build Your VR Experience</h3>
 						</div>
-						<form class="experience__form form" action="#" enctype="multipart/form-data">
+						<form class="experience__form form" action="#">
 							<div class="form__group ">
 								<div class="form__item">
-									<input class="form__input" type="text" placeholder="First name" name="form[]" required autocomplete="off">
+									<input class="form__input" type="text" placeholder="First name" name="form[firstname]" required autocomplete="on">
 								</div>
 								<div class="form__item">
-									<input class="form__input" type="text" placeholder="Last name" name="form[]" required autocomplete="off">
+									<input class="form__input" type="text" placeholder="Last name" name="form[lastname]" required autocomplete="on">
 								</div>
 							</div>
 							<div class="form__group">
 								<div class="form__item">
-									<input class="form__input" type="email" placeholder="Email Address" name="form[email]" required autocomplete="off">
+									<input class="form__input" type="email" placeholder="Email Address" name="form[email]" required autocomplete="on">
 								</div>
 								<div class="form__item">
-									<input class="form__input" type="tel" placeholder="Phone number" name="form[phone]" required autocomplete="off">
+									<input class="form__input" type="tel" placeholder="Phone number" name="form[phone]" required autocomplete="on">
 								</div>
 							</div>
 							<div class="form__group">
@@ -429,7 +437,7 @@
 								<li class="list-footer__item"><a class="list-footer__link" href="#">HOW TO</a></li>
 								<li class="list-footer__item"><a class="list-footer__link" href="#">JOIN HYDRA</a></li>
 							</ul>
-							<img src="img/footer/decor-line.svg" alt="Decor line">
+							<img src="img/footer/decor-line.svg" alt="" aria-hidden="true">
 						</div>
 						<div class="footer__item">
 							<div class="footer__label">F.A.Q</div>
@@ -438,10 +446,10 @@
 								<li class="list-footer__item"><a class="list-footer__link" href="#">CONDITIONS</a></li>
 								<li class="list-footer__item"><a class="list-footer__link" href="#">LICENSES</a></li>
 							</ul>
-							<img src="img/footer/decor-line.svg" alt="Decor line">
+							<img src="img/footer/decor-line.svg" alt="" aria-hidden="true">
 						</div>
 						<div class="footer__item">
-							<img src="img/footer/decor-line.svg" alt="Decor line">
+							<img src="img/footer/decor-line.svg" alt="" aria-hidden="true">
 							<div class="footer__label footer__label--margin">SOCIALIZE WITH HYDRA</div>
 							<ul class="footer__list social">
 								<li class="social__item">
@@ -475,13 +483,13 @@
 									</a>
 								</li>
 							</ul>
-							<a class="footer__link btn" href="#">BUILD YOUR WORLD</a>
+							<a class="footer__link btn btn--center" href="#">BUILD YOUR WORLD</a>
 						</div>
 					</div>
 				</div>
 				<div class="footer__bottom">
 					<div class="footer__copy">
-						<p><span>2023 © HYDRA LANDING PAGE</span> <span>- BY ZINE. E. FALOUTI -</span> <span>ALL RIGHTS RESERVED</span> </p>
+						<p><span>2026 © HYDRA LANDING PAGE</span> <span>- BY ZINE. E. FALOUTI -</span> <span>ALL RIGHTS RESERVED</span> </p>
 					</div>
 				</div>
 			</div>

@@ -20,7 +20,7 @@ body {
 	font-family: $fontFamily;
 	font-size: $fontSize;
 	overflow-x: hidden;
-	.menu-open & {
+	&.menu-open {
 		overflow: hidden;
 		touch-action: none;
 		overscroll-behavior: none;

@@ -33,16 +33,16 @@
 		@include adaptiveValue("padding-right", 20, 10);
 		@include adaptiveValue("padding-bottom", 20, 10);
 		@include adaptiveValue("padding-left", 27, 13);
-		& {
-			box-shadow: toRem(0) toRem(20) toRem(35) rgba(0, 0, 0, 0.1);
-			background: $white;
-			border: toRem(1) solid $border-btn;
-			border-radius: toRem(10);
-			color: $grey11;
-			transition:
-				background-color 0.3s ease,
-				color 0.3s ease;
-		}
+
+		box-shadow: toRem(0) toRem(20) toRem(35) rgba(0, 0, 0, 0.1);
+		background: $white;
+		border: toRem(1) solid $border-btn;
+		border-radius: toRem(10);
+		color: $grey11;
+		transition:
+			background-color 0.3s ease,
+			color 0.3s ease;
+
 		// .explore__arrow--left
 		&--left {
 		}

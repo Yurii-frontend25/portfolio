@@ -35,14 +35,23 @@
 	line-height: 1.25;
 	position: relative;
 	transition: color 0.3s ease;
+	text-align: center;
+	display: inline-block;
+	@media (max-width: toEm(600)) {
+		max-width: toRem(380);
+		width: 100%;
+	}
+
 	@media (any-hover: hover), (any-pointer: fine) {
 		&:hover {
 			color: $mainColor;
 		}
 	}
-	@media (max-width: toEm(767.98)) {
-		width: 100%;
-		text-align: center;
+	&--center {
+		@media (max-width: toEm(600)) {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 	&--arrow {
 		&::after {
@@ -57,7 +66,7 @@
 			width: toRem(41);
 			height: toRem(33);
 			right: toRem(-80);
-			@media (max-width: toEm(767.98)) {
+			@media (max-width: toEm(600)) {
 				display: none;
 			}
 		}
@@ -72,11 +81,9 @@
 // =========================================
 .title {
 	@include adaptiveValue("font-size", 36, 26);
-	& {
-		font-weight: 700;
-		line-height: 1.22;
-		text-transform: uppercase;
-	}
+	font-weight: 700;
+	line-height: 1.22;
+	text-transform: uppercase;
 	span {
 		font-weight: 300;
 		display: block;
@@ -85,7 +92,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(15);
-		@media (max-width: toEm(360)) {
+		@media (max-width: toEm(430)) {
 			text-align: center;
 		}
 		span {
@@ -100,12 +107,10 @@
 			background-size: cover;
 			@include adaptiveValue("left", 280, 220);
 			@include adaptiveValue("width", 228, 100);
-			& {
-				top: 50%;
-				translate: 0 -50%;
-				height: toRem(33);
-			}
-			@media (max-width: toEm(360)) {
+			top: 50%;
+			translate: 0 -50%;
+			height: toRem(33);
+			@media (max-width: toEm(430)) {
 				display: none;
 			}
 		}
