@@ -67,7 +67,7 @@
 			position: absolute;
 			left: toRem(-80);
 			top: toRem(0);
-			@media (max-width: toEm(991.98)) {
+			@media (max-width: toEm($tablet)) {
 				display: none;
 			}
 		}
@@ -100,7 +100,7 @@
 	// .hero__text
 	&__text {
 		line-height: 1.5;
-		max-width: toRem(450);
+		max-width: toRm(450);
 		> p:not(:last-child) {
 			margin-bottom: toRem(10);
 		}
@@ -180,47 +180,45 @@
 // ======================================================================
 // Hero Contacts
 .contacts-items {
-	background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211e2e 100%);
-	box-shadow: toRem(0) toRem(4) toRem(4) rgba(192, 183, 232, 0.01);
-	border-radius: toRem(90);
-	padding: toRem(28.5) toRem(0);
-	display: flex;
-	align-items: center;
-	gap: toRem(2);
-	position: relative;
+	// background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211e2e 100%);
+	// box-shadow: toRem(0) toRem(4) toRem(4) rgba(192, 183, 232, 0.01);
+	// border-radius: toRem(90);
+	// padding: toRem(28.5) toRem(0);
+	// display: flex;
+	// align-items: center;
+	// gap: toRem(2);
+	// position: relative;
 	// .contacts-items__item
 	&__item {
-		border-right: toRem(1) solid rgba(192, 183, 232, 0.33);
-		flex: 1 1 toRem(422);
+		// border-right: toRem(1) solid rgba(192, 183, 232, 0.33);
+		// flex: 1 1 toRem(422);
 		@media (max-width: toEm(1300)) {
-			border: none;
+			// border: none;
 		}
 		// .contacts-items__item--visit
 		&--visit {
-			background: url("../img/hero/icons/location.svg") toRem(35) toRem(30) / toRem(60) toRem(60) no-repeat;
-			min-height: toRem(60);
-			@include adaptiveValue("padding-left", 100, 100);
+			// background: url("../img/hero/icons/location.svg") toRem(35) toRem(30) / toRem(60) toRem(60) no-repeat;
+			// min-height: toRem(60);
+			// @include adaptiveValue("padding-left", 100, 100);
 		}
 		// .contacts-items__item--call
 		&--call {
-			background: url("../img/hero/icons/phone.svg") toRem(30) toRem(30) / toRem(60) no-repeat;
-			min-height: toRem(60);
-			@include adaptiveValue("padding-left", 110, 102);
+			// background: url("../img/hero/icons/phone.svg") toRem(30) toRem(30) / toRem(60) no-repeat;
+			// min-height: toRem(60);
+			// @include adaptiveValue("padding-left", 110, 102);
 		}
 		// .contacts-items__item--email
 		&--email {
-			background: url("../img/hero/icons/mail.svg") toRem(30) toRem(30) / toRem(60) no-repeat;
-			min-height: toRem(60);
-			@include adaptiveValue("padding-left", 110, 102);
-			& {
-				border: none;
-			}
+			// background: url("../img/hero/icons/mail.svg") toRem(30) toRem(30) / toRem(60) no-repeat;
+			// min-height: toRem(60);
+			// border: none;
+			// @include adaptiveValue("padding-left", 110, 102);
 		}
 	}
 	// .contacts-items__body
 	&__body {
-		min-height: toRem(110);
-		padding-top: toRem(30);
+		// min-height: toRem(110);
+		// padding-top: toRem(30);
 	}
 	// .contacts-items__title
 	&__title {
@@ -234,9 +232,7 @@
 	// .contacts-items__link
 	&__link {
 		@include adaptiveValue("font-size", 14, 13);
-		& {
-			line-height: 1.2;
-		}
+		line-height: 1.2;
 		@media (any-hover: hover), (pointer: fine) {
 			&:hover {
 				text-decoration: underline;
@@ -244,19 +240,19 @@
 		}
 	}
 }
-// Contacts
 // ======================================================================
+// Contacts
 .contacts {
 	background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211e2e 100%);
 	box-shadow: toRem(0) toRem(4) toRem(4) rgba(192, 183, 232, 0.01);
 	border-radius: toRem(90);
-	// padding: toRem(28.5) toRem(15);
 	@include adaptiveValue("padding-top", 28, 5);
 	@include adaptiveValue("padding-bottom", 28, 15);
 	padding-right: toRem(32);
 	display: flex;
 	align-items: center;
 	position: relative;
+	overflow: hidden;
 
 	// .contacts__controls
 	&__controls {
@@ -278,12 +274,11 @@
 		// .contacts__slide--visit
 		&--visit {
 			background: url("../img/hero/icons/location.svg") toRem(35) toRem(30) / toRem(60) toRem(60) no-repeat;
-			min-height: toRem(60);
+			min-height: toEm(60);
 			@include adaptiveValue("padding-left", 100, 70);
 			@media (max-width: toEm(960)) {
 				background: url("../img/hero/icons/location.svg") toRem(40) toRem(30) / toRem(25) no-repeat;
 			}
-
 			@media (max-width: toEm(435)) {
 				background: url("../img/hero/icons/location.svg") toRem(40) toRem(25) / toRem(25) no-repeat;
 			}
@@ -308,7 +303,6 @@
 			background: url("../img/hero/icons/mail.svg") toRem(30) toRem(30) / toRem(60) no-repeat;
 			min-height: toRem(60);
 			@include adaptiveValue("padding-left", 110, 78);
-
 			border: none;
 
 			@media (max-width: toEm(960)) {
@@ -336,7 +330,7 @@
 	&__body {
 		@include adaptiveValue("padding-top", 30, 10);
 		@include adaptiveValue("min-height", 110, 60);
-		@media (max-width: toRem(650)) {
+		@media (max-width: toEm(650)) {
 			align-items: center;
 			display: flex;
 		}
@@ -395,6 +389,9 @@
 			@media (max-width: toEm(1300)) {
 				display: block;
 			}
+		}
+		&.swiper-button-disabled {
+			opacity: 0.5;
 		}
 	}
 }
@@ -658,6 +655,9 @@
 			@media (max-width: toEm(1299)) {
 				display: block;
 			}
+		}
+		&.swiper-button-disabled {
+			opacity: 0.5;
 		}
 	}
 }
@@ -946,6 +946,9 @@
 			@media (max-width: toEm(1200)) {
 				display: block;
 			}
+		}
+		&.swiper-button-disabled {
+			opacity: 0.5;
 		}
 	}
 }

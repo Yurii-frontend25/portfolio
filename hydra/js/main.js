@@ -17,7 +17,7 @@ const contactsSlider = new Swiper('.contacts__slider', {
 	observeParents: true,
 	// grabCursor: true,
 	speed: 800,
-	loop: true,
+	// loop: true,
 	// autoHeight: true,
 	// parallax: true,
 	// loopAdditionalSlides: 3,
@@ -37,20 +37,24 @@ const contactsSlider = new Swiper('.contacts__slider', {
 		320: {
 			slidesPerView: 1,
 			slidesPerGroup: 1,
+			allowTouchMove: true,
 
 		},
 		681: {
 			slidesPerView: 2,
 			slidesPerGroup: 1,
+			allowTouchMove: true,
 		},
 		961: {
 			slidesPerView: 3,
 			slidesPerGroup: 1,
+			allowTouchMove: true,
 		},
 		1300: {
 			slidesPerView: 3,
-			slidesPerGroup: 3,
+			// slidesPerGroup: 3,
 			// slidesPerGroup: 1,
+			allowTouchMove: false,
 		},
 	},
 });
@@ -64,14 +68,13 @@ const whySlider = new Swiper('.cards__slider', {
 	// slidesPerView: 4,
 	grabCursor: true,
 	speed: 800,
-	loop: true,
+	// loop: true,
 	autoHeight: true,
-	parallax: true,
+	// parallax: true,
 	// loopAdditionalSlides: 5,
 	watchOverFlow: true,
 	spaceBetween: 10,
 	preloadImage: false,
-	// allowTouchMove: false,
 	allowTouchMove: true,
 	navigation: {
 		nextEl: '.controls__arrow--next',
