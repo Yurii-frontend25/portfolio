@@ -8,18 +8,13 @@
 @use "_home";
 @use "_footer";
 // =========================================
-@media (prefers-reduced-motion: no-preference) {
-	html {
-		scroll-behavior: smooth;
-	}
-}
+
 $fontSize: toRem(16);
 body {
 	color: $mainColor;
 	background-color: $bgColor;
 	font-family: $fontFamily;
 	font-size: $fontSize;
-	overflow-x: hidden;
 	&.menu-open {
 		overflow: hidden;
 		touch-action: none;

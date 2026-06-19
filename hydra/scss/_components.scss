@@ -6,8 +6,6 @@
 	span {
 		position: relative;
 		display: inline-block;
-		transition: color 0.4s ease;
-		z-index: -1;
 	}
 	span::after {
 		content: "";
@@ -42,15 +40,18 @@
 		width: 100%;
 	}
 
-	@media (any-hover: hover), (any-pointer: fine) {
+	@media (any-hover: hover) and (any-pointer: fine) {
 		&:hover {
 			color: $mainColor;
+			&.btn--arrow::after {
+				transform: translate(toRem(8), -50%);
+			}
 		}
 	}
 	&--center {
-		@media (max-width: toEm(600)) {
-			display: block;
-			margin: 0 auto;
+		@media (max-width: toEm(802)) {
+			max-width: toRem(380);
+			width: 100%;
 		}
 	}
 	&--arrow {
@@ -58,14 +59,15 @@
 			content: "";
 			position: absolute;
 			top: 50%;
-			translate: 0% -50%;
+			transform: translate(0, -50%);
 			background-image: url("../img/hero/icons/arrow.svg");
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: cover;
+			background-size: contain;
 			width: toRem(41);
 			height: toRem(33);
 			right: toRem(-80);
+			transition: transform 0.3s ease;
 			@media (max-width: toEm(600)) {
 				display: none;
 			}
@@ -108,7 +110,7 @@
 			@include adaptiveValue("left", 280, 220);
 			@include adaptiveValue("width", 228, 100);
 			top: 50%;
-			translate: 0 -50%;
+			transform: translate(0, -50%);
 			height: toRem(33);
 			@media (max-width: toEm(430)) {
 				display: none;

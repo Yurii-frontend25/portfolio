@@ -2,7 +2,7 @@
 @use "_settings" as *;
 // =========================================
 .footer {
-	padding-bottom: toRem(60);
+	@include adaptiveValue("padding-bottom", 60, 40);
 	position: relative;
 	&::before {
 		content: "";
@@ -43,6 +43,7 @@
 		&::after {
 			content: "";
 			position: absolute;
+			left: 0;
 			width: 100%;
 			height: toRem(1);
 			background: linear-gradient(90deg, #343045 0%, #c0b7e8 35%, #8176af 69%, #343045 99%);
@@ -62,7 +63,7 @@
 		position: relative;
 		&:nth-child(1) {
 			flex: 0 1 toRem(185);
-			@media (max-width: toEm(450)) {
+			@media (max-width: toEm(498)) {
 				flex: 1 1 100%;
 			}
 		}
@@ -107,8 +108,8 @@
 					display: none;
 				}
 			}
-			@media (max-width: toEm(540)) {
-				flex-grow: 1;
+			@media (max-width: toEm(802)) {
+				flex: 1 1 100%;
 				text-align: center;
 			}
 		}
@@ -154,44 +155,17 @@
 		letter-spacing: 0.13em;
 		text-align: center;
 		@include adaptiveValue("padding-top", 50, 38);
-		@media (max-width: toEm(480)) {
+		@media (max-width: toEm(430)) {
 			p span {
 				display: block;
+			}
+			p > span:not(:last-child) {
 				margin-bottom: toRem(15);
 			}
 		}
 	}
 }
 .logo-footer {
-	position: relative;
-	@media (max-width: toEm(430)) {
-		&::before {
-			content: "";
-			position: absolute;
-			top: toRem(-120);
-			left: toRem(-260);
-			background: url("../img/footer/footer-bg.svg");
-			background-size: cover;
-			background-position: 0 0;
-			background-repeat: no-repeat;
-			width: 200%;
-			height: 180%;
-		}
-	}
-	@media (max-width: toEm(320)) {
-		&::before {
-			content: "";
-			position: absolute;
-			top: toRem(-20);
-			left: toRem(-160);
-			background: url("../img/footer/footer-bg.svg");
-			background-size: cover;
-			background-position: 0 0;
-			background-repeat: no-repeat;
-			width: 200%;
-			height: 120%;
-		}
-	}
 	// .logo-footer__link
 	&__link {
 		img {
@@ -227,19 +201,19 @@
 	gap: toRem(20);
 	&:has(.social__link-item:hover) .social__link-item:not(:hover) {
 		opacity: 0.6;
-		transition: opacity 0.5s ease;
 	}
 	&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 50, 47);
 	}
-	@media (max-width: toEm(600)) {
+	@media (max-width: toEm(802)) {
 		justify-content: center;
+		//600
 	}
 	// .social__item
 	&__item {
 	}
 	// .social__link-item
 	&__link-item {
-		transition: opacity 0.5s ease;
+		transition: opacity 0.3s ease;
 	}
 }

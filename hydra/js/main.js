@@ -8,6 +8,21 @@ function documentActions(e) {
 		document.body.classList.toggle('menu-open')
 	}
 }
+//=================================================================================================================================
+//header-scroll working function
+// window.addEventListener('scroll', function () {
+// 	scrollY > 0 ? document.querySelector('.header').classList.add('scroll') : document.querySelector('.header').classList.remove('scroll');
+// });
+//end
+//=================================================================================================================================
+const header = document.querySelector('.header');
+
+if (header) {
+	window.addEventListener('scroll', function () {
+		// Клас додається, якщо scrollY > 0, і видаляється, якщо scrollY === 0
+		header.classList.toggle('scroll', window.scrollY > 0);
+	});
+}
 // =================================================
 const contactsSlider = new Swiper('.contacts__slider', {
 	// autoplay: {
@@ -60,21 +75,13 @@ const contactsSlider = new Swiper('.contacts__slider', {
 });
 // =================================================
 const whySlider = new Swiper('.cards__slider', {
-	// autoplay: {
-	//    delay: 9000
-	// },
 	observer: true,
 	observeParents: true,
-	// slidesPerView: 4,
 	grabCursor: true,
 	speed: 800,
-	// loop: true,
-	autoHeight: true,
-	// parallax: true,
-	// loopAdditionalSlides: 5,
-	watchOverFlow: true,
-	spaceBetween: 10,
-	preloadImage: false,
+	watchOverflow: true,
+	spaceBetween: 15,
+	preloadImages: false,
 	allowTouchMove: true,
 	navigation: {
 		nextEl: '.controls__arrow--next',
@@ -97,22 +104,16 @@ const whySlider = new Swiper('.cards__slider', {
 });
 // =================================================
 const partnersSlider = new Swiper('.partners__slider', {
-	// autoplay: {
-	//    delay: 9000
-	// },
 	observer: true,
 	observeParents: true,
-	// slidesPerView: 4,
 	grabCursor: true,
-
 	speed: 800,
 	// loop: true,
 	// autoHeight: true,
-	// parallax: true,
-	// loopAdditionalSlides: 5,
-	watchOverFlow: true,
+	watchOverflow: true,
 	spaceBetween: 10,
-	preloadImage: false,
+	preloadImages: false,
+	slidesPerView: 1,
 	navigation: {
 		nextEl: '.controls-partners__arrow--next',
 		prevEl: '.controls-partners__arrow--prev'
@@ -120,33 +121,30 @@ const partnersSlider = new Swiper('.partners__slider', {
 	breakpoints: {
 		650: {
 			slidesPerView: 2,
+			spaceBetween: 15,
 		},
 		960: {
 			slidesPerView: 3,
+			spaceBetween: 20,
 		},
 		1201: {
 			slidesPerView: 4,
+			spaceBetween: 20,
 		},
 	},
 });
 // =================================================
 const buildSlider = new Swiper('.build__slider', {
-	// autoplay: {
-	//    delay: 9000
-	// },
 	observer: true,
 	observeParents: true,
-	// slidesPerView: 4,
+	slidesPerView: 1,
 	grabCursor: true,
-
 	speed: 800,
 	// loop: true,
-	// autoHeight: true,
-	// parallax: true,
-	// loopAdditionalSlides: 5,
-	watchOverFlow: true,
+	autoHeight: true,
+	watchOverflow: true,
 	spaceBetween: 10,
-	preloadImage: false,
+	preloadImages: false,
 	navigation: {
 		nextEl: '.controls-build__arrow--next',
 		prevEl: '.controls-build__arrow--prev'

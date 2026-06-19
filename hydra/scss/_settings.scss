@@ -111,9 +111,8 @@ $responsiveType: 1;
 
 	@if ($size == "T") {
 		$fontSize: 12;
-		& {
-			font-weight: 700;
-		}
+		$fontSizeMob: 11;
+		font-weight: 700;
 	}
 	@if ($size == "S") {
 		$fontSize: 16;
