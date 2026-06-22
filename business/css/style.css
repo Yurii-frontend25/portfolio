@@ -964,20 +964,16 @@ label {
 @media (width <= 35.25em) {
   .popup {
     margin-inline: auto;
-    left: 0rem;
+    left: 0;
     width: 9.375rem;
     height: 9.375rem;
-    bottom: 0rem;
+    bottom: 0;
   }
   .popup:not(:last-child) {
     margin-bottom: 1.5625rem;
   }
 }
 .popup__inner {
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -986,33 +982,52 @@ label {
   width: 100%;
   border-radius: 50%;
   text-align: center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   will-change: transform;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   overflow: hidden;
 }
-@media (width <= 35.25em) {
-  .popup__inner {
-    width: 6.875rem;
-    height: 6.875rem;
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-    padding-inline: 0.625rem;
+.popup__inner:hover {
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+          transform: scale(0.98);
+}
+@media (min-width: 94.375em) {
+  .popup__video {
+    font-size: 16px;
   }
 }
-.popup__inner:hover {
-  -webkit-transform: scale(0.977);
-      -ms-transform: scale(0.977);
-          transform: scale(0.977);
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+@media (min-width: 20em) and (max-width: 94.375em) {
+  .popup__video {
+    font-size: clamp( 10px , 8.3865546218px  +  0.5042016807vw , 16px );
+  }
+}
+@media (max-width: 20em) {
+  .popup__video {
+    font-size: 10px;
+  }
+}
+@media (min-width: 94.375em) {
+  .popup__video {
+    gap: 15px;
+  }
+}
+@media (min-width: 20em) and (max-width: 94.375em) {
+  .popup__video {
+    gap: clamp( 5px , 2.3109243697px  +  0.8403361345vw , 15px );
+  }
+}
+@media (max-width: 20em) {
+  .popup__video {
+    gap: 5px;
+  }
 }
 .popup__video {
   display: grid;
-  gap: 0.9375rem;
   -ms-flex-line-pack: center;
       align-content: center;
   font-weight: 500;
@@ -1043,9 +1058,9 @@ label {
 }
 @media (width <= 35.25em) {
   .popup__triangle-right {
-    border-top: 0.9375rem solid transparent;
-    border-left: 1.25rem solid var(--white-color);
-    border-bottom: 0.9375rem solid transparent;
+    border-top: 0.625rem solid transparent;
+    border-left: 0.9375rem solid var(--white-color);
+    border-bottom: 0.625rem solid transparent;
   }
 }
 

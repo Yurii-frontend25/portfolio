@@ -79,7 +79,7 @@
 	// .hero__content
 	&__content {
 		display: grid;
-		justify-content: center;
+		// justify-content: center;
 		align-items: center;
 		gap: toRem(16);
 		position: relative;
@@ -91,8 +91,10 @@
 		&--home {
 			padding-top: toRem(90);
 			gap: toRem(10);
-			justify-content: start;
-			@include adaptiveValue("margin-left", 23, 0);
+			// justify-content: start;
+			max-width: toRem(736);
+			// @include adaptiveValue("margin-left", 23, 0);
+			@include adaptiveValue("margin-left", 36, 0);
 		}
 		&--about {
 			min-height: toRem(300);
@@ -198,6 +200,14 @@
 			}
 		}
 	}
+	// .hero__figure
+	&__figure {
+		// position: absolute;
+		// top: 0;
+		// left: 0;
+		// width: 100%;
+		// height: 100%;
+	}
 	// .hero__image
 	&__image {
 		position: absolute;
@@ -218,7 +228,7 @@
 	// .hero__choice
 	&__choice {
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 37, 20);
+			@include adaptiveValue("margin-bottom", 37, 15);
 		}
 	}
 }
@@ -233,22 +243,23 @@
 	&__body {
 		@media (max-width: toEm($tablet)) {
 			position: fixed;
-			@include adaptiveValue("top", 128, 80);
+			// @include adaptiveValue("top", 128, 80);
+			top: 0;
 			left: -100%;
 			width: 100%;
 			height: 100%;
 			overflow: auto;
 			background-color: #fff;
 			padding-inline: toRem(15);
-			padding-bottom: toRem(20);
-			padding-top: toRem(40);
-			transition: all 0.4s ease;
+			padding-bottom: toRem(30);
+			padding-top: toRem(128);
+			transition: left 0.3s ease;
 			display: flex;
 			flex-direction: column;
 
 			.menu-open &,
 			.menu-open:before {
-				@include adaptiveValue("top", 128, 80);
+				// @include adaptiveValue("top", 128, 80);
 				left: 0;
 			}
 			.menu__list {
@@ -259,7 +270,7 @@
 				font-weight: 300;
 				align-items: start;
 				align-self: self-start;
-				@include adaptiveValue("margin-bottom", 128, 70);
+				// @include adaptiveValue("margin-bottom", 128, 70);
 			}
 		}
 	}
@@ -594,46 +605,47 @@
 }
 //========================================================================================================================
 .choice-hero {
-	@include adaptiveValue("padding-left", 23, 10);
-	& {
-		display: flex;
-		flex-wrap: wrap;
-		gap: toRem(20);
-		padding-right: toRem(10);
-		padding-top: toRem(10);
-		padding-bottom: toRem(10);
-		border: toRem(1) solid #cbcaca;
-		box-shadow: toRem(0) toRem(20) toRem(35) rgba(0, 0, 0, 0.3);
-		border-radius: toRem(72);
-	}
-	@media (min-width: toEm(486)) {
-		max-width: toRem(740);
+	display: flex;
+	flex-wrap: wrap;
+	gap: toRem(20);
+	border: toRem(1) solid #cbcaca;
+	box-shadow: toRem(0) toRem(20) toRem(35) rgba(0, 0, 0, 0.3);
+	border-radius: toRem(72);
+
+	@media (min-width: toEm(495)) {
+		max-width: toRem(736);
 		justify-content: space-between;
 		column-gap: toRem(20);
 		background-color: $white;
 		align-items: center;
+		padding-right: toRem(10);
+		padding-block: toRem(10);
+		@include adaptiveValue("padding-left", 23, 10);
+		//486
 	}
-	@media (max-width: toEm(486)) {
+	@media (max-width: toEm(495)) {
 		background-color: transparent;
 		border: none;
 		box-shadow: none;
+		//486
 	}
 	// .choice-hero__items
 	&__items {
 		display: flex;
 		background-color: $white;
 		@include adaptiveValue("gap", 87, 5);
-		flex: 1 1 auto;
-		justify-content: space-between;
-		padding-right: toRem(10);
+		// padding-right: toRem(10);
 		padding-top: toRem(11);
 		padding-bottom: toRem(10);
-		@media (max-width: toEm(486)) {
+		@media (max-width: toEm(495)) {
+			flex: 1 1 auto;
+			justify-content: space-between;
 			padding-inline: toRem(15);
 			padding-block: toRem(15);
 			border: toRem(1) solid #cbcaca;
 			box-shadow: toRem(0) toRem(20) toRem(35) rgba(0, 0, 0, 0.3);
 			border-radius: toRem(72);
+			//486
 		}
 	}
 	// .choice-hero__item
@@ -652,16 +664,17 @@
 		font-weight: 600;
 		border-radius: toRem(28);
 		line-height: 2;
-		padding: toRem(10) toRem(25) toRem(10) toRem(25);
+		padding: toRem(10.5) toRem(26) toRem(10.5) toRem(26);
 		transition: background-color 0.3s ease;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				background-color: $grey2;
 			}
 		}
-		@media (max-width: toEm(486)) {
+		@media (max-width: toEm(495)) {
 			width: 100%;
 			text-align: center;
+			//486
 		}
 	}
 }
