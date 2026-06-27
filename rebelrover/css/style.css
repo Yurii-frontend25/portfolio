@@ -3421,7 +3421,7 @@ label {
           filter: drop-shadow(0rem 0.5rem 3.125rem rgba(0, 0, 0, 0.1));
 }
 .why__arrow--next {
-  rotate: 180deg;
+  rotate: -180deg;
 }
 .why__arrow.swiper-button-disabled {
   opacity: 0.5;
