@@ -371,32 +371,34 @@
 					</div>
 				</div>
 			</section>
+			<section class="page__subscribe subscribe">
+				<div class="subscribe__content">
+					<h2 class="subscribe__title">Subscribe to get special price</h2>
+					<div class="subscribe__descr">
+						<p>Don't wanna miss something? subscribe right now and get special promotion and monthly newsletter</p>
+					</div>
+					<form class="subscribe__form form" action="#">
+						<div class="form__item">
+							<input class="form__input" type="email" placeholder="Type your email here" name="form[]" required autocomplete="off">
+						</div>
+						<button class="form__button" type="submit">Subscribe</button>
+					</form>
+					<figure class="subscribe__figure">
+						<picture>
+							<source srcset="img/footer/footer-bg-1x.webp 1x, img/footer/footer-bg-2x.webp 2x, img/footer/footer-bg-3x.webp 3x" type="image/webp">
+							<img class="subscribe__image" src="img/footer/footer-bg.jpg" alt="World map">
+						</picture>
+					</figure>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
-			<div class="footer__top">
-				<h2 class="footer__title">Subcribe to get special price</h2>
-				<div class="footer__descr">
-					<p>Dont wanna miss something? subscribe right now and get special promotion and monthly newsletter</p>
-				</div>
-				<form class="footer__form form" action="#" enctype="multipart/form-data">
-					<div class="form__item">
-						<input class="form__input" type="email" placeholder="Type your  email here" name="form[]" required autocomplete="off">
-					</div>
-					<button class="form__button" type="submit">Subscribe</button>
-				</form>
-				<figure>
-					<picture>
-						<source srcset="img/footer/footer-bg-1x.webp 1x, img/footer/footer-bg-2x.webp 2x, img/footer/footer-bg-3x.webp 3x" type="image/webp">
-						<img class="footer__image" src="img/footer/footer-bg.webp" alt="image">
-					</picture>
-				</figure>
-			</div>
-			<div class="footer__container footer__container--width">
+			<div class="footer__container">
 				<div class="footer__content">
 					<div class="footer__body">
 						<div class="footer__box">
 							<div class="footer__logo">
-								<a class="footer__link" href="#" id="#top">
+								<a class="footer__link" href="#">
 									<img src="img/footer/footer-logo.webp" alt="Logo">
 								</a>
 							</div>
@@ -406,30 +408,30 @@
 						</div>
 						<div class="footer__items">
 							<div class="footer__item item-footer">
-								<h4 class="item-footer__title">Contact Information</h4>
+								<h3 class="item-footer__title">Contact Information</h3>
 								<ul class="item-footer__list contact-list">
 									<li class="contact-list__item">
 										<div class="contact-list__icon">
-											<img src="img/icons/location.svg" alt="Icon">
+											<img src="img/icons/location.svg" alt="" aria-hidden="true">
 										</div>
-										<a class="contact-list__link" href="#">732 Despard St, Atlanta</a>
+										<a class="contact-list__link" href="#" target="_blank">732 Despard St, Atlanta</a>
 									</li>
 									<li class="contact-list__item">
 										<div class="contact-list__icon">
-											<img src="img/icons/phone.svg" alt="Icon">
+											<img src="img/icons/phone.svg" alt="" aria-hidden="true">
 										</div>
 										<a class="contact-list__link" href="tel:+978888888">+97 888 8888</a>
 									</li>
 									<li class="contact-list__item">
 										<div class="contact-list__icon">
-											<img src="img/icons/email.svg" alt="Icon">
+											<img src="img/icons/email.svg" alt="" aria-hidden="true">
 										</div>
 										<a class="contact-list__link" href="mailto:info@traveller.com">info@traveller.com</a>
 									</li>
 								</ul>
 							</div>
 							<div class="footer__item item-footer">
-								<h4 class="item-footer__title">Quick Link</h4>
+								<h3 class="item-footer__title">Quick Link</h3>
 								<ul class="item-footer__list about-list">
 									<li class="about-list__item">
 										<a class="about-list__link" href="#">Home</a>
@@ -446,19 +448,19 @@
 								</ul>
 							</div>
 							<div class="footer__item item-footer">
-								<h4 class="item-footer__title">Follow Us</h4>
+								<h3 class="item-footer__title">Follow Us</h3>
 								<ul class="item-footer__list social-list">
 									<li class="social-list__item">
-										<a class="social-list__link _icon-s-facebook" href="#"></a>
+										<a class="social-list__link _icon-s-facebook" href="#" rel="noopener noreferrer" target="_blank" aria-label="facebook profile"></a>
 									</li>
 									<li class="social-list__item">
-										<a class="social-list__link _icon-s-twitter" href="#"></a>
+										<a class="social-list__link _icon-s-twitter" href="#" rel="noopener noreferrer" target="_blank" aria-label="twitter profile"></a>
 									</li>
 									<li class="social-list__item">
-										<a class="social-list__link _icon-s-youtube" href="#"></a>
+										<a class="social-list__link _icon-s-youtube" href="#" rel="noopener noreferrer" target="_blank" aria-label="youtube profile"></a>
 									</li>
 									<li class="social-list__item">
-										<a class="social-list__link _icon-s-instagram" href="#"></a>
+										<a class="social-list__link _icon-s-instagram" href="#" rel="noopener noreferrer" target="_blank" aria-label="instagram profile"></a>
 									</li>
 								</ul>
 							</div>
@@ -471,8 +473,8 @@
 			</div>
 		</footer>
 	</div>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
-<script src="js/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
 
 </html>

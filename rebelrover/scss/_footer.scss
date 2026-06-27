@@ -64,7 +64,8 @@
 	}
 	// .footer__copy
 	&__copy {
-		@include adaptiveValue("padding-block", 43, 25);
+		@include adaptiveValue("font-size", 16, 12);
+		@include adaptiveValue("padding-block", 43, 20);
 		line-height: 1.88;
 		color: $grey7;
 		text-align: center;

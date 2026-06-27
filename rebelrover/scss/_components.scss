@@ -43,7 +43,6 @@
 		// .block-head__title--margin
 		&--margin {
 			max-width: toRem(756);
-			// width: 100%;
 			&:not(:last-child) {
 				@include adaptiveValue("margin-bottom", 30, 20);
 			}
@@ -77,7 +76,6 @@
 		line-height: 2;
 		&--width {
 			max-width: toRem(630);
-			// width: 100%;
 		}
 		// .block-head__descr--white
 		&--white {
@@ -88,7 +86,6 @@
 			color: $grey8;
 			text-align: left;
 			max-width: toRem(577);
-			// width: 100%;
 			@media (max-width: toEm(823)) {
 				max-width: 100%;
 			}
@@ -113,6 +110,59 @@
 	@media (any-hover: hover) and (any-pointer: fine) {
 		&:hover {
 			background-color: $grey2;
+		}
+	}
+}
+// =======================================================================================================================
+.form {
+	// .form__item
+	&__item {
+		flex-grow: 1;
+	}
+	// .form__input
+	&__input {
+		padding-inline: toRem(8);
+		border-radius: toRem(30);
+		padding-block: toRem(8);
+		font-weight: 300;
+		color: $black;
+		&::placeholder {
+			@include adaptiveValue("font-size", 20, 16);
+			transition: opacity 0.3s ease;
+			color: $grey12;
+			font-weight: 500;
+		}
+		&:focus::placeholder {
+			opacity: 0;
+		}
+		&:focus-visible {
+			outline: toRem(2) solid blue;
+		}
+		@media (max-width: toEm(400)) {
+			background-color: $white;
+			border-radius: toRem(34.5);
+			padding-block: toRem(11.5);
+			padding-inline: toRem(20);
+		}
+	}
+	// .form__button
+	&__button {
+		@include adaptiveValue("font-size", 20, 16);
+		padding: toRem(11) toRem(23) toRem(10) toRem(22);
+		background-color: #000;
+		border-radius: toRem(27.5);
+		line-height: 1.7;
+		transition:
+			background-color 0.4s ease,
+			color 0.4s ease;
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				background-color: $grey2;
+				color: $white;
+			}
+		}
+		@media (max-width: toEm(400)) {
+			width: 100%;
 		}
 	}
 }
