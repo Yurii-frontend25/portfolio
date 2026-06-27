@@ -5818,7 +5818,7 @@ select {
 }
 .footer__text {
   line-height: 1.38;
-  max-width: 27.1875rem;
+  max-width: 25rem;
 }
 @media (min-width: 89.375em) {
   .footer__text {

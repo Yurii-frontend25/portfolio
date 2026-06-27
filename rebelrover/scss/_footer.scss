@@ -30,7 +30,6 @@
 		max-width: toRem(437);
 		img {
 			width: 100%;
-			// height: auto;
 			aspect-ratio: 388 / 90;
 			object-fit: contain;
 		}
@@ -38,7 +37,7 @@
 	// .footer__text
 	&__text {
 		line-height: 1.38;
-		max-width: toRem(435);
+		max-width: toRem(400);
 		@include adaptiveValue("font-size", 16, 14);
 	}
 	&__box,
@@ -170,7 +169,6 @@
 ._icon-s-youtube {
 	width: toRem(25);
 	font-size: toRem(16);
-	// vertical-align: middle;
 }
 ._icon-s-instagram {
 	width: toRem(22);
