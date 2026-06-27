@@ -21,7 +21,7 @@
 	}
 	// .explore__controls
 	&__controls {
-		display: flex;
+		display: none;
 		align-items: center;
 		justify-content: space-between;
 		@include adaptiveValue("margin-bottom", 41, 30);
