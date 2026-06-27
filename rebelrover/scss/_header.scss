@@ -86,14 +86,13 @@
 		z-index: 3;
 		padding-bottom: toRem(10);
 		@media (max-width: toEm($mobileSmall)) {
-			padding-top: toRem(90);
+			// padding-top: toRem(90);
 		}
 		&--home {
-			padding-top: toRem(90);
+			// padding-top: toRem(90);
 			gap: toRem(10);
 			// justify-content: start;
 			max-width: toRem(736);
-			// @include adaptiveValue("margin-left", 23, 0);
 			@include adaptiveValue("margin-left", 36, 0);
 		}
 		&--about {
@@ -105,16 +104,13 @@
 	// .hero__title
 	&__title {
 		@include typography("h1");
-		& {
-			color: $white;
-			font-weight: 700;
-		}
+		color: $white;
+		font-weight: 700;
+
 		&--center {
 			@include adaptiveValue("font-size", 64, 54);
-			& {
-				font-weight: 700;
-				text-align: center;
-			}
+			font-weight: 700;
+			text-align: center;
 		}
 		&--center-blog {
 			@media (max-width: toEm(415)) {
@@ -154,12 +150,10 @@
 	// .hero__link
 	&__link {
 		@include adaptiveValue("font-size", 24, 18);
-		& {
-			color: $white;
-			font-weight: 500;
-			line-height: 2;
-			transition: color 0.4s ease;
-		}
+		color: $white;
+		font-weight: 500;
+		line-height: 2;
+		transition: color 0.4s ease;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				color: $grey16;
@@ -170,9 +164,7 @@
 	&__descr {
 		color: $grey9;
 		max-width: toRem(442);
-		& {
-			line-height: 2;
-		}
+		line-height: 2;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 42, 25);
 		}
@@ -249,10 +241,13 @@
 			width: 100%;
 			height: 100%;
 			overflow: auto;
-			background-color: #fff;
+			// @include adaptiveValue("margin-top", 128, 80);
+			background-color: $white;
+			background: url("../img/hero/hero-bg.webp") 0 0 / no-repeat;
 			padding-inline: toRem(15);
 			padding-bottom: toRem(30);
-			padding-top: toRem(128);
+			// padding-top: toRem(128);
+			@include adaptiveValue("padding-top", 60, 40);
 			transition: left 0.3s ease;
 			display: flex;
 			flex-direction: column;
@@ -280,17 +275,13 @@
 		flex-wrap: wrap;
 		align-items: center;
 		@include adaptiveValue("column-gap", 67, 5);
-		& {
-			color: $white;
-			font-weight: 600;
-			line-height: 1.5;
-			row-gap: toRem(5);
-		}
+		color: $white;
+		font-weight: 600;
+		line-height: 1.5;
+		row-gap: toRem(5);
 		@media (max-width: toEm($tablet)) {
-			& {
-				width: 100%;
-				color: $grey2;
-			}
+			width: 100%;
+			color: $grey2;
 		}
 	}
 	// .menu__item
@@ -414,7 +405,7 @@
 		flex-direction: column;
 		background-color: transparent;
 		min-height: 0;
-		transition: min-height 0.8s ease;
+		transition: min-height 0.5s ease;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				opacity: 1;
@@ -514,7 +505,6 @@
 		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
-				text-decoration: underline;
 				background-color: $white;
 				color: $black;
 			}
@@ -681,11 +671,9 @@
 select {
 	color: $grey12;
 	@include typography("L");
-	& {
-		line-height: 2;
-		background-color: transparent;
-		font-weight: 600;
-	}
+	line-height: 2;
+	background-color: transparent;
+	font-weight: 600;
 }
 // .block {
 // 	&__title {

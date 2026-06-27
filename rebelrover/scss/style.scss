@@ -36,10 +36,9 @@ html {
 // =========================================
 body {
 	@include typography("def");
-	& {
-		font-family: $fontFamily;
-		color: $mainColor;
-	}
+	font-family: $fontFamily;
+	color: $mainColor;
+
 	.menu-open & {
 		overflow: hidden;
 		touch-action: none;

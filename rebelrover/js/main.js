@@ -51,10 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		el.style.maxHeight = null;
 	}
 });
-
-
 //====================================================================================================
-
 // $(function () {
 // 	$('.block__title').click(function (event) {
 // 		if ($('.block').hasClass('one')) {
@@ -66,26 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
 // });
 //====================================================================================================
 const exploreSlider = new Swiper('.explore__slider', {
-	// autoplay: {
-	//    delay: 6000
-	// },
 	observer: true,
 	observeParents: true,
-	// grabCursor: true,
 	speed: 800,
-	// loop: true,
 	autoHeight: true,
-	parallax: true,
-	// loopAdditionalSlides: 3,
-	// watchOverFlow: true,
-	// spaceBetween: 38,
-	// preloadImage: false,
 	navigation: {
-		nextEl: '.explore__arrow--left',
-		prevEl: '.explore__arrow--right'
+		nextEl: '.explore__arrow--next',
+		prevEl: '.explore__arrow--prev'
 	},
 	keyboard: {
 		enabled: true,
+		onlyInViewport: true,
 	},
 	breakpoints: {
 		320: {
@@ -95,11 +83,6 @@ const exploreSlider = new Swiper('.explore__slider', {
 
 		},
 		481: {
-			slidesPerView: 2,
-			slidesPerGroup: 1,
-			spaceBetween: 15,
-		},
-		681: {
 			slidesPerView: 2,
 			slidesPerGroup: 1,
 			spaceBetween: 15,
@@ -111,82 +94,57 @@ const exploreSlider = new Swiper('.explore__slider', {
 		},
 		1300: {
 			slidesPerView: 3,
-			slidesPerGroup: 3,
+			slidesPerGroup: 1,
 			spaceBetween: 20,
 		},
 	},
 });
-
+//====================================================================================================
 const whySlider = new Swiper('.why__slider', {
-	// autoplay: {
-	//    delay: 6000
-	// },
 	observer: true,
 	observeParents: true,
-	// grabCursor: true,
 	speed: 800,
-	// loop: true,
-	autoHeight: true,
-	parallax: true,
-	// loopAdditionalSlides: 3,
-	// watchOverFlow: true,
-	// spaceBetween: 87,
-	// preloadImage: false,
+	// watchOverflow: true,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	spaceBetween: 15,
 	navigation: {
-		nextEl: '.why__arrow--left',
-		prevEl: '.why__arrow--right'
+		nextEl: '.why__arrow--next',
+		prevEl: '.why__arrow--prev'
 	},
 	keyboard: {
 		enabled: true,
 	},
 	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			slidesPerGroup: 1,
-			spaceBetween: 15,
-
-		},
 		481: {
 			slidesPerView: 2,
-			slidesPerGroup: 1,
 			spaceBetween: 15,
 		},
 		783: {
 			slidesPerView: 3,
-			slidesPerGroup: 1,
 			spaceBetween: 15,
 		},
-		// 961: {
-		// 	slidesPerView: 3,
-		// 	slidesPerGroup: 1,
-		// 	spaceBetween: 38,
-		// },
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 38,
+		},
 		1300: {
 			slidesPerView: 3,
-			slidesPerGroup: 3,
 			spaceBetween: 92,
 		},
 	},
 });
-
+//====================================================================================================
 const testimonialSlider = new Swiper('.testimonial__slider', {
-	// autoplay: {
-	//    delay: 6000
-	// },
 	observer: true,
 	observeParents: true,
-	// grabCursor: true,
 	speed: 800,
-	// loop: true,
 	autoHeight: true,
-	parallax: true,
-	// loopAdditionalSlides: 3,
-	// watchOverFlow: true,
-	// spaceBetween: 43,
-	// preloadImage: false,
+	slidesPerGroup: 1,
+	spaceBetween: 15,
 	navigation: {
-		nextEl: '.testimonial__arrow--left',
-		prevEl: '.testimonial__arrow--right'
+		nextEl: '.testimonial__arrow--next',
+		prevEl: '.testimonial__arrow--prev'
 	},
 	keyboard: {
 		enabled: true,
@@ -194,33 +152,22 @@ const testimonialSlider = new Swiper('.testimonial__slider', {
 	breakpoints: {
 		320: {
 			slidesPerView: 1.10,
-			slidesPerGroup: 1,
-			spaceBetween: 15,
-
 		},
 		481: {
 			slidesPerView: 1,
-			slidesPerGroup: 2,
-			spaceBetween: 15,
 		},
 		581: {
 			slidesPerView: 2.2,
-			slidesPerGroup: 2,
-			spaceBetween: 15,
 		},
 		783: {
 			slidesPerView: 2.3,
-			slidesPerGroup: 1,
-			spaceBetween: 15,
 		},
 		961: {
 			slidesPerView: 3.5,
-			slidesPerGroup: 1,
 			spaceBetween: 20,
 		},
 		1300: {
 			slidesPerView: 3.24,//37
-			slidesPerGroup: 3,
 			spaceBetween: 48,
 		},
 	},
