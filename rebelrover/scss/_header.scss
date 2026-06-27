@@ -23,8 +23,9 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		// justify-content: center;
 		min-height: 100svh;
+		@include adaptiveValue("padding-top", 200, 120);
 	}
 	&__body {
 		position: fixed;
@@ -84,13 +85,13 @@
 		gap: toRem(16);
 		position: relative;
 		z-index: 3;
-		padding-bottom: toRem(10);
+		padding-bottom: toRem(20);
 		@media (max-width: toEm($mobileSmall)) {
 			// padding-top: toRem(90);
 		}
 		&--home {
 			// padding-top: toRem(90);
-			gap: toRem(10);
+			gap: toRem(30);
 			// justify-content: start;
 			max-width: toRem(736);
 			@include adaptiveValue("margin-left", 36, 0);
@@ -185,11 +186,30 @@
 			font-weight: 300;
 			line-height: 2;
 		}
-		@media (max-width: toEm($mobileSmall)) {
-			font-weight: 300;
+		@media (max-width: toEm($mobile)) {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			color: $grey9;
 			span {
+				display: block;
 				font-size: toRem(14);
+				color: white;
+				// background-color: rgba(255, 0, 0, 0.5);
+				background-color: rgba(79, 154, 208, 0.7);
+				// background-color: rgba(155, 199, 237, 0.7);
+				// display: inline-block;
+				border-radius: 50px;
+				text-align: center;
 			}
+		}
+	}
+	// .hero__popular
+	.hero__popular {
+		@media (max-width: toEm($mobile)) {
+			color: white;
+
+			background-color: rgba(95, 95, 26, 0.7);
 		}
 	}
 	// .hero__figure
@@ -380,7 +400,7 @@
 	}
 	.active {
 		@media (max-width: toEm($tablet)) {
-			color: rgba(255, 0, 0, 0.499);
+			color: rgba(255, 0, 0, 0.5);
 		}
 	}
 	// .menu__search
@@ -623,7 +643,8 @@
 	&__items {
 		display: flex;
 		background-color: $white;
-		@include adaptiveValue("gap", 87, 5);
+		// background-color: rgba(255, 255, 255, 0.8);
+		@include adaptiveValue("column-gap", 87, 5);
 		// padding-right: toRem(10);
 		padding-top: toRem(11);
 		padding-bottom: toRem(10);
@@ -650,7 +671,8 @@
 	// .choice-hero__link
 	&__link {
 		color: $white;
-		background-color: $black;
+		// background-color: $black;
+		background-color: rgba(0, 0, 0, 0.7);
 		font-weight: 600;
 		border-radius: toRem(28);
 		line-height: 2;
