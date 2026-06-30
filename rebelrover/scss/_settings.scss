@@ -102,7 +102,7 @@ $responsiveType: 1;
 
 @mixin typography($size: "def", $weight: 500, $adapt: 1, $sizeMob: 0) {
 	$fontSize: 18;
-	$fontSizeMob: 16;
+	$fontSizeMob: 14;
 	$fontWeight: $weight;
 
 	@if ($size == "T") {

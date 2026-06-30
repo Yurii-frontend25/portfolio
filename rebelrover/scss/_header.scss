@@ -107,7 +107,6 @@
 		@include typography("h1");
 		color: $white;
 		font-weight: 700;
-
 		&--center {
 			@include adaptiveValue("font-size", 64, 54);
 			font-weight: 700;
