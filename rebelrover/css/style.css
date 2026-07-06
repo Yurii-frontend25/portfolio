@@ -2429,7 +2429,7 @@ label {
 }
 @media (max-width: 35em) {
   .cards-popular__items {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
   }
 }
 .cards-popular__item {
@@ -2440,22 +2440,37 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-.cards-popular__image img {
+  background-color: #fff;
+  -webkit-box-shadow: 0rem 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0rem 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  max-width: 27.75rem;
   width: 100%;
-  height: 100%;
-  aspect-ratio: 444/319;
-  border-top-left-radius: 0.625rem;
-  border-top-right-radius: 0.625rem;
+}
+.cards-popular__image {
+  overflow: hidden;
+  width: 100%;
 }
 .cards-popular__img-link {
   width: 100%;
-  -webkit-transition: translate 0.5s ease;
-  transition: translate 0.5s ease;
+  aspect-ratio: 444/319;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+.cards-popular__img-link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (any-hover: hover) and (any-pointer: fine) {
   .cards-popular__img-link:hover {
-    translate: 0 -0.1875rem;
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
   }
 }
 .cards-popular__body {
@@ -2469,10 +2484,6 @@ label {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  background: #ffffff;
-  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 0.625rem;
 }
 @media (min-width: 89.375em) {
   .cards-popular__body {
@@ -2670,10 +2681,10 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
-  row-gap: 20px;
+  -webkit-column-gap: 0.625rem;
+     -moz-column-gap: 0.625rem;
+          column-gap: 0.625rem;
+  row-gap: 1.25rem;
 }
 .rating {
   display: -webkit-box;
@@ -2683,7 +2694,7 @@ label {
 }
 .rating__item {
   aspect-ratio: 1/1;
-  background: url("../../img/icons/star.svg") 0 0 no-repeat;
+  background: url("../img/icons/star.svg") 0 0 no-repeat;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1.3125rem;
           flex: 0 0 1.3125rem;
@@ -2739,7 +2750,7 @@ label {
 
 .background__img {
   width: 100%;
-  max-height: 33.875rem;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 1512/542;

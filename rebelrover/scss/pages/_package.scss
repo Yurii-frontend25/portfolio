@@ -2,6 +2,7 @@
 @use "../settings" as *;
 @use "../colors" as *;
 // =======================================================================================================================
+// Section popular
 .page {
 	// .page__popular
 	&__popular {
@@ -29,13 +30,11 @@
 	// .popular__link
 	&__link {
 		@include adaptiveValue("font-size", 22, 16);
-		& {
-			font-weight: 600;
-			background-color: $black;
-			padding-block: toRem(13.5);
-			padding-inline: toRem(26);
-			border-radius: toRem(30);
-		}
+		font-weight: 600;
+		background-color: $black;
+		padding-block: toRem(13.5);
+		padding-inline: toRem(26);
+		border-radius: toRem(30);
 		@media (max-width: toEm($mobile)) {
 			width: 100%;
 			text-align: center;
@@ -49,39 +48,44 @@
 	// .cards-popular__items
 	&__items {
 		display: grid;
-		// row-gap: toRem(18);
-		// gap: toRem(18);
 		grid-gap: toRem(18);
 		grid-template-columns: repeat(3, 1fr);
 		@media (max-width: toEm(890)) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 		@media (max-width: toEm(560)) {
-			grid-template-columns: auto;
+			grid-template-columns: 1fr;
 		}
 	}
 	// .cards-popular__item
 	&__item {
 		display: flex;
 		flex-direction: column;
+		background-color: $white;
+		box-shadow: toRem(0) toRem(5) toRem(20) rgba(0, 0, 0, 0.1);
+		border-radius: toRem(10);
+		overflow: hidden;
+		max-width: toRem(444);
+		width: 100%;
 	}
 	// .cards-popular__image
 	&__image {
-		img {
-			width: 100%;
-			height: 100%;
-			aspect-ratio: 444 / 319;
-			border-top-left-radius: toRem(10);
-			border-top-right-radius: toRem(10);
-		}
+		overflow: hidden;
+		width: 100%;
 	}
 	// .cards-popular__img-link
 	&__img-link {
 		width: 100%;
-		transition: translate 0.5s ease;
+		aspect-ratio: 444 / 319;
+		transition: transform 0.4s ease;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
-				translate: 0 toRem(-3);
+				transform: scale(1.02);
 			}
 		}
 	}
@@ -90,9 +94,6 @@
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
-		background: #ffffff;
-		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-		border-radius: toRem(10);
 		@include adaptiveValue("padding-top", 34, 10);
 		@include adaptiveValue("padding-right", 31, 10);
 		@include adaptiveValue("padding-bottom", 29, 15);
@@ -101,23 +102,19 @@
 	// .cards-popular__info
 	&__info {
 		@include adaptiveValue("margin-bottom", 28, 10);
-		& {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			gap: toRem(10);
-			justify-content: space-between;
-		}
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: toRem(10);
+		justify-content: space-between;
 	}
 	// .cards-popular__title
 	&__title {
 		@include adaptiveValue("font-size", 24, 20);
-		& {
-			font-weight: 600;
-			color: $black;
-			line-height: math.div(36, 24);
-			flex-grow: 1;
-		}
+		font-weight: 600;
+		color: $black;
+		line-height: math.div(36, 24);
+		flex-grow: 1;
 	}
 	// .cards-popular__link-title
 	&__link-title {
@@ -131,10 +128,8 @@
 	// .cards-popular__price
 	&__price {
 		@include adaptiveValue("font-size", 24, 16);
-		& {
-			line-height: math.div(36, 24);
-			color: $black;
-		}
+		line-height: math.div(36, 24);
+		color: $black;
 		span {
 			font-weight: 300;
 			@include adaptiveValue("font-size", 24, 16);
@@ -143,12 +138,10 @@
 	// .cards-popular__text
 	&__text {
 		@include adaptiveValue("margin-bottom", 34, 20);
-		& {
-			flex-grow: 1;
-			font-size: toRem(14);
-			line-height: math.div(27, 14);
-			color: $grey5;
-		}
+		flex-grow: 1;
+		font-size: toRem(14);
+		line-height: math.div(27, 14);
+		color: $grey5;
 		> p:not(:last-child) {
 			margin-bottom: toRem(10);
 		}
@@ -159,8 +152,8 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		column-gap: 10px;
-		row-gap: 20px;
+		column-gap: toRem(10);
+		row-gap: toRem(20);
 	}
 	// .cards-popular__rating
 	&__rating {
@@ -172,7 +165,7 @@
 	// .rating__item
 	&__item {
 		aspect-ratio: 1 / 1;
-		background: url("../../img/icons/star.svg") 0 0 no-repeat;
+		background: url("../img/icons/star.svg") 0 0 no-repeat;
 		flex: 0 0 toRem(21);
 	}
 }
@@ -183,19 +176,17 @@
 	// .form__btn
 	&__btn {
 		@include adaptiveValue("font-size", 22, 16);
-		& {
-			padding-block: toRem(13.5);
-			padding-inline: toRem(27);
-			font-weight: 600;
-			line-height: math.div(33, 22);
-		}
+		padding-block: toRem(13.5);
+		padding-inline: toRem(27);
+		font-weight: 600;
+		line-height: math.div(33, 22);
 		@media (max-width: toEm($mobile)) {
 			width: 100%;
 		}
 	}
 }
-//btn
 // =======================================================================================================================
+// Block background
 .page {
 	// .page__background
 	&__background {
@@ -206,13 +197,14 @@
 	// .background__img
 	&__img {
 		width: 100%;
-		max-height: toRem(542);
+		height: 100%;
 		object-fit: cover;
 		aspect-ratio: 1512 / 542;
 		object-position: top;
 	}
 }
 // =======================================================================================================================
+// Section tips
 .page {
 	// .page__tips
 	&__tips {
@@ -241,11 +233,9 @@
 	&__link {
 		@include adaptiveValue("font-size", 22, 16);
 		@include adaptiveValue("margin-top", 35, 0);
-		& {
-			padding-block: toRem(13.5);
-			padding-inline: toRem(47.5);
-			font-weight: 600;
-		}
+		padding-block: toRem(13.5);
+		padding-inline: toRem(47.5);
+		font-weight: 600;
 		@media (max-width: toEm($mobile)) {
 			width: 100%;
 			text-align: center;
@@ -260,11 +250,9 @@
 }
 .columns-tips {
 	@include adaptiveValue("column-gap", 56, 10);
-	& {
-		display: grid;
-		grid-template-columns: 38.1% 57.811%;
-		row-gap: toRem(20);
-	}
+	display: grid;
+	grid-template-columns: 38.1% 57.811%;
+	row-gap: toRem(20);
 	@media (max-width: toEm($tablet)) {
 		grid-template-columns: auto;
 	}
@@ -329,10 +317,8 @@
 	// .columns-tips__label
 	&__label {
 		@include adaptiveValue("font-size", 24, 20);
-		& {
-			color: $black;
-			font-weight: 400;
-		}
+		color: $black;
+		font-weight: 400;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 25, 20);
 		}
@@ -368,14 +354,12 @@
 		span::after {
 			content: "";
 			@include adaptiveValue("bottom", -30, -15);
-			& {
-				position: absolute;
-				left: 0;
-				background-color: $black;
-				width: toRem(12);
-				height: toRem(3);
-				pointer-events: none;
-			}
+			position: absolute;
+			left: 0;
+			background-color: $black;
+			width: toRem(12);
+			height: toRem(3);
+			pointer-events: none;
 		}
 	}
 	// .columns-tips__text
@@ -390,11 +374,9 @@
 	// .columns-tips__link
 	&__link {
 		@include adaptiveValue("font-size", 24, 16);
-		& {
-			padding-inline: toRem(40);
-			padding-block: toRem(14);
-			// font-weight: 500;
-		}
+		padding-inline: toRem(40);
+		padding-block: toRem(14);
+		// font-weight: 500;
 		@media (max-width: toEm($mobile)) {
 			width: 100%;
 			text-align: center;
