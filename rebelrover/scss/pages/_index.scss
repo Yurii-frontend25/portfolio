@@ -7,22 +7,20 @@
 	// .page__hero
 	&__hero {
 		position: relative;
-		@include adaptiveValue("margin-bottom", 90, 50);
+		// @include adaptiveValue("margin-bottom", 90, 50);
 	}
 }
 .hero {
 	// .hero__container
 	&__container {
-		display: flex;
-		flex-direction: column;
+		display: grid;
 		min-height: 100svh;
-		// justify-content: center;
 		@include adaptiveValue("padding-top", 200, 120);
 	}
 	// .hero__content
 	&__content {
-		display: grid;
-		align-items: center;
+		display: flex;
+		flex-direction: column;
 		gap: toRem(16);
 		position: relative;
 		z-index: 3;
@@ -30,8 +28,7 @@
 		// .hero__content--home
 		&--home {
 			// padding-top: toRem(90);
-			gap: toRem(30);
-			// justify-content: start;
+			// gap: toRem(30);
 			max-width: toRem(736);
 			@include adaptiveValue("margin-left", 36, 0);
 			@media (max-width: toEm($tablet)) {
@@ -65,7 +62,7 @@
 		// .hero__title--margin
 		&--margin {
 			&:not(:last-child) {
-				@include adaptiveValue("margin-bottom", 27, 10);
+				// @include adaptiveValue("margin-bottom", 27, 10);
 			}
 		}
 	}
@@ -109,10 +106,10 @@
 	// .hero__descr
 	&__descr {
 		color: $grey9;
-		max-width: toRem(442);
+		max-width: toRem(440);
 		line-height: 2;
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 42, 25);
+			// @include adaptiveValue("margin-bottom", 44, 25);
 		}
 		@media (max-width: toEm($tablet)) {
 			font-weight: 300;
@@ -122,7 +119,7 @@
 	// .hero__choice
 	&__choice {
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 37, 15);
+			// @include adaptiveValue("margin-bottom", 37, 15);
 		}
 	}
 	// .hero__places
@@ -159,9 +156,10 @@
 			background-color: rgba(95, 95, 26, 0.7);
 		}
 	}
-	// .hero__figure
-	&__figure {
+	// .hero__picture
+	&__picture {
 		position: absolute;
+		z-index: -1;
 		top: 0;
 		left: 0;
 		width: 100%;

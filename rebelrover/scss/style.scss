@@ -18,7 +18,6 @@
 @use "header";
 @use "footer";
 // =========================================
-// =========================================
 html {
 	scroll-behavior: smooth;
 }
@@ -26,12 +25,6 @@ html {
 	max-width: toRem($containerWidth);
 	padding-inline: toRem(math.div($containerPadding, 2));
 	margin: 0 auto;
-}
-// [class*="__container--width"],
-[class*="__header--width"] {
-	// max-width: toRem(1400);
-	// margin: 0 auto;
-	// padding-inline: toRem(15);
 }
 // =========================================
 body {

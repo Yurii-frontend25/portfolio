@@ -163,6 +163,7 @@
 
 		._sub-menu-open & {
 			rotate: -180deg; // Стрілочка розвертається при відкритті
+			color: rgba(255, 0, 0, 0.5);
 		}
 	}
 	// .menu__actions
