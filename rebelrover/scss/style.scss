@@ -27,18 +27,17 @@ html {
 	padding-inline: toRem(math.div($containerPadding, 2));
 	margin: 0 auto;
 }
-[class*="__container--width"],
+// [class*="__container--width"],
 [class*="__header--width"] {
-	max-width: toRem(1400);
-	margin: 0 auto;
-	padding-inline: toRem(15);
+	// max-width: toRem(1400);
+	// margin: 0 auto;
+	// padding-inline: toRem(15);
 }
 // =========================================
 body {
 	@include typography("def");
 	font-family: $fontFamily;
 	color: $mainColor;
-
 	.menu-open & {
 		overflow: hidden;
 		touch-action: none;

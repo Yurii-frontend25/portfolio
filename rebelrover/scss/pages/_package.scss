@@ -32,7 +32,7 @@
 		@include adaptiveValue("font-size", 22, 16);
 		font-weight: 600;
 		background-color: $black;
-		padding-block: toRem(13.5);
+		@include adaptiveValue("padding-block", 13.5, 10);
 		padding-inline: toRem(26);
 		border-radius: toRem(30);
 		@media (max-width: toEm($mobile)) {
@@ -67,6 +67,9 @@
 		overflow: hidden;
 		max-width: toRem(444);
 		width: 100%;
+		@media (max-width: toEm(560)) {
+			max-width: 100%;
+		}
 	}
 	// .cards-popular__image
 	&__image {
@@ -176,10 +179,8 @@
 	// .form__btn
 	&__btn {
 		@include adaptiveValue("font-size", 22, 16);
-		padding-block: toRem(13.5);
+		@include adaptiveValue("padding-block", 13.5, 10);
 		padding-inline: toRem(27);
-		font-weight: 600;
-		line-height: math.div(33, 22);
 		@media (max-width: toEm($mobile)) {
 			width: 100%;
 		}
@@ -200,7 +201,6 @@
 		height: 100%;
 		object-fit: cover;
 		aspect-ratio: 1512 / 542;
-		object-position: top;
 	}
 }
 // =======================================================================================================================
@@ -221,7 +221,8 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
-		gap: toRem(20);
+		column-gap: toRem(20);
+		row-gap: toRem(20);
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 58, 30);
 		}
@@ -233,9 +234,8 @@
 	&__link {
 		@include adaptiveValue("font-size", 22, 16);
 		@include adaptiveValue("margin-top", 35, 0);
-		padding-block: toRem(13.5);
+		@include adaptiveValue("padding-block", 13.5, 10);
 		padding-inline: toRem(47.5);
-		font-weight: 600;
 		@media (max-width: toEm($mobile)) {
 			width: 100%;
 			text-align: center;
@@ -258,47 +258,21 @@
 	}
 	// .columns-tips__column
 	&__column {
-		// background: black;
-		&:nth-child(1) {
+		&--grid {
 			display: grid;
 			@include adaptiveValue("row-gap", 58, 25);
-			.columns-tips__text {
-				&:not(:last-child) {
-					@include adaptiveValue("margin-bottom", 74, 30);
-				}
-			}
-			.columns-tips__body {
-				@include adaptiveValue("padding-right", 34, 2);
-				@include adaptiveValue("padding-left", 26, 2);
-				@include adaptiveValue("padding-top", 35, 15);
-			}
-			.columns-tips__item:nth-child(1) .columns-tips__body {
-				@include adaptiveValue("padding-bottom", 45, 10);
-			}
-			.columns-tips__item:nth-child(2) .columns-tips__body {
-				@include adaptiveValue("padding-bottom", 37, 10);
-			}
-		}
-		&:nth-child(2) {
-			.columns-tips__title {
-				&:not(:last-child) {
-					@include adaptiveValue("margin-bottom", 37, 10);
-				}
-			}
-			.columns-tips__body {
-				@include adaptiveValue("padding-inline", 60, 2);
-				@include adaptiveValue("padding-bottom", 37, 10);
-				@include adaptiveValue("padding-top", 35, 15);
-			}
-			.columns-tips__text {
-				&:not(:last-child) {
-					@include adaptiveValue("margin-bottom", 84, 30);
-				}
-			}
 		}
 	}
 	// .columns-tips__item
 	&__item {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		box-shadow: toRem(0) toRem(4) toRem(20) rgba(0, 0, 0, 0.1);
+		background: $white;
+	}
+	// .columns-tips__picture
+	&__picture {
 	}
 	// .columns-tips__img
 	&__img {
@@ -311,8 +285,27 @@
 	}
 	// .columns-tips__body
 	&__body {
-		background: $white;
-		box-shadow: toRem(0) toRem(4) toRem(20) rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-grow: 1;
+		&--small-padding {
+			@include adaptiveValue("padding-right", 18, 0);
+			@include adaptiveValue("padding-left", 15, 0);
+			@include adaptiveValue("padding-top", 35, 15);
+			&.columns-tips__body--first {
+				@include adaptiveValue("padding-bottom", 45, 10);
+			}
+			&.columns-tips__body--second {
+				@include adaptiveValue("padding-bottom", 37, 10);
+			}
+		}
+		&--big-padding {
+			@include adaptiveValue("padding-inline", 60, 0);
+			@include adaptiveValue("padding-bottom", 37, 10);
+			@include adaptiveValue("padding-top", 35, 15);
+		}
 	}
 	// .columns-tips__label
 	&__label {
@@ -320,19 +313,7 @@
 		color: $black;
 		font-weight: 400;
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 25, 20);
-		}
-	}
-	// .columns-tips__title
-	&__title {
-		@include adaptiveValue("font-size", 36, 24);
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 58, 30);
-		}
-		& {
-			color: $black;
-			line-height: math.div(51, 36);
-			position: relative;
+			@include adaptiveValue("margin-bottom", 20, 15);
 		}
 	}
 	// .columns-tips__anchor-title
@@ -340,26 +321,38 @@
 		text-decoration-line: underline;
 		text-decoration-color: transparent;
 		text-decoration-thickness: toRem(2);
-		text-underline-offset: toRem(9);
-		transition: all 0.4s ease;
+		text-underline-offset: toRem(10);
+		transition: text-decoration-color 0.3s ease;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
-				color: skyblue;
-				text-decoration-line: underline;
-				text-decoration-color: skyblue;
-				text-decoration-thickness: toRem(2);
-				text-underline-offset: toRem(9);
+				text-decoration-color: $black;
+				.columns-tips__title {
+					// color: skyblue;
+				}
 			}
 		}
-		span::after {
-			content: "";
-			@include adaptiveValue("bottom", -30, -15);
-			position: absolute;
-			left: 0;
-			background-color: $black;
-			width: toRem(12);
-			height: toRem(3);
-			pointer-events: none;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 15);
+		}
+	}
+	// .columns-tips__title
+	&__title {
+		@include adaptiveValue("font-size", 36, 24);
+		font-weight: 500;
+		color: $black;
+		line-height: math.div(51, 36);
+		transition: color 0.3s ease;
+		&--line {
+			&::after {
+				content: "";
+				@include adaptiveValue("margin-top", 30, 15);
+				display: block;
+				left: 0;
+				background-color: $black;
+				width: toRem(12);
+				height: toRem(3);
+				// pointer-events: none;
+			}
 		}
 	}
 	// .columns-tips__text
@@ -367,16 +360,24 @@
 		line-height: math.div(33, 18);
 		font-weight: 300;
 		color: $grey2;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 74, 30);
+		}
 		> p:not(:last-child) {
 			margin-bottom: toRem(10);
+		}
+		&--84 {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 84, 30);
+			}
 		}
 	}
 	// .columns-tips__link
 	&__link {
 		@include adaptiveValue("font-size", 24, 16);
 		padding-inline: toRem(40);
-		padding-block: toRem(14);
-		// font-weight: 500;
+		@include adaptiveValue("padding-block", 14, 10);
+		font-weight: 500;
 		@media (max-width: toEm($mobile)) {
 			width: 100%;
 			text-align: center;

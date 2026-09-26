@@ -9,9 +9,63 @@ function documentClick(e) {
 	}
 };
 //===================================================================================================
+// Menu dropdown
+document.addEventListener("DOMContentLoaded", () => {
 
+	// 2. Нова, залізобетонна логіка для підменю
+	const menuButtons = document.querySelectorAll(".menu__button");
+
+	menuButtons.forEach(button => {
+		button.addEventListener("click", (e) => {
+			if (window.innerWidth <= 991.98) {
+				const menuItem = button.closest(".menu__item");
+				const subMenu = menuItem.querySelector(".menu__sub-menu");
+
+				if (!subMenu) return;
+
+				const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+				if (!isExpanded) {
+					// --- ВІДКРИТТЯ ---
+					button.setAttribute("aria-expanded", "true");
+					menuItem.classList.add("_sub-menu-open");
+
+					// 1. Тимчасово вмикаємо флекс, щоб виміряти висоту контенту
+					subMenu.style.display = "flex";
+					subMenu.style.height = "auto";
+					const fullHeight = subMenu.offsetHeight; // Виміряли точну висоту в px
+
+					// 2. Скидаємо в 0, щоб браузер побачив старт анімації
+					subMenu.style.height = "0px";
+
+					// 3. Через мікро-таймаут запускаємо плавну CSS-анімацію
+					setTimeout(() => {
+						subMenu.style.height = `${fullHeight}px`;
+					}, 10);
+
+				} else {
+					// --- ЗАКРИТТЯ ---
+					button.setAttribute("aria-expanded", "false");
+					menuItem.classList.remove("_sub-menu-open");
+
+					// Зменшуємо висоту до 0
+					subMenu.style.height = "0px";
+
+					// Коли CSS-анімація закінчиться, повністю вимикаємо display
+					subMenu.addEventListener("transitionend", function handler() {
+						if (subMenu.style.height === "0px") {
+							subMenu.style.display = "none";
+						}
+						subMenu.removeEventListener("transitionend", handler); // Очищаємо слухач
+					});
+				}
+
+				e.stopPropagation();
+			}
+		});
+	});
+});
 //===================================================================================================
-
 document.addEventListener('DOMContentLoaded', () => {
 	const titles = document.querySelectorAll('.block__title');
 	const block = document.querySelector('.block');
