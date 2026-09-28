@@ -16,12 +16,11 @@
 	&__container {
 		position: relative;
 		z-index: 5;
-		// @include adaptiveValue("padding-top", 230, 120);
 		padding-top: toRem(120);
 		padding-bottom: toRem(10);
 		display: grid;
 		min-height: 100svh;
-		align-content: center;
+		// align-content: center;
 		@media (max-width: toEm($mobileSmall)) {
 		}
 	}
@@ -29,7 +28,7 @@
 	&__content {
 		// .hero__content--home
 		&--home {
-			@include adaptiveValue("padding-top", 55, 0);
+			@include adaptiveValue("padding-top", 60, 0);
 			display: flex;
 			flex-direction: column;
 			gap: toRem(50);
@@ -37,12 +36,11 @@
 			max-width: toRem(736);
 			@include adaptiveValue("margin-left", 36, 0);
 			@media (max-width: toEm(1515)) {
-				gap: toRem(20);
-				// padding-top: 55px;
+				gap: toRem(30);
+				@include adaptiveValue("padding-top", 30, 0);
 			}
 			@media (max-width: toEm($mobileSmall)) {
 				gap: toRem(50);
-				// justify-content: space-between;
 			}
 		}
 		// .hero__content--about
@@ -121,7 +119,7 @@
 		line-height: 2;
 
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 44, 30);
+			// @include adaptiveValue("margin-bottom", 44, 15);
 		}
 		@media (max-width: toEm($tablet)) {
 			font-weight: 300;
@@ -132,7 +130,7 @@
 	// .hero__choice
 	&__choice {
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 37, 30);
+			// @include adaptiveValue("margin-bottom", 37, 15);
 		}
 	}
 	// .hero__places
@@ -177,12 +175,14 @@
 		left: 0;
 		height: 100%;
 		width: 100%;
+		aspect-ratio: 16 / 8;
 	}
 	// .hero__image
 	&__image {
 		width: 100%;
 		height: 100%;
-
+		aspect-ratio: 16 / 8;
+		// object-position: center 65%;
 		filter: blur(toRem(1.25));
 		@media (max-width: toEm(1610)) {
 			object-fit: cover;

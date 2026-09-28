@@ -3272,17 +3272,15 @@ label {
   padding-bottom: 0.625rem;
   display: grid;
   min-height: 100svh;
-  -ms-flex-line-pack: center;
-      align-content: center;
 }
 @media (min-width: 89.375em) {
   .hero__content--home {
-    padding-top: 55px;
+    padding-top: 60px;
   }
 }
 @media (min-width: 20em) and (max-width: 89.375em) {
   .hero__content--home {
-    padding-top: clamp( 0.000001px , -15.8558545676px  +  4.9549548649vw , 55px );
+    padding-top: clamp( 0.000001px , -17.297296009px  +  5.4054053153vw , 60px );
   }
 }
 @media (max-width: 20em) {
@@ -3319,7 +3317,22 @@ label {
 }
 @media (max-width: 94.6875em) {
   .hero__content--home {
-    gap: 1.25rem;
+    gap: 1.875rem;
+  }
+}
+@media (max-width: 94.6875em) and (min-width: 89.375em) {
+  .hero__content--home {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 94.6875em) and (min-width: 20em) and (max-width: 89.375em) {
+  .hero__content--home {
+    padding-top: clamp( 0.000001px , -8.6486473604px  +  2.7027026126vw , 30px );
+  }
+}
+@media (max-width: 94.6875em) and (max-width: 20em) {
+  .hero__content--home {
+    padding-top: 0.000001px;
   }
 }
 @media (max-width: 29.99875em) {
@@ -3467,40 +3480,10 @@ label {
   max-width: 27.5rem;
   line-height: 2;
 }
-@media (min-width: 89.375em) {
-  .hero__descr:not(:last-child) {
-    margin-bottom: 44px;
-  }
-}
-@media (min-width: 20em) and (max-width: 89.375em) {
-  .hero__descr:not(:last-child) {
-    margin-bottom: clamp( 30px , 25.963963964px  +  1.2612612613vw , 44px );
-  }
-}
-@media (max-width: 20em) {
-  .hero__descr:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
 @media (max-width: 61.99875em) {
   .hero__descr {
     font-weight: 300;
     color: #fff;
-  }
-}
-@media (min-width: 89.375em) {
-  .hero__choice:not(:last-child) {
-    margin-bottom: 37px;
-  }
-}
-@media (min-width: 20em) and (max-width: 89.375em) {
-  .hero__choice:not(:last-child) {
-    margin-bottom: clamp( 30px , 27.981981982px  +  0.6306306306vw , 37px );
-  }
-}
-@media (max-width: 20em) {
-  .hero__choice:not(:last-child) {
-    margin-bottom: 30px;
   }
 }
 .hero__places {
@@ -3518,10 +3501,12 @@ label {
   left: 0;
   height: 100%;
   width: 100%;
+  aspect-ratio: 16/8;
 }
 .hero__image {
   width: 100%;
   height: 100%;
+  aspect-ratio: 16/8;
   -webkit-filter: blur(0.078125rem);
           filter: blur(0.078125rem);
 }
