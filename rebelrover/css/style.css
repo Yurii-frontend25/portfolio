@@ -3268,34 +3268,26 @@ label {
 .hero__container {
   position: relative;
   z-index: 5;
-}
-@media (min-width: 89.375em) {
-  .hero__container {
-    padding-top: 180px;
-  }
-}
-@media (min-width: 20em) and (max-width: 89.375em) {
-  .hero__container {
-    padding-top: clamp( 120px , 102.7027027027px  +  5.4054054054vw , 180px );
-  }
-}
-@media (max-width: 20em) {
-  .hero__container {
-    padding-top: 120px;
-  }
-}
-.hero__container {
+  padding-top: 7.5rem;
   padding-bottom: 0.625rem;
   display: grid;
   min-height: 100svh;
   -ms-flex-line-pack: center;
       align-content: center;
 }
-@media (max-width: 29.99875em) {
-  .hero__container {
-    -webkit-box-align: self-start;
-        -ms-flex-align: self-start;
-            align-items: self-start;
+@media (min-width: 89.375em) {
+  .hero__content--home {
+    padding-top: 55px;
+  }
+}
+@media (min-width: 20em) and (max-width: 89.375em) {
+  .hero__content--home {
+    padding-top: clamp( 0.000001px , -15.8558545676px  +  4.9549548649vw , 55px );
+  }
+}
+@media (max-width: 20em) {
+  .hero__content--home {
+    padding-top: 0.000001px;
   }
 }
 .hero__content--home {
@@ -3306,7 +3298,7 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 3.125rem;
   min-height: 100%;
   max-width: 46rem;
 }
@@ -3325,11 +3317,14 @@ label {
     margin-left: 0.000001px;
   }
 }
+@media (max-width: 94.6875em) {
+  .hero__content--home {
+    gap: 1.25rem;
+  }
+}
 @media (max-width: 29.99875em) {
   .hero__content--home {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    gap: 3.125rem;
   }
 }
 .hero__content--about {
@@ -3383,21 +3378,6 @@ label {
 @media (max-width: 25.9375em) {
   .hero__title--center-blog {
     text-align: left;
-  }
-}
-@media (min-width: 89.375em) {
-  .hero__title--margin:not(:last-child) {
-    margin-bottom: 28px;
-  }
-}
-@media (min-width: 20em) and (max-width: 89.375em) {
-  .hero__title--margin:not(:last-child) {
-    margin-bottom: clamp( 25px , 24.1351351351px  +  0.2702702703vw , 28px );
-  }
-}
-@media (max-width: 20em) {
-  .hero__title--margin:not(:last-child) {
-    margin-bottom: 25px;
   }
 }
 .hero__title--margin:not(:last-child) {
