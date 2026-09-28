@@ -9,13 +9,12 @@
 	width: 100%;
 	z-index: 100;
 	background-color: rgba(18, 11, 11, 0.51);
-
 	// .header__container
 	&__container {
 		@include adaptiveValue("min-height", 128, 80);
 		display: flex;
 		align-items: center;
-		position: relative;
+		// position: relative;
 	}
 	// .header__body
 	&__body {
