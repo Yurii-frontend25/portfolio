@@ -17,16 +17,10 @@
 		position: relative;
 		z-index: 5;
 		@include adaptiveValue("padding-top", 180, 120);
-		// @include adaptiveValue("padding-bottom", 50, 30);
-		padding-bottom: 10px;
+		padding-bottom: toRem(10);
 		display: grid;
 		min-height: 100svh;
-		align-items: center;
-		@media (max-width: toEm(1515)) {
-			// @include adaptiveValue("padding-top", 280, 120);
-			// @include adaptiveValue("padding-bottom", 140, 30);
-			// align-items: center;
-		}
+		align-content: center;
 		@media (max-width: toEm($mobileSmall)) {
 			align-items: self-start;
 		}
@@ -41,9 +35,6 @@
 			min-height: 100%;
 			max-width: toRem(736);
 			@include adaptiveValue("margin-left", 36, 0);
-			@media (max-width: toEm($tablet)) {
-				// margin-left: 0;
-			}
 			@media (max-width: toEm($mobileSmall)) {
 				justify-content: space-between;
 			}
