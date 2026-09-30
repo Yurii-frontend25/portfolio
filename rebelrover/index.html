@@ -97,32 +97,32 @@
 						<div class="hero__descr">
 							<p>Explore the world with what you love beautiful natural beauty.</p>
 						</div>
-						<form class="hero__choice choice-hero">
+						<form class="hero__choice choice-hero" action="#">
 							<div class="choice-hero__items">
-								<label class="choice-hero__item">
-									<select class="choice-hero__select" name="form[]">
+								<div class="choice-hero__item">
+									<select class="choice-hero__select" name="form[]" aria-label="Choose location">
 										<option class="choice-hero__element" value disabled selected hidden>Location</option>
-										<option class="choice-hero__element" value="country">Bali</option>
-										<option class="choice-hero__element" value="country">Istanbul</option>
-										<option class="choice-hero__element" value="country">Rome</option>
+										<option class="choice-hero__element" value="bali">Bali</option>
+										<option class="choice-hero__element" value="istanbul">Istanbul</option>
+										<option class="choice-hero__element" value="rome">Rome</option>
 									</select>
-								</label>
-								<label class="choice-hero__item">
-									<select class="choice-hero__select" name="form[]">
+								</div>
+								<div class="choice-hero__item">
+									<select class="choice-hero__select" name="form[]" aria-label="Choose duration in days">
 										<option class="choice-hero__element" value disabled selected hidden>Date</option>
-										<option class="choice-hero__element" value="date">3</option>
-										<option class="choice-hero__element" value="date">7</option>
-										<option class="choice-hero__element" value="date">10</option>
+										<option class="choice-hero__element" value="3">3</option>
+										<option class="choice-hero__element" value="7">7</option>
+										<option class="choice-hero__element" value="10">10</option>
 									</select>
-								</label>
-								<label class="choice-hero__item">
-									<select class="choice-hero__select" name="form[]">
+								</div>
+								<div class="choice-hero__item">
+									<select class="choice-hero__select" name="form[]" aria-label="Number of people">
 										<option class="choice-hero__element" value disabled selected hidden>People</option>
-										<option class="choice-hero__element" value="quantity">2</option>
-										<option class="choice-hero__element" value="quantity">4</option>
-										<option class="choice-hero__element" value="quantity">6</option>
+										<option class="choice-hero__element" value="2">2</option>
+										<option class="choice-hero__element" value="4">4</option>
+										<option class="choice-hero__element" value="6">6</option>
 									</select>
-								</label>
+								</div>
 							</div>
 							<a class="choice-hero__link" href="#">Explore now</a>
 						</form>
@@ -133,7 +133,6 @@
 				</div>
 				<picture class="hero__picture">
 					<source srcset="img/hero/hero-bg.webp" type="image/webp">
-					<!-- <source media="(max-width: 991.98px)" srcset="img/package/package-hero.webp" type="image/webp"> -->
 					<img class="hero__image" src="img/hero/hero-bg.jpg" alt="Three colorful suitcases on a table with a scenic beach and mountains in the background">
 				</picture>
 			</section>

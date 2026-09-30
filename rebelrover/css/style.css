@@ -3545,6 +3545,7 @@ label {
 }
 .hero__picture {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   height: 100%;
@@ -3559,6 +3560,7 @@ label {
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
   }
 }
 .hero__image {
@@ -3672,9 +3674,6 @@ label {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     padding-inline: 0.9375rem;
     padding-block: 0.9375rem;
     border: 0.0625rem solid #cbcaca;
@@ -3682,6 +3681,13 @@ label {
             box-shadow: 0rem 1.25rem 2.1875rem rgba(0, 0, 0, 0.3);
     border-radius: 4.5rem;
   }
+}
+.choice-hero__select:focus {
+  outline: none;
+}
+.choice-hero__select:focus-visible {
+  outline: 0.125rem solid #000;
+  outline-offset: 0.0625rem;
 }
 .choice-hero__link {
   color: #fff;

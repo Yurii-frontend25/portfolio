@@ -63,7 +63,6 @@
 		&--margin {
 			&:not(:last-child) {
 				@include adaptiveValue("margin-bottom", 28, 25);
-				// text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 			}
 		}
 	}
@@ -115,7 +114,6 @@
 		@media (max-width: toEm($tablet)) {
 			font-weight: 300;
 			color: $white;
-			// text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 		}
 	}
 	// .hero__choice
@@ -126,7 +124,6 @@
 	}
 	// .hero__places
 	&__places {
-		// text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 		// color: $grey13;
 		line-height: 2;
 		span {
@@ -135,33 +132,18 @@
 			// font-weight: 500;
 			line-height: 2;
 		}
-		@media (max-width: toEm($mobile)) {
-			// gap: toRem(20);
-			// color: $grey9;
-			span {
-				// display: block;
-				// color: white;
-				// background-color: rgba(255, 0, 0, 0.5);
-				// background-color: rgba(79, 154, 208, 0.7);
-
-				// background-color: rgba(155, 199, 237, 0.7);
-				// border-radius: toRem(50);
-				// text-align: center;
-			}
-		}
 	}
 	// .hero__popular
 	&__popular {
 		@media (max-width: toEm(360)) {
 			display: flex;
 			flex-direction: column;
-			// color: white;
-			// background-color: rgba(95, 95, 26, 0.7);
 		}
 	}
 	// .hero__picture
 	&__picture {
 		position: absolute;
+		z-index: 1;
 		top: 0;
 		left: 0;
 		height: 100%;
@@ -175,6 +157,7 @@
 				height: 100%;
 				width: 100%;
 				background: rgba(0, 0, 0, 0.3);
+				pointer-events: none;
 			}
 		}
 	}
@@ -233,7 +216,6 @@
 		padding-bottom: toRem(10);
 		@media (max-width: toEm(495)) {
 			flex: 1 1 auto;
-			justify-content: space-between;
 			padding-inline: toRem(15);
 			padding-block: toRem(15);
 			border: toRem(1) solid #cbcaca;
@@ -247,6 +229,14 @@
 	}
 	// .choice-hero__select
 	&__select {
+		&:focus {
+			outline: none; // Скрывает рамку при обычном клике мышкой/пальцем
+		}
+
+		&:focus-visible {
+			outline: toRem(2) solid $black; // Показывает четкую рамку только при навигации с клавиатуры
+			outline-offset: toRem(1);
+		}
 	}
 	// .choice-hero__element
 	&__element {
