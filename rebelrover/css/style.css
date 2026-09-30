@@ -3354,12 +3354,12 @@ label {
 }
 @media (min-width: 20em) and (max-width: 89.375em) {
   .hero__title {
-    font-size: clamp( 50px , 38.4684684685px  +  3.6036036036vw , 90px );
+    font-size: clamp( 56px , 46.1981981982px  +  3.0630630631vw , 90px );
   }
 }
 @media (max-width: 20em) {
   .hero__title {
-    font-size: 50px;
+    font-size: 56px;
   }
 }
 .hero__title {
