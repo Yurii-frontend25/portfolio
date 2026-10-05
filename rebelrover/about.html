@@ -13,157 +13,90 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header header--margin hero">
-			<section class="hero__section">
-				<div class="hero__container hero__container--width">
-					<div class="hero__body">
-						<div class="hero__header hero__header--width">
-							<div class="hero__logo logo">
-								<a class="logo__link" href="#">
-									<img class="logo__image" src="img/logo-3x.png" alt="Logo">
-								</a>
-							</div>
-							<div class="hero__menu menu">
-								<!-- <nav class="menu__body">
-									<ul class="menu__list block">
-										<li class="menu__item">
-											<a class="menu__link" href="#">Home</a>
+		<!-- <header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<div class="header__logo logo">
+						<a class="logo__link" href="/">
+							<img class="logo__img" src="img/logo-3x.webp" alt="Logo Rebel Rover">
+						</a>
+					</div>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a class="menu__link" href="index.html">Home</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">About Us</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Package</a>
+									<button class="menu__button _icon-s-arrow" type="button" aria-label="Toggle Package submenu" aria-expanded="false"></button>
+									<ul class="menu__sub-menu sub-menu">
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
-										<li class="menu__item">
-											<a class="menu__link" href="#">About Us</a>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
-										<li class="menu__item">
-											<a class="menu__link menu__link--transparent" href="#">Package</a>
-											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
-											<ul class="menu__sub-menu sub-menu block__text">
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu__item">
-											<a class="menu__link menu__link--transparent" href="#">Destination</a>
-											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
-											<ul class="menu__sub-menu sub-menu block__text">
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu__item">
-											<a class="menu__link menu__link--transparent" href="#">Blog</a>
-											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
-											<ul class="menu__sub-menu sub-menu block__text">
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu__item">
-											<a class="menu__link" href="#">Contact</a>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
 									</ul>
-								</nav> -->
-								<nav class="menu__body">
-									<ul class="menu__list">
-										<li class="menu__item">
-											<a class="menu__link" href="#">Home</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Destination</a>
+									<button class="menu__button _icon-s-arrow" type="button" aria-label="Toggle Package submenu" aria-expanded="false"></button>
+									<ul class="menu__sub-menu sub-menu">
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
-										<li class="menu__item">
-											<a class="menu__link" href="#">About Us</a>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
-										<!-- Чекбокс нужен для клика на мобилках -->
-										<li class="menu__dropdown">
-											<input type="checkbox" id="menu-toggle-1">
-											<label for="menu-toggle-1" class="menu__label">
-												<a class="menu__anchor" href="#">Package </a>
-												<span class="menu__arrow _icon-s-arrow"></span>
-											</label>
-											<div class="menu__submenu submenu">
-												<ul class="submenu__inner">
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-												</ul>
-											</div>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
-										<li class="menu__dropdown">
-											<input type="checkbox" id="menu-toggle-2">
-											<label for="menu-toggle-2" class="menu__label">
-												<a class="menu__anchor" href="#"> Destination </a>
-												<span class="menu__arrow _icon-s-arrow"></span>
-											</label>
-											<div class="menu__submenu submenu">
-												<ul class="submenu__inner">
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li class="menu__dropdown">
-											<input type="checkbox" id="menu-toggle-3">
-											<label for="menu-toggle-3" class="menu__label">
-												<a class="menu__anchor" href="#"> Blog </a>
-												<span class="menu__arrow _icon-s-arrow"></span>
-											</label>
-											<div class="menu__submenu submenu">
-												<ul class="submenu__inner">
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
 									</ul>
-								</nav>
-								<a class="menu__search" href="#"><img src="img/icons/search.svg" alt="" aria-hidden="true"></a>
-								<button class="menu__icon icon-menu" type="button" aria-label="Open menu burger"><span></span></button>
-							</div>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Blog</a>
+									<button class="menu__button _icon-s-arrow" type="button" aria-label="Toggle Package submenu" aria-expanded="false"></button>
+									<ul class="menu__sub-menu sub-menu">
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
+										</li>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
+										</li>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Contact</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="menu__actions actions">
+							<a class="actions__search" href="#" aria-label="Search">
+								<img src="img/icons/search.svg" alt="" aria-hidden="true">
+							</a>
+							<button class="actions__button icon-menu" type="button" aria-label="Open menu" aria-controls="menu-body">
+								<span></span>
+							</button>
 						</div>
 					</div>
+				</div>
+			</div>
+		</header> -->
+		<main class="page">
+			<!-- <section class="page__hero hero">
+				<div class="hero__container hero__container--about">
 					<div class="hero__content hero__content--about">
-						<h1 class="hero__title hero__title--center">About Us</h1>
+						<h1 class="hero__title hero__title--about">About Us</h1>
 						<ul class="hero__items hero__items--about">
 							<li class="hero__item">
 								<a class="hero__link" href="#">Home</a>
@@ -177,15 +110,11 @@
 						</ul>
 					</div>
 				</div>
-				<figure>
-					<picture>
-						<source srcset="img/about/about-hero.webp" type="image/webp">
-						<img class="hero__image hero__image--about" src="img/about/about-hero.jpg" alt="image">
-					</picture>
-				</figure>
-			</section>
-		</header>
-		<main class="page">
+				<picture class="hero__picture">
+					<source srcset="img/about/about-hero.webp" type="image/webp">
+					<img class="hero__image hero__image--about" src="img/about/about-hero.jpg" alt="image">
+				</picture>
+			</section> -->
 			<div class="page__our our">
 				<div class="our__container hero__container--width">
 					<div class="our__items">
@@ -194,7 +123,7 @@
 								<img class="our__img-icon" src="img/our/icons/01.svg" alt="" aria-hidden="true">
 							</div>
 							<h3 class="our__label">Great team work</h3>
-							<div class="our__text">
+							<div class="our__text our__text--width">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget, maximus convallis massa. Curabitur quis tellus a tortor egestas viverra. </p>
 							</div>
 						</div>
@@ -219,7 +148,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="page__blockquote blockquote">
+			<!-- <div class="page__blockquote blockquote">
 				<div class="blockquote__container blockquote__container--width">
 					<div class="blockquote__items">
 						<div class="blockquote__item">
@@ -246,7 +175,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
+			<!-- 
 			<div class="page__advantages advantages">
 				<div class="advantages__container advantages__container--width">
 					<ul class="advantages__items">
@@ -378,7 +308,7 @@
 						</picture>
 					</figure>
 				</div>
-			</section>
+			</section> -->
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -457,7 +387,9 @@
 				</div>
 			</div>
 			<div class="footer__copy">
-				<p>Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+				<div class="footer__container">
+					<p>Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+				</div>
 			</div>
 		</footer>
 	</div>

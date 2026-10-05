@@ -11,15 +11,33 @@
 }
 .hero {
 	position: relative;
+	// max-width: toRem(1920);
+	// min-height: 860px;
 	// .hero__container
 	&__container {
 		display: flex;
-		align-items: center;
+		// align-items: center;
 		min-height: 100svh;
 		position: relative;
 		z-index: 5;
 		@include adaptiveValue("padding-top", 275, 90);
 		@include adaptiveValue("padding-bottom", 110, 30);
+		@media (max-width: toEm($mobileSmall)) {
+			min-height: 70svh;
+		}
+		&--home {
+			align-items: center;
+		}
+		&--about {
+			@include adaptiveValue("padding-top", 200, 90);
+			@include adaptiveValue("padding-bottom", 352, 30);
+			@media (max-width: toEm($mobileSmall)) {
+				min-height: 70svh;
+			}
+			@media (min-width: toEm($mobileSmall)) {
+				align-items: center;
+			}
+		}
 	}
 	// .hero__content
 	&__content {
@@ -37,9 +55,15 @@
 		}
 		// .hero__content--about
 		&--about {
-			min-height: toRem(300);
+			display: grid;
+			@include adaptiveValue("gap", 55, 25);
+			justify-content: center;
+			width: 100%;
+			// min-height: toRem(156);
 			grid-template-rows: auto 1fr;
 			align-items: self-start;
+			@media (min-width: toEm($mobileSmall)) {
+			}
 		}
 	}
 	// .hero__title
@@ -47,11 +71,10 @@
 		@include typography("h1");
 		color: $white;
 		font-weight: 700;
-		// .hero__title--center
-		&--center {
-			@include adaptiveValue("font-size", 64, 54);
-			font-weight: 700;
-			text-align: center;
+		// .hero__title--about
+		&--about {
+			@include adaptiveValue("font-size", 64, 56);
+			text-shadow: toRem(1) toRem(1) toRem(4) rgba(0, 0, 0, 0.3);
 		}
 		// .hero__title--center-blog
 		&--center-blog {
@@ -192,6 +215,7 @@
 		}
 		// .hero__image--about
 		&--about {
+			object-fit: cover;
 			object-position: bottom;
 		}
 		// .hero__image--package
