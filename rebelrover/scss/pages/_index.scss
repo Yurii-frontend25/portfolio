@@ -23,7 +23,7 @@
 		@include adaptiveValue("padding-top", 275, 90);
 		@include adaptiveValue("padding-bottom", 110, 30);
 		@media (max-width: toEm($mobileSmall)) {
-			min-height: 70svh;
+			// min-height: 90svh;
 		}
 		&--home {
 			align-items: center;
@@ -32,7 +32,7 @@
 			@include adaptiveValue("padding-top", 200, 90);
 			@include adaptiveValue("padding-bottom", 352, 30);
 			@media (max-width: toEm($mobileSmall)) {
-				min-height: 70svh;
+				// min-height: 90svh;
 			}
 			@media (min-width: toEm($mobileSmall)) {
 				align-items: center;
