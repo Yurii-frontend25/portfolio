@@ -117,7 +117,7 @@ $responsiveType: 1;
 	}
 	@if ($size == "L") {
 		$fontSize: 18;
-		$fontSizeMob: 16;
+		$fontSizeMob: 14;
 	}
 	@if ($size == "XL") {
 		$fontSize: 20;

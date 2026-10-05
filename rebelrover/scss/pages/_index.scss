@@ -13,13 +13,13 @@
 	position: relative;
 	// .hero__container
 	&__container {
+		display: flex;
+		align-items: center;
+		min-height: 100svh;
 		position: relative;
 		z-index: 5;
-		min-height: 100svh;
-		display: flex;
 		@include adaptiveValue("padding-top", 275, 90);
 		@include adaptiveValue("padding-bottom", 110, 30);
-		align-items: center;
 	}
 	// .hero__content
 	&__content {
@@ -27,7 +27,7 @@
 		&--home {
 			display: flex;
 			flex-direction: column;
-			gap: 12px;
+			gap: toRem(10);
 			max-width: toRem(736);
 			width: 100%;
 			@include adaptiveValue("margin-left", 36, 0);
@@ -90,6 +90,10 @@
 		align-items: center;
 		gap: toRem(12);
 	}
+	// .hero__line-title
+	&__line-title {
+		display: block;
+	}
 	// .hero__link
 	&__link {
 		@include adaptiveValue("font-size", 24, 18);
@@ -111,10 +115,6 @@
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 44, 25);
 		}
-		@media (max-width: toEm($tablet)) {
-			font-weight: 300;
-			color: $white;
-		}
 	}
 	// .hero__choice
 	&__choice {
@@ -124,20 +124,40 @@
 	}
 	// .hero__places
 	&__places {
-		// color: $grey13;
+		display: flex;
+		flex-wrap: wrap;
+		gap: toRem(2) toRem(4);
 		line-height: 2;
-		span {
-			// color: $grey9;
-			color: $white;
-			// font-weight: 500;
-			line-height: 2;
-		}
 	}
 	// .hero__popular
 	&__popular {
-		@media (max-width: toEm(360)) {
-			display: flex;
-			flex-direction: column;
+		color: $grey13;
+	}
+	// .hero__areas-list
+	&__areas-list {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: toRem(4);
+		color: $grey9;
+	}
+	// .hero__areas-item
+	&__areas-item {
+		display: inline-flex;
+		&:not(:last-child)::after {
+			content: ",";
+		}
+		&:last-child::after {
+			content: ".";
+		}
+	}
+	// .hero__areas-link
+	&__areas-link {
+		transition: color 0.2s ease;
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				color: $grey13;
+				text-decoration: underline;
+			}
 		}
 	}
 	// .hero__picture
@@ -183,19 +203,16 @@
 .choice-hero {
 	display: flex;
 	flex-wrap: wrap;
-	gap: toRem(30);
 	border: toRem(1) solid #cbcaca;
-	box-shadow: toRem(0) toRem(20) toRem(35) rgba(0, 0, 0, 0.3);
 	border-radius: toRem(72);
+	box-shadow: toRem(0) toRem(20) toRem(35) rgba(0, 0, 0, 0.3);
+	row-gap: toRem(30);
 	@include adaptiveValue("column-gap", 102, 20);
-	@media (min-width: toEm(495)) {
-		background-color: $white;
-		align-items: center;
-		padding-right: toRem(10);
-		padding-block: toRem(10);
-		@include adaptiveValue("padding-left", 23, 10);
-		//486
-	}
+	background-color: $white;
+	align-items: center;
+	padding-right: toRem(10);
+	padding-block: toRem(10);
+	@include adaptiveValue("padding-left", 23, 10);
 	@media (max-width: toEm(495)) {
 		background-color: transparent;
 		border: none;
@@ -203,25 +220,19 @@
 		padding-right: 0;
 		padding-block: 0;
 		padding-left: 0;
-		//486
 	}
 	// .choice-hero__items
 	&__items {
-		flex-grow: 1;
-		justify-content: space-between;
 		display: flex;
+		justify-content: space-between;
+		flex: 1 1 auto;
+		column-gap: toRem(5);
 		background-color: $white;
-		// @include adaptiveValue("column-gap", 87, 10);
-		padding-top: toRem(11);
-		padding-bottom: toRem(10);
 		@media (max-width: toEm(495)) {
-			flex: 1 1 auto;
-			padding-inline: toRem(15);
-			padding-block: toRem(15);
+			padding: toRem(10);
 			border: toRem(1) solid #cbcaca;
 			box-shadow: toRem(0) toRem(20) toRem(35) rgba(0, 0, 0, 0.3);
 			border-radius: toRem(72);
-			//486
 		}
 	}
 	// .choice-hero__item
@@ -229,26 +240,35 @@
 	}
 	// .choice-hero__select
 	&__select {
-		&:focus {
-			outline: none; // Скрывает рамку при обычном клике мышкой/пальцем
-		}
-
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		color: $grey12;
+		line-height: 2;
+		font-family: "Poppins", sans-serif;
+		font-weight: 600;
+		@include adaptiveValue("padding-right", 30, 26);
+		padding-left: toRem(3);
+		@include typography("L");
+		background: url("../img/icons/arrow.svg") right toRem(12) center / toRem(9) no-repeat;
 		&:focus-visible {
-			outline: toRem(2) solid $black; // Показывает четкую рамку только при навигации с клавиатуры
-			outline-offset: toRem(1);
+			outline: toRem(2) solid $black;
+			outline-offset: toRem(-1);
+			border-radius: toRem(6);
 		}
 	}
 	// .choice-hero__element
 	&__element {
 	}
 	// .choice-hero__link
-	&__link {
+	&__button {
 		color: $white;
 		background-color: $black;
 		font-weight: 600;
 		border-radius: toRem(28);
 		line-height: 2;
-		padding: toRem(10.5) toRem(26) toRem(10.5) toRem(26);
+		@include adaptiveValue("padding-block", 10.5, 9);
+		padding-inline: toRem(26);
 		transition: background-color 0.3s ease;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
@@ -258,16 +278,10 @@
 		@media (max-width: toEm(495)) {
 			width: 100%;
 			text-align: center;
-			//486
 		}
 	}
 }
 select {
-	color: $grey12;
-	@include typography("L");
-	line-height: 2;
-	background-color: transparent;
-	font-weight: 600;
 }
 // =======================================================================================================================
 // Section explore

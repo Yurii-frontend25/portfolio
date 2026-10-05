@@ -83,7 +83,9 @@
 							<a class="actions__search" href="#" aria-label="Search">
 								<img src="img/icons/search.svg" alt="" aria-hidden="true">
 							</a>
-							<button class="actions__button icon-menu" type="button" aria-label="Open menu burger"><span></span></button>
+							<button class="actions__button icon-menu" type="button" aria-label="Open menu" aria-controls="menu-body">
+								<span></span>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -93,14 +95,16 @@
 			<section class="page__hero hero">
 				<div class="hero__container">
 					<div class="hero__content hero__content--home">
-						<h1 class="hero__title hero__title--margin">Make in <br> your journey.</h1>
+						<h1 class="hero__title hero__title--margin">
+							<span class="hero__line-title">Make in</span> your journey.
+						</h1>
 						<div class="hero__descr">
 							<p>Explore the world with what you love beautiful natural beauty.</p>
 						</div>
 						<form class="hero__choice choice-hero" action="#">
 							<div class="choice-hero__items">
 								<div class="choice-hero__item">
-									<select class="choice-hero__select" name="form[]" aria-label="Choose location">
+									<select class="choice-hero__select" name="form[location]" aria-label="Choose location" required>
 										<option class="choice-hero__element" value disabled selected hidden>Location</option>
 										<option class="choice-hero__element" value="bali">Bali</option>
 										<option class="choice-hero__element" value="istanbul">Istanbul</option>
@@ -108,7 +112,7 @@
 									</select>
 								</div>
 								<div class="choice-hero__item">
-									<select class="choice-hero__select" name="form[]" aria-label="Choose duration in days">
+									<select class="choice-hero__select" name="form[duration]" aria-label="Choose duration in days" required>
 										<option class="choice-hero__element" value disabled selected hidden>Date</option>
 										<option class="choice-hero__element" value="3">3</option>
 										<option class="choice-hero__element" value="7">7</option>
@@ -116,7 +120,7 @@
 									</select>
 								</div>
 								<div class="choice-hero__item">
-									<select class="choice-hero__select" name="form[]" aria-label="Number of people">
+									<select class="choice-hero__select" name="form[people]" aria-label="Number of people" required>
 										<option class="choice-hero__element" value disabled selected hidden>People</option>
 										<option class="choice-hero__element" value="2">2</option>
 										<option class="choice-hero__element" value="4">4</option>
@@ -124,16 +128,31 @@
 									</select>
 								</div>
 							</div>
-							<a class="choice-hero__link" href="#">Explore now</a>
+							<button class="choice-hero__button" type="button">Explore now</button>
 						</form>
 						<div class="hero__places">
-							<span class="hero__popular">Popular Place:</span> <span>Bali, Istanbul, Rome, Paris.</span>
+							<span class="hero__popular">Popular Place:</span>
+							<ul class="hero__areas-list">
+								<li class="hero__areas-item">
+									<a class="hero__areas-link" href="#">Bali</a>
+								</li>
+								<li class="hero__areas-item">
+									<a class="hero__areas-link" href="#">Istanbul</a>
+								</li>
+								<li class="hero__areas-item">
+									<a class="hero__areas-link" href="#">Rome</a>
+								</li>
+								<li class="hero__areas-item">
+									<a class="hero__areas-link" href="#">Paris</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 				<picture class="hero__picture">
 					<source srcset="img/hero/hero-bg.webp" type="image/webp">
 					<img class="hero__image" src="img/hero/hero-bg.jpg" alt="Three colorful suitcases on a table with a scenic beach and mountains in the background">
+					<!-- <img class="hero__image" src="img/hero/image_baf26992 (1).jpg" alt=""> -->
 				</picture>
 			</section>
 			<section class="page__explore explore">
