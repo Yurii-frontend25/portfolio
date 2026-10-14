@@ -11,6 +11,9 @@
 }
 .hero {
 	position: relative;
+	&--package {
+		@include adaptiveValue("margin-bottom", 178, 50);
+	}
 	// .hero__container
 	&__container {
 		display: flex;
@@ -30,6 +33,14 @@
 			align-items: flex-start;
 			@include adaptiveValue("padding-top", 180, 100);
 			@include adaptiveValue("padding-bottom", 352, 30);
+			@media (min-width: toEm($mobile)) {
+				align-items: center;
+			}
+		}
+		&--package {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
 			@media (min-width: toEm($mobile)) {
 				align-items: center;
 			}
@@ -57,6 +68,12 @@
 			gap: toRem(27);
 			width: 100%;
 		}
+		&--package {
+			display: flex;
+			flex-direction: column;
+			gap: toRem(16);
+			width: 100%;
+		}
 	}
 	// .hero__title
 	&__title {
@@ -64,7 +81,8 @@
 		color: $white;
 		font-weight: 700;
 		// .hero__title--about
-		&--about {
+		&--about,
+		&--package {
 			text-align: center;
 			@include adaptiveValue("font-size", 64, 56);
 			text-shadow: toRem(1) toRem(1) toRem(4) rgba(0, 0, 0, 0.3);
@@ -75,8 +93,11 @@
 				text-align: left;
 			}
 		}
+		// .hero__title--package
+		&--package {
+		}
 		// .hero__title--margin
-		&--margin {
+		&--home {
 			&:not(:last-child) {
 				@include adaptiveValue("margin-bottom", 56, 25); //28
 			}
@@ -127,6 +148,7 @@
 		line-height: 2;
 		transition: color 0.3s ease;
 		display: inline-flex;
+		text-shadow: toRem(1) toRem(1) toRem(4) rgba(0, 0, 0, 0.3);
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				color: $grey16;
@@ -225,7 +247,10 @@
 		}
 		// .hero__image--package
 		&--package {
-			object-position: center;
+			object-position: center center;
+			@media (max-width: toEm($mobileSmall)) {
+				object-position: right;
+			}
 		}
 	}
 }

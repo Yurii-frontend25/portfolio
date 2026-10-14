@@ -13,160 +13,93 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header header--margin hero">
-			<section class="hero__section">
-				<div class="hero__container hero__container--width">
-					<div class="hero__body">
-						<div class="hero__header hero__header--width">
-							<div class="hero__logo logo">
-								<a class="logo__link" href="#">
-									<img class="logo__image" src="img/logo-3x.png" alt="Logo">
-								</a>
-							</div>
-							<div class="hero__menu menu">
-								<!-- <nav class="menu__body">
-									<ul class="menu__list block one">
-										<li class="menu__item">
-											<a class="menu__link" href="#">Home</a>
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<div class="header__logo logo">
+						<a class="logo__link" href="#">
+							<img class="logo__img" src="img/logo-3x.webp" alt="Logo Rebel Rover">
+						</a>
+					</div>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a class="menu__link" href="index.html">Home</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="about.html">About Us</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Package</a>
+									<button class="menu__button _icon-s-arrow" type="button" aria-label="Toggle Package submenu" aria-expanded="false"></button>
+									<ul class="menu__sub-menu sub-menu">
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
-										<li class="menu__item">
-											<a class="menu__link" href="#">About Us</a>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
-										<li class="menu__item">
-											<a class="menu__link" href="#">Package</a>
-											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
-											<ul class="menu__sub-menu sub-menu block__text">
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu__item">
-											<a class="menu__link" href="#">Destination</a>
-											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
-											<ul class="menu__sub-menu sub-menu block__text">
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu__item">
-											<a class="menu__link" href="#">Blog</a>
-											<button class="menu__button _icon-s-arrow block__title" type="button"></button>
-											<ul class="menu__sub-menu sub-menu block__text">
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-												<li class="sub-menu__item">
-													<a class="sub-menu__link" href="#">Some link</a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu__item">
-											<a class="menu__link" href="#">Contact</a>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
 									</ul>
-								</nav> -->
-								<nav class="menu__body">
-									<ul class="menu__list">
-										<li class="menu__item">
-											<a class="menu__link" href="#">Home</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Destination</a>
+									<button class="menu__button _icon-s-arrow" type="button" aria-label="Toggle Package submenu" aria-expanded="false"></button>
+									<ul class="menu__sub-menu sub-menu">
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
-										<li class="menu__item">
-											<a class="menu__link" href="#">About Us</a>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
-										<!-- Чекбокс нужен для клика на мобилках -->
-										<li class="menu__dropdown">
-											<input type="checkbox" id="menu-toggle-1">
-											<label for="menu-toggle-1" class="menu__label">
-												<a class="menu__anchor" href="#">Package </a>
-												<span class="menu__arrow _icon-s-arrow"></span>
-											</label>
-											<div class="menu__submenu submenu">
-												<ul class="submenu__inner">
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-												</ul>
-											</div>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
 										</li>
-										<li class="menu__dropdown">
-											<input type="checkbox" id="menu-toggle-2">
-											<label for="menu-toggle-2" class="menu__label">
-												<a class="menu__anchor" href="#"> Destination </a>
-												<span class="menu__arrow _icon-s-arrow"></span>
-											</label>
-											<div class="menu__submenu submenu">
-												<ul class="submenu__inner">
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li class="menu__dropdown">
-											<input type="checkbox" id="menu-toggle-3">
-											<label for="menu-toggle-3" class="menu__label">
-												<a class="menu__anchor" href="#"> Blog </a>
-												<span class="menu__arrow _icon-s-arrow"></span>
-											</label>
-											<div class="menu__submenu submenu">
-												<ul class="submenu__inner">
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-													<li class="submenu__item">
-														<a class="submenu__link" href="#">some link</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
 									</ul>
-								</nav>
-								<a class="menu__search" href="#"><img src="img/icons/search.svg" alt="icon"></a>
-								<button class="menu__icon icon-menu" type="button"><span></span></button>
-							</div>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Blog</a>
+									<button class="menu__button _icon-s-arrow" type="button" aria-label="Toggle Package submenu" aria-expanded="false"></button>
+									<ul class="menu__sub-menu sub-menu">
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
+										</li>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
+										</li>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Some link</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Contact</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="menu__actions actions">
+							<a class="actions__search" href="#" aria-label="Search">
+								<img src="img/icons/search.svg" alt="" aria-hidden="true">
+							</a>
+							<button class="actions__button icon-menu" type="button" aria-label="Open menu" aria-controls="menu-body">
+								<span></span>
+							</button>
 						</div>
 					</div>
-					<div class="hero__content">
-						<h1 class="hero__title hero__title--center">Travel Packages</h1>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__hero hero hero--package">
+				<div class="hero__container hero__container--package">
+					<div class="hero__content hero__content--package">
+						<h1 class="hero__title hero__title--package">Travel Packages</h1>
 						<ul class="hero__items hero__items--package">
 							<li class="hero__item">
 								<a class="hero__link" href="#">Home</a>
-							</li>
-							<li class="hero__item">
-								<img src="img/about/arrow.svg" alt="Icon of arrow">
 							</li>
 							<li class="hero__item">
 								<a class="hero__link" href="#">Package</a>
@@ -174,13 +107,11 @@
 						</ul>
 					</div>
 				</div>
-				<picture>
+				<picture class="hero__picture">
 					<source srcset="img/package/package-hero.webp" type="image/webp">
 					<img class="hero__image hero__image--package" src="img/package/package-hero.jpg" alt="A woman wearing a hat and carrying a backpack stands on the beach, gazing at a tropical island in the distance">
 				</picture>
 			</section>
-		</header>
-		<main class="page">
 			<section class="page__popular popular">
 				<div class="popular__container popular__container--width">
 					<div class="popular__top">
@@ -196,10 +127,10 @@
 						<div class="cards-popular__items">
 							<article class="cards-popular__item">
 								<div class="cards-popular__image">
-									<a class="cards-popular__img-link" href="#">
-										<picture>
+									<a class="cards-popular__anchor-image" href="#">
+										<picture class="cards-popular__picture">
 											<source srcset="img/package/popular/01.webp" type="image/webp">
-											<img src="img/package/popular/01.jpg" alt="A stunning view of the Eiffel Tower at sunset in Paris, with colorful skies enhancing the beauty of this famous structure">
+											<img class="cards-popular__img" src="img/package/popular/01.jpg" alt="A stunning view of the Eiffel Tower at sunset in Paris, with colorful skies enhancing the beauty of this famous structure">
 										</picture>
 									</a>
 								</div>
@@ -229,10 +160,10 @@
 							</article>
 							<article class="cards-popular__item">
 								<div class="cards-popular__image">
-									<a class="cards-popular__img-link" href="#">
-										<picture>
+									<a class="cards-popular__anchor-image" href="#">
+										<picture class="cards-popular__picture">
 											<source srcset="img/package/popular/02.webp" type="image/webp">
-											<img src="img/package/popular/02.jpg" alt="A snow-capped mountain hosts a stunning castle, highlighting its architectural beauty amidst the winter scenery">
+											<img class="cards-popular__img" src="img/package/popular/02.jpg" alt="A snow-capped mountain hosts a stunning castle, highlighting its architectural beauty amidst the winter scenery">
 										</picture>
 									</a>
 								</div>
@@ -262,10 +193,10 @@
 							</article>
 							<article class="cards-popular__item">
 								<div class="cards-popular__image">
-									<a class="cards-popular__img-link" href="#">
-										<picture>
+									<a class="cards-popular__anchor-image" href="#">
+										<picture class="cards-popular__picture">
 											<source srcset="img/package/popular/03.webp" type="image/webp">
-											<img src="img/package/popular/03.jpg" alt="A scenic depiction of Bangkok's skyline by the river, illustrating the blend of urban life and natural waterways in the city">
+											<img class="cards-popular__img" src="img/package/popular/03.jpg" alt="A scenic depiction of Bangkok's skyline by the river, illustrating the blend of urban life and natural waterways in the city">
 										</picture>
 									</a>
 								</div>
@@ -295,10 +226,10 @@
 							</article>
 							<article class="cards-popular__item">
 								<div class="cards-popular__image">
-									<a class="cards-popular__img-link" href="#">
-										<picture>
+									<a class="cards-popular__anchor-image" href="#">
+										<picture class="cards-popular__picture">
 											<source srcset="img/package/popular/04.webp" type="image/webp">
-											<img src="img/package/popular/04.jpg" alt="The Golden Bridge in Vietnam, showcasing its unique design with giant stone hands and a scenic backdrop of mountains and trees">
+											<img class="cards-popular__img" src="img/package/popular/04.jpg" alt="The Golden Bridge in Vietnam, showcasing its unique design with giant stone hands and a scenic backdrop of mountains and trees">
 										</picture>
 									</a>
 								</div>
@@ -328,10 +259,10 @@
 							</article>
 							<article class="cards-popular__item">
 								<div class="cards-popular__image">
-									<a class="cards-popular__img-link" href="#">
-										<picture>
+									<a class="cards-popular__anchor-image" href="#">
+										<picture class="cards-popular__picture">
 											<source srcset="img/package/popular/05.webp" type="image/webp">
-											<img src="img/package/popular/05.jpg" alt="A boat floats in front of a lush jungle waterfall, surrounded by vibrant greenery and cascading wate">
+											<img class="cards-popular__img" src="img/package/popular/05.jpg" alt="A boat floats in front of a lush jungle waterfall, surrounded by vibrant greenery and cascading wate">
 										</picture>
 									</a>
 								</div>
@@ -361,10 +292,10 @@
 							</article>
 							<article class="cards-popular__item">
 								<div class="cards-popular__image">
-									<a class="cards-popular__img-link" href="#">
-										<picture>
+									<a class="cards-popular__anchor-image" href="#">
+										<picture class="cards-popular__picture">
 											<source srcset="img/package/popular/06.webp" type="image/webp">
-											<img src="img/package/popular/06.jpg" alt="A view of the Merlion statue with the Marina Bay skyline in the background, highlighting Singapore's cultural and modern landmarks">
+											<img class="cards-popular__img" src="img/package/popular/06.jpg" alt="A view of the Merlion statue with the Marina Bay skyline in the background, highlighting Singapore's cultural and modern landmarks">
 										</picture>
 									</a>
 								</div>
@@ -464,24 +395,24 @@
 				</div>
 			</section>
 			<section class="page__subscribe subscribe">
-				<div class="subscribe__content">
-					<h2 class="subscribe__title">Subscribe to get special price</h2>
-					<div class="subscribe__descr">
-						<p>Don't wanna miss something? subscribe right now and get special promotion and monthly newsletter</p>
-					</div>
-					<form class="subscribe__form form" action="#">
-						<div class="form__item">
-							<input class="form__input" type="email" placeholder="Type your email here" name="form[]" required autocomplete="off">
+				<div class="subscribe__container">
+					<div class="subscribe__content">
+						<h2 class="subscribe__title">Subscribe to get special price</h2>
+						<div class="subscribe__descr">
+							<p>Don't wanna miss something? subscribe right now and get special promotion and monthly newsletter</p>
 						</div>
-						<button class="form__button" type="submit">Subscribe</button>
-					</form>
-					<figure class="subscribe__figure">
-						<picture>
-							<source srcset="img/footer/footer-bg-1x.webp 1x, img/footer/footer-bg-2x.webp 2x, img/footer/footer-bg-3x.webp 3x" type="image/webp">
-							<img class="subscribe__image" src="img/footer/footer-bg.jpg" alt="World map">
-						</picture>
-					</figure>
+						<form class="subscribe__form form" action="#">
+							<div class="form__item">
+								<input class="form__input" type="email" placeholder="Type your email here" name="form[email]" required autocomplete="off">
+							</div>
+							<button class="form__button" type="submit">Subscribe</button>
+						</form>
+					</div>
 				</div>
+				<picture class="subscribe__picture">
+					<source srcset="img/footer/footer-bg-1x.webp 1x, img/footer/footer-bg-2x.webp 2x, img/footer/footer-bg-3x.webp 3x" type="image/webp">
+					<img class="subscribe__image" src="img/footer/footer-bg.jpg" alt="World map">
+				</picture>
 			</section>
 		</main>
 		<footer class="footer">
@@ -561,7 +492,9 @@
 				</div>
 			</div>
 			<div class="footer__copy">
-				<p>Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+				<div class="footer__container">
+					<p>Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+				</div>
 			</div>
 		</footer>
 	</div>
