@@ -11,30 +11,26 @@
 }
 .hero {
 	position: relative;
-	// max-width: toRem(1920);
-	// min-height: 860px;
 	// .hero__container
 	&__container {
 		display: flex;
-		// align-items: center;
 		min-height: 100svh;
 		position: relative;
 		z-index: 5;
-		@include adaptiveValue("padding-top", 275, 90);
+		@include adaptiveValue("padding-top", 170, 100);
 		@include adaptiveValue("padding-bottom", 110, 30);
-		@media (max-width: toEm($mobileSmall)) {
-			// min-height: 90svh;
-		}
 		&--home {
-			align-items: center;
+			align-items: flex-start;
+			@media (min-width: toEm(381)) {
+				align-items: center;
+			}
 		}
 		&--about {
-			@include adaptiveValue("padding-top", 200, 90);
+			display: flex;
+			align-items: flex-start;
+			@include adaptiveValue("padding-top", 180, 100);
 			@include adaptiveValue("padding-bottom", 352, 30);
-			@media (max-width: toEm($mobileSmall)) {
-				// min-height: 90svh;
-			}
-			@media (min-width: toEm($mobileSmall)) {
+			@media (min-width: toEm($mobile)) {
 				align-items: center;
 			}
 		}
@@ -45,7 +41,8 @@
 		&--home {
 			display: flex;
 			flex-direction: column;
-			gap: toRem(10);
+			justify-content: space-between;
+			@include adaptiveValue("gap", 25, 10);
 			max-width: toRem(736);
 			width: 100%;
 			@include adaptiveValue("margin-left", 36, 0);
@@ -55,15 +52,10 @@
 		}
 		// .hero__content--about
 		&--about {
-			display: grid;
-			@include adaptiveValue("gap", 55, 25);
-			justify-content: center;
+			display: flex;
+			flex-direction: column;
+			gap: toRem(27);
 			width: 100%;
-			// min-height: toRem(156);
-			grid-template-rows: auto 1fr;
-			align-items: self-start;
-			@media (min-width: toEm($mobileSmall)) {
-			}
 		}
 	}
 	// .hero__title
@@ -73,6 +65,7 @@
 		font-weight: 700;
 		// .hero__title--about
 		&--about {
+			text-align: center;
 			@include adaptiveValue("font-size", 64, 56);
 			text-shadow: toRem(1) toRem(1) toRem(4) rgba(0, 0, 0, 0.3);
 		}
@@ -85,7 +78,7 @@
 		// .hero__title--margin
 		&--margin {
 			&:not(:last-child) {
-				@include adaptiveValue("margin-bottom", 28, 25);
+				@include adaptiveValue("margin-bottom", 56, 25); //28
 			}
 		}
 	}
@@ -97,11 +90,11 @@
 		&--about,
 		&--package {
 			gap: toRem(10);
-			justify-content: center;
+			align-self: center;
 		}
 		&--blog {
 			@include adaptiveValue("gap", 66, 10);
-			justify-content: center;
+			align-self: center;
 			@media (max-width: toEm(415)) {
 				justify-content: start;
 			}
@@ -112,6 +105,15 @@
 		display: flex;
 		align-items: center;
 		gap: toRem(12);
+		&:not(:last-child)::after {
+			content: "";
+			background-image: url("../img/about/arrow.svg");
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: toRem(11);
+			height: toRem(18);
+		}
 	}
 	// .hero__line-title
 	&__line-title {
@@ -124,6 +126,7 @@
 		font-weight: 500;
 		line-height: 2;
 		transition: color 0.3s ease;
+		display: inline-flex;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				color: $grey16;
@@ -135,14 +138,15 @@
 		color: $grey9;
 		max-width: toRem(440);
 		line-height: 2;
+		text-shadow: toRem(1) toRem(1) toRem(4) rgba(0, 0, 0, 0.3);
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 44, 25);
+			@include adaptiveValue("margin-bottom", 64, 25); //44
 		}
 	}
 	// .hero__choice
 	&__choice {
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 37, 25);
+			margin-bottom: toRem(17);
 		}
 	}
 	// .hero__places
@@ -155,6 +159,7 @@
 	// .hero__popular
 	&__popular {
 		color: $grey13;
+		font-weight: 600;
 	}
 	// .hero__areas-list
 	&__areas-list {
@@ -189,8 +194,8 @@
 		z-index: 1;
 		top: 0;
 		left: 0;
-		height: 100%;
 		width: 100%;
+		height: 100%;
 		@media (max-width: toEm($tablet)) {
 			&::after {
 				content: "";
@@ -208,14 +213,14 @@
 	&__image {
 		width: 100%;
 		height: 100%;
+		object-fit: cover;
+		object-position: bottom;
 		filter: blur(toRem(1.25));
 		@media (max-width: toEm($tablet)) {
-			object-fit: cover;
 			object-position: right;
 		}
 		// .hero__image--about
 		&--about {
-			object-fit: cover;
 			object-position: bottom;
 		}
 		// .hero__image--package
@@ -831,6 +836,15 @@ select {
 	}
 }
 .subscribe {
+	position: relative;
+	width: 100%;
+	@include adaptiveValue("min-height", 542, 300);
+	overflow: hidden;
+	// .subscribe__container
+	&__container {
+		position: relative;
+		z-index: 5;
+	}
 	// .subscribe__content
 	&__content {
 		@include adaptiveValue("padding-bottom", 157, 40);
@@ -838,8 +852,6 @@ select {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-inline: toRem(15);
-		position: relative;
 	}
 	// .subscribe__title
 	&__title {
@@ -849,8 +861,6 @@ select {
 		color: $white;
 		line-height: 1.16;
 		text-align: center;
-		position: relative;
-		z-index: 5;
 	}
 	// .subscribe__descr
 	&__descr {
@@ -859,8 +869,6 @@ select {
 		line-height: 1.88;
 		max-width: toRem(630);
 		text-align: center;
-		position: relative;
-		z-index: 5;
 	}
 	// .subscribe__form
 	&__form {
@@ -874,14 +882,10 @@ select {
 		max-width: toRem(676);
 		width: 100%;
 		border-radius: toRem(34.5);
-		position: relative;
-		z-index: 5;
 		@media (min-width: toEm(400)) {
-			display: flex;
 			background-color: $white;
 			display: flex;
 			align-items: center;
-			max-width: toRem(676);
 			@include adaptiveValue("gap", 10, 5);
 		}
 		@media (max-width: toEm(400)) {
@@ -893,8 +897,8 @@ select {
 			padding-left: toRem(0);
 		}
 	}
-	// .subscribe__figure
-	&__figure {
+	// .subscribe__picture
+	&__picture {
 		position: absolute;
 		z-index: 1;
 		top: 0;
