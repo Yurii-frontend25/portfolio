@@ -49,7 +49,7 @@
 	&__items {
 		display: grid;
 		grid-gap: toRem(18);
-		grid-template-columns: repeat(auto-fit, minmax(min(toRem(335), 100%), 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(toRem(330), 100%), 1fr));
 	}
 	// .cards-popular__item
 	&__item {
@@ -59,6 +59,13 @@
 		box-shadow: toRem(0) toRem(5) toRem(20) rgba(0, 0, 0, 0.1);
 		border-radius: toRem(10);
 		overflow: hidden;
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				.cards-popular__img {
+					transform: scale(1.02);
+				}
+			}
+		}
 	}
 	// .cards-popular__image
 	&__image {
@@ -69,12 +76,6 @@
 	&__anchor-image {
 		width: 100%;
 		aspect-ratio: 444 / 319;
-		transition: transform 0.4s ease;
-		@media (any-hover: hover) and (any-pointer: fine) {
-			&:hover {
-				transform: scale(1.02);
-			}
-		}
 	}
 	// .cards-popular__picture
 	&__picture {
@@ -84,6 +85,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		transition: transform 0.4s ease;
 	}
 	// .cards-popular__body
 	&__body {
@@ -91,9 +93,9 @@
 		flex-direction: column;
 		flex-grow: 1;
 		@include adaptiveValue("padding-top", 34, 10);
-		@include adaptiveValue("padding-right", 31, 10);
 		@include adaptiveValue("padding-bottom", 29, 15);
-		@include adaptiveValue("padding-left", 25, 10);
+		@include adaptiveValue("padding-right", 31, 5);
+		@include adaptiveValue("padding-left", 25, 5);
 	}
 	// .cards-popular__info
 	&__info {
@@ -245,18 +247,40 @@
 	}
 }
 .columns-tips {
-	@include adaptiveValue("column-gap", 56, 10);
-	display: grid;
-	grid-template-columns: 38.1% 57.811%;
+	@include adaptiveValue("column-gap", 30, 10);
+	// display: grid;
+	// grid-template-columns: 38.1% 57.811%;
+
 	row-gap: toRem(20);
-	@media (max-width: toEm($tablet)) {
-		grid-template-columns: auto;
+	display: flex;
+	flex-wrap: wrap;
+
+	@media (max-width: toEm($mobile)) {
+		// grid-template-columns: auto;
+		// flex-wrap: wrap;
 	}
 	// .columns-tips__column
 	&__column {
 		&--grid {
 			display: grid;
+			max-width: toRem(548);
+			flex-grow: 1;
+			flex-basis: toRem(300);
 			@include adaptiveValue("row-gap", 58, 25);
+			@media (max-width: toEm(654)) {
+				grid-template-columns: 1fr 1fr;
+				column-gap: toRem(20);
+				max-width: 100%;
+				flex-basis: 100%;
+			}
+			@media (max-width: toEm($mobileSmall)) {
+				grid-template-columns: 1fr;
+			}
+		}
+		&--img {
+			max-width: toRem(792);
+			flex-grow: 1;
+			flex-basis: toRem(300);
 		}
 	}
 	// .columns-tips__item
@@ -266,16 +290,32 @@
 		min-height: 100%;
 		box-shadow: toRem(0) toRem(4) toRem(20) rgba(0, 0, 0, 0.1);
 		background: $white;
+		&--flex-row {
+			@media (max-width: toEm(654)) {
+				flex-direction: row;
+				gap: toRem(10);
+			}
+			@media (max-width: toEm(580)) {
+				flex-wrap: wrap;
+			}
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			box-shadow: none;
+		}
 	}
 	// .columns-tips__picture
 	&__picture {
+		aspect-ratio: 792 / 679;
+		width: 100%;
+		flex-basis: toRem(260);
+		flex-grow: 1;
+		flex-shrink: 0;
 	}
 	// .columns-tips__img
 	&__img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		aspect-ratio: 792 / 679;
 		border-top-left-radius: toRem(10);
 		border-top-right-radius: toRem(10);
 	}
@@ -283,29 +323,38 @@
 	&__body {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		align-items: flex-start;
-		flex-grow: 1;
+		// flex-grow: 1;
+		@media (max-width: toEm($mobile)) {
+		}
 		&--small-padding {
-			@include adaptiveValue("padding-right", 18, 0);
-			@include adaptiveValue("padding-left", 15, 0);
+			flex-grow: 1;
+			@include adaptiveValue("padding-right", 15, 0);
+			@include adaptiveValue("padding-left", 23, 0);
 			@include adaptiveValue("padding-top", 35, 15);
+
 			&.columns-tips__body--first {
-				@include adaptiveValue("padding-bottom", 45, 10);
+				padding-bottom: toRem(10);
+				@media (min-width: toEm(655)) {
+					@include adaptiveValue("padding-bottom", 45, 10);
+				}
 			}
 			&.columns-tips__body--second {
-				@include adaptiveValue("padding-bottom", 37, 10);
+				padding-bottom: toRem(10);
+				@media (min-width: toEm(655)) {
+					@include adaptiveValue("padding-bottom", 37, 10);
+				}
 			}
 		}
 		&--big-padding {
-			@include adaptiveValue("padding-inline", 60, 0);
+			@include adaptiveValue("padding-inline", 60, 0, 0, $containerWidth, 480);
 			@include adaptiveValue("padding-bottom", 37, 10);
 			@include adaptiveValue("padding-top", 35, 15);
 		}
 	}
 	// .columns-tips__label
 	&__label {
-		@include adaptiveValue("font-size", 24, 20);
+		@include adaptiveValue("font-size", 24, 18); //20
 		color: $black;
 		font-weight: 400;
 		&:not(:last-child) {
@@ -322,9 +371,9 @@
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				text-decoration-color: $black;
-				.columns-tips__title {
-					// color: skyblue;
-				}
+				// .columns-tips__title {
+				// 	color: skyblue;
+				// }
 			}
 		}
 		&:not(:last-child) {
@@ -333,21 +382,20 @@
 	}
 	// .columns-tips__title
 	&__title {
-		@include adaptiveValue("font-size", 36, 24);
+		@include adaptiveValue("font-size", 36, 20); //22
 		font-weight: 500;
 		color: $black;
 		line-height: math.div(51, 36);
 		transition: color 0.3s ease;
 		&--line {
+			display: flex;
+			flex-direction: column;
+			@include adaptiveValue("gap", 30, 18);
 			&::after {
 				content: "";
-				@include adaptiveValue("margin-top", 30, 15);
-				display: block;
-				left: 0;
 				background-color: $black;
 				width: toRem(12);
 				height: toRem(3);
-				// pointer-events: none;
 			}
 		}
 	}
@@ -356,27 +404,30 @@
 		line-height: math.div(33, 18);
 		font-weight: 300;
 		color: $grey2;
+		flex-grow: 1;
+		display: flex;
+		align-items: flex-end;
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 74, 30);
+			@include adaptiveValue("margin-bottom", 74, 20);
 		}
 		> p:not(:last-child) {
 			margin-bottom: toRem(10);
 		}
 		&--84 {
 			&:not(:last-child) {
-				@include adaptiveValue("margin-bottom", 84, 30);
+				@include adaptiveValue("margin-bottom", 84, 20);
 			}
 		}
 	}
 	// .columns-tips__link
 	&__link {
 		@include adaptiveValue("font-size", 24, 16);
-		padding-inline: toRem(40);
+		@include adaptiveValue("padding-inline", 40, 20);
 		@include adaptiveValue("padding-block", 14, 10);
 		font-weight: 500;
+		text-align: center;
 		@media (max-width: toEm($mobile)) {
 			width: 100%;
-			text-align: center;
 		}
 	}
 }

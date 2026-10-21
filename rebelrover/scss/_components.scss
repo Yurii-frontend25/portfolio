@@ -105,6 +105,14 @@
 	background-color: $black;
 	border-radius: toRem(39);
 	transition: background-color 0.3s ease;
+
+	@media (max-width: toEm($mobile)) {
+		// color: rgba(30, 50, 33, 0.6);
+		// font-weight: 400;
+		// background-color: rgba(3, 10, 33, 0.4);
+		// background-color: $grey15;
+	}
+
 	@media (any-hover: hover) and (any-pointer: fine) {
 		&:hover {
 			background-color: $grey2;
