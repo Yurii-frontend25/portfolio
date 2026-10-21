@@ -3787,7 +3787,21 @@ label {
   background-size: contain;
   background-repeat: no-repeat;
   width: 0.6875rem;
-  height: 1.125rem;
+}
+@media (min-width: 87.5em) {
+  .hero__item:not(:last-child)::after {
+    height: 18px;
+  }
+}
+@media (min-width: 20em) and (max-width: 87.5em) {
+  .hero__item:not(:last-child)::after {
+    height: clamp( 12px , 10.2222222222px  +  0.5555555556vw , 18px );
+  }
+}
+@media (max-width: 20em) {
+  .hero__item:not(:last-child)::after {
+    height: 12px;
+  }
 }
 .hero__line-title {
   display: block;
