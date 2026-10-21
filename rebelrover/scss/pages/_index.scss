@@ -65,7 +65,7 @@
 		&--about {
 			display: flex;
 			flex-direction: column;
-			gap: toRem(27);
+			@include adaptiveValue("gap", 27, 16);
 			width: 100%;
 		}
 		&--package {

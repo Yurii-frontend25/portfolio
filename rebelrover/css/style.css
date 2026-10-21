@@ -3653,7 +3653,23 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.6875rem;
+}
+@media (min-width: 87.5em) {
+  .hero__content--about {
+    gap: 27px;
+  }
+}
+@media (min-width: 20em) and (max-width: 87.5em) {
+  .hero__content--about {
+    gap: clamp( 16px , 12.7407407407px  +  1.0185185185vw , 27px );
+  }
+}
+@media (max-width: 20em) {
+  .hero__content--about {
+    gap: 16px;
+  }
+}
+.hero__content--about {
   width: 100%;
 }
 .hero__content--package {
@@ -5607,6 +5623,13 @@ label {
   border-radius: 2.4375rem;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+}
+@media (max-width: 47.99875em) {
+  .btn {
+    color: rgba(30, 50, 33, 0.6);
+    font-weight: 400;
+    background-color: #e7e7e7;
+  }
 }
 @media (any-hover: hover) and (any-pointer: fine) {
   .btn:hover {
