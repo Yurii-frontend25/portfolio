@@ -133,7 +133,6 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			width: toRem(11);
-			// height: toRem(18);
 			@include adaptiveValue("height", 18, 12);
 		}
 	}
