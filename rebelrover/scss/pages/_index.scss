@@ -767,7 +767,6 @@ select {
 	// .testimonial__slider
 	&__slider {
 		padding-top: toRem(65);
-
 		&.swiper {
 			overflow: visible;
 		}
@@ -777,6 +776,14 @@ select {
 	}
 	// .testimonial__slide
 	&__slide {
+		//
+		// &.swiper-slide {
+		// 	opacity: 0.7;
+		// 	transition: opacity 0.3s ease;
+		// }
+		// &.swiper-slide-active {
+		// 	opacity: 1;
+		// }
 	}
 	// .testimonial__item
 	&__item {
@@ -840,6 +847,7 @@ select {
 	&__text {
 		line-height: 1.55;
 		font-weight: 500;
+		color: $grey3;
 	}
 }
 .rating {

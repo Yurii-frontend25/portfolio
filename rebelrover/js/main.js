@@ -198,8 +198,11 @@ const testimonialSlider = new Swiper('.testimonial__slider', {
 		320: {
 			slidesPerView: 1.10,
 		},
+		380: {
+			slidesPerView: 1.2,
+		},
 		481: {
-			slidesPerView: 1,
+			slidesPerView: 1.5,
 		},
 		581: {
 			slidesPerView: 2.2,
@@ -213,7 +216,7 @@ const testimonialSlider = new Swiper('.testimonial__slider', {
 		},
 		1300: {
 			slidesPerView: 3.24,//37
-			spaceBetween: 48,
+			spaceBetween: 48,//48
 		},
 	},
 });

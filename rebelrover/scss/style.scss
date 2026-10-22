@@ -18,13 +18,18 @@
 @use "header";
 @use "footer";
 // =========================================
-html {
-	scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
 }
 [class*="__container"] {
 	max-width: toRem($containerWidth);
 	padding-inline: toRem(math.div($containerPadding, 2));
 	margin: 0 auto;
+}
+[class*="--wide"] {
+	max-width: toRem(1430);
 }
 // =========================================
 body {
@@ -36,6 +41,7 @@ body {
 		touch-action: none;
 		overscroll-behavior: none;
 	}
+	overflow-x: hidden;
 }
 .wrapper {
 	display: flex;
