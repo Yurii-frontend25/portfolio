@@ -6,15 +6,15 @@
 .page {
 	// .page__popular
 	&__popular {
-		@include adaptiveValue("margin-bottom", 178, 30);
+		@include adaptiveValue("margin-bottom", 178, 40);
 	}
 	// .page__background
 	&__background {
-		@include adaptiveValue("margin-bottom", 178, 30);
+		@include adaptiveValue("margin-bottom", 178, 40);
 	}
 	// .page__tips
 	&__tips {
-		@include adaptiveValue("margin-bottom", 178, 30);
+		@include adaptiveValue("margin-bottom", 178, 40);
 	}
 }
 // =======================================================================================================================
@@ -273,6 +273,10 @@
 			max-width: toRem(792);
 			flex-grow: 1;
 			flex-basis: toRem(300);
+			@media (max-width: toEm(654)) {
+				max-width: 100%;
+				flex-basis: 100%;
+			}
 		}
 	}
 	// .columns-tips__item
