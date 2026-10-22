@@ -2434,12 +2434,12 @@ label {
 }
 @media (min-width: 20em) and (max-width: 87.5em) {
   .page__popular {
-    margin-bottom: clamp( 40px , -0.8888888889px  +  12.7777777778vw , 178px );
+    margin-bottom: clamp( 30px , -13.8518518519px  +  13.7037037037vw , 178px );
   }
 }
 @media (max-width: 20em) {
   .page__popular {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 87.5em) {
@@ -2449,12 +2449,12 @@ label {
 }
 @media (min-width: 20em) and (max-width: 87.5em) {
   .page__background {
-    margin-bottom: clamp( 40px , -0.8888888889px  +  12.7777777778vw , 178px );
+    margin-bottom: clamp( 30px , -13.8518518519px  +  13.7037037037vw , 178px );
   }
 }
 @media (max-width: 20em) {
   .page__background {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 87.5em) {
@@ -2464,12 +2464,12 @@ label {
 }
 @media (min-width: 20em) and (max-width: 87.5em) {
   .page__tips {
-    margin-bottom: clamp( 40px , -0.8888888889px  +  12.7777777778vw , 178px );
+    margin-bottom: clamp( 30px , -13.8518518519px  +  13.7037037037vw , 178px );
   }
 }
 @media (max-width: 20em) {
   .page__tips {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
@@ -2859,22 +2859,6 @@ label {
 @media (max-width: 47.99875em) {
   .form__btn {
     width: 100%;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .page__background {
-    margin-bottom: 178px;
-  }
-}
-@media (min-width: 20em) and (max-width: 87.5em) {
-  .page__background {
-    margin-bottom: clamp( 40px , -0.8888888889px  +  12.7777777778vw , 178px );
-  }
-}
-@media (max-width: 20em) {
-  .page__background {
-    margin-bottom: 40px;
   }
 }
 
@@ -3501,12 +3485,12 @@ label {
 }
 @media (min-width: 20em) and (max-width: 87.5em) {
   .page__hero {
-    margin-bottom: clamp( 50px , 38.1481481481px  +  3.7037037037vw , 90px );
+    margin-bottom: clamp( 30px , 12.2222222222px  +  5.5555555556vw , 90px );
   }
 }
 @media (max-width: 20em) {
   .page__hero {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -3520,12 +3504,12 @@ label {
 }
 @media (min-width: 20em) and (max-width: 87.5em) {
   .hero--package {
-    margin-bottom: clamp( 50px , 12.0740740741px  +  11.8518518519vw , 178px );
+    margin-bottom: clamp( 30px , -13.8518518519px  +  13.7037037037vw , 178px );
   }
 }
 @media (max-width: 20em) {
   .hero--package {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 .hero__container {

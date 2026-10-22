@@ -6,13 +6,13 @@
 .page {
 	// .page__hero
 	&__hero {
-		@include adaptiveValue("margin-bottom", 90, 50);
+		@include adaptiveValue("margin-bottom", 90, 30);
 	}
 }
 .hero {
 	position: relative;
 	&--package {
-		@include adaptiveValue("margin-bottom", 178, 50);
+		@include adaptiveValue("margin-bottom", 178, 30);
 	}
 	// .hero__container
 	&__container {

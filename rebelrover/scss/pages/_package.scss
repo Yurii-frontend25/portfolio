@@ -6,25 +6,19 @@
 .page {
 	// .page__popular
 	&__popular {
-		@include adaptiveValue("margin-bottom", 178, 40);
+		@include adaptiveValue("margin-bottom", 178, 30);
 	}
 	// .page__background
 	&__background {
-		@include adaptiveValue("margin-bottom", 178, 40);
+		@include adaptiveValue("margin-bottom", 178, 30);
 	}
 	// .page__tips
 	&__tips {
-		@include adaptiveValue("margin-bottom", 178, 40);
+		@include adaptiveValue("margin-bottom", 178, 30);
 	}
 }
 // =======================================================================================================================
 // Section popular
-// .page {
-// 	// .page__popular
-// 	&__popular {
-// 		@include adaptiveValue("margin-bottom", 178, 40);
-// 	}
-// }
 .popular {
 	// .popular__container
 	&__container {
@@ -202,12 +196,6 @@
 }
 // =======================================================================================================================
 // Block background
-.page {
-	// .page__background
-	&__background {
-		@include adaptiveValue("margin-bottom", 178, 40);
-	}
-}
 .background {
 	// .background__img
 	&__img {
@@ -219,12 +207,6 @@
 }
 // =======================================================================================================================
 // Section tips
-.page {
-	// // .page__tips
-	// &__tips {
-	// 	@include adaptiveValue("margin-bottom", 178, 40);
-	// }
-}
 .tips {
 	// .tips__container
 	&__container {
