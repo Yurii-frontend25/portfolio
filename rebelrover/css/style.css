@@ -4869,12 +4869,12 @@ label {
 }
 @media (min-width: 20em) and (max-width: 87.5em) {
   .page__partners {
-    margin-bottom: clamp( 50px , 26.2962962963px  +  7.4074074074vw , 130px );
+    margin-bottom: clamp( 30px , 0.3703703704px  +  9.2592592593vw , 130px );
   }
 }
 @media (max-width: 20em) {
   .page__partners {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -4983,12 +4983,12 @@ label {
 }
 @media (min-width: 20em) and (max-width: 87.5em) {
   .page__testimonial {
-    margin-bottom: clamp( 40px , 22.2222222222px  +  5.5555555556vw , 100px );
+    margin-bottom: clamp( 30px , 9.2592592593px  +  6.4814814815vw , 100px );
   }
 }
 @media (max-width: 20em) {
   .page__testimonial {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 

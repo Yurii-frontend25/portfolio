@@ -668,7 +668,7 @@ select {
 .page {
 	// .page__partners
 	&__partners {
-		@include adaptiveValue("margin-bottom", 130, 50);
+		@include adaptiveValue("margin-bottom", 130, 30);
 	}
 }
 .partners {
@@ -715,7 +715,7 @@ select {
 .page {
 	// .page__testimonial
 	&__testimonial {
-		@include adaptiveValue("margin-bottom", 100, 40);
+		@include adaptiveValue("margin-bottom", 100, 30);
 	}
 }
 .testimonial {
