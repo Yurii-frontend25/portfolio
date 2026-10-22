@@ -2,13 +2,29 @@
 @use "../settings" as *;
 @use "../colors" as *;
 // =======================================================================================================================
-// Section popular
+// Pages
 .page {
 	// .page__popular
 	&__popular {
 		@include adaptiveValue("margin-bottom", 178, 40);
 	}
+	// .page__background
+	&__background {
+		@include adaptiveValue("margin-bottom", 178, 40);
+	}
+	// .page__tips
+	&__tips {
+		@include adaptiveValue("margin-bottom", 178, 40);
+	}
 }
+// =======================================================================================================================
+// Section popular
+// .page {
+// 	// .page__popular
+// 	&__popular {
+// 		@include adaptiveValue("margin-bottom", 178, 40);
+// 	}
+// }
 .popular {
 	// .popular__container
 	&__container {
@@ -204,10 +220,10 @@
 // =======================================================================================================================
 // Section tips
 .page {
-	// .page__tips
-	&__tips {
-		@include adaptiveValue("margin-bottom", 178, 40);
-	}
+	// // .page__tips
+	// &__tips {
+	// 	@include adaptiveValue("margin-bottom", 178, 40);
+	// }
 }
 .tips {
 	// .tips__container
@@ -233,7 +249,7 @@
 		@include adaptiveValue("font-size", 22, 16);
 		@include adaptiveValue("margin-top", 35, 0);
 		@include adaptiveValue("padding-block", 13.5, 10);
-		padding-inline: toRem(47.5);
+		@include adaptiveValue("padding-inline", 47.5, 20);
 		@media (max-width: toEm($mobile)) {
 			width: 100%;
 			text-align: center;
@@ -250,15 +266,9 @@
 	@include adaptiveValue("column-gap", 30, 10);
 	// display: grid;
 	// grid-template-columns: 38.1% 57.811%;
-
-	row-gap: toRem(20);
 	display: flex;
 	flex-wrap: wrap;
-
-	@media (max-width: toEm($mobile)) {
-		// grid-template-columns: auto;
-		// flex-wrap: wrap;
-	}
+	row-gap: toRem(20);
 	// .columns-tips__column
 	&__column {
 		&--grid {
@@ -290,6 +300,9 @@
 		min-height: 100%;
 		box-shadow: toRem(0) toRem(4) toRem(20) rgba(0, 0, 0, 0.1);
 		background: $white;
+		@media (max-width: toEm(654)) {
+			box-shadow: none;
+		}
 		&--flex-row {
 			@media (max-width: toEm(654)) {
 				flex-direction: row;
@@ -298,9 +311,6 @@
 			@media (max-width: toEm(580)) {
 				flex-wrap: wrap;
 			}
-		}
-		@media (max-width: toEm($mobileSmall)) {
-			box-shadow: none;
 		}
 	}
 	// .columns-tips__picture
@@ -323,8 +333,6 @@
 	&__body {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
-		// flex-grow: 1;
 		@media (max-width: toEm($mobile)) {
 		}
 		&--small-padding {
@@ -332,6 +340,10 @@
 			@include adaptiveValue("padding-right", 15, 0);
 			@include adaptiveValue("padding-left", 23, 0);
 			@include adaptiveValue("padding-top", 35, 15);
+			@media (max-width: toEm(654)) {
+				padding-left: 0;
+				padding-right: 0;
+			}
 
 			&.columns-tips__body--first {
 				padding-bottom: toRem(10);
@@ -354,7 +366,7 @@
 	}
 	// .columns-tips__label
 	&__label {
-		@include adaptiveValue("font-size", 24, 18); //20
+		@include adaptiveValue("font-size", 24, 18);
 		color: $black;
 		font-weight: 400;
 		&:not(:last-child) {
@@ -368,34 +380,38 @@
 		text-decoration-thickness: toRem(2);
 		text-underline-offset: toRem(10);
 		transition: text-decoration-color 0.3s ease;
+	}
+	// .columns-tips__title
+	&__title {
+		@include adaptiveValue("font-size", 36, 20);
+		font-weight: 500;
+		color: $black;
+		line-height: math.div(51, 36);
+		transition: color 0.3s ease;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
-				text-decoration-color: $black;
-				// .columns-tips__title {
-				// 	color: skyblue;
-				// }
+				.columns-tips__anchor-title {
+					text-decoration-color: $black;
+				}
 			}
 		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 30, 15);
 		}
-	}
-	// .columns-tips__title
-	&__title {
-		@include adaptiveValue("font-size", 36, 20); //22
-		font-weight: 500;
-		color: $black;
-		line-height: math.div(51, 36);
-		transition: color 0.3s ease;
+		// .columns-tips__title--line
 		&--line {
 			display: flex;
 			flex-direction: column;
-			@include adaptiveValue("gap", 30, 18);
+			@include adaptiveValue("gap", 15, 7);
 			&::after {
 				content: "";
 				background-color: $black;
 				width: toRem(12);
 				height: toRem(3);
+				@include adaptiveValue("margin-bottom", 10, 5);
+			}
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 5, 0);
 			}
 		}
 	}
@@ -405,13 +421,13 @@
 		font-weight: 300;
 		color: $grey2;
 		flex-grow: 1;
-		display: flex;
-		align-items: flex-end;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 74, 20);
 		}
-		> p:not(:last-child) {
-			margin-bottom: toRem(10);
+		> p {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
 		}
 		&--84 {
 			&:not(:last-child) {
@@ -425,9 +441,5 @@
 		@include adaptiveValue("padding-inline", 40, 20);
 		@include adaptiveValue("padding-block", 14, 10);
 		font-weight: 500;
-		text-align: center;
-		@media (max-width: toEm($mobile)) {
-			width: 100%;
-		}
 	}
 }
