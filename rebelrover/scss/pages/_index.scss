@@ -6,13 +6,13 @@
 .page {
 	// .page__hero
 	&__hero {
-		@include adaptiveValue("margin-bottom", 90, 30);
+		@include adaptiveValue("margin-bottom", 90, 40);
 	}
 }
 .hero {
 	position: relative;
 	&--package {
-		@include adaptiveValue("margin-bottom", 178, 30);
+		@include adaptiveValue("margin-bottom", 178, 40);
 	}
 	// .hero__container
 	&__container {
@@ -499,7 +499,7 @@ select {
 .page {
 	// .page__why
 	&__why {
-		@include adaptiveValue("padding-top", 56, 30);
+		@include adaptiveValue("padding-top", 56, 40);
 	}
 }
 .why {
@@ -668,7 +668,7 @@ select {
 .page {
 	// .page__partners
 	&__partners {
-		@include adaptiveValue("margin-bottom", 130, 30);
+		@include adaptiveValue("margin-bottom", 130, 40);
 	}
 }
 .partners {
