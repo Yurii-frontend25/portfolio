@@ -2243,7 +2243,7 @@ label {
 }
 .categories__link span:before {
   content: "";
-  background: url("../../img/blog/icons/arrow.svg") 0 0/100% 100% no-repeat;
+  background: url("../img/blog/icons/arrow.svg") 0 0/100% 100% no-repeat;
 }
 @media (min-width: 87.5em) {
   .categories__link span:before {

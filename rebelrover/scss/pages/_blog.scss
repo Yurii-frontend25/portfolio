@@ -380,7 +380,7 @@
 		}
 		span:before {
 			content: "";
-			background: url("../../img/blog/icons/arrow.svg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/blog/icons/arrow.svg") 0 0 / 100% 100% no-repeat;
 			@include adaptiveValue("width", 20, 18);
 			@include adaptiveValue("height", 14, 10);
 			transition:
