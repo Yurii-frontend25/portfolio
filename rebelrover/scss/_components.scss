@@ -108,6 +108,7 @@
 	display: flex;
 	align-self: flex-start;
 	justify-content: center;
+
 	@media (max-width: toEm($mobile)) {
 		color: $btnMobileBg;
 		font-weight: 400;
@@ -160,6 +161,7 @@
 		background-color: #000;
 		border-radius: toRem(27);
 		line-height: 1.7;
+		color: $grey18;
 		transition:
 			background-color 0.3s ease,
 			color 0.3s ease;

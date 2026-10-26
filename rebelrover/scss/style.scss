@@ -28,7 +28,7 @@
 	padding-inline: toRem(math.div($containerPadding, 2));
 	margin: 0 auto;
 }
-[class*="--wide"] {
+[class*="__container--wide"] {
 	max-width: toRem(1430);
 }
 // =========================================

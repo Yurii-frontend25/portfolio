@@ -8,6 +8,12 @@ function documentClick(e) {
 		document.documentElement.classList.toggle('menu-open');
 	}
 };
+document.querySelectorAll('.menu__link').forEach(link => {
+	// Якщо адреса посилання збігається з поточною адресою сторінки
+	if (link.href === window.location.href) {
+		link.classList.add('menu__link--current');
+	}
+});
 //===================================================================================================
 // Menu dropdown
 document.addEventListener("DOMContentLoaded", () => {
