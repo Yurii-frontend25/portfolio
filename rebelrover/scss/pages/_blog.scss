@@ -538,7 +538,7 @@
 		min-height: toRem(275);
 		padding-inline: toRem(10);
 		@include adaptiveValue("padding-block", 20, 10);
-		line-height: math.dev(33, 18);
+		line-height: math.div(33, 18);
 		font-size: toRem(18);
 		resize: vertical;
 		font-weight: 300;
@@ -563,7 +563,7 @@
 		font-weight: 300;
 		transition: border-color 0.3s ease;
 		color: $grey2;
-		line-height: math.dev(33, 18);
+		line-height: math.div(33, 18);
 		font-size: toRem(18);
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
