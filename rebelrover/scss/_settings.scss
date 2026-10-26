@@ -152,11 +152,9 @@ $responsiveType: 1;
 		$fontSize: 72;
 		$fontSizeMob: 38;
 	}
-
 	@if ($sizeMob > 0) {
 		$fontSizeMob: $sizeMob;
 	}
-
 	@if ($adapt == 1) {
 		@include adaptiveValue("font-size", $fontSize, $fontSizeMob);
 	} @else {

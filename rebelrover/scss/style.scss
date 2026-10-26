@@ -36,12 +36,12 @@ body {
 	@include typography("def");
 	font-family: $fontFamily;
 	color: $mainColor;
+	overflow-x: hidden;
 	.menu-open & {
 		overflow: hidden;
 		touch-action: none;
 		overscroll-behavior: none;
 	}
-	overflow-x: hidden;
 }
 .wrapper {
 	display: flex;
