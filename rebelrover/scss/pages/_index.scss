@@ -6,23 +6,14 @@
 .page {
 	// .page__hero
 	&__hero {
-		@include adaptiveValue("margin-bottom", 90, 40);
+		@include adaptiveValue("margin-bottom", 178, 40, 0, $containerWidth, $tablet);
+		&--home {
+			@include adaptiveValue("margin-bottom", 90, 40, 0, $containerWidth, $tablet);
+		}
 	}
 }
 .hero {
 	position: relative;
-	&--about,
-	&--package,
-	&--blog,
-	&--contacts {
-		@include adaptiveValue("margin-bottom", 178, 40, 0, $containerWidth, $tablet);
-	}
-	&--package {
-	}
-	&--blog {
-	}
-	&--contacts {
-	}
 	// .hero__container
 	&__container {
 		display: flex;
