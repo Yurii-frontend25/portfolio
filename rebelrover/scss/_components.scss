@@ -14,7 +14,7 @@
 	&--start {
 		display: flex;
 		flex-direction: column;
-		row-gap: toRem(5);
+		@include adaptiveValue("row-gap", 15, 10);
 		align-items: flex-start;
 	}
 	// .block-head__label
@@ -94,6 +94,7 @@
 			font-weight: 300;
 			text-align: left;
 			line-height: math.div(33, 18);
+			color: $grey2;
 		}
 	}
 }
@@ -108,7 +109,9 @@
 	display: flex;
 	align-self: flex-start;
 	justify-content: center;
-
+	&--contact-form {
+		align-self: center;
+	}
 	@media (max-width: toEm($mobile)) {
 		color: $btnMobileBg;
 		font-weight: 400;
@@ -144,19 +147,19 @@
 			opacity: 0;
 		}
 		&:focus-visible {
-			outline: toRem(2) solid $grey10;
+			outline: toRem(1) solid $grey10;
 		}
 		@media (max-width: toEm(400)) {
 			background-color: $white;
-			border-radius: toRem(34.5);
+			// border-radius: toRem(34.5);
 			padding-block: toRem(11.5);
-			padding-inline: toRem(20);
+			padding-inline: toRem(15);
 		}
 	}
 	// .form__button
 	&__button {
 		@include adaptiveValue("font-size", 20, 16);
-		@include adaptiveValue("padding-block", 10.5, 8.5);
+		@include adaptiveValue("padding-block", 10.5, 9.41);
 		padding-inline: toRem(23.5);
 		background-color: #000;
 		border-radius: toRem(27);

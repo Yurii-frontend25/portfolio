@@ -18,10 +18,11 @@
 	// .connection__items
 	&__items {
 		display: grid;
-		grid-template-columns: 42.336% 49.344%;
-		@include adaptiveValue("column-gap", 114, 20);
+		grid-template-columns: minmax(toRem(290), toRem(580)) minmax(toRem(480), toRem(676));
+		justify-content: space-between;
+		column-gap: toRem(20);
 		@include adaptiveValue("row-gap", 40, 20);
-		@media (width < toEm(1014)) {
+		@media (width < toEm(822)) {
 			display: flex;
 			flex-direction: column-reverse;
 		}
@@ -31,25 +32,30 @@
 	}
 }
 .item-connection {
+	display: flex;
+	align-items: center;
 	// .item-connection__body
 	&__body {
-		@include adaptiveValue("padding-block", 75, 15);
+		@include adaptiveValue("padding-block", 73, 15);
 		@include adaptiveValue("padding-inline", 41, 0);
 		background: $white;
-		box-shadow: toRem(0) toRem(4) toRem(20) rgba(0, 0, 0, 0.1);
 		border-radius: toRem(10);
+		box-shadow: toRem(0) toRem(4) toRem(20) rgba(0, 0, 0, 0.1);
+		width: 100%;
+		@media (width < toEm(822)) {
+			padding-inline: 0;
+		}
 	}
 	// .item-connection__form
 	&__form {
 	}
 	// .item-connection__content
 	&__content {
-		@include adaptiveValue("padding-top", 14, 0);
 	}
 	// .item-connection__title
 	&__title {
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 47, 20);
+			@include adaptiveValue("margin-bottom", 46, 20, 0, $containerWidth, $tablet);
 		}
 	}
 	// .item-connection__heading
@@ -70,7 +76,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: toRem(20);
-		@include adaptiveValue("row-gap", 47, 20);
+		@include adaptiveValue("row-gap", 46, 20);
 		@media (max-width: toEm($mobileSmall)) {
 			grid-template-columns: 1fr;
 		}
@@ -87,10 +93,12 @@
 	}
 }
 .form-contact {
+	display: flex;
+	flex-direction: column;
 	// .form-contact__body
 	&__body {
 		> *:not(:last-child) {
-			margin-bottom: toRem(10);
+			@include adaptiveValue("margin-bottom", 20, 10);
 		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 47, 20);
@@ -103,10 +111,10 @@
 	&__input {
 		border: toRem(1) solid $grey16;
 		border-radius: toRem(5);
-		padding-block: toRem(12.6);
+		@include adaptiveValue("padding-block", 12.5, 10);
 		@include adaptiveValue("padding-left", 20, 10);
 		padding-right: toRem(10);
-		font-size: toRem(18);
+		@include adaptiveValue("font-size", 18, 16);
 		line-height: math.div(33, 18);
 		font-weight: 300;
 		color: $grey2;
@@ -139,7 +147,7 @@
 		padding-right: toRem(8);
 		padding-top: toRem(13);
 		padding-bottom: toRem(10);
-		font-size: toRem(18);
+		@include adaptiveValue("font-size", 18, 16);
 		line-height: math.div(33, 18);
 		font-weight: 300;
 		color: $grey2;
@@ -170,8 +178,7 @@
 		padding-block: toRem(9);
 		max-width: toRem(498);
 		width: 100%;
-		// @include adaptiveValue("padding-inline", 131.44, 10);
-		padding-inline: toRem(50);
+		@include adaptiveValue("padding-inline", 50, 20);
 		line-height: math.div(51, 32);
 		@include adaptiveValue("font-size", 32, 16);
 		@media (max-width: toEm($mobile)) {
@@ -182,16 +189,17 @@
 .list-item-connection {
 	display: flex;
 	flex-direction: column;
-	@include adaptiveValue("row-gap", 24, 15);
+	@include adaptiveValue("row-gap", 23, 15);
 	// .list-item-connection__item
 	&__item {
 		display: flex;
 		align-items: center;
 		@include adaptiveValue("column-gap", 25, 10);
-		row-gap: toRem(5);
 	}
 	// .list-item-connection__icon
 	&__icon {
+		display: flex;
+		flex-shrink: 0;
 		// .list-item-connection__icon--phone
 		&--phone {
 			width: toRem(19);
@@ -205,7 +213,7 @@
 		// .list-item-connection__icon--location
 		&--location {
 			width: toRem(18);
-			height: toRem(22);
+			height: toRem(25);
 			align-self: flex-start;
 		}
 	}
