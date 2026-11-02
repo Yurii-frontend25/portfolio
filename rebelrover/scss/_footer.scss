@@ -105,6 +105,15 @@
 	}
 	// .item-footer__list
 	&__list {
+		&.contact-list .contact-list__link,
+		&.about-list .about-list__link {
+			@media (any-hover: hover) and (any-pointer: fine) {
+				&:hover {
+					text-decoration: underline;
+					color: $black;
+				}
+			}
+		}
 	}
 }
 .about-list {
@@ -119,11 +128,7 @@
 		line-height: 1.88;
 		font-weight: 500;
 		@include adaptiveValue("font-size", 16, 14);
-		@media (any-hover: hover) and (any-pointer: fine) {
-			&:hover {
-				text-decoration: underline;
-			}
-		}
+		transition: color 0.3s ease;
 	}
 }
 .contact-list {
@@ -145,13 +150,9 @@
 	// .contact-list__link
 	&__link {
 		line-height: 1.7;
-		font-weight: 500;
+		// font-weight: 500;
 		@include adaptiveValue("font-size", 16, 14);
-		@media (any-hover: hover) and (any-pointer: fine) {
-			&:hover {
-				text-decoration: underline;
-			}
-		}
+		transition: color 0.3s ease;
 	}
 }
 .social-list {
@@ -176,7 +177,8 @@
 	transition: color 0.3s ease;
 	@media (any-hover: hover) and (any-pointer: fine) {
 		&:hover {
-			color: $grey11;
+			// color: $grey11;
+			color: $black;
 		}
 	}
 }

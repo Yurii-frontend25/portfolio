@@ -36,6 +36,7 @@ body {
 	@include typography("def");
 	font-family: $fontFamily;
 	color: $mainColor;
+	font-weight: $fontWeight;
 	overflow-x: hidden;
 	.menu-open & {
 		overflow: hidden;

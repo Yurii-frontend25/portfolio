@@ -1,7 +1,11 @@
 @use "sass:math";
 @use "../settings" as *;
 @use "../colors" as *;
+@use "../mixins" as *;
 // =======================================================================================================================
+.is-required {
+	@include required-mark;
+}
 .page {
 	// .page__article
 	&__article {
@@ -32,33 +36,34 @@
 		display: flex;
 		flex-direction: column;
 		@include adaptiveValue("row-gap", 30, 20);
-		@include adaptiveValue("margin-bottom", 25, 15);
+		@include adaptiveValue("margin-bottom", 25, 20);
 		@media (max-width: toEm($tablet)) {
 			flex-direction: row-reverse;
 			gap: toRem(20);
 		}
-		@media (max-width: toEm(710)) {
+		@media (max-width: toEm($mobile)) {
 			flex-direction: column-reverse;
 		}
 	}
+	// .article__figure
+	&__figure {
+		display: inline-flex;
+		min-width: toRem(290);
+		overflow: hidden;
+		border-radius: toRem(10);
+	}
 	// .article__top-image
 	&__top-picture {
-		display: block;
 		max-width: toRem(812);
+		width: 100%;
 		aspect-ratio: 812 / 703;
 		background-color: $grey15;
-		@media (max-width: toEm($tablet)) {
-			flex-basis: toRem(290);
-			flex-grow: 1;
-			flex-shrink: 0;
-		}
 	}
 	// .article__img-top
 	&__img-top {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		border-radius: toRem(10);
 	}
 	// .article__text
 	&__text {
@@ -73,7 +78,9 @@
 	}
 	// .article__content
 	&__content {
-		@include adaptiveValue("margin-bottom", 53, 25);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 53, 25);
+		}
 	}
 	// .article__bottom
 	&__bottom {
@@ -130,7 +137,7 @@
 .content-article {
 	// .content-article__title
 	&__title {
-		@include adaptiveValue("font-size", 36, 22);
+		@include adaptiveValue("font-size", 36, 20);
 		line-height: math.div(51, 36);
 		color: $black;
 		&:not(:last-child) {
@@ -142,6 +149,11 @@
 		line-height: math.div(33, 18);
 		font-weight: 300;
 		color: $grey2;
+		> p {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
 		&:not(:last-child) {
 			margin-bottom: toRem(25);
 		}
@@ -151,35 +163,34 @@
 			display: flex;
 			gap: toRem(20);
 		}
-		@media (max-width: toEm(710)) {
+		@media (max-width: toEm($mobile)) {
 			flex-direction: column;
 		}
 	}
-	// .content-article__picture
-	&__picture {
-		display: block;
-		max-width: toRem(812);
-		aspect-ratio: 812 / 703;
-
-		background-color: $grey15;
+	&__figure {
+		display: inline-flex;
+		min-width: toRem(290);
+		overflow: hidden;
+		border-radius: toRem(10);
 		&:not(:last-child) {
 			margin-bottom: toRem(25);
 			@media (max-width: toEm($tablet)) {
 				margin-bottom: 0;
 			}
 		}
-		@media (max-width: toEm($tablet)) {
-			flex-grow: 1;
-			flex-basis: toRem(290);
-			flex-shrink: 0;
-		}
+	}
+	// .content-article__picture
+	&__picture {
+		max-width: toRem(812);
+		width: 100%;
+		aspect-ratio: 812 / 703;
+		background-color: $grey15;
 	}
 	// .content-article__img
 	&__img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		border-radius: toRem(10);
 	}
 }
 .social-article {
@@ -233,7 +244,7 @@
 	}
 	// .recent__title
 	&__title {
-		@include adaptiveValue("font-size", 36, 22);
+		@include adaptiveValue("font-size", 36, 20);
 		line-height: math.div(51, 36);
 		color: $black;
 		&:not(:last-child) {
@@ -334,7 +345,7 @@
 	}
 	// .categories__title
 	&__title {
-		@include adaptiveValue("font-size", 36, 22);
+		@include adaptiveValue("font-size", 36, 20);
 		line-height: math.div(51, 36);
 		color: $black;
 		&:not(:last-child) {
@@ -460,7 +471,7 @@
 .section-form {
 	// .section-form__title
 	&__title {
-		@include adaptiveValue("font-size", 36, 22);
+		@include adaptiveValue("font-size", 36, 20);
 		line-height: math.div(51, 36);
 		color: $black;
 		&:not(:last-child) {
@@ -474,14 +485,6 @@
 		color: $grey2;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 37, 20);
-		}
-		// span {
-		// 	display: inline-flex;
-		// 	gap: toRem(5);
-		// }
-		> p::after {
-			content: "*";
-			@include adaptiveValue("padding-left", 10, 3);
 		}
 	}
 	// .section-form__body
@@ -517,13 +520,6 @@
 		&:not(:last-child) {
 			margin-bottom: toRem(10);
 		}
-		// span {
-		// 	display: flex;
-		// 	gap: toRem(5);
-		// }
-		// span::after {
-		// 	content: "*";
-		// }
 	}
 	// .form-section__textarea
 	&__textarea {

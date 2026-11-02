@@ -1,0 +1,18 @@
+@use "sass:math";
+@use "settings" as *;
+@use "colors" as *;
+@mixin required-mark($starColor: $grey2, $spacing: toRem(4)) {
+	white-space: nowrap;
+
+	&::after {
+		content: "*";
+		color: $starColor;
+		font-weight: bold;
+		display: inline-block;
+		margin-left: $spacing;
+	}
+}
+.is-required {
+	@include required-mark;
+}
+// #ff4d4f

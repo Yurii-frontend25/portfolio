@@ -20,9 +20,9 @@
 		display: grid;
 		grid-template-columns: minmax(toRem(290), toRem(580)) minmax(toRem(480), toRem(676));
 		justify-content: space-between;
-		column-gap: toRem(20);
+		@include adaptiveValue("column-gap", 20, 10);
 		@include adaptiveValue("row-gap", 40, 20);
-		@media (width < toEm(822)) {
+		@media (width < toEm(830)) {
 			display: flex;
 			flex-direction: column-reverse;
 		}
@@ -42,7 +42,7 @@
 		border-radius: toRem(10);
 		box-shadow: toRem(0) toRem(4) toRem(20) rgba(0, 0, 0, 0.1);
 		width: 100%;
-		@media (width < toEm(822)) {
+		@media (width < toEm(830)) {
 			padding-inline: 0;
 		}
 	}
@@ -75,7 +75,7 @@
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		column-gap: toRem(20);
+		@include adaptiveValue("column-gap", 20, 15);
 		@include adaptiveValue("row-gap", 46, 20);
 		@media (max-width: toEm($mobileSmall)) {
 			grid-template-columns: 1fr;
@@ -135,7 +135,6 @@
 		&:focus-visible {
 			outline: toRem(2) solid $grey11;
 			outline-offset: toRem(2);
-			// border-radius: toRem(5);
 		}
 	}
 	// .form-contact__textarea
@@ -170,7 +169,6 @@
 		&:focus-visible {
 			outline: toRem(2) solid $grey11;
 			outline-offset: toRem(2);
-			// border-radius: toRem(5);
 		}
 	}
 	// .form-contact__button
@@ -221,7 +219,7 @@
 	&__link {
 		font-weight: 400;
 		color: $black;
-		line-height: math.div(22, 18);
+		line-height: 1.22;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				text-decoration: underline;

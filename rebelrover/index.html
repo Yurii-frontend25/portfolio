@@ -93,11 +93,9 @@
 		</header>
 		<main class="page">
 			<section class="page__hero page__hero--home hero">
-				<div class="hero__container hero__container--home hero__container--wide">
+				<div class="hero__container hero__container--wide">
 					<div class="hero__content hero__content--home">
-						<h1 class="hero__title hero__title--home">
-							<span class="hero__line-title">Make in</span> your journey.
-						</h1>
+						<h1 class="hero__title hero__title--home"> Make in <br> your journey. </h1>
 						<div class="hero__descr">
 							<p>Explore the world with what you love beautiful natural beauty.</p>
 						</div>
@@ -128,10 +126,10 @@
 									</select>
 								</div>
 							</div>
-							<button class="choice-hero__button" type="button">Explore now</button>
+							<button class="choice-hero__button" type="submit">Explore now</button>
 						</form>
-						<div class="hero__places">
-							<span class="hero__popular">Popular Place:</span>
+						<div class="hero__places" aria-label="Popular places">
+							<span class="hero__popular" aria-hidden="true">Popular Place:</span>
 							<ul class="hero__areas-list">
 								<li class="hero__areas-item">
 									<a class="hero__areas-link" href="#">Bali</a>
@@ -151,7 +149,7 @@
 				</div>
 				<picture class="hero__picture">
 					<source srcset="img/hero/hero-bg.webp" type="image/webp">
-					<img class="hero__image" src="img/hero/hero-bg.jpg" alt="Three colorful suitcases on a table with a scenic beach and mountains in the background">
+					<img class="hero__image hero__image--home" src="img/hero/hero-bg.jpg" alt="Three colorful suitcases on a table with a scenic beach and mountains in the background">
 				</picture>
 			</section>
 			<section class="page__explore explore">
@@ -167,10 +165,10 @@
 					<div class="explore__slider swiper">
 						<div class="explore__wrapper swiper-wrapper">
 							<div class="explore__slide swiper-slide">
-								<div class="item-explore">
-									<a class="item-explore__image" href="#">
-										<figure>
-											<picture>
+								<div class="explore__item item-explore">
+									<a class="item-explore__image-link" href="#">
+										<figure class="item-explore__figure">
+											<picture class="item-explore__picture">
 												<source srcset="img/explore/01.webp" type="image/webp">
 												<img src="img/explore/01.jpg" alt="A couple equipped with backpacks and cameras smiles, indicating their readiness for a journey or photography expedition">
 											</picture>
@@ -179,10 +177,10 @@
 								</div>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="item-explore item-explore--border">
-									<a class="item-explore__image item-explore__image--small" href="#">
-										<figure>
-											<picture>
+								<div class="explore__item item-explore item-explore--border">
+									<a class="item-explore__image-link item-explore__image-link--small" href="#">
+										<figure class="item-explore__figure">
+											<picture class="item-explore__picture">
 												<source srcset="img/explore/02.webp" type="image/webp">
 												<img src="img/explore/02.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
 											</picture>
@@ -200,10 +198,10 @@
 								</div>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="item-explore">
-									<a class="item-explore__image" href="#">
-										<figure>
-											<picture>
+								<div class="explore__item item-explore">
+									<a class="item-explore__image-link" href="#">
+										<figure class="item-explore__figure">
+											<picture class="item-explore__picture">
 												<source srcset="img/explore/03.webp" type="image/webp">
 												<img src="img/explore/03.jpg" alt="The Statue of Liberty stands prominently in front of the New York City skyline, showcasing both the monument and urban landscape">
 											</picture>
@@ -212,10 +210,10 @@
 								</div>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="item-explore">
-									<a class="item-explore__image" href="#">
-										<figure>
-											<picture>
+								<div class="explore__item item-explore">
+									<a class="item-explore__image-link" href="#">
+										<figure class="item-explore__figure">
+											<picture class="item-explore__picture">
 												<source srcset="img/explore/01.webp" type="image/webp">
 												<img src="img/explore/01.jpg" alt="A couple equipped with backpacks and cameras smiles, indicating their readiness for a journey or photography expedition">
 											</picture>
@@ -224,10 +222,10 @@
 								</div>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="item-explore item-explore--border">
-									<a class="item-explore__image item-explore__image--small" href="#">
-										<figure>
-											<picture>
+								<div class="explore__item item-explore item-explore--border">
+									<a class="item-explore__image-link item-explore__image--small" href="#">
+										<figure class="item-explore__figure">
+											<picture class="item-explore__picture">
 												<source srcset="img/explore/02.webp" type="image/webp">
 												<img src="img/explore/02.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
 											</picture>
@@ -245,10 +243,10 @@
 								</div>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="item-explore">
-									<a class="item-explore__image" href="#">
-										<figure>
-											<picture>
+								<div class="explore__item item-explore">
+									<a class="item-explore__image-link" href="#">
+										<figure class="item-explore__figure">
+											<picture class="item-explore__picture">
 												<source srcset="img/explore/03.webp" type="image/webp">
 												<img src="img/explore/03.jpg" alt="The Statue of Liberty stands prominently in front of the New York City skyline, showcasing both the monument and urban landscape">
 											</picture>
@@ -389,12 +387,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="why__bg">
-					<picture>
-						<source srcset="img/why/why-bg-2x.webp" type="image/webp">
-						<img class="why__image" src="img/why/why-bg-2x.jpg" alt="A suitcase and a hat are placed on the sandy beach, with a city skyline visible in the background">
-					</picture>
-				</div>
+				<picture class="why__picture">
+					<source srcset="img/why/why-bg-2x.webp" type="image/webp">
+					<img class="why__image" src="img/why/why-bg-2x.jpg" alt="A suitcase and a hat are placed on the sandy beach, with a city skyline visible in the background">
+				</picture>
 			</section>
 			<section class="page__partners partners">
 				<div class="partners__container partners__container--wide">
@@ -459,7 +455,7 @@
 											<div class="rating__item rating__item--active"></div>
 										</div>
 										<div class="item-testimonial__text">
-											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
+											<p> Before we define any approach, we need to deline the brands overall goal. We then need to di</p>
 										</div>
 									</div>
 								</article>
