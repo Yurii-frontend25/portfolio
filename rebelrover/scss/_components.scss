@@ -20,14 +20,12 @@
 	// .block-head__label
 	&__label {
 		@include adaptiveValue("font-size", 30, 16);
-		font-weight: 500;
 		line-height: 1.5;
 		color: $grey8;
 		letter-spacing: toRem(4);
 		&--small {
 			@include adaptiveValue("font-size", 36, 24);
 			color: $mainColor;
-			font-weight: 500;
 			line-height: 1.94;
 			&:not(:last-child) {
 				@include adaptiveValue("margin-bottom", 12, 2);
@@ -72,7 +70,6 @@
 	}
 	// .block-head__descr
 	&__descr {
-		font-weight: 500;
 		line-height: 2;
 		&--width {
 			max-width: toRem(630);
@@ -117,6 +114,11 @@
 		font-weight: 400;
 		background-color: $grey15;
 		width: 100%;
+	}
+	&--popular-card {
+		@include adaptiveValue("font-size", 22, 16);
+		@include adaptiveValue("padding-block", 13.5, 10);
+		padding-inline: toRem(27);
 	}
 	@media (any-hover: hover) and (any-pointer: fine) {
 		&:hover {

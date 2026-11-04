@@ -1,8 +1,6 @@
 @use "sass:math";
 // ==================================================
-$fontSize: 18;
 $fontFamily: "Poppins", sans-serif;
-$fontWeight: 500;
 // ==================================================
 // Мінімальна ширина сторінки
 $minWidth: 320;
@@ -104,7 +102,6 @@ $responsiveType: 1;
 @mixin typography($size: "def", $weight: 500, $adapt: 1, $sizeMob: 0) {
 	$fontSize: 18;
 	$fontSizeMob: 15;
-	$fontWeight: $weight;
 
 	@if ($size == "T") {
 		$fontSize: 12;
@@ -156,6 +153,9 @@ $responsiveType: 1;
 	@if ($sizeMob > 0) {
 		$fontSizeMob: $sizeMob;
 	}
+	//Генерація CSS
+	font-weight: $weight;
+
 	@if ($adapt == 1) {
 		@include adaptiveValue("font-size", $fontSize, $fontSizeMob);
 	} @else {

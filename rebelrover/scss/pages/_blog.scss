@@ -3,9 +3,6 @@
 @use "../colors" as *;
 @use "../mixins" as *;
 // =======================================================================================================================
-.is-required {
-	@include required-mark;
-}
 .page {
 	// .page__article
 	&__article {
@@ -16,8 +13,6 @@
 	// .article__container
 	&__container {
 		display: flex;
-		// display: grid;
-		// grid-template-columns: 59.271% auto;
 		@include adaptiveValue("gap", 58, 20, 0, $containerWidth, $maxWidthContainer);
 		@media (max-width: toEm($tablet)) {
 			flex-direction: column;
@@ -25,6 +20,8 @@
 	}
 	// .article__main
 	&__main {
+		display: flex;
+		flex-direction: column;
 		max-width: toRem(812);
 		width: 100%;
 		@media (max-width: toEm($tablet)) {
@@ -40,15 +37,16 @@
 		@media (max-width: toEm($tablet)) {
 			flex-direction: row-reverse;
 			gap: toRem(20);
+			order: 2;
 		}
-		@media (max-width: toEm($mobile)) {
-			flex-direction: column-reverse;
+		@media (max-width: toEm(690)) {
+			flex-direction: column;
 		}
 	}
 	// .article__figure
 	&__figure {
 		display: inline-flex;
-		min-width: toRem(290);
+		min-width: toRem(220);
 		overflow: hidden;
 		border-radius: toRem(10);
 	}
@@ -78,6 +76,9 @@
 	}
 	// .article__content
 	&__content {
+		@media (max-width: toEm($tablet)) {
+			order: 1;
+		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 53, 25);
 		}
@@ -91,6 +92,9 @@
 		align-items: center;
 		border-bottom: toRem(1) solid $grey16;
 		@include adaptiveValue("padding-bottom", 64, 25);
+		@media (max-width: toEm($tablet)) {
+			order: 3;
+		}
 	}
 	// .article__labels
 	&__labels {
@@ -158,18 +162,20 @@
 			margin-bottom: toRem(25);
 		}
 	}
+	// .content-article__info
 	&__info {
 		@media (max-width: toEm($tablet)) {
 			display: flex;
 			gap: toRem(20);
 		}
-		@media (max-width: toEm($mobile)) {
+		@media (max-width: toEm(690)) {
 			flex-direction: column;
 		}
 	}
+	// .content-article__figure
 	&__figure {
 		display: inline-flex;
-		min-width: toRem(290);
+		min-width: toRem(220);
 		overflow: hidden;
 		border-radius: toRem(10);
 		&:not(:last-child) {
@@ -267,12 +273,10 @@
 	// .recent__item
 	&__item {
 		flex-grow: 1;
-		// display: flex;
 		display: grid;
 	}
 	// .recent__article
 	&__article {
-		// display: flex;
 		display: grid;
 		flex-grow: 1;
 	}
@@ -280,15 +284,11 @@
 	&__link {
 		display: grid;
 		grid-template-columns: auto 1fr;
-		// display: flex;
-		// flex-grow: 1;
 		transition: opacity 0.3s ease;
 		@include adaptiveValue("gap", 26, 10);
 		@media (max-width: toEm($tablet)) {
-			// flex-direction: column;
 			grid-template-columns: 1fr;
 			grid-template-rows: auto 1fr;
-			//1180
 		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
@@ -302,7 +302,6 @@
 		aspect-ratio: 149 / 99;
 		@media (max-width: toEm($tablet)) {
 			max-width: 100%;
-			//1180
 		}
 		img {
 			width: 100%;
@@ -487,6 +486,12 @@
 			@include adaptiveValue("margin-bottom", 37, 20);
 		}
 	}
+	// .section-form__required
+	&__required {
+		&.is-required {
+			@include required-mark;
+		}
+	}
 	// .section-form__body
 	&__body {
 	}
@@ -519,6 +524,9 @@
 		color: $grey2;
 		&:not(:last-child) {
 			margin-bottom: toRem(10);
+		}
+		&.is-required {
+			@include required-mark;
 		}
 	}
 	// .form-section__textarea
@@ -567,7 +575,7 @@
 	}
 	// .form-section__button
 	&__button {
-		padding-inline: toRem(35.5);
+		@include adaptiveValue("padding-inline", 35.5, 20);
 		@include adaptiveValue("padding-block", 17, 10);
 		@include adaptiveValue("font-size", 24, 16);
 	}

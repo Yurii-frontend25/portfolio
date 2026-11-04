@@ -151,7 +151,6 @@
 		@include adaptiveValue("margin-bottom", 34, 20);
 		flex-grow: 1;
 		font-size: toRem(14);
-		font-weight: 500;
 		line-height: math.div(27, 14);
 		color: $grey5;
 		> p {
@@ -172,6 +171,15 @@
 	// .cards-popular__rating
 	&__rating {
 	}
+	// .cards-popular__form
+	&__form {
+		@media (max-width: toEm(730)) {
+			width: 100%;
+		}
+	}
+	// .cards-popular__btn
+	&__btn {
+	}
 }
 .rating {
 	display: flex;
@@ -181,20 +189,6 @@
 		aspect-ratio: 1 / 1;
 		background: url("../img/icons/star.svg") 0 0 no-repeat;
 		flex: 0 0 toRem(21);
-	}
-}
-.form {
-	@media (max-width: toEm($mobile)) {
-		width: 100%;
-	}
-	// .form__btn
-	&__btn {
-		@include adaptiveValue("font-size", 22, 16);
-		@include adaptiveValue("padding-block", 13.5, 10);
-		padding-inline: toRem(27);
-		@media (max-width: toEm($mobile)) {
-			width: 100%;
-		}
 	}
 }
 // =======================================================================================================================

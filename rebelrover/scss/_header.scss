@@ -48,6 +48,7 @@
 }
 //=========================================================================
 ._icon-s-arrow {
+	padding-top: toRem(3);
 }
 //=============================================
 .menu {
@@ -105,8 +106,7 @@
 		justify-content: flex-end;
 		@include adaptiveValue("column-gap", 67, 5);
 		color: $white;
-		font-weight: 600;
-		line-height: 1.5;
+
 		row-gap: toRem(5);
 		@media (max-width: toEm($tablet)) {
 			width: 100%;
@@ -117,7 +117,7 @@
 	&__item {
 		display: flex;
 		column-gap: toRem(5);
-		align-items: center;
+		// align-items: center;
 		position: relative;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
@@ -152,16 +152,18 @@
 	}
 	// .menu__link
 	&__link {
+		font-weight: 600;
+		line-height: 1.5;
 		transition: color 0.3s ease;
 	}
 	// .menu__button
 	&__button {
 		// position: relative;
-		font-size: toRem(7);
+		font-size: toRem(8);
 		transition: rotate 0.3s ease;
 		._sub-menu-open & {
-			rotate: -180deg; // Стрілочка розвертається при відкритті
-			color: steelblue;
+			rotate: -180deg;
+			color: red;
 		}
 	}
 	// .menu__actions
@@ -196,8 +198,6 @@
 			//===========================================
 			// for menuDropdown
 			overflow: hidden; // Ховаємо контент, який вилазить
-
-			// 🌟 Головне: задаємо плавність для властивості height!
 			height: 0;
 			transition: height 0.3s ease-in-out;
 		}

@@ -46,7 +46,6 @@
 	// .footer__text
 	&__text {
 		line-height: 1.38;
-		font-weight: 500;
 		@include adaptiveValue("font-size", 18, 14);
 	}
 	// .footer__items
@@ -126,7 +125,6 @@
 	// .about-list__link
 	&__link {
 		line-height: 1.88;
-		font-weight: 500;
 		@include adaptiveValue("font-size", 16, 14);
 		transition: color 0.3s ease;
 	}
@@ -150,7 +148,6 @@
 	// .contact-list__link
 	&__link {
 		line-height: 1.7;
-		// font-weight: 500;
 		@include adaptiveValue("font-size", 16, 14);
 		transition: color 0.3s ease;
 	}
