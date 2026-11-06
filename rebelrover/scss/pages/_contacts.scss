@@ -181,7 +181,6 @@
 		@include adaptiveValue("font-size", 32, 16);
 		@media (max-width: toEm($mobile)) {
 			max-width: 100%;
-			max-width: 100%;
 		}
 	}
 }
