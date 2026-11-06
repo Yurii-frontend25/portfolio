@@ -127,7 +127,7 @@ $responsiveType: 1;
 	}
 	@if ($size == "h1") {
 		$fontSize: 90;
-		$fontSizeMob: 56; //42
+		$fontSizeMob: 56;
 		line-height: 1.22;
 	}
 	@if ($size == "h2") {
@@ -138,18 +138,18 @@ $responsiveType: 1;
 		$fontSize: 40;
 		$fontSizeMob: 26;
 	}
-	@if ($size == "h4") {
-		$fontSize: 36;
-		$fontSizeMob: 24;
-	}
-	@if ($size == "h5") {
-		$fontSize: 32;
-		$fontSizeMob: 22;
-	}
-	@if ($size == "d1") {
-		$fontSize: 72;
-		$fontSizeMob: 38;
-	}
+	// @if ($size == "h4") {
+	// 	$fontSize: 36;
+	// 	$fontSizeMob: 24;
+	// }
+	// @if ($size == "h5") {
+	// 	$fontSize: 32;
+	// 	$fontSizeMob: 22;
+	// }
+	// @if ($size == "d1") {
+	// 	$fontSize: 72;
+	// 	$fontSizeMob: 38;
+	// }
 	@if ($sizeMob > 0) {
 		$fontSizeMob: $sizeMob;
 	}

@@ -575,9 +575,8 @@
 	}
 	// .form-section__button
 	&__button {
-		@include adaptiveValue("padding-inline", 35.5, 20);
-		@include adaptiveValue("padding-block", 17, 10);
-		@include adaptiveValue("font-size", 24, 16);
+		// @include adaptiveValue("padding-inline", 35.5, 20);
+		// @include adaptiveValue("padding-block", 17, 10);
 	}
 }
 .checkbox {

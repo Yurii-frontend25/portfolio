@@ -29,7 +29,6 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		gap: toRem(20);
-		align-items: end;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 66, 30);
 		}
@@ -39,16 +38,16 @@
 	}
 	// .popular__link
 	&__link {
-		@include adaptiveValue("font-size", 22, 16);
-		font-weight: 600;
-		background-color: $black;
+		// @include adaptiveValue("font-size", 22, 16);
+		// font-weight: 600;
+		// background-color: $black;
 		@include adaptiveValue("padding-block", 13.5, 10);
 		padding-inline: toRem(26);
 		border-radius: toRem(30);
-		@media (max-width: toEm($mobile)) {
-			width: 100%;
-			text-align: center;
-		}
+		// @media (max-width: toEm($mobile)) {
+		// 	width: 100%;
+		// 	text-align: center;
+		// }
 	}
 	// .popular__cards
 	&__cards {
@@ -229,13 +228,13 @@
 	}
 	// .tips__link
 	&__link {
-		@include adaptiveValue("font-size", 22, 16);
-		@include adaptiveValue("margin-top", 35, 0);
-		@include adaptiveValue("padding-block", 13.5, 10);
-		@include adaptiveValue("padding-inline", 47.5, 20);
+		// @include adaptiveValue("font-size", 22, 16);
+		// @include adaptiveValue("margin-top", 40, 0);
+		// @include adaptiveValue("padding-block", 13.5, 10);
+		// @include adaptiveValue("padding-inline", 47.5, 20);
 		@media (max-width: toEm($mobile)) {
-			width: 100%;
-			text-align: center;
+			// width: 100%;
+			// text-align: center;
 		}
 	}
 	// .tips__content
@@ -294,7 +293,8 @@
 				gap: toRem(15);
 			}
 			@media (max-width: toEm(580)) {
-				flex-wrap: wrap;
+				// flex-wrap: wrap;
+				flex-direction: column;
 			}
 		}
 	}
@@ -428,9 +428,8 @@
 	}
 	// .columns-tips__link
 	&__link {
-		@include adaptiveValue("font-size", 24, 16);
 		@include adaptiveValue("padding-inline", 40, 20);
 		@include adaptiveValue("padding-block", 14, 10);
-		font-weight: 500;
+		align-self: flex-start;
 	}
 }

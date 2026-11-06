@@ -4,16 +4,13 @@
 // =======================================================================================================================
 .block-head {
 	display: flex;
-	//flex-direction: column;
+	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	&--col {
-		display: grid;
-		justify-content: center;
 	}
+	// .block-head--start
 	&--start {
-		display: flex;
-		flex-direction: column;
 		@include adaptiveValue("row-gap", 15, 10);
 		align-items: flex-start;
 	}
@@ -23,6 +20,7 @@
 		line-height: 1.5;
 		color: $grey8;
 		letter-spacing: toRem(4);
+		// .block-head__label--small
 		&--small {
 			@include adaptiveValue("font-size", 36, 24);
 			color: $mainColor;
@@ -45,6 +43,7 @@
 				@include adaptiveValue("margin-bottom", 30, 20);
 			}
 		}
+		// .block-head__title--margin-m
 		&--margin-m {
 			&:not(:last-child) {
 				margin-bottom: toRem(20);
@@ -57,10 +56,12 @@
 				margin-bottom: toRem(7);
 			}
 		}
+		// .block-head__title--start
 		&--start {
 			text-align: left;
 			color: $black;
 		}
+		// .block-head__title--start-margin
 		&--start-margin {
 			color: $black;
 			&:not(:last-child) {
@@ -71,6 +72,7 @@
 	// .block-head__descr
 	&__descr {
 		line-height: 2;
+		// .block-head__descr--width
 		&--width {
 			max-width: toRem(630);
 		}
@@ -78,15 +80,15 @@
 		&--white {
 			color: $white;
 		}
+		// .block-head__descr--start
 		&--start {
-			line-height: 2;
-			color: $grey8;
-			text-align: left;
 			max-width: toRem(577);
-			@media (max-width: toEm(823)) {
+			color: $grey8;
+			@media (max-width: toEm(816)) {
 				max-width: 100%;
 			}
 		}
+		// .block-head__descr--start-light
 		&--start-light {
 			font-weight: 300;
 			text-align: left;
@@ -96,33 +98,58 @@
 	}
 }
 .btn {
-	// @include adaptiveValue("font-size", 22, 16);
+	@include adaptiveValue("font-size", 22, 16);
 	color: $white;
 	line-height: math.div(33, 22);
-	font-weight: 600;
 	background-color: $black;
 	border-radius: toRem(39);
-	transition: background-color 0.3s ease;
+	transition:
+		background-color 0.3s ease,
+		transform 0.3s ease;
 	display: flex;
-	align-self: flex-start;
 	justify-content: center;
-	&--contact-form {
-		align-self: center;
-	}
+	will-change: transform;
+	text-align: center;
+
 	@media (max-width: toEm($mobile)) {
 		color: $btnMobileBg;
-		font-weight: 400;
-		background-color: $grey15;
+		// font-weight: 400;
+		// background-color: $grey15;
+		background-color: transparent;
 		width: 100%;
+		border: toRem(1) solid $btnMobileBg;
+		line-height: 1;
+	}
+	&--contact-form {
+		align-self: center;
+		@include adaptiveValue("font-size", 32, 16);
+		line-height: math.div(51, 32);
 	}
 	&--popular-card {
-		@include adaptiveValue("font-size", 22, 16);
 		@include adaptiveValue("padding-block", 13.5, 10);
 		padding-inline: toRem(27);
+		font-weight: 600;
+	}
+	&--popular {
+		align-self: flex-end;
+	}
+	&--tips {
+		font-weight: 600;
+		@include adaptiveValue("margin-top", 40, 0);
+		@include adaptiveValue("padding-block", 13.5, 10);
+		@include adaptiveValue("padding-inline", 47.5, 20);
+	}
+	&--columns-tips {
+		@include adaptiveValue("font-size", 24, 16);
+	}
+	&--blog {
+		@include adaptiveValue("font-size", 24, 16);
+		@include adaptiveValue("padding-inline", 35.5, 20);
+		@include adaptiveValue("padding-block", 17, 10);
 	}
 	@media (any-hover: hover) and (any-pointer: fine) {
 		&:hover {
-			background-color: $grey2;
+			transform: translate(0, toRem(2));
 		}
 	}
 }
