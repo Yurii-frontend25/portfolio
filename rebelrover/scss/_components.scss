@@ -112,12 +112,12 @@
 	text-align: center;
 
 	@media (max-width: toEm($mobile)) {
-		color: $btnMobileBg;
-		// font-weight: 400;
+		// color: $btnMobileColor;
+		color: $black;
 		// background-color: $grey15;
 		background-color: transparent;
 		width: 100%;
-		border: toRem(1) solid $btnMobileBg;
+		border: toRem(1) solid $black;
 		line-height: 1;
 	}
 	&--contact-form {
