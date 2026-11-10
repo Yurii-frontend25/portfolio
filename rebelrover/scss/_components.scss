@@ -117,34 +117,45 @@
 		// background-color: $grey15;
 		background-color: transparent;
 		width: 100%;
-		border: toRem(1) solid $black;
+		border: toRem(1) solid $grey9;
 		line-height: 1;
 	}
 	&--contact-form {
 		align-self: center;
 		@include adaptiveValue("font-size", 32, 16);
-		line-height: math.div(51, 32);
+		padding-block: toRem(9);
+		padding-inline: toRem(20);
 	}
 	&--popular-card {
 		@include adaptiveValue("padding-block", 13.5, 10);
-		padding-inline: toRem(27);
+		@include adaptiveValue("padding-inline", 27.8, 20);
 		font-weight: 600;
 	}
 	&--popular {
+		font-weight: 600;
 		align-self: flex-end;
+		@include adaptiveValue("padding-block", 13.5, 10);
+		@include adaptiveValue("padding-inline", 26.6, 20);
+		border-radius: toRem(30);
 	}
 	&--tips {
 		font-weight: 600;
 		@include adaptiveValue("margin-top", 40, 0);
 		@include adaptiveValue("padding-block", 13.5, 10);
 		@include adaptiveValue("padding-inline", 47.5, 20);
+		@media (max-width: toEm(816)) {
+			margin-top: 0;
+		}
 	}
 	&--columns-tips {
 		@include adaptiveValue("font-size", 24, 16);
+		@include adaptiveValue("padding-inline", 40, 20);
+		@include adaptiveValue("padding-block", 14, 10);
+		align-self: flex-start;
 	}
 	&--blog {
 		@include adaptiveValue("font-size", 24, 16);
-		@include adaptiveValue("padding-inline", 35.5, 20);
+		@include adaptiveValue("padding-inline", 37, 20);
 		@include adaptiveValue("padding-block", 17, 10);
 	}
 	@media (any-hover: hover) and (any-pointer: fine) {
@@ -206,5 +217,19 @@
 		@media (max-width: toEm(400)) {
 			width: 100%;
 		}
+	}
+}
+//========================================================================================================================
+.rating {
+	display: flex;
+	@include adaptiveValue("column-gap", 7, 5);
+	// .rating__item
+	&__item {
+		aspect-ratio: 1 / 1;
+		// flex: 0 0 toRem(21);
+		flex-shrink: 0;
+		// height: toRem(21);
+		@include adaptiveValue("width", 21, 18);
+		background: url("../img/icons/star.svg") 0 0 / contain no-repeat;
 	}
 }

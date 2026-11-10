@@ -173,12 +173,12 @@
 	}
 	// .form-contact__button
 	&__button {
-		padding-block: toRem(9);
 		max-width: toRem(498);
-		@include adaptiveValue("padding-inline", 50, 20);
+		// padding-block: toRem(9);
+		// @include adaptiveValue("padding-inline", 50, 20);
 		width: 100%;
 		// line-height: math.div(51, 32);
-		@include adaptiveValue("font-size", 32, 16);
+		// @include adaptiveValue("font-size", 32, 16);
 		@media (max-width: toEm($mobile)) {
 			max-width: 100%;
 		}

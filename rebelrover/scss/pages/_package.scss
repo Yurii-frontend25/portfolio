@@ -38,16 +38,6 @@
 	}
 	// .popular__link
 	&__link {
-		// @include adaptiveValue("font-size", 22, 16);
-		// font-weight: 600;
-		// background-color: $black;
-		@include adaptiveValue("padding-block", 13.5, 10);
-		padding-inline: toRem(26);
-		border-radius: toRem(30);
-		// @media (max-width: toEm($mobile)) {
-		// 	width: 100%;
-		// 	text-align: center;
-		// }
 	}
 	// .popular__cards
 	&__cards {
@@ -57,37 +47,38 @@
 	// .cards-popular__items
 	&__items {
 		display: grid;
-		grid-gap: toRem(18);
-		grid-template-columns: repeat(auto-fit, minmax(min(toRem(330), 100%), 1fr));
+		@include adaptiveValue("grid-gap", 19, 15);
+		grid-template-columns: repeat(auto-fit, minmax(min(toRem(333), 100%), 1fr));
 	}
 	// .cards-popular__item
 	&__item {
 		display: flex;
 		flex-direction: column;
+		flex-grow: 1;
 		background-color: $white;
 		box-shadow: toRem(0) toRem(5) toRem(20) rgba(0, 0, 0, 0.1);
 		border-radius: toRem(10);
 		overflow: hidden;
+	}
+	// .cards-popular__image
+	&__image {
+		// overflow: hidden;
+		// will-change: transform;
+	}
+	// .cards-popular__anchor-image
+	&__anchor-image {
+		overflow: hidden;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				.cards-popular__img {
-					transform: scale(1.02);
+					transform: scale(1.01);
 				}
 			}
 		}
 	}
-	// .cards-popular__image
-	&__image {
-		overflow: hidden;
-		will-change: transform;
-	}
-	// .cards-popular__img-link
-	&__anchor-image {
-		width: 100%;
-		aspect-ratio: 444 / 319;
-	}
 	// .cards-popular__figure
 	&__figure {
+		aspect-ratio: 444 / 319;
 	}
 	// .cards-popular__picture
 	&__picture {
@@ -162,32 +153,21 @@
 	&__box {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
 		align-items: center;
-		column-gap: toRem(10);
+		@include adaptiveValue("column-gap", 56, 10, 0, $containerWidth, $containerWidth);
 		row-gap: toRem(20);
 	}
 	// .cards-popular__rating
 	&__rating {
+		flex-grow: 1;
 	}
 	// .cards-popular__form
 	&__form {
-		@media (max-width: toEm(730)) {
-			width: 100%;
-		}
+		flex-grow: 1;
 	}
 	// .cards-popular__btn
 	&__btn {
-	}
-}
-.rating {
-	display: flex;
-	gap: toRem(7);
-	// .rating__item
-	&__item {
-		aspect-ratio: 1 / 1;
-		background: url("../img/icons/star.svg") 0 0 no-repeat;
-		flex: 0 0 toRem(21);
+		width: 100%;
 	}
 }
 // =======================================================================================================================
@@ -228,14 +208,6 @@
 	}
 	// .tips__link
 	&__link {
-		// @include adaptiveValue("font-size", 22, 16);
-		// @include adaptiveValue("margin-top", 40, 0);
-		// @include adaptiveValue("padding-block", 13.5, 10);
-		// @include adaptiveValue("padding-inline", 47.5, 20);
-		@media (max-width: toEm($mobile)) {
-			// width: 100%;
-			// text-align: center;
-		}
 	}
 	// .tips__content
 	&__content {
@@ -251,6 +223,7 @@
 	@include adaptiveValue("column-gap", 30, 10);
 	// .columns-tips__column
 	&__column {
+		// .columns-tips__column--grid
 		&--grid {
 			display: grid;
 			max-width: toRem(548);
@@ -267,6 +240,7 @@
 				grid-template-columns: 1fr;
 			}
 		}
+		// .columns-tips__column--img
 		&--img {
 			max-width: toRem(792);
 			flex-grow: 1;
@@ -293,7 +267,6 @@
 				gap: toRem(15);
 			}
 			@media (max-width: toEm(580)) {
-				// flex-wrap: wrap;
 				flex-direction: column;
 			}
 		}
@@ -310,8 +283,8 @@
 	&__picture {
 		aspect-ratio: 792 / 679;
 		width: 100%;
-		flex-basis: toRem(260);
-		flex-grow: 1;
+		// flex-basis: toRem(260);
+		// flex-grow: 1;
 	}
 	// .columns-tips__img
 	&__img {
@@ -334,13 +307,11 @@
 			}
 
 			&.columns-tips__body--first {
-				// padding-bottom: toRem(10);
 				@media (min-width: toEm(655)) {
 					@include adaptiveValue("padding-bottom", 45, 10);
 				}
 			}
 			&.columns-tips__body--second {
-				// padding-bottom: toRem(10);
 				@media (min-width: toEm(655)) {
 					@include adaptiveValue("padding-bottom", 37, 10);
 				}
@@ -428,8 +399,5 @@
 	}
 	// .columns-tips__link
 	&__link {
-		@include adaptiveValue("padding-inline", 40, 20);
-		@include adaptiveValue("padding-block", 14, 10);
-		align-self: flex-start;
 	}
 }

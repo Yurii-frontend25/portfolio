@@ -882,17 +882,7 @@ select {
 		color: $grey3;
 	}
 }
-.rating {
-	display: flex;
-	column-gap: toRem(7);
-	// .rating__item
-	&__item {
-		aspect-ratio: 1 / 1;
-		flex: 0 0 toRem(21);
-		height: toRem(21);
-		background: url("../img/icons/star.svg") 0 0 no-repeat;
-	}
-}
+
 // =======================================================================================================================
 // Section subscribe
 .page {
