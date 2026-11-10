@@ -5787,7 +5787,7 @@ label {
     color: #000;
     background-color: transparent;
     width: 100%;
-    border: 0.0625rem solid #cfcfcf;
+    border: 0.0625rem solid rgba(0, 0, 0, 0.5);
     line-height: 1;
   }
 }
@@ -5813,6 +5813,11 @@ label {
 .btn--contact-form {
   padding-block: 0.5625rem;
   padding-inline: 1.25rem;
+}
+@media (max-width: 47.99875em) {
+  .btn--contact-form {
+    line-height: 1.125;
+  }
 }
 @media (min-width: 87.5em) {
   .btn--popular-card {
