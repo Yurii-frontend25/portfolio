@@ -2,13 +2,13 @@
 
 Responsive, accessible, and high-performance multi-page website for a travel agency, built from scratch with clean semantic HTML5, modular SCSS, and vanilla JavaScript.
 
-🔗 **[Live Demo on GitHub Pages](https://github.io)**
+🔗 **[Live Demo on GitHub Pages](https://yurii-frontend25.github.io/portfolio/rebelrover/)**
 
 ## 🚀 Google Lighthouse Audit
 
 | Desktop (`100 / 100 / 100 / 100`) | Mobile (`93 / 100 / 100 / 100`) |
 | :---: | :---: |
-| ![Desktop Lighthouse Score](./lighthouse-desktop.png) | ![Mobile Lighthouse Score](./lighthouse-mobile.png) |
+| ![Desktop Lighthouse Score](lighthouse-desktop-score.png) | ![Mobile Lighthouse Score](lighthouse-mobile-score.png) |
 
 ## ✨ Key Features
 

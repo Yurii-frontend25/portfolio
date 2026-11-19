@@ -8,7 +8,6 @@
 	left: 0;
 	width: 100%;
 	z-index: 100;
-
 	&::before {
 		content: "";
 		position: absolute;
@@ -32,7 +31,6 @@
 		@include adaptiveValue("min-height", 128, 70);
 		display: flex;
 		align-items: center;
-		// position: relative;
 	}
 	// .header__body
 	&__body {
@@ -65,9 +63,8 @@
 	}
 }
 //=========================================================================
-._icon-s-arrow {
-	// padding-top: toRem(3);
-}
+// ._icon-s-arrow {
+// }
 //=============================================
 .menu {
 	display: flex;
@@ -134,7 +131,7 @@
 	// .menu__item
 	&__item {
 		display: flex;
-		column-gap: toRem(8); //5
+		column-gap: toRem(8);
 		align-items: center;
 		position: relative;
 		@media (any-hover: hover) and (any-pointer: fine) {
@@ -241,7 +238,6 @@
 	@media (max-width: toEm($tablet)) {
 		padding-top: 0;
 	}
-
 	// .sub-menu__item
 	&__item {
 		padding-block: toRem(5);
