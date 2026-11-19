@@ -6682,10 +6682,6 @@ label {
   height: 100%;
 }
 
-._icon-s-arrow {
-  padding-top: 0.1875rem;
-}
-
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6830,9 +6826,12 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 0.3125rem;
-     -moz-column-gap: 0.3125rem;
-          column-gap: 0.3125rem;
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 @media (any-hover: hover) and (any-pointer: fine) {
