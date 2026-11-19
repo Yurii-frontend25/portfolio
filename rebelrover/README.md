@@ -6,7 +6,7 @@ Responsive, accessible, and high-performance multi-page website for a travel age
 
 ## 🚀 Google Lighthouse Audit
 
- Desktop (`100 / 100 / 100 / 100`) | Mobile (`93 / 100 / 100 / 100`) |
+| Desktop (`100 / 100 / 100 / 100`) | Mobile (`93 / 100 / 100 / 100`) |
 | :---: | :---: |
 | ![Desktop Lighthouse Score](./lighthouse-desktop.png) | ![Mobile Lighthouse Score](./lighthouse-mobile.png) |
 
