@@ -4,9 +4,11 @@ Responsive, accessible, and high-performance multi-page website for a travel age
 
 🔗 **[Live Demo on GitHub Pages](https://github.io)**
 
-## 🚀 Google Lighthouse Audit (100 / 100 / 100 / 100)
+## 🚀 Google Lighthouse Audit
 
-![Google Lighthouse Score 100/100/100/100](./lighthouse-score.png)
+ Desktop (`100 / 100 / 100 / 100`) | Mobile (`93 / 100 / 100 / 100`) |
+| :---: | :---: |
+| ![Desktop Lighthouse Score](./lighthouse-desktop.png) | ![Mobile Lighthouse Score](./lighthouse-mobile.png) |
 
 ## ✨ Key Features
 
