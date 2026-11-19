@@ -48,7 +48,7 @@
 	&__items {
 		display: grid;
 		@include adaptiveValue("grid-gap", 19, 15);
-		grid-template-columns: repeat(auto-fit, minmax(min(toRem(333), 100%), 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(toRem(330), 100%), 1fr));
 	}
 	// .cards-popular__item
 	&__item {
@@ -111,7 +111,7 @@
 	}
 	// .cards-popular__title
 	&__title {
-		@include adaptiveValue("font-size", 24, 20);
+		@include adaptiveValue("font-size", 24, 20, 0, $maxWidthContainer, 1100);
 		font-weight: 600;
 		color: $black;
 		line-height: math.div(36, 24);
@@ -128,12 +128,12 @@
 	}
 	// .cards-popular__price
 	&__price {
-		@include adaptiveValue("font-size", 24, 16);
+		@include adaptiveValue("font-size", 24, 16, 0, $maxWidthContainer, 1100);
 		line-height: math.div(36, 24);
 		color: $black;
 		span {
 			font-weight: 300;
-			@include adaptiveValue("font-size", 24, 16);
+			@include adaptiveValue("font-size", 24, 16, 0, $maxWidthContainer, 1100);
 		}
 	}
 	// .cards-popular__text
@@ -176,7 +176,6 @@
 	&__picture {
 		display: block;
 		aspect-ratio: 1512 / 542;
-		text-align: center;
 	}
 	// .background__img
 	&__img {

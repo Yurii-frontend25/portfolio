@@ -46,7 +46,7 @@
 	// .footer__text
 	&__text {
 		line-height: 1.38;
-		@include adaptiveValue("font-size", 18, 14);
+		color: $grey4;
 	}
 	// .footer__items
 	&__items {
@@ -55,7 +55,7 @@
 		display: grid;
 		justify-content: space-between;
 		grid-template-columns: toRem(253) toRem(124) toRem(173);
-		row-gap: toRem(20);
+		row-gap: toRem(24);
 		@include adaptiveValue("column-gap", 50, 20);
 		@media (max-width: toEm(1135)) {
 			grid-template-columns: toRem(235) toRem(120) toRem(173);
@@ -89,14 +89,13 @@
 .item-footer {
 	// .item-footer__title
 	&__title {
-		text-wrap: balance;
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 20, 10);
-		}
-		@include typography("XXL");
-		line-height: 1.5; //2
+		@include adaptiveValue("font-size", 24, 18, 0, $maxWidthContainer, 868);
+		line-height: 1.5;
 		font-weight: 600;
 		color: $black;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 12);
+		}
 	}
 	// .item-footer__address
 	&__address {
@@ -106,27 +105,21 @@
 	&__list {
 		&.contact-list .contact-list__link,
 		&.about-list .about-list__link {
+			line-height: 1.5;
+			color: $grey4;
+			@include adaptiveValue("font-size", 18, 14, 0, $tablet, $mobile);
 			@media (any-hover: hover) and (any-pointer: fine) {
 				&:hover {
-					text-decoration: underline;
 					color: $black;
 				}
 			}
 		}
-	}
-}
-.about-list {
-	// .about-list__item
-	&__item {
-		&:not(:last-child) {
-			margin-bottom: toRem(7);
+		&.contact-list .contact-list__item,
+		&.about-list .about-list__item {
+			&:not(:last-child) {
+				margin-bottom: toRem(12);
+			}
 		}
-	}
-	// .about-list__link
-	&__link {
-		line-height: 1.88;
-		@include adaptiveValue("font-size", 16, 14);
-		transition: color 0.3s ease;
 	}
 }
 .contact-list {
@@ -135,23 +128,33 @@
 		display: flex;
 		column-gap: toRem(8);
 		align-items: flex-start;
-
-		&:not(:last-child) {
-			margin-bottom: toRem(10);
-		}
 	}
 	// .contact-list__icon
 	&__icon {
-		flex-shrink: 0;
-		margin-top: toRem(4);
+		display: flex;
+		justify-content: center;
+		flex: 0 0 toRem(16);
+		@include adaptiveValue("margin-top", 7, 4);
+		img {
+			max-width: 100%;
+			height: auto;
+		}
 	}
 	// .contact-list__link
 	&__link {
-		line-height: 1.7;
-		@include adaptiveValue("font-size", 16, 14);
 		transition: color 0.3s ease;
 	}
 }
+.about-list {
+	// .about-list__item
+	&__item {
+	}
+	// .about-list__link
+	&__link {
+		transition: color 0.3s ease;
+	}
+}
+
 .social-list {
 	display: flex;
 	align-items: flex-end;

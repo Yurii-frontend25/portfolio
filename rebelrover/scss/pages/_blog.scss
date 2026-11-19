@@ -55,7 +55,7 @@
 		max-width: toRem(812);
 		width: 100%;
 		aspect-ratio: 812 / 703;
-		background-color: $grey15;
+		// background-color: $grey15;
 	}
 	// .article__img-top
 	&__img-top {
@@ -190,7 +190,7 @@
 		max-width: toRem(812);
 		width: 100%;
 		aspect-ratio: 812 / 703;
-		background-color: $grey15;
+		// background-color: $grey15;
 	}
 	// .content-article__img
 	&__img {
@@ -219,7 +219,7 @@
 		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			svg:hover {
-				fill: $grey8;
+				fill: $grey3; //8
 			}
 		}
 	}
@@ -370,7 +370,7 @@
 					opacity: 0.6;
 				}
 				span {
-					color: $grey8;
+					color: $grey3; //8
 				}
 			}
 		}
@@ -537,19 +537,22 @@
 		padding-inline: toRem(10);
 		@include adaptiveValue("padding-block", 20, 10);
 		line-height: math.div(33, 18);
-		font-size: toRem(18);
+		@include adaptiveValue("font-size", 18, 15);
 		resize: vertical;
 		font-weight: 300;
 		color: $grey2;
-		transition: border-color 0.3s ease;
+		transition:
+			border-color 0.3s ease,
+			box-shadow 0.3s ease;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
-				border-color: $grey17;
+				border-color: $grey2;
 			}
 		}
 		&:focus-visible {
-			outline: toRem(1) solid $grey11;
-			outline-offset: toRem(2);
+			outline: none;
+			border-color: $grey2;
+			box-shadow: 0 0 0 3px rgba(52, 52, 52, 0.1);
 		}
 	}
 	// .form-section__input
@@ -557,26 +560,27 @@
 		border: toRem(1) solid $grey16;
 		border-radius: toRem(10);
 		padding-inline: toRem(10);
-		padding-block: toRem(12.5);
+		@include adaptiveValue("padding-block", 12.5, 10);
 		font-weight: 300;
-		transition: border-color 0.3s ease;
+		transition:
+			border-color 0.3s ease,
+			box-shadow 0.3s ease;
 		color: $grey2;
 		line-height: math.div(33, 18);
-		font-size: toRem(18);
+		@include adaptiveValue("font-size", 18, 15);
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
-				border-color: $grey17;
+				border-color: $grey2;
 			}
 		}
 		&:focus-visible {
-			outline: toRem(1) solid $grey11;
-			outline-offset: toRem(2);
+			outline: none;
+			border-color: $grey2;
+			box-shadow: 0 0 0 3px rgba(52, 52, 52, 0.1);
 		}
 	}
 	// .form-section__button
 	&__button {
-		// @include adaptiveValue("padding-inline", 35.5, 20);
-		// @include adaptiveValue("padding-block", 17, 10);
 	}
 }
 .checkbox {
@@ -584,20 +588,16 @@
 	cursor: pointer;
 	// .checkbox__input
 	&__input {
-		// width: auto;
 		width: 0;
 		height: 0;
 		opacity: 0;
-		&:focus-visible + .checkbox__label {
-			outline: toRem(2) solid $grey11;
-			outline-offset: toRem(2);
-			border-radius: toRem(5);
+		&:focus-visible + .checkbox__label::before {
+			outline: none;
+			border-color: $grey2;
+			box-shadow: 0 0 0 3px rgba(52, 52, 52, 0.1);
 		}
 		&:checked + .checkbox__label::before {
-			content: "";
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			border-color: $black;
 			background: $black url("../img/blog/icons/check-white.svg") center no-repeat;
 		}
 	}
@@ -613,9 +613,13 @@
 			width: toRem(22);
 			height: toRem(22);
 			border-radius: toRem(5);
-			border: toRem(1) solid $grey17;
+			border: toRem(1) solid $grey16;
 			background-color: transparent;
 			flex-shrink: 0;
+			transition:
+				border-color 0.3s ease,
+				background-color 0.3s ease,
+				box-shadow 0.3s ease;
 			@media (max-width: toEm(721)) {
 				margin-top: toRem(6);
 				align-self: flex-start;

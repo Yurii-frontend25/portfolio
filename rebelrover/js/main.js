@@ -15,6 +15,20 @@ document.querySelectorAll('.menu__link').forEach(link => {
 	}
 });
 //===================================================================================================
+// header-scroll first variant working function
+// window.addEventListener('scroll', function () {
+// 	scrollY > 0 ? document.querySelector('.header').classList.add('scroll') : document.querySelector('.header').classList.remove('scroll');
+// });
+//===================================================================================================
+// header-scroll second variant
+const header = document.querySelector('.header');
+function handleHeaderScroll() {
+	if (!header) return;
+	header.classList.toggle('scroll', window.scrollY > 20);
+}
+window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+handleHeaderScroll();
+//===================================================================================================
 // Menu dropdown
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -114,38 +128,34 @@ document.addEventListener('DOMContentLoaded', () => {
 //====================================================================================================
 //====================================================================================================
 const exploreSlider = new Swiper('.explore__slider', {
+	centeredSlides: true,
+	loop: true,
+	roundLengths: true,
 	observer: true,
 	observeParents: true,
-	speed: 800,
-	autoHeight: true,
+	speed: 500,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	spaceBetween: 15,
 	navigation: {
 		nextEl: '.explore__arrow--next',
-		prevEl: '.explore__arrow--prev'
+		prevEl: '.explore__arrow--prev',
 	},
 	keyboard: {
 		enabled: true,
 		onlyInViewport: true,
 	},
+	mousewheel: {
+		releaseOnEdges: true,
+		sensitivity: 1,
+	},
 	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			slidesPerGroup: 1,
-			spaceBetween: 15,
-
-		},
-		481: {
+		576: {
 			slidesPerView: 2,
-			slidesPerGroup: 1,
 			spaceBetween: 15,
 		},
 		961: {
 			slidesPerView: 3,
-			slidesPerGroup: 1,
-			spaceBetween: 21,
-		},
-		1300: {
-			slidesPerView: 3,
-			slidesPerGroup: 1,
 			spaceBetween: 20,
 		},
 	},
@@ -154,22 +164,26 @@ const exploreSlider = new Swiper('.explore__slider', {
 const whySlider = new Swiper('.why__slider', {
 	observer: true,
 	observeParents: true,
-	speed: 800,
-	// watchOverflow: true,
+	speed: 500,
 	slidesPerView: 1,
 	slidesPerGroup: 1,
 	spaceBetween: 15,
+	roundLengths: true,
 	navigation: {
 		nextEl: '.why__arrow--next',
 		prevEl: '.why__arrow--prev'
 	},
 	keyboard: {
 		enabled: true,
+		onlyInViewport: true,
+	},
+	mousewheel: {
+		releaseOnEdges: true,
+		sensitivity: 1,
 	},
 	breakpoints: {
 		481: {
 			slidesPerView: 2,
-			spaceBetween: 15,
 		},
 		783: {
 			slidesPerView: 3,
@@ -189,16 +203,21 @@ const whySlider = new Swiper('.why__slider', {
 const testimonialSlider = new Swiper('.testimonial__slider', {
 	observer: true,
 	observeParents: true,
-	speed: 800,
-	autoHeight: true,
+	speed: 500,
 	slidesPerGroup: 1,
 	spaceBetween: 15,
+	roundLengths: true,
 	navigation: {
 		nextEl: '.testimonial__arrow--next',
 		prevEl: '.testimonial__arrow--prev'
 	},
 	keyboard: {
 		enabled: true,
+		onlyInViewport: true,
+	},
+	mousewheel: {
+		releaseOnEdges: true,
+		sensitivity: 1,
 	},
 	breakpoints: {
 		320: {
@@ -221,8 +240,8 @@ const testimonialSlider = new Swiper('.testimonial__slider', {
 			spaceBetween: 20,
 		},
 		1300: {
-			slidesPerView: 3.24,//37
-			spaceBetween: 48,//48
+			slidesPerView: 3.24,
+			spaceBetween: 48,
 		},
 	},
 });

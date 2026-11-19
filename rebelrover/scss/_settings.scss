@@ -103,28 +103,24 @@ $responsiveType: 1;
 	$fontSize: 18;
 	$fontSizeMob: 15;
 
-	@if ($size == "T") {
-		$fontSize: 12;
-	}
-	@if ($size == "S") {
-		$fontSize: 14;
-	}
-	@if ($size == "M") {
-		$fontSize: 16;
-		$fontSizeMob: 14;
-	}
-	@if ($size == "L") {
-		$fontSize: 18;
-		$fontSizeMob: 14;
-	}
-	@if ($size == "XL") {
-		$fontSize: 20;
-		$fontSizeMob: 18;
-	}
-	@if ($size == "XXL") {
-		$fontSize: 24;
-		$fontSizeMob: 16;
-	}
+	// @if ($size == "T") {
+	// 	$fontSize: 12;
+	// }
+	// @if ($size == "S") {
+	// 	$fontSize: 14;
+	// }
+	// @if ($size == "M") {
+	// 	$fontSize: 16;
+	// 	$fontSizeMob: 14;
+	// }
+	// @if ($size == "L") {
+	// 	$fontSize: 18;
+	// 	$fontSizeMob: 14;
+	// }
+	// @if ($size == "XL") {
+	// 	$fontSize: 20;
+	// 	$fontSizeMob: 18;
+	// }
 	@if ($size == "h1") {
 		$fontSize: 90;
 		$fontSizeMob: 56;
@@ -138,18 +134,6 @@ $responsiveType: 1;
 		$fontSize: 40;
 		$fontSizeMob: 26;
 	}
-	// @if ($size == "h4") {
-	// 	$fontSize: 36;
-	// 	$fontSizeMob: 24;
-	// }
-	// @if ($size == "h5") {
-	// 	$fontSize: 32;
-	// 	$fontSizeMob: 22;
-	// }
-	// @if ($size == "d1") {
-	// 	$fontSize: 72;
-	// 	$fontSizeMob: 38;
-	// }
 	@if ($sizeMob > 0) {
 		$fontSizeMob: $sizeMob;
 	}
