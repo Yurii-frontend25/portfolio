@@ -11,7 +11,6 @@
 		.block-head__title {
 			max-width: toRem(756);
 			&:not(:last-child) {
-				// @include adaptiveValue("margin-bottom", 30, 20);
 				margin-bottom: toRem(20);
 			}
 		}
@@ -215,7 +214,6 @@
 		}
 		@media (max-width: toEm(400)) {
 			background-color: $white;
-			// border-radius: toRem(34.5);
 			padding-block: toRem(11.5);
 			padding-inline: toRem(15);
 		}
@@ -228,7 +226,6 @@
 		background-color: #000;
 		border-radius: toRem(27);
 		line-height: 1.7;
-		// color: $grey18;
 		color: $grey7;
 		transition:
 			background-color 0.3s ease,

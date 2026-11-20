@@ -127,121 +127,134 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 //====================================================================================================
 //====================================================================================================
-const exploreSlider = new Swiper('.explore__slider', {
-	centeredSlides: true,
-	loop: true,
-	roundLengths: true,
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	slidesPerView: 1,
-	slidesPerGroup: 1,
-	spaceBetween: 15,
-	navigation: {
-		nextEl: '.explore__arrow--next',
-		prevEl: '.explore__arrow--prev',
-	},
-	keyboard: {
-		enabled: true,
-		onlyInViewport: true,
-	},
-	mousewheel: {
-		releaseOnEdges: true,
-		sensitivity: 1,
-	},
-	breakpoints: {
-		576: {
-			slidesPerView: 2,
-			spaceBetween: 15,
+if (document.querySelector('.explore__slider')) {
+
+	const exploreSlider = new Swiper('.explore__slider', {
+		centeredSlides: true,
+		loop: true,
+		roundLengths: true,
+		observer: true,
+		observeParents: true,
+		speed: 500,
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 15,
+		navigation: {
+			nextEl: '.explore__arrow--next',
+			prevEl: '.explore__arrow--prev',
 		},
-		961: {
-			slidesPerView: 3,
-			spaceBetween: 20,
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
 		},
-	},
-});
+		mousewheel: {
+			releaseOnEdges: true,
+			sensitivity: 1,
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			961: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+		},
+	});
+
+}
 //====================================================================================================
-const whySlider = new Swiper('.why__slider', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	slidesPerView: 1,
-	slidesPerGroup: 1,
-	spaceBetween: 15,
-	roundLengths: true,
-	navigation: {
-		nextEl: '.why__arrow--next',
-		prevEl: '.why__arrow--prev'
-	},
-	keyboard: {
-		enabled: true,
-		onlyInViewport: true,
-	},
-	mousewheel: {
-		releaseOnEdges: true,
-		sensitivity: 1,
-	},
-	breakpoints: {
-		481: {
-			slidesPerView: 2,
+if (document.querySelector('.explore__slider')) {
+
+
+	const whySlider = new Swiper('.why__slider', {
+		observer: true,
+		observeParents: true,
+		speed: 500,
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 15,
+		roundLengths: true,
+		navigation: {
+			nextEl: '.why__arrow--next',
+			prevEl: '.why__arrow--prev'
 		},
-		783: {
-			slidesPerView: 3,
-			spaceBetween: 15,
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
 		},
-		992: {
-			slidesPerView: 3,
-			spaceBetween: 38,
+		mousewheel: {
+			releaseOnEdges: true,
+			sensitivity: 1,
 		},
-		1300: {
-			slidesPerView: 3,
-			spaceBetween: 92,
+		breakpoints: {
+			481: {
+				slidesPerView: 2,
+			},
+			783: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 38,
+			},
+			1300: {
+				slidesPerView: 3,
+				spaceBetween: 92,
+			},
 		},
-	},
-});
+	});
+}
 //====================================================================================================
-const testimonialSlider = new Swiper('.testimonial__slider', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	slidesPerGroup: 1,
-	spaceBetween: 15,
-	roundLengths: true,
-	navigation: {
-		nextEl: '.testimonial__arrow--next',
-		prevEl: '.testimonial__arrow--prev'
-	},
-	keyboard: {
-		enabled: true,
-		onlyInViewport: true,
-	},
-	mousewheel: {
-		releaseOnEdges: true,
-		sensitivity: 1,
-	},
-	breakpoints: {
-		320: {
-			slidesPerView: 1.10,
+if (document.querySelector('.explore__slider')) {
+
+
+
+	const testimonialSlider = new Swiper('.testimonial__slider', {
+		observer: true,
+		observeParents: true,
+		speed: 500,
+		slidesPerGroup: 1,
+		spaceBetween: 15,
+		roundLengths: true,
+		navigation: {
+			nextEl: '.testimonial__arrow--next',
+			prevEl: '.testimonial__arrow--prev'
 		},
-		380: {
-			slidesPerView: 1.2,
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
 		},
-		481: {
-			slidesPerView: 1.5,
+		mousewheel: {
+			releaseOnEdges: true,
+			sensitivity: 1,
 		},
-		581: {
-			slidesPerView: 2.2,
+		breakpoints: {
+			320: {
+				slidesPerView: 1.10,
+			},
+			380: {
+				slidesPerView: 1.2,
+			},
+			481: {
+				slidesPerView: 1.5,
+			},
+			581: {
+				slidesPerView: 2.2,
+			},
+			783: {
+				slidesPerView: 2.3,
+			},
+			961: {
+				slidesPerView: 3.5,
+				spaceBetween: 20,
+			},
+			1300: {
+				slidesPerView: 3.24,
+				spaceBetween: 48,
+			},
 		},
-		783: {
-			slidesPerView: 2.3,
-		},
-		961: {
-			slidesPerView: 3.5,
-			spaceBetween: 20,
-		},
-		1300: {
-			slidesPerView: 3.24,
-			spaceBetween: 48,
-		},
-	},
-});
+	});
+}
