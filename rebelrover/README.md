@@ -25,3 +25,13 @@ Responsive, accessible, and high-performance multi-page website for a travel age
 - **HTML5** (Semantic markup, BEM methodology, ARIA accessibility)
 - **SCSS / Sass** (Modular architecture, CSS Grid, Flexbox, fluid `rem` calculations)
 - **JavaScript (ES6+)** (Vanilla JS, Swiper.js integration)
+
+## 📊 Page-by-Page Audit Summary (GitHub Pages)
+
+| Page | Desktop (`Perf / A11y / BP / SEO`) | Mobile (`Perf / A11y / BP / SEO`) |
+| :--- | :---: | :---: |
+| **Home** (`index.html`) | `100 / 100 / 100 / 100` | `93 / 100 / 100 / 100` |
+| **About Us** (`about.html`) | `100 / 100 / 100 / 100` | `98 / 100 / 100 / 100` |
+| **Package** (`package.html`) | `100 / 100 / 100 / 100` | `98 / 100 / 100 / 100` |
+| **Blog** (`blog.html`) | `99 / 100 / 100 / 100` | `98 / 100 / 100 / 100` |
+| **Contacts** (`contact.html`) | `100 / 100 / 100 / 100` | `99 / 100 / 100 / 100` |

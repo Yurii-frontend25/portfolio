@@ -90,7 +90,7 @@ label {
   src: url("../fonts/icons.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 [class*=_icon-]::before {
   font-family: "icons";
