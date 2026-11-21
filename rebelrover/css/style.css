@@ -4143,8 +4143,6 @@ label {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.hero__image--home {
   -webkit-filter: blur(0.078125rem);
           filter: blur(0.078125rem);
 }
