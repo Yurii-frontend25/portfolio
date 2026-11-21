@@ -17,7 +17,7 @@ Responsive, accessible, and high-performance multi-page website for a travel age
 - **Custom Grid Animations & Micro-Interactions:** Smooth hover transitions, expanding destination cards, and an accessible mobile burger menu.
 - **Performance & Accessibility Optimized:**
   - Next-gen **WebP** graphics with responsive `<picture>` / `srcset` and lazy loading.
-  - Non-blocking font & CSS loading strategy (`font-display: swap`, async stylesheets).
+  - Non-blocking font & CSS loading strategy (`font-display: block`, async stylesheets).
   - Full WCAG AA color contrast compliance, semantic HTML5 landmarks, and ARIA attributes.
 
 ## 🛠 Tech Stack
