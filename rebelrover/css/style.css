@@ -6786,6 +6786,21 @@ label {
 }
 @media (min-width: 85.625em) {
   .menu__list {
+    font-size: 18px;
+  }
+}
+@media (min-width: 68.75em) and (max-width: 85.625em) {
+  .menu__list {
+    font-size: clamp( 16px , 7.8518518519px  +  0.7407407407vw , 18px );
+  }
+}
+@media (max-width: 68.75em) {
+  .menu__list {
+    font-size: 16px;
+  }
+}
+@media (min-width: 85.625em) {
+  .menu__list {
     -webkit-column-gap: 67px;
        -moz-column-gap: 67px;
             column-gap: 67px;
@@ -7004,6 +7019,7 @@ label {
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     background-color: rgba(18, 11, 11, 0.65);
+    backdrop-filter: blur(0.4375rem);
   }
 }
 .sub-menu__item:last-child {

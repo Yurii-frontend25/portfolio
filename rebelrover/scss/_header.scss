@@ -108,6 +108,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: flex-end;
+		@include adaptiveValue("font-size", 18, 16, 0, $maxWidthContainer, 1100);
 		@include adaptiveValue("column-gap", 67, 30, 0, $maxWidthContainer, 1100);
 		color: $white;
 		row-gap: toRem(5);
@@ -128,29 +129,6 @@
 		@media (width >= toEm($tablet)) {
 			height: toRem(128);
 		}
-		// @media (any-hover: hover) and (any-pointer: fine) {
-		// 	&:hover {
-		// 		.menu__link,
-		// 		.menu__button {
-		// 			color: $grey16;
-		// 		}
-		// 	}
-		// 	&:hover {
-		// 		.menu__button {
-		// 			rotate: -180deg;
-		// 		}
-		// 	}
-		// 	&:hover {
-		// 		.menu__sub-menu {
-		// 			opacity: 1;
-		// 			visibility: visible;
-		// 			pointer-events: auto;
-		// 			transition:
-		// 				opacity 0.3s ease,
-		// 				visibility 0.3s ease;
-		// 		}
-		// 	}
-		// }
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:has(.menu__link:hover),
 			&:has(.menu__button:hover),
@@ -215,7 +193,7 @@
 			color 0.3s ease;
 		@media (max-width: toEm($tablet)) {
 			padding: toRem(12);
-			margin-right: toRem(-12); // компенсируем отступ, чтобы стрелка осталась у правого края
+			margin-right: toRem(-12);
 		}
 	}
 	// .menu__actions
@@ -290,6 +268,7 @@
 		border-bottom-left-radius: toRem(8);
 		border-bottom-right-radius: toRem(8);
 		background-color: rgba(18, 11, 11, 0.65);
+		backdrop-filter: blur(toRem(7));
 	}
 	// .sub-menu__item
 	&__item {
