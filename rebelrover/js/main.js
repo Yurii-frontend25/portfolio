@@ -30,105 +30,176 @@ window.addEventListener('scroll', handleHeaderScroll, { passive: true });
 handleHeaderScroll();
 //===================================================================================================
 // Menu dropdown
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
-	// 2. Нова, залізобетонна логіка для підменю
+// 	// 2. Нова, залізобетонна логіка для підменю
+// 	const menuButtons = document.querySelectorAll(".menu__button");
+
+// 	menuButtons.forEach(button => {
+// 		button.addEventListener("click", (e) => {
+// 			if (window.innerWidth <= 991.98) {
+// 				const menuItem = button.closest(".menu__item");
+// 				const subMenu = menuItem.querySelector(".menu__sub-menu");
+
+// 				if (!subMenu) return;
+
+// 				const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+// 				if (!isExpanded) {
+// 					// --- ВІДКРИТТЯ ---
+// 					button.setAttribute("aria-expanded", "true");
+// 					menuItem.classList.add("_sub-menu-open");
+
+// 					// 1. Тимчасово вмикаємо флекс, щоб виміряти висоту контенту
+// 					subMenu.style.display = "flex";
+// 					subMenu.style.height = "auto";
+// 					const fullHeight = subMenu.offsetHeight; // Виміряли точну висоту в px
+
+// 					// 2. Скидаємо в 0, щоб браузер побачив старт анімації
+// 					subMenu.style.height = "0px";
+
+// 					// 3. Через мікро-таймаут запускаємо плавну CSS-анімацію
+// 					setTimeout(() => {
+// 						subMenu.style.height = `${fullHeight}px`;
+// 					}, 10);
+
+// 				} else {
+// 					// --- ЗАКРИТТЯ ---
+// 					button.setAttribute("aria-expanded", "false");
+// 					menuItem.classList.remove("_sub-menu-open");
+
+// 					// Зменшуємо висоту до 0
+// 					subMenu.style.height = "0px";
+
+// 					// Коли CSS-анімація закінчиться, повністю вимикаємо display
+// 					subMenu.addEventListener("transitionend", function handler() {
+// 						if (subMenu.style.height === "0px") {
+// 							subMenu.style.display = "none";
+// 						}
+// 						subMenu.removeEventListener("transitionend", handler); // Очищаємо слухач
+// 					});
+// 				}
+
+// 				e.stopPropagation();
+// 			}
+// 		});
+// 	});
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
 	const menuButtons = document.querySelectorAll(".menu__button");
 
 	menuButtons.forEach(button => {
 		button.addEventListener("click", (e) => {
+			e.stopPropagation();
+
+			const menuItem = button.closest(".menu__item");
+			const subMenu = menuItem?.querySelector(".menu__sub-menu");
+			if (!subMenu) return;
+
+			const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+			// 1. Для мобилок (бургер-меню до 991.98px) — плавная высота
 			if (window.innerWidth <= 991.98) {
-				const menuItem = button.closest(".menu__item");
-				const subMenu = menuItem.querySelector(".menu__sub-menu");
-
-				if (!subMenu) return;
-
-				const isExpanded = button.getAttribute("aria-expanded") === "true";
-
 				if (!isExpanded) {
-					// --- ВІДКРИТТЯ ---
 					button.setAttribute("aria-expanded", "true");
 					menuItem.classList.add("_sub-menu-open");
 
-					// 1. Тимчасово вмикаємо флекс, щоб виміряти висоту контенту
 					subMenu.style.display = "flex";
 					subMenu.style.height = "auto";
-					const fullHeight = subMenu.offsetHeight; // Виміряли точну висоту в px
-
-					// 2. Скидаємо в 0, щоб браузер побачив старт анімації
+					const fullHeight = subMenu.offsetHeight;
 					subMenu.style.height = "0px";
 
-					// 3. Через мікро-таймаут запускаємо плавну CSS-анімацію
-					setTimeout(() => {
-						subMenu.style.height = `${fullHeight}px`;
-					}, 10);
-
+					requestAnimationFrame(() => {
+						requestAnimationFrame(() => {
+							subMenu.style.height = `${fullHeight}px`;
+						});
+					});
 				} else {
-					// --- ЗАКРИТТЯ ---
 					button.setAttribute("aria-expanded", "false");
 					menuItem.classList.remove("_sub-menu-open");
-
-					// Зменшуємо висоту до 0
 					subMenu.style.height = "0px";
 
-					// Коли CSS-анімація закінчиться, повністю вимикаємо display
-					subMenu.addEventListener("transitionend", function handler() {
-						if (subMenu.style.height === "0px") {
+					setTimeout(() => {
+						if (button.getAttribute("aria-expanded") === "false") {
 							subMenu.style.display = "none";
 						}
-						subMenu.removeEventListener("transitionend", handler); // Очищаємо слухач
-					});
+					}, 300);
 				}
+			} else {
+				// 2. Для больших тачскринов (планшетов > 991.98px) — просто переключаем класс
+				subMenu.style.display = "";
+				subMenu.style.height = "";
 
-				e.stopPropagation();
+				// Закрываем другие открытые подменю, чтобы не накладывались друг на друга
+				document.querySelectorAll(".menu__item._sub-menu-open").forEach(otherItem => {
+					if (otherItem !== menuItem) {
+						otherItem.classList.remove("_sub-menu-open");
+						const otherBtn = otherItem.querySelector(".menu__button");
+						if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+					}
+				});
+
+				button.setAttribute("aria-expanded", String(!isExpanded));
+				menuItem.classList.toggle("_sub-menu-open", !isExpanded);
 			}
 		});
+	});
+
+	// Закрытие подменю при клике в любое пустое место экрана (для планшетов)
+	document.addEventListener("click", (e) => {
+		if (window.innerWidth > 991.98 && !e.target.closest(".menu__item")) {
+			document.querySelectorAll(".menu__item._sub-menu-open").forEach(item => {
+				item.classList.remove("_sub-menu-open");
+				const btn = item.querySelector(".menu__button");
+				if (btn) btn.setAttribute("aria-expanded", "false");
+			});
+		}
 	});
 });
 //===================================================================================================
-document.addEventListener('DOMContentLoaded', () => {
-	const titles = document.querySelectorAll('.block__title');
-	const block = document.querySelector('.block');
+// document.addEventListener('DOMContentLoaded', () => {
+// 	const titles = document.querySelectorAll('.block__title');
+// 	const block = document.querySelector('.block');
 
-	titles.forEach(title => {
-		title.addEventListener('click', () => {
-			const text = title.nextElementSibling;
+// 	titles.forEach(title => {
+// 		title.addEventListener('click', () => {
+// 			const text = title.nextElementSibling;
 
-			if (block.classList.contains('one')) {
-				titles.forEach(otherTitle => {
-					if (otherTitle !== title) {
-						otherTitle.classList.remove('active');
-						const otherText = otherTitle.nextElementSibling;
-						closeBlock(otherText);
-					}
-				});
-			}
+// 			if (block.classList.contains('one')) {
+// 				titles.forEach(otherTitle => {
+// 					if (otherTitle !== title) {
+// 						otherTitle.classList.remove('active');
+// 						const otherText = otherTitle.nextElementSibling;
+// 						closeBlock(otherText);
+// 					}
+// 				});
+// 			}
 
-			title.classList.toggle('active');
-			toggleBlock(text);
-		});
-	});
+// 			title.classList.toggle('active');
+// 			toggleBlock(text);
+// 		});
+// 	});
 
-	function toggleBlock(el) {
-		if (el.style.maxHeight) {
-			closeBlock(el);
-		} else {
-			openBlock(el);
-		}
-	}
+// 	function toggleBlock(el) {
+// 		if (el.style.maxHeight) {
+// 			closeBlock(el);
+// 		} else {
+// 			openBlock(el);
+// 		}
+// 	}
 
-	function openBlock(el) {
-		el.style.maxHeight = el.scrollHeight + 'px';
-	}
+// 	function openBlock(el) {
+// 		el.style.maxHeight = el.scrollHeight + 'px';
+// 	}
 
-	function closeBlock(el) {
-		el.style.maxHeight = null;
-	}
-});
+// 	function closeBlock(el) {
+// 		el.style.maxHeight = null;
+// 	}
+// });
 //====================================================================================================
 //====================================================================================================
 if (document.querySelector('.explore__slider')) {
-
 	const exploreSlider = new Swiper('.explore__slider', {
 		centeredSlides: true,
 		loop: true,
@@ -162,12 +233,9 @@ if (document.querySelector('.explore__slider')) {
 			},
 		},
 	});
-
 }
 //====================================================================================================
 if (document.querySelector('.explore__slider')) {
-
-
 	const whySlider = new Swiper('.why__slider', {
 		observer: true,
 		observeParents: true,
@@ -209,9 +277,6 @@ if (document.querySelector('.explore__slider')) {
 }
 //====================================================================================================
 if (document.querySelector('.explore__slider')) {
-
-
-
 	const testimonialSlider = new Swiper('.testimonial__slider', {
 		observer: true,
 		observeParents: true,

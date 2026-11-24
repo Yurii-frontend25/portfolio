@@ -241,7 +241,7 @@
 				z-index: 2;
 				height: 100%;
 				width: 100%;
-				background: rgba(0, 0, 0, 0.3);
+				background: rgba(0, 0, 0, 0.2);
 				pointer-events: none;
 			}
 		}
@@ -252,16 +252,17 @@
 		height: 100%;
 		object-fit: cover;
 		filter: blur(toRem(1.25));
+		@media (max-width: toEm($mobile)) {
+			filter: blur(0);
+		}
 		// .hero__image--home
 		&--home {
 			@media (max-width: toEm($mobile)) {
 				object-position: 78% center;
-				filter: blur(0);
 			}
 		}
 		// .hero__image--about
 		&--about {
-			// object-position: bottom;
 		}
 		// .hero__image--package
 		&--package {
