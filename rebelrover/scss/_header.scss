@@ -25,33 +25,35 @@
 	}
 	// .header__container
 	&__container {
-		@include adaptiveValue("min-height", 128, 70, 0, $tablet, $mobile);
+		@include adaptiveValue("min-height", 128, 70);
 		display: flex;
 		align-items: center;
 	}
 	// .header__body
 	&__body {
-		display: flex;
-		align-items: center;
+		display: grid;
+		grid-template-columns: auto 1fr;
 		flex-grow: 1;
-		column-gap: toRem(20);
+		align-items: center;
+		@include adaptiveValue("column-gap", 113, 20, 0, $containerWidth, 1200);
 	}
 	// .header__logo
 	&__logo {
 	}
 	// .header__menu
 	&__menu {
-		position: relative;
-		z-index: 101;
-		flex: 1 0 auto;
+		display: flex;
+		flex: 1 1 auto;
+		@include adaptiveValue("column-gap", 67, 20, 0, $maxWidthContainer, 1100);
+		align-items: center;
+		justify-content: flex-end;
 	}
 }
 .logo {
 	position: relative;
-	z-index: 102;
-	flex: 0 1 toRem(345);
-	color: #fff;
-	transform: translate3d(0, 0, 0);
+	z-index: 105;
+	// flex: 0 1 toRem(345);
+	max-width: 345px;
 	&__link {
 	}
 	&__img {
@@ -64,10 +66,6 @@
 // }
 //=============================================
 .menu {
-	display: flex;
-	@include adaptiveValue("column-gap", 67, 20, 0, $maxWidthContainer, 1200);
-	align-items: center;
-	justify-content: flex-end;
 	// .menu__body
 	&__body {
 		position: relative;
@@ -81,7 +79,7 @@
 			background-color: $white;
 			padding-inline: toRem(15);
 			padding-bottom: toRem(30);
-			@include adaptiveValue("padding-top", 180, 100);
+			@include adaptiveValue("padding-top", 150, 100);
 			transition: left 0.3s ease;
 			display: flex;
 			flex-direction: column;
@@ -91,7 +89,7 @@
 				top: 0;
 				left: -100%;
 				width: 100%;
-				@include adaptiveValue("min-height", 128, 70, 0, $tablet, $mobile);
+				@include adaptiveValue("min-height", 128, 70);
 				z-index: 102;
 				transition: left 0.3s ease;
 				background-color: steelblue;
@@ -107,17 +105,13 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		justify-content: flex-end;
-		@include adaptiveValue("font-size", 18, 16, 0, $maxWidthContainer, 1100);
-		@include adaptiveValue("column-gap", 67, 30, 0, $maxWidthContainer, 1100);
+		@include adaptiveValue("column-gap", 64, 20, 0, $containerWidth, 1100);
 		color: $white;
 		row-gap: toRem(5);
 		@media (max-width: toEm($tablet)) {
 			flex-direction: column;
 			gap: toRem(20);
-			font-size: toRem(22);
 			width: 100%;
-			color: $grey2;
 		}
 	}
 	// .menu__item
@@ -125,14 +119,8 @@
 		display: flex;
 		column-gap: toRem(8);
 		align-items: center;
-		position: relative;
-		@media (width >= toEm($tablet)) {
-			height: toRem(128);
-		}
-		@media (any-hover: hover) and (any-pointer: fine) {
-			&:has(.menu__link:hover),
-			&:has(.menu__button:hover),
-			&:has(.menu__sub-menu:hover) {
+		@media (width > toEm($tablet)) {
+			&:hover {
 				.menu__link,
 				.menu__button {
 					color: $grey16;
@@ -165,11 +153,11 @@
 			}
 		}
 		@media (max-width: toEm($tablet)) {
+			position: relative;
 			justify-content: space-between;
 			flex-wrap: wrap;
 			width: 100%;
 			border-bottom: toRem(1) solid $grey10;
-
 			padding-bottom: toRem(10);
 		}
 	}
@@ -178,8 +166,12 @@
 		font-weight: 600;
 		line-height: 1.5;
 		transition: color 0.3s ease;
+		color: $white;
+		@include adaptiveValue("font-size", 18, 16, 0, $maxWidthContainer, 1100);
 		@media (max-width: toEm($tablet)) {
 			font-weight: 400;
+			font-size: toRem(22);
+			color: $grey2;
 		}
 	}
 	// .menu__button
@@ -194,13 +186,11 @@
 		@media (max-width: toEm($tablet)) {
 			padding: toRem(12);
 			margin-right: toRem(-12);
+			color: $grey2;
 		}
 	}
 	// .menu__actions
 	&__actions {
-		display: flex;
-		align-items: center;
-		@include adaptiveValue("column-gap", 15, 10);
 	}
 	// .menu__sub-menu
 	&__sub-menu {
@@ -216,16 +206,20 @@
 		transition:
 			opacity 0.3s ease,
 			visibility 0.3s ease;
-		@media (width >= toEm($tablet)) {
-			left: 50%;
+		@media (width > toEm($tablet)) {
+			position: fixed;
 			translate: -50% 0;
+			display: flex !important;
+			height: auto !important;
+			overflow: visible !important;
+			z-index: 110;
 			&::before {
 				content: "";
 				position: absolute;
 				bottom: 100%;
 				left: 0;
 				width: 100%;
-				height: toRem(55);
+				height: var(--bridge-height, 60px);
 			}
 		}
 		@media (max-width: toEm($tablet)) {
@@ -237,9 +231,7 @@
 			opacity: 1;
 			visibility: visible;
 			pointer-events: auto;
-			//===========================================
-			// for menuDropdown
-			overflow: hidden; // Ховаємо контент, який вилазить
+			overflow: hidden;
 			height: 0;
 			transition: height 0.3s ease-in-out;
 		}
@@ -247,12 +239,15 @@
 }
 //========================================================================================================================
 .actions {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("column-gap", 15, 10);
 	// .actions__search
 	&__search {
 		flex: 0 0 toRem(22);
 		height: toRem(21);
 		position: relative;
-		z-index: 101;
+		z-index: 103;
 	}
 	// .actions__button
 	&__button {
@@ -260,15 +255,13 @@
 }
 //========================================================================================================================
 .sub-menu {
-	@media (width >= toEm($tablet)) {
+	@media (width > toEm($tablet)) {
 		box-shadow: 0 toRem(10) toRem(25) rgba(0, 0, 0, 0.25);
 		border: toRem(1) solid rgba(0, 0, 0, 0.12);
 		border-top: none;
-
 		border-bottom-left-radius: toRem(8);
 		border-bottom-right-radius: toRem(8);
 		background-color: rgba(18, 11, 11, 0.65);
-		backdrop-filter: blur(toRem(7));
 	}
 	// .sub-menu__item
 	&__item {
@@ -287,7 +280,7 @@
 		width: 100%;
 		padding: toRem(10);
 		font-weight: 300;
-		@include adaptiveValue("font-size", 18, 16);
+		font-size: toRem(16);
 		transition:
 			color 0.3s ease,
 			background-color 0.3s ease;

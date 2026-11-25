@@ -9,10 +9,10 @@
 	<link rel="icon" type="image/svg+xml" href="img/icon/favicon.svg">
 	<link rel="shortcut icon" href="img/icon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" media="print" onload="this.media='all'">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Rebel Rover — Explore the world with us</title>
 </head>
@@ -23,7 +23,7 @@
 			<div class="header__container">
 				<div class="header__body">
 					<div class="header__logo logo">
-						<img class="logo__img" src="img/logo.webp" alt="Logo Rebel Rover">
+						<img class="logo__img" src="img/logo.webp" width="345" height="82" alt="Logo Rebel Rover">
 					</div>
 					<div class="header__menu menu">
 						<nav class="menu__body">
@@ -86,7 +86,7 @@
 						</nav>
 						<div class="menu__actions actions">
 							<a class="actions__search" href="#" aria-label="Search">
-								<img src="img/icons/search.svg" alt="" aria-hidden="true">
+								<img src="img/icons/search.svg" width="21" height="21" alt="" aria-hidden="true">
 							</a>
 							<button class="actions__button icon-menu" type="button" aria-label="Open menu">
 								<span></span>
@@ -108,7 +108,7 @@
 							<div class="choice-hero__items">
 								<div class="choice-hero__item">
 									<select class="choice-hero__select" name="form[location]" aria-label="Choose location" required>
-										<option class="choice-hero__element" value disabled selected hidden>Location</option>
+										<option class="choice-hero__element" value="" disabled selected hidden>Location</option>
 										<option class="choice-hero__element" value="bali">Bali</option>
 										<option class="choice-hero__element" value="istanbul">Istanbul</option>
 										<option class="choice-hero__element" value="rome">Rome</option>
@@ -116,7 +116,7 @@
 								</div>
 								<div class="choice-hero__item">
 									<select class="choice-hero__select" name="form[duration]" aria-label="Choose duration in days" required>
-										<option class="choice-hero__element" value disabled selected hidden>Date</option>
+										<option class="choice-hero__element" value="" disabled selected hidden>Date</option>
 										<option class="choice-hero__element" value="3">3</option>
 										<option class="choice-hero__element" value="7">7</option>
 										<option class="choice-hero__element" value="10">10</option>
@@ -124,7 +124,7 @@
 								</div>
 								<div class="choice-hero__item">
 									<select class="choice-hero__select" name="form[people]" aria-label="Number of people" required>
-										<option class="choice-hero__element" value disabled selected hidden>People</option>
+										<option class="choice-hero__element" value="" disabled selected hidden>People</option>
 										<option class="choice-hero__element" value="2">2</option>
 										<option class="choice-hero__element" value="4">4</option>
 										<option class="choice-hero__element" value="6">6</option>
@@ -153,9 +153,8 @@
 					</div>
 				</div>
 				<picture class="hero__picture">
-					<source media="(max-width: 767.98px)" srcset="img/hero/hero-bg-mob.webp" type="image/webp">
 					<source srcset="img/hero/hero-bg.webp" type="image/webp">
-					<img class="hero__image hero__image--home" src="img/hero/hero-bg.jpg" fetchpriority="high" alt="Three colorful suitcases on a table with a scenic beach and mountains in the background">
+					<img class="hero__image hero__image--home" src="img/hero/hero-bg.jpg" width="1500" height="760" fetchpriority="high" alt="Three colorful suitcases on a table with a scenic beach and mountains in the background">
 				</picture>
 			</section>
 			<section class="page__explore explore">
@@ -176,10 +175,10 @@
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/01.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/01.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/01.jpg" width="453" height="361" loading="lazy" alt="Two happy travelers with large backpacks, a camera, and a guidebook standing on a city street">
 											</picture>
 											<div class="item-explore__quote">
-												<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="" aria-hidden="true">
+												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
 											</div>
 										</div>
 										<figcaption class="item-explore__body">
@@ -199,10 +198,10 @@
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/02.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/02.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/02.jpg" width="453" height="316" loading="lazy" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
 											</picture>
 											<div class="item-explore__quote">
-												<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="" aria-hidden="true">
+												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
 											</div>
 										</div>
 										<figcaption class="item-explore__body">
@@ -222,10 +221,10 @@
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/03.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/03.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/03.jpg" width="453" height="361" loading="lazy" alt="The Statue of Liberty with a glowing torch in front of the illuminated New York City skyline at sunset">
 											</picture>
 											<div class="item-explore__quote">
-												<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="" aria-hidden="true">
+												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
 											</div>
 										</div>
 										<figcaption class="item-explore__body">
@@ -245,10 +244,10 @@
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/01.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/01.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/01.jpg" width="453" height="361" loading="lazy" alt="Two happy travelers with large backpacks, a camera, and a guidebook standing on a city street">
 											</picture>
 											<div class="item-explore__quote">
-												<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="" aria-hidden="true">
+												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
 											</div>
 										</div>
 										<figcaption class="item-explore__body">
@@ -268,10 +267,10 @@
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/02.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/02.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/02.jpg" width="453" height="316" loading="lazy" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
 											</picture>
 											<div class="item-explore__quote">
-												<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="" aria-hidden="true">
+												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
 											</div>
 										</div>
 										<figcaption class="item-explore__body">
@@ -291,10 +290,10 @@
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/03.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/03.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/03.jpg" width="453" height="361" loading="lazy" alt="The Statue of Liberty with a glowing torch in front of the illuminated New York City skyline at sunset">
 											</picture>
 											<div class="item-explore__quote">
-												<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="" aria-hidden="true">
+												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
 											</div>
 										</div>
 										<figcaption class="item-explore__body">
@@ -314,10 +313,10 @@
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/01.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/01.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/01.jpg" width="453" height="361" loading="lazy" alt="Two happy travelers with large backpacks, a camera, and a guidebook standing on a city street">
 											</picture>
 											<div class="item-explore__quote">
-												<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="" aria-hidden="true">
+												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
 											</div>
 										</div>
 										<figcaption class="item-explore__body">
@@ -337,10 +336,10 @@
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/02.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/02.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/02.jpg" width="453" height="316" loading="lazy" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
 											</picture>
 											<div class="item-explore__quote">
-												<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="" aria-hidden="true">
+												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
 											</div>
 										</div>
 										<figcaption class="item-explore__body">
@@ -360,10 +359,10 @@
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/03.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/03.jpg" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/03.jpg" width="453" height="361" loading="lazy" alt="The Statue of Liberty with a glowing torch in front of the illuminated New York City skyline at sunset">
 											</picture>
 											<div class="item-explore__quote">
-												<img class="item-explore__decor" src="img/explore/icon/quote.svg" alt="" aria-hidden="true">
+												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
 											</div>
 										</div>
 										<figcaption class="item-explore__body">
@@ -397,7 +396,7 @@
 								<article class="why__item item-why">
 									<div class="item-why__body">
 										<div class="item-why__image">
-											<img src="img/why/icons/01.svg" alt="" aria-hidden="true">
+											<img src="img/why/icons/01.svg" width="66" height="65" alt="" aria-hidden="true">
 										</div>
 										<h3 class="item-why__title">Best Service</h3>
 										<div class="item-why__text">
@@ -416,7 +415,7 @@
 								<article class="why__item item-why">
 									<div class="item-why__body">
 										<div class="item-why__image">
-											<img src="img/why/icons/02.svg" alt="" aria-hidden="true">
+											<img src="img/why/icons/02.svg" width="58" height="59" alt="" aria-hidden="true">
 										</div>
 										<h3 class="item-why__title">Price Guarantee</h3>
 										<div class="item-why__text">
@@ -435,7 +434,7 @@
 								<article class="why__item item-why">
 									<div class="item-why__body">
 										<div class="item-why__image">
-											<img src="img/why/icons/03.svg" alt="" aria-hidden="true">
+											<img src="img/why/icons/03.svg" width="63" height="61" alt="" aria-hidden="true">
 										</div>
 										<h3 class="item-why__title">Handpicked Hotels</h3>
 										<div class="item-why__text">
@@ -454,7 +453,7 @@
 								<article class="why__item item-why">
 									<div class="item-why__body">
 										<div class="item-why__image">
-											<img src="img/why/icons/01.svg" alt="" aria-hidden="true">
+											<img src="img/why/icons/01.svg" width="66" height="65" alt="" aria-hidden="true">
 										</div>
 										<h3 class="item-why__title">Best Service</h3>
 										<div class="item-why__text">
@@ -473,7 +472,7 @@
 								<article class="why__item item-why">
 									<div class="item-why__body">
 										<div class="item-why__image">
-											<img src="img/why/icons/02.svg" alt="" aria-hidden="true">
+											<img src="img/why/icons/02.svg" width="58" height="59" alt="" aria-hidden="true">
 										</div>
 										<h3 class="item-why__title">Price Guarantee</h3>
 										<div class="item-why__text">
@@ -492,7 +491,7 @@
 								<article class="why__item item-why">
 									<div class="item-why__body">
 										<div class="item-why__image">
-											<img src="img/why/icons/03.svg" alt="" aria-hidden="true">
+											<img src="img/why/icons/03.svg" width="63" height="61" alt="" aria-hidden="true">
 										</div>
 										<h3 class="item-why__title">Handpicked Hotels</h3>
 										<div class="item-why__text">
@@ -512,7 +511,7 @@
 				</div>
 				<picture class="why__picture">
 					<source srcset="img/why/why-bg-2x.webp" type="image/webp">
-					<img class="why__image" src="img/why/why-bg-2x.jpg" alt="A suitcase and a hat are placed on the sandy beach, with a city skyline visible in the background" loading="lazy">
+					<img class="why__image" src="img/why/why-bg-2x.jpg" alt="A suitcase and a hat are placed on the sandy beach, with a city skyline visible in the background" loading="lazy" width="1510" height="633">
 				</picture>
 			</section>
 			<section class="page__partners partners">
@@ -525,19 +524,19 @@
 					</div>
 					<ul class="partners__items">
 						<li class="partners__item">
-							<img src="img/partners/01.svg" alt="Katana company">
+							<img src="img/partners/01.svg" width="150" height="44" alt="Katana company">
 						</li>
 						<li class="partners__item partners__item--center">
-							<img src="img/partners/02.svg" alt="Travava company">
+							<img src="img/partners/02.svg" width="149" height="27" alt="Travava company">
 						</li>
 						<li class="partners__item">
-							<img src="img/partners/03.svg" alt="Bigui company">
+							<img src="img/partners/03.svg" width="97" height="53" alt="Bigui company">
 						</li>
 						<li class="partners__item">
-							<img src="img/partners/04.svg" alt="Booking.com company">
+							<img src="img/partners/04.svg" width="228" height="41" alt="Booking.com company">
 						</li>
 						<li class="partners__item">
-							<img src="img/partners/05.svg" alt="Jakmaen company">
+							<img src="img/partners/05.svg" width="147" height="31" alt="Jakmaen company">
 						</li>
 					</ul>
 				</div>
@@ -564,7 +563,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/01.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/01.jpg" alt="Sara Jay">
+													<img class="item-testimonial__img" src="img/testimonial/01.jpg" width="130" height="130" alt="Sara Jay">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -592,7 +591,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/02.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/02.jpg" alt="Cristian Daniel">
+													<img class="item-testimonial__img" src="img/testimonial/02.jpg" width="130" height="130" alt="Cristian Daniel">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -620,7 +619,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/03.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/03.jpg" alt="Kausar Hasan">
+													<img class="item-testimonial__img" src="img/testimonial/03.jpg" width="130" height="130" alt="Kausar Hasan">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -648,7 +647,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/01.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/01.jpg" alt="Sara Jay">
+													<img class="item-testimonial__img" src="img/testimonial/01.jpg" width="130" height="130" alt="Sara Jay">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -676,7 +675,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/02.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/02.jpg" alt="Cristian Daniel">
+													<img class="item-testimonial__img" src="img/testimonial/02.jpg" width="130" height="130" alt="Cristian Daniel">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -704,7 +703,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/03.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/03.jpg" alt="Kausar Hasan">
+													<img class="item-testimonial__img" src="img/testimonial/03.jpg" width="130" height="130" alt="Kausar Hasan">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -746,7 +745,7 @@
 				</div>
 				<picture class="subscribe__picture">
 					<source srcset="img/subscribe/subscribe-bg.webp" type="image/webp">
-					<img class="subscribe__image" src="img/subscribe/subscribe-bg.jpg" alt="World map" loading="lazy">
+					<img class="subscribe__image" src="img/subscribe/subscribe-bg.jpg" width="1516" height="542" alt="World map" loading="lazy">
 				</picture>
 			</section>
 		</main>
@@ -755,7 +754,7 @@
 				<div class="footer__body">
 					<div class="footer__box">
 						<div class="footer__logo">
-							<img class="footer__img-logo" src="img/footer/footer-logo.webp" alt="Logo Rebel Rover" loading="lazy">
+							<img class="footer__img-logo" src="img/footer/footer-logo.webp" width="378" height="91" alt="Logo Rebel Rover" loading="lazy">
 						</div>
 						<div class="footer__text">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra condimentum.</p>
@@ -768,19 +767,19 @@
 								<ul class="item-footer__list contact-list">
 									<li class="contact-list__item">
 										<div class="contact-list__icon">
-											<img src="img/icons/location.svg" alt="" aria-hidden="true">
+											<img src="img/icons/location.svg" width="12" height="17" alt="" aria-hidden="true">
 										</div>
 										<a class="contact-list__link" href="#" target="_blank" rel="noopener noreferrer">732 Despard St, Atlanta</a>
 									</li>
 									<li class="contact-list__item">
 										<div class="contact-list__icon">
-											<img src="img/icons/phone.svg" alt="" aria-hidden="true">
+											<img src="img/icons/phone.svg" width="16" height="16" alt="" aria-hidden="true">
 										</div>
 										<a class="contact-list__link" href="tel:+978888888">+97 888 8888</a>
 									</li>
 									<li class="contact-list__item">
 										<div class="contact-list__icon">
-											<img src="img/icons/email.svg" alt="" aria-hidden="true">
+											<img src="img/icons/email.svg" width="16" height="13" alt="" aria-hidden="true">
 										</div>
 										<a class="contact-list__link" href="mailto:info@traveller.com">info@traveller.com</a>
 									</li>
@@ -831,8 +830,8 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/swiper-bundle.min.js" defer></script>
+	<script src="js/main.js" defer></script>
 </body>
 
 </html>
