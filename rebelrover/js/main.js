@@ -30,62 +30,6 @@ window.addEventListener('scroll', handleHeaderScroll, { passive: true });
 handleHeaderScroll();
 //===================================================================================================
 // Menu dropdown
-// document.addEventListener("DOMContentLoaded", () => {
-
-// 	// 2. Нова, залізобетонна логіка для підменю
-// 	const menuButtons = document.querySelectorAll(".menu__button");
-
-// 	menuButtons.forEach(button => {
-// 		button.addEventListener("click", (e) => {
-// 			if (window.innerWidth <= 991.98) {
-// 				const menuItem = button.closest(".menu__item");
-// 				const subMenu = menuItem.querySelector(".menu__sub-menu");
-
-// 				if (!subMenu) return;
-
-// 				const isExpanded = button.getAttribute("aria-expanded") === "true";
-
-// 				if (!isExpanded) {
-// 					// --- ВІДКРИТТЯ ---
-// 					button.setAttribute("aria-expanded", "true");
-// 					menuItem.classList.add("_sub-menu-open");
-
-// 					// 1. Тимчасово вмикаємо флекс, щоб виміряти висоту контенту
-// 					subMenu.style.display = "flex";
-// 					subMenu.style.height = "auto";
-// 					const fullHeight = subMenu.offsetHeight; // Виміряли точну висоту в px
-
-// 					// 2. Скидаємо в 0, щоб браузер побачив старт анімації
-// 					subMenu.style.height = "0px";
-
-// 					// 3. Через мікро-таймаут запускаємо плавну CSS-анімацію
-// 					setTimeout(() => {
-// 						subMenu.style.height = `${fullHeight}px`;
-// 					}, 10);
-
-// 				} else {
-// 					// --- ЗАКРИТТЯ ---
-// 					button.setAttribute("aria-expanded", "false");
-// 					menuItem.classList.remove("_sub-menu-open");
-
-// 					// Зменшуємо висоту до 0
-// 					subMenu.style.height = "0px";
-
-// 					// Коли CSS-анімація закінчиться, повністю вимикаємо display
-// 					subMenu.addEventListener("transitionend", function handler() {
-// 						if (subMenu.style.height === "0px") {
-// 							subMenu.style.display = "none";
-// 						}
-// 						subMenu.removeEventListener("transitionend", handler); // Очищаємо слухач
-// 					});
-// 				}
-
-// 				e.stopPropagation();
-// 			}
-// 		});
-// 	});
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
 	const menuButtons = document.querySelectorAll(".menu__button");
 
@@ -199,187 +143,155 @@ document.addEventListener("DOMContentLoaded", () => {
 // });
 //====================================================================================================
 //====================================================================================================
-if (document.querySelector('.explore__slider')) {
-	const exploreSlider = new Swiper('.explore__slider', {
-		centeredSlides: true,
-		loop: true,
-		roundLengths: true,
-		observer: true,
-		observeParents: true,
-		speed: 500,
-		slidesPerView: 1,
-		slidesPerGroup: 1,
-		spaceBetween: 15,
-		navigation: {
-			nextEl: '.explore__arrow--next',
-			prevEl: '.explore__arrow--prev',
-		},
-		keyboard: {
-			enabled: true,
-			onlyInViewport: true,
-		},
-		mousewheel: {
-			releaseOnEdges: true,
-			sensitivity: 1,
-		},
-		breakpoints: {
-			576: {
-				slidesPerView: 2,
-				spaceBetween: 15,
+
+setTimeout(() => {
+
+
+
+	if (document.querySelector('.explore__slider')) {
+		const exploreSlider = new Swiper('.explore__slider', {
+			centeredSlides: true,
+			loop: true,
+			roundLengths: true,
+			observer: true,
+			observeParents: true,
+			speed: 500,
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			spaceBetween: 15,
+			navigation: {
+				nextEl: '.explore__arrow--next',
+				prevEl: '.explore__arrow--prev',
 			},
-			961: {
-				slidesPerView: 3,
-				spaceBetween: 20,
+			keyboard: {
+				enabled: true,
+				onlyInViewport: true,
 			},
-		},
-	});
-}
+			mousewheel: {
+				releaseOnEdges: true,
+				sensitivity: 1,
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 15,
+				},
+				961: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+			},
+		});
+	}
+
+}, 1500);
 //====================================================================================================
-if (document.querySelector('.explore__slider')) {
-	const whySlider = new Swiper('.why__slider', {
-		observer: true,
-		observeParents: true,
-		speed: 500,
-		slidesPerView: 1,
-		slidesPerGroup: 1,
-		spaceBetween: 15,
-		roundLengths: true,
-		navigation: {
-			nextEl: '.why__arrow--next',
-			prevEl: '.why__arrow--prev'
-		},
-		keyboard: {
-			enabled: true,
-			onlyInViewport: true,
-		},
-		mousewheel: {
-			releaseOnEdges: true,
-			sensitivity: 1,
-		},
-		breakpoints: {
-			481: {
-				slidesPerView: 2,
+
+setTimeout(() => {
+
+	if (document.querySelector('.why__slider')) {
+		const whySlider = new Swiper('.why__slider', {
+			observer: true,
+			observeParents: true,
+			speed: 500,
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			spaceBetween: 15,
+			roundLengths: true,
+			navigation: {
+				nextEl: '.why__arrow--next',
+				prevEl: '.why__arrow--prev'
 			},
-			783: {
-				slidesPerView: 3,
-				spaceBetween: 15,
+			keyboard: {
+				enabled: true,
+				onlyInViewport: true,
 			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 38,
+			mousewheel: {
+				releaseOnEdges: true,
+				sensitivity: 1,
 			},
-			1300: {
-				slidesPerView: 3,
-				spaceBetween: 92,
+			breakpoints: {
+				481: {
+					slidesPerView: 2,
+				},
+				783: {
+					slidesPerView: 3,
+					spaceBetween: 15,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 38,
+				},
+				1300: {
+					slidesPerView: 3,
+					spaceBetween: 92,
+				},
 			},
-		},
-	});
-}
+		});
+	}
+
+}, 1500);
+
 //====================================================================================================
-if (document.querySelector('.explore__slider')) {
-	const testimonialSlider = new Swiper('.testimonial__slider', {
-		observer: true,
-		observeParents: true,
-		speed: 500,
-		slidesPerGroup: 1,
-		spaceBetween: 15,
-		roundLengths: true,
-		navigation: {
-			nextEl: '.testimonial__arrow--next',
-			prevEl: '.testimonial__arrow--prev'
-		},
-		keyboard: {
-			enabled: true,
-			onlyInViewport: true,
-		},
-		mousewheel: {
-			releaseOnEdges: true,
-			sensitivity: 1,
-		},
-		breakpoints: {
-			320: {
-				slidesPerView: 1.10,
+
+setTimeout(() => {
+
+
+
+	if (document.querySelector('.testimonial__slider')) {
+		const testimonialSlider = new Swiper('.testimonial__slider', {
+			observer: true,
+			observeParents: true,
+			speed: 500,
+			slidesPerGroup: 1,
+			spaceBetween: 15,
+			roundLengths: true,
+			navigation: {
+				nextEl: '.testimonial__arrow--next',
+				prevEl: '.testimonial__arrow--prev'
 			},
-			380: {
-				slidesPerView: 1.2,
+			keyboard: {
+				enabled: true,
+				onlyInViewport: true,
 			},
-			481: {
-				slidesPerView: 1.5,
+			mousewheel: {
+				releaseOnEdges: true,
+				sensitivity: 1,
 			},
-			581: {
-				slidesPerView: 2.2,
+			breakpoints: {
+				320: {
+					slidesPerView: 1.10,
+				},
+				380: {
+					slidesPerView: 1.2,
+				},
+				481: {
+					slidesPerView: 1.5,
+				},
+				581: {
+					slidesPerView: 2.2,
+				},
+				783: {
+					slidesPerView: 2.3,
+				},
+				961: {
+					slidesPerView: 3.5,
+					spaceBetween: 20,
+				},
+				1300: {
+					slidesPerView: 3.24,
+					spaceBetween: 48,
+				},
 			},
-			783: {
-				slidesPerView: 2.3,
-			},
-			961: {
-				slidesPerView: 3.5,
-				spaceBetween: 20,
-			},
-			1300: {
-				slidesPerView: 3.24,
-				spaceBetween: 48,
-			},
-		},
-	});
-}
+		});
+	}
 
 
+}, 1500);
+//====================================================================================================
+// Ленивая загрузка и инициализация слайдеров
 
-
-
-//==================================================
-
-
-
-
-
-// function positionSubMenus() {
-// 	const header = document.querySelector('.header');
-// 	const menuItems = document.querySelectorAll('.menu__item');
-// 	if (!header || !menuItems.length) return;
-
-// 	menuItems.forEach((item) => {
-// 		const subMenu = item.querySelector('.menu__sub-menu');
-// 		if (!subMenu) return;
-
-// 		if (window.innerWidth < 991.98) {
-// 			subMenu.style.left = '';
-// 			subMenu.style.top = '';
-// 			return;
-// 		}
-
-// 		// Закрываем мобильный клик-состояние при переходе на десктоп
-// 		item.classList.remove('_sub-menu-open');
-// 		subMenu.style.height = '';
-
-// 		const itemRect = item.getBoundingClientRect();
-// 		const headerRect = header.getBoundingClientRect();
-
-// 		// Координаты строго относительно окна браузера (так как position: fixed)
-// 		const centerLeft = itemRect.left + itemRect.width / 2;
-// 		const topPos = headerRect.bottom;
-// 		const bridgeHeight = headerRect.bottom - itemRect.bottom;
-
-// 		subMenu.style.left = `${centerLeft}px`;
-// 		subMenu.style.top = `${topPos}px`;
-// 		subMenu.style.setProperty('--bridge-height', `${Math.max(bridgeHeight, 0)}px`);
-// 	});
-// }
-
-// let resizeTimer;
-// window.addEventListener('resize', () => {
-// 	positionSubMenus();
-// 	clearTimeout(resizeTimer);
-// 	resizeTimer = setTimeout(positionSubMenus, 350);
-// });
-
-// window.addEventListener('load', positionSubMenus);
-// document.querySelectorAll('.menu__item').forEach((item) => {
-// 	item.addEventListener('mouseenter', positionSubMenus);
-// 	item.addEventListener('click', positionSubMenus);
-// });
-
+//====================================================================================================
 function positionSubMenus() {
 	const header = document.querySelector('.header');
 	const menuItems = document.querySelectorAll('.menu__item');
