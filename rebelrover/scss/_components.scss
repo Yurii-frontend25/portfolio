@@ -127,6 +127,12 @@
 	justify-content: center;
 	will-change: transform;
 	text-align: center;
+	&:focus-visible {
+		outline: none;
+		box-shadow:
+			0 0 0 toRem(2) $white,
+			0 0 0 toRem(4) $black;
+	}
 
 	@media (max-width: toEm($mobile)) {
 		color: $black;
@@ -230,6 +236,10 @@
 		transition:
 			background-color 0.3s ease,
 			color 0.3s ease;
+		&:focus-visible {
+			outline: toRem(2) solid $black;
+			outline-offset: toRem(3);
+		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				background-color: $grey2;

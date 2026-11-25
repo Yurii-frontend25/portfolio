@@ -36,6 +36,11 @@
 	}
 	// .footer__link-logo
 	&__link-logo {
+		&:focus-visible {
+			outline: toRem(2) solid $black;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 	}
 	// .footer__img-logo
 	&__img-logo {
@@ -113,6 +118,11 @@
 					color: $black;
 				}
 			}
+			&:focus-visible {
+				outline: toRem(2) solid $black;
+				outline-offset: toRem(4);
+				border-radius: toRem(4);
+			}
 		}
 		&.contact-list .contact-list__item,
 		&.about-list .about-list__item {
@@ -166,6 +176,11 @@
 	}
 	// .social-list__link
 	&__link {
+		&:focus-visible {
+			outline: toRem(2) solid $black;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 	}
 }
 ._icon-s-facebook,

@@ -53,8 +53,13 @@
 	position: relative;
 	z-index: 105;
 	// flex: 0 1 toRem(345);
-	max-width: 345px;
+	max-width: toRem(345);
 	&__link {
+		&:focus-visible {
+			outline: toRem(2) solid $white;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 	}
 	&__img {
 		width: 100%;
@@ -167,6 +172,11 @@
 		line-height: 1.5;
 		transition: color 0.3s ease;
 		color: $white;
+		&:focus-visible {
+			outline: toRem(2) solid $white;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 		@include adaptiveValue("font-size", 18, 16, 0, $maxWidthContainer, 1100);
 		@media (max-width: toEm($tablet)) {
 			font-weight: 400;
@@ -183,6 +193,11 @@
 		transition:
 			rotate 0.3s ease,
 			color 0.3s ease;
+		&:focus-visible {
+			outline: toRem(2) solid $white;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 		@media (max-width: toEm($tablet)) {
 			padding: toRem(12);
 			margin-right: toRem(-12);
@@ -248,6 +263,11 @@
 		height: toRem(21);
 		position: relative;
 		z-index: 103;
+		&:focus-visible {
+			outline: toRem(2) solid $white;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 	}
 	// .actions__button
 	&__button {

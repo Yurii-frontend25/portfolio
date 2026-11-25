@@ -152,6 +152,11 @@
 		text-shadow:
 			1px 1px 3px rgba(0, 0, 0, 0.6),
 			0px 0px 6px rgba(0, 0, 0, 0.4);
+		&:focus-visible {
+			outline: toRem(2) solid $white;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				color: $grey16;
@@ -216,6 +221,11 @@
 		transition:
 			color 0.3s ease,
 			text-shadow 0.3s ease;
+		&:focus-visible {
+			outline: toRem(2) solid $white;
+			outline-offset: toRem(3);
+			border-radius: toRem(3);
+		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				color: $grey13;
@@ -350,6 +360,12 @@
 		padding-inline: toRem(26);
 		text-align: center;
 		transition: background-color 0.3s ease;
+		&:focus-visible {
+			outline: none;
+			box-shadow:
+				0 0 0 toRem(2) $white,
+				0 0 0 toRem(4) $black;
+		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				background-color: $grey2;
@@ -404,6 +420,10 @@
 		transition:
 			background-color 0.3s ease,
 			color 0.3s ease;
+		&:focus-visible {
+			outline: toRem(2) solid $black;
+			outline-offset: toRem(3);
+		}
 
 		// .explore__arrow--left
 		&--prev {
@@ -549,6 +569,11 @@
 				color: $grey3;
 			}
 		}
+		&:focus-visible {
+			outline: toRem(2) solid $black;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 	}
 	// .item-explore__title
 	&__title {
@@ -641,6 +666,11 @@
 		position: relative;
 		z-index: 2;
 		filter: drop-shadow(toRem(0) toRem(8) toRem(50) rgba(0, 0, 0, 0.1));
+		&:focus-visible {
+			outline: toRem(2) solid $white;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 
 		// .why__arrow--prev
 		&--prev {
@@ -763,6 +793,11 @@
 		line-height: 1.5;
 		gap: toRem(9);
 		transition: color 0.3s ease;
+		&:focus-visible {
+			outline: toRem(2) solid $black;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				color: $grey6;
