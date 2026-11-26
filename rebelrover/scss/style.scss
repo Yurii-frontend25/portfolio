@@ -2,6 +2,7 @@
 @use "reset";
 @use "colors" as *;
 @use "fonts/iconfonts";
+@use "fonts/fonts.scss";
 @use "settings" as *;
 // =========================================
 // Pages
@@ -51,4 +52,3 @@ body {
 .wrapper > main {
 	flex-grow: 1;
 }
-// =========================================

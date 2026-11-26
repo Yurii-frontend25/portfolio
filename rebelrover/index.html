@@ -10,20 +10,23 @@
 	<link rel="shortcut icon" href="img/icon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
 	<link rel="stylesheet" href="css/swiper-bundle.min.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	</noscript>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Rebel Rover — Explore the world with us</title>
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="top">
 		<header class="header">
 			<div class="header__container">
 				<div class="header__body">
 					<div class="header__logo logo">
-						<img class="logo__img" src="img/logo.webp" width="345" height="82" alt="Logo Rebel Rover">
+						<img class="logo__img" src="img/logo.webp" width="345" height="82" alt="Rebel Rover">
 					</div>
 					<div class="header__menu menu">
 						<nav class="menu__body">
@@ -51,7 +54,7 @@
 								</li>
 								<li class="menu__item">
 									<a class="menu__link" href="#">Destination</a>
-									<button class="menu__button _icon-s-arrow" type="button" aria-label="Toggle Package submenu" aria-expanded="false"></button>
+									<button class="menu__button _icon-s-arrow" type="button" aria-label="Toggle Destination submenu" aria-expanded="false"></button>
 									<ul class="menu__sub-menu sub-menu">
 										<li class="sub-menu__item">
 											<a class="sub-menu__link" href="#">Some link</a>
@@ -66,7 +69,7 @@
 								</li>
 								<li class="menu__item">
 									<a class="menu__link" href="blog.html">Blog</a>
-									<button class="menu__button _icon-s-arrow" type="button" aria-label="Toggle Package submenu" aria-expanded="false"></button>
+									<button class="menu__button _icon-s-arrow" type="button" aria-label="Toggle Blog submenu" aria-expanded="false"></button>
 									<ul class="menu__sub-menu sub-menu">
 										<li class="sub-menu__item">
 											<a class="sub-menu__link" href="#">Some link</a>
@@ -85,10 +88,10 @@
 							</ul>
 						</nav>
 						<div class="menu__actions actions">
-							<a class="actions__search" href="#" aria-label="Search">
+							<button class="actions__search" type="button" aria-label="Open search" aria-expanded="false">
 								<img src="img/icons/search.svg" width="21" height="21" alt="" aria-hidden="true">
-							</a>
-							<button class="actions__button icon-menu" type="button" aria-label="Open menu">
+							</button>
+							<button class="actions__button icon-menu" type="button" aria-label="Open menu" aria-expanded="false">
 								<span></span>
 							</button>
 						</div>
@@ -133,8 +136,8 @@
 							</div>
 							<button class="choice-hero__button" type="submit">Explore now</button>
 						</form>
-						<div class="hero__places" aria-label="Popular places">
-							<span class="hero__popular" aria-hidden="true">Popular Place:</span>
+						<div class="hero__places">
+							<span class="hero__popular">Popular Place:</span>
 							<ul class="hero__areas-list">
 								<li class="hero__areas-item">
 									<a class="hero__areas-link" href="#">Bali</a>
@@ -170,7 +173,7 @@
 					<div class="explore__slider swiper">
 						<div class="explore__wrapper swiper-wrapper">
 							<div class="explore__slide swiper-slide">
-								<div class="explore__item item-explore item-explore--border">
+								<article class="explore__item item-explore item-explore--border">
 									<figure class="item-explore__figure">
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
@@ -190,15 +193,15 @@
 											</div>
 										</figcaption>
 									</figure>
-								</div>
+								</article>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="explore__item item-explore item-explore--border">
+								<article class="explore__item item-explore item-explore--border">
 									<figure class="item-explore__figure">
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/02.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/02.jpg" width="453" height="316" loading="lazy" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/02.jpg" width="453" height="361" loading="lazy" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
 											</picture>
 											<div class="item-explore__quote">
 												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
@@ -213,10 +216,10 @@
 											</div>
 										</figcaption>
 									</figure>
-								</div>
+								</article>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="explore__item item-explore item-explore--border">
+								<article class="explore__item item-explore item-explore--border">
 									<figure class="item-explore__figure">
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
@@ -236,10 +239,10 @@
 											</div>
 										</figcaption>
 									</figure>
-								</div>
+								</article>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="explore__item item-explore item-explore--border">
+								<article class="explore__item item-explore item-explore--border">
 									<figure class="item-explore__figure">
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
@@ -259,15 +262,15 @@
 											</div>
 										</figcaption>
 									</figure>
-								</div>
+								</article>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="explore__item item-explore item-explore--border">
+								<article class="explore__item item-explore item-explore--border">
 									<figure class="item-explore__figure">
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/02.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/02.jpg" width="453" height="316" loading="lazy" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/02.jpg" width="453" height="361" loading="lazy" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
 											</picture>
 											<div class="item-explore__quote">
 												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
@@ -282,10 +285,10 @@
 											</div>
 										</figcaption>
 									</figure>
-								</div>
+								</article>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="explore__item item-explore item-explore--border">
+								<article class="explore__item item-explore item-explore--border">
 									<figure class="item-explore__figure">
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
@@ -305,10 +308,10 @@
 											</div>
 										</figcaption>
 									</figure>
-								</div>
+								</article>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="explore__item item-explore item-explore--border">
+								<article class="explore__item item-explore item-explore--border">
 									<figure class="item-explore__figure">
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
@@ -328,15 +331,15 @@
 											</div>
 										</figcaption>
 									</figure>
-								</div>
+								</article>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="explore__item item-explore item-explore--border">
+								<article class="explore__item item-explore item-explore--border">
 									<figure class="item-explore__figure">
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
 												<source srcset="img/explore/02.webp" type="image/webp">
-												<img class="item-explore__img" src="img/explore/02.jpg" width="453" height="316" loading="lazy" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
+												<img class="item-explore__img" src="img/explore/02.jpg" width="453" height="361" loading="lazy" alt="A man sits on a rock, admiring the tranquil waters of Halong Bay, with stunning limestone formations in the background">
 											</picture>
 											<div class="item-explore__quote">
 												<img class="item-explore__decor" src="img/explore/icon/quote.svg" width="25" height="18" alt="" aria-hidden="true">
@@ -351,10 +354,10 @@
 											</div>
 										</figcaption>
 									</figure>
-								</div>
+								</article>
 							</div>
 							<div class="explore__slide swiper-slide">
-								<div class="explore__item item-explore item-explore--border">
+								<article class="explore__item item-explore item-explore--border">
 									<figure class="item-explore__figure">
 										<div class="item-explore__wrapper">
 											<picture class="item-explore__picture">
@@ -374,7 +377,7 @@
 											</div>
 										</figcaption>
 									</figure>
-								</div>
+								</article>
 							</div>
 						</div>
 					</div>
@@ -384,7 +387,7 @@
 				<div class="why__container why__container--wide">
 					<div class="why__title block-head block-head--white">
 						<h2 class="block-head__title">Why choose Us?</h2>
-						<div class="block-head__descr">our services have been trusted by world travelers.</div>
+						<div class="block-head__descr">Our services have been trusted by world travelers.</div>
 					</div>
 					<div class="why__controls">
 						<button class="why__arrow why__arrow--prev _icon-s-arrow-slider" type="button" aria-label="Previous slide"></button>
@@ -400,10 +403,10 @@
 										</div>
 										<h3 class="item-why__title">Best Service</h3>
 										<div class="item-why__text">
-											<p>our service is reliable and convenient, our service is quality.</p>
+											<p>Our service is reliable and convenient, our service is quality.</p>
 										</div>
 										<div class="item-why__box">
-											<a class="item-why__link" href="#" aria-label="Learn more about Best Service">Learn more <svg width="30" height="12" viewBox="0 0 30 12" xmlns="http://www.w3.org/2000/svg">
+											<a class="item-why__link" href="#" aria-label="Learn more about Best Service">Learn more <svg width="30" height="12" viewBox="0 0 30 12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="currentColor" />
 												</svg>
 											</a>
@@ -419,10 +422,10 @@
 										</div>
 										<h3 class="item-why__title">Price Guarantee</h3>
 										<div class="item-why__text">
-											<p>our service is reliable and convenient, our service is quality.</p>
+											<p>Our service is reliable and convenient, our service is quality.</p>
 										</div>
 										<div class="item-why__box">
-											<a class="item-why__link" href="#" aria-label="Learn more about Price Guarantee">Learn more <svg width="30" height="12" viewBox="0 0 30 12" xmlns="http://www.w3.org/2000/svg">
+											<a class="item-why__link" href="#" aria-label="Learn more about Price Guarantee">Learn more <svg width="30" height="12" viewBox="0 0 30 12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="currentColor" />
 												</svg>
 											</a>
@@ -438,10 +441,10 @@
 										</div>
 										<h3 class="item-why__title">Handpicked Hotels</h3>
 										<div class="item-why__text">
-											<p>our service is reliable and convenient, our service is quality.</p>
+											<p>Our service is reliable and convenient, our service is quality.</p>
 										</div>
 										<div class="item-why__box">
-											<a class="item-why__link" href="#" aria-label="Learn more about Handpicked Hotels">Learn more <svg width="30" height="12" viewBox="0 0 30 12" xmlns="http://www.w3.org/2000/svg">
+											<a class="item-why__link" href="#" aria-label="Learn more about Handpicked Hotels">Learn more <svg width="30" height="12" viewBox="0 0 30 12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="currentColor" />
 												</svg>
 											</a>
@@ -457,10 +460,10 @@
 										</div>
 										<h3 class="item-why__title">Best Service</h3>
 										<div class="item-why__text">
-											<p>our service is reliable and convenient, our service is quality.</p>
+											<p>Our service is reliable and convenient, our service is quality.</p>
 										</div>
 										<div class="item-why__box">
-											<a class="item-why__link" href="#" aria-label="Learn more about Best Service">Learn more <svg width="30" height="12" viewBox="0 0 30 12" xmlns="http://www.w3.org/2000/svg">
+											<a class="item-why__link" href="#" aria-label="Learn more about Best Service">Learn more <svg width="30" height="12" viewBox="0 0 30 12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="currentColor" />
 												</svg>
 											</a>
@@ -476,10 +479,10 @@
 										</div>
 										<h3 class="item-why__title">Price Guarantee</h3>
 										<div class="item-why__text">
-											<p>our service is reliable and convenient, our service is quality.</p>
+											<p>Our service is reliable and convenient, our service is quality.</p>
 										</div>
 										<div class="item-why__box">
-											<a class="item-why__link" href="#" aria-label="Learn more about Price Guarantee">Learn more <svg width="30" height="12" viewBox="0 0 30 12" xmlns="http://www.w3.org/2000/svg">
+											<a class="item-why__link" href="#" aria-label="Learn more about Price Guarantee">Learn more <svg width="30" height="12" viewBox="0 0 30 12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="currentColor" />
 												</svg>
 											</a>
@@ -495,10 +498,10 @@
 										</div>
 										<h3 class="item-why__title">Handpicked Hotels</h3>
 										<div class="item-why__text">
-											<p>our service is reliable and convenient, our service is quality.</p>
+											<p>Our service is reliable and convenient, our service is quality.</p>
 										</div>
 										<div class="item-why__box">
-											<a class="item-why__link" href="#" aria-label="Learn more about Handpicked Hotels">Learn more <svg width="30" height="12" viewBox="0 0 30 12" xmlns="http://www.w3.org/2000/svg">
+											<a class="item-why__link" href="#" aria-label="Learn more about Handpicked Hotels">Learn more <svg width="30" height="12" viewBox="0 0 30 12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 													<path d="M29.6172 5.77344L19.6172 11.5469V6.77344H0V4.77344H19.6172V0L29.6172 5.77344Z" fill="currentColor" />
 												</svg>
 											</a>
@@ -511,7 +514,7 @@
 				</div>
 				<picture class="why__picture">
 					<source srcset="img/why/why-bg-2x.webp" type="image/webp">
-					<img class="why__image" src="img/why/why-bg-2x.jpg" alt="A suitcase and a hat are placed on the sandy beach, with a city skyline visible in the background" loading="lazy" width="1510" height="633">
+					<img class="why__image" src="img/why/why-bg-2x.jpg" loading="lazy" width="1510" height="633" alt="" aria-hidden="true">
 				</picture>
 			</section>
 			<section class="page__partners partners">
@@ -524,19 +527,19 @@
 					</div>
 					<ul class="partners__items">
 						<li class="partners__item">
-							<img src="img/partners/01.svg" width="150" height="44" alt="Katana company">
+							<img src="img/partners/01.svg" width="150" height="44" alt="Katana company" loading="lazy">
 						</li>
 						<li class="partners__item partners__item--center">
-							<img src="img/partners/02.svg" width="149" height="27" alt="Travava company">
+							<img src="img/partners/02.svg" width="149" height="27" alt="Travava company" loading="lazy">
 						</li>
 						<li class="partners__item">
-							<img src="img/partners/03.svg" width="97" height="53" alt="Bigui company">
+							<img src="img/partners/03.svg" width="97" height="53" alt="Bigui company" loading="lazy">
 						</li>
 						<li class="partners__item">
-							<img src="img/partners/04.svg" width="228" height="41" alt="Booking.com company">
+							<img src="img/partners/04.svg" width="228" height="41" alt="Booking.com company" loading="lazy">
 						</li>
 						<li class="partners__item">
-							<img src="img/partners/05.svg" width="147" height="31" alt="Jakmaen company">
+							<img src="img/partners/05.svg" width="147" height="31" alt="Jakmaen company" loading="lazy">
 						</li>
 					</ul>
 				</div>
@@ -563,7 +566,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/01.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/01.jpg" width="130" height="130" alt="Sara Jay">
+													<img class="item-testimonial__img" src="img/testimonial/01.jpg" width="130" height="130" loading="lazy" alt="Sara Jay">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -571,16 +574,16 @@
 												<div class="item-testimonial__label">Traveler</div>
 											</div>
 										</div>
-										<div class="item-testimonial__rating rating">
+										<div class="item-testimonial__rating rating" role="img" aria-label="Rating: 5 out of 5 stars">
 											<div class="rating__item"></div>
 											<div class="rating__item"></div>
 											<div class="rating__item"></div>
 											<div class="rating__item"></div>
 											<div class="rating__item"></div>
 										</div>
-										<div class="item-testimonial__text">
+										<blockquote class="item-testimonial__blockquote">
 											<p> Before we define any approach, we need to deline the brands overall goal. We then need to dive. </p>
-										</div>
+										</blockquote>
 									</div>
 								</article>
 							</div>
@@ -591,7 +594,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/02.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/02.jpg" width="130" height="130" alt="Cristian Daniel">
+													<img class="item-testimonial__img" src="img/testimonial/02.jpg" width="130" height="130" loading="lazy" alt="Cristian Daniel">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -599,16 +602,16 @@
 												<div class="item-testimonial__label">Traveler</div>
 											</div>
 										</div>
-										<div class="item-testimonial__rating rating">
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
+										<div class="item-testimonial__rating rating" role="img" aria-label="Rating: 5 out of 5 stars">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
 										</div>
-										<div class="item-testimonial__text">
-											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
-										</div>
+										<blockquote class="item-testimonial__blockquote">
+											<p> Before we define any approach, we need to deline the brands overall goal. We then need to dive. </p>
+										</blockquote>
 									</div>
 								</article>
 							</div>
@@ -619,7 +622,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/03.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/03.jpg" width="130" height="130" alt="Kausar Hasan">
+													<img class="item-testimonial__img" src="img/testimonial/03.jpg" width="130" height="130" loading="lazy" alt="Kausar Hasan">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -627,16 +630,16 @@
 												<div class="item-testimonial__label">Traveler</div>
 											</div>
 										</div>
-										<div class="item-testimonial__rating rating">
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
+										<div class="item-testimonial__rating rating" role="img" aria-label="Rating: 5 out of 5 stars">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
 										</div>
-										<div class="item-testimonial__text">
-											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
-										</div>
+										<blockquote class="item-testimonial__blockquote">
+											<p> Before we define any approach, we need to deline the brands overall goal. We then need to dive. </p>
+										</blockquote>
 									</div>
 								</article>
 							</div>
@@ -647,7 +650,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/01.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/01.jpg" width="130" height="130" alt="Sara Jay">
+													<img class="item-testimonial__img" src="img/testimonial/01.jpg" width="130" height="130" loading="lazy" alt="Sara Jay">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -655,16 +658,16 @@
 												<div class="item-testimonial__label">Traveler</div>
 											</div>
 										</div>
-										<div class="item-testimonial__rating rating">
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
+										<div class="item-testimonial__rating rating" role="img" aria-label="Rating: 5 out of 5 stars">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
 										</div>
-										<div class="item-testimonial__text">
-											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
-										</div>
+										<blockquote class="item-testimonial__blockquote">
+											<p> Before we define any approach, we need to deline the brands overall goal. We then need to dive. </p>
+										</blockquote>
 									</div>
 								</article>
 							</div>
@@ -675,7 +678,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/02.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/02.jpg" width="130" height="130" alt="Cristian Daniel">
+													<img class="item-testimonial__img" src="img/testimonial/02.jpg" width="130" height="130" loading="lazy" alt="Cristian Daniel">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -683,16 +686,16 @@
 												<div class="item-testimonial__label">Traveler</div>
 											</div>
 										</div>
-										<div class="item-testimonial__rating rating">
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
+										<div class="item-testimonial__rating rating" role="img" aria-label="Rating: 5 out of 5 stars">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
 										</div>
-										<div class="item-testimonial__text">
-											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
-										</div>
+										<blockquote class="item-testimonial__blockquote">
+											<p> Before we define any approach, we need to deline the brands overall goal. We then need to dive. </p>
+										</blockquote>
 									</div>
 								</article>
 							</div>
@@ -703,7 +706,7 @@
 											<figure class="item-testimonial__figure">
 												<picture class="item-testimonial__picture">
 													<source srcset="img/testimonial/03.webp" type="image/webp">
-													<img class="item-testimonial__img" src="img/testimonial/03.jpg" width="130" height="130" alt="Kausar Hasan">
+													<img class="item-testimonial__img" src="img/testimonial/03.jpg" width="130" height="130" loading="lazy" alt="Kausar Hasan">
 												</picture>
 											</figure>
 											<div class="item-testimonial__head">
@@ -711,16 +714,16 @@
 												<div class="item-testimonial__label">Traveler</div>
 											</div>
 										</div>
-										<div class="item-testimonial__rating rating">
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
-											<div class="rating__item rating__item--active"></div>
+										<div class="item-testimonial__rating rating" role="img" aria-label="Rating: 5 out of 5 stars">
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
+											<div class="rating__item"></div>
 										</div>
-										<div class="item-testimonial__text">
-											<p>Before we define any approach, we need to deline the brands overall goal. We then need to dive.</p>
-										</div>
+										<blockquote class="item-testimonial__blockquote">
+											<p> Before we define any approach, we need to deline the brands overall goal. We then need to dive. </p>
+										</blockquote>
 									</div>
 								</article>
 							</div>
@@ -738,14 +741,14 @@
 					</div>
 					<form class="subscribe__form form" action="#">
 						<div class="form__item">
-							<input class="form__input" type="email" placeholder="Type your email here" name="form[email]" required autocomplete="off">
+							<input class="form__input" type="email" aria-label="Email address" placeholder="Type your email here" name="form[email]" required autocomplete="email">
 						</div>
 						<button class="form__button" type="submit">Subscribe</button>
 					</form>
 				</div>
 				<picture class="subscribe__picture">
 					<source srcset="img/subscribe/subscribe-bg.webp" type="image/webp">
-					<img class="subscribe__image" src="img/subscribe/subscribe-bg.jpg" width="1512" height="542" alt="World map" loading="lazy">
+					<img class="subscribe__image" src="img/subscribe/subscribe-bg.jpg" width="1512" height="542" alt="" aria-hidden="true" loading="lazy">
 				</picture>
 			</section>
 		</main>
@@ -754,7 +757,9 @@
 				<div class="footer__body">
 					<div class="footer__box">
 						<div class="footer__logo">
-							<img class="footer__img-logo" src="img/footer/footer-logo.webp" width="378" height="91" alt="Logo Rebel Rover" loading="lazy">
+							<a class="footer__link-logo" href="#top">
+								<img class="footer__img-logo" src="img/footer/footer-logo.webp" width="378" height="91" alt="Rebel Rover - Home" loading="lazy">
+							</a>
 						</div>
 						<div class="footer__text">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra condimentum.</p>
@@ -793,13 +798,13 @@
 									<a class="about-list__link" href="#">Home</a>
 								</li>
 								<li class="about-list__item">
-									<a class="about-list__link" href="#">About Us</a>
+									<a class="about-list__link" href="about.html">About Us</a>
 								</li>
 								<li class="about-list__item">
 									<a class="about-list__link" href="#">Tours</a>
 								</li>
 								<li class="about-list__item">
-									<a class="about-list__link" href="#">Contact</a>
+									<a class="about-list__link" href="contacts.html">Contact</a>
 								</li>
 							</ul>
 						</div>

@@ -5,14 +5,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Get in touch with the Rebel Rover travel team. Contact us for custom tour bookings, itinerary questions, and personalized travel assistance.">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preload" as="image" href="img/contacts/contacts-hero-mob.webp" media="(max-width: 767.98px)" type="image/webp" fetchpriority="high">
+	<link rel="preload" as="image" href="img/contacts/contacts-hero.webp" type="image/webp" fetchpriority="high">
 	<link rel="icon" type="image/png" href="img/icon/favicon-96x96.png" sizes="96x96">
 	<link rel="icon" type="image/svg+xml" href="img/icon/favicon.svg">
 	<link rel="shortcut icon" href="img/icon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"> -->
+	<link rel="preload" href="fonts/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 	<title>Contacts - Rebel Rover</title>
 </head>
 
@@ -23,7 +27,7 @@
 				<div class="header__body">
 					<div class="header__logo logo">
 						<a class="logo__link" href="#">
-							<img class="logo__img" src="img/logo.webp" width="345" height="82" alt="Logo Rebel Rover">
+							<img class="logo__img" src="img/logo.webp" width="345" height="82" alt="Rebel Rover">
 						</a>
 					</div>
 					<div class="header__menu menu">
@@ -86,13 +90,21 @@
 							</ul>
 						</nav>
 						<div class="menu__actions actions">
+							<button class="actions__search" type="button" aria-label="Open search" aria-expanded="false">
+								<img src="img/icons/search.svg" width="21" height="21" alt aria-hidden="true">
+							</button>
+							<button class="actions__button icon-menu" type="button" aria-label="Open menu" aria-expanded="false">
+								<span></span>
+							</button>
+						</div>
+						<!-- <div class="menu__actions actions">
 							<a class="actions__search" href="#" aria-label="Search">
 								<img src="img/icons/search.svg" alt="" aria-hidden="true">
 							</a>
 							<button class="actions__button icon-menu" type="button" aria-label="Open menu">
 								<span></span>
 							</button>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -102,17 +114,20 @@
 				<div class="hero__container">
 					<div class="hero__content hero__content--contacts">
 						<h1 class="hero__title hero__title--contacts">Contact</h1>
-						<ul class="hero__items hero__items--contacts">
-							<li class="hero__item">
-								<a class="hero__link" href="#">Home</a>
-							</li>
-							<li class="hero__item">
-								<a class="hero__link" href="#">Contact</a>
-							</li>
-						</ul>
+						<nav aria-label="Breadcrumb">
+							<ul class="hero__items hero__items--contacts">
+								<li class="hero__item">
+									<a class="hero__link" href="index.html">Home</a>
+								</li>
+								<li class="hero__item">
+									<span class="hero__link" aria-current="page">Contact</span>
+								</li>
+							</ul>
+						</nav>
 					</div>
 				</div>
 				<picture class="hero__picture hero__picture--contacts">
+					<source srcset="img/contacts/contacts-hero-mob.webp" media="(max-width: 767.98px)" type="image/webp">
 					<source srcset="img/contacts/contacts-hero.webp" type="image/webp">
 					<img class="hero__image hero__image--contacts" src="img/contacts/contacts-hero.jpg" width="1500" height="760" fetchpriority="high" alt="A woman wearing headphones sits at a desk, focused on her laptop while working or studying">
 				</picture>
@@ -126,10 +141,10 @@
 									<form class="item-connection__form form-contact" action="#">
 										<div class="form-contact__body">
 											<div class="form-contact__item">
-												<input class="form-contact__input" name="form[name]" type="text" required autocomplete="off" placeholder="Your Name" aria-label="Your Name">
+												<input class="form-contact__input" name="form[name]" type="text" required autocomplete="name" placeholder="Your Name" aria-label="Your Name">
 											</div>
 											<div class="form-contact__item">
-												<input class="form-contact__input" name="form[email]" type="email" required autocomplete="off" placeholder="Your Email" aria-label="Your Email">
+												<input class="form-contact__input" name="form[email]" type="email" required autocomplete="email" placeholder="Your Email" aria-label="Your Email">
 											</div>
 											<div class="form-contact__item">
 												<input class="form-contact__input" name="form[subject]" type="text" required autocomplete="off" placeholder="Subject" aria-label="Subject">
@@ -158,19 +173,19 @@
 													<ul class="item-connection__list list-item-connection">
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/phone.svg" alt="" aria-hidden="true">
+																<img src="img/icons/phone.svg" width="16" height="16" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="tel:+6269436956">+62 6943 6956</a>
 														</li>
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/email.svg" alt="" aria-hidden="true">
+																<img src="img/icons/email.svg" width="16" height="13" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="mailto:contact@domain.com">contact@domain.com</a>
 														</li>
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/location.svg" alt="" aria-hidden="true">
+																<img src="img/icons/location.svg" width="12" height="17" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="#">Jl. Darussalam Hagu selatan</a>
 														</li>
@@ -183,19 +198,19 @@
 													<ul class="item-connection__list list-item-connection">
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/phone.svg" alt="" aria-hidden="true">
+																<img src="img/icons/phone.svg" width="16" height="16" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="tel:+6269436956">+62 6943 6956</a>
 														</li>
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/email.svg" alt="" aria-hidden="true">
+																<img src="img/icons/email.svg" width="16" height="13" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="mailto:contact@domain.com">contact@domain.com</a>
 														</li>
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/location.svg" alt="" aria-hidden="true">
+																<img src="img/icons/location.svg" width="12" height="17" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="#">Jl. Darussalam Hagu selatan</a>
 														</li>
@@ -208,19 +223,19 @@
 													<ul class="item-connection__list list-item-connection">
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/phone.svg" alt="" aria-hidden="true">
+																<img src="img/icons/phone.svg" width="16" height="16" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="tel:+6269436956">+62 6943 6956</a>
 														</li>
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/email.svg" alt="" aria-hidden="true">
+																<img src="img/icons/email.svg" width="16" height="13" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="mailto:contact@domain.com">contact@domain.com</a>
 														</li>
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/location.svg" alt="" aria-hidden="true">
+																<img src="img/icons/location.svg" width="12" height="17" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="#">Jl. Darussalam Hagu selatan</a>
 														</li>
@@ -233,19 +248,19 @@
 													<ul class="item-connection__list list-item-connection">
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/phone.svg" alt="" aria-hidden="true">
+																<img src="img/icons/phone.svg" width="16" height="16" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="tel:+6269436956">+62 6943 6956</a>
 														</li>
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/email.svg" alt="" aria-hidden="true">
+																<img src="img/icons/email.svg" width="16" height="13" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="mailto:contact@domain.com">contact@domain.com</a>
 														</li>
 														<li class="list-item-connection__item">
 															<div class="list-item-connection__icon">
-																<img src="img/icons/location.svg" alt="" aria-hidden="true">
+																<img src="img/icons/location.svg" width="12" height="17" alt aria-hidden="true">
 															</div>
 															<a class="list-item-connection__link" href="#">Jl. Darussalam Hagu selatan</a>
 														</li>
@@ -270,14 +285,14 @@
 					</div>
 					<form class="subscribe__form form" action="#">
 						<div class="form__item">
-							<input class="form__input" type="email" placeholder="Type your email here" name="form[email]" required autocomplete="off">
+							<input class="form__input" type="email" placeholder="Type your email here" name="form[email]" required autocomplete="email">
 						</div>
 						<button class="form__button" type="submit">Subscribe</button>
 					</form>
 				</div>
 				<picture class="subscribe__picture">
 					<source srcset="img/subscribe/subscribe-bg.webp" type="image/webp">
-					<img class="subscribe__image" src="img/subscribe/subscribe-bg.jpg" width="1512" height="542" alt="World map" loading="lazy">
+					<img class="subscribe__image" src="img/subscribe/subscribe-bg.jpg" width="1512" height="542" alt aria-hidden="true" loading="lazy">
 				</picture>
 			</section>
 		</main>
@@ -287,7 +302,7 @@
 					<div class="footer__box">
 						<div class="footer__logo">
 							<a class="footer__link-logo" href="#">
-								<img class="footer__img-logo" src="img/footer/footer-logo.webp" width="378" height="91" alt="Logo Rebel Rover" loading="lazy">
+								<img class="footer__img-logo" src="img/footer/footer-logo.webp" width="378" height="91" alt="Rebel Rover" loading="lazy">
 							</a>
 						</div>
 						<div class="footer__text">
@@ -301,19 +316,19 @@
 								<ul class="item-footer__list contact-list">
 									<li class="contact-list__item">
 										<div class="contact-list__icon">
-											<img src="img/icons/location.svg" width="12" height="17" alt="" aria-hidden="true">
+											<img src="img/icons/location.svg" width="12" height="17" alt aria-hidden="true">
 										</div>
 										<a class="contact-list__link" href="#" target="_blank">732 Despard St, Atlanta</a>
 									</li>
 									<li class="contact-list__item">
 										<div class="contact-list__icon">
-											<img src="img/icons/phone.svg" width="16" height="16" alt="" aria-hidden="true">
+											<img src="img/icons/phone.svg" width="16" height="16" alt aria-hidden="true">
 										</div>
 										<a class="contact-list__link" href="tel:+978888888">+97 888 8888</a>
 									</li>
 									<li class="contact-list__item">
 										<div class="contact-list__icon">
-											<img src="img/icons/email.svg" width="16" height="13" alt="" aria-hidden="true">
+											<img src="img/icons/email.svg" width="16" height="13" alt aria-hidden="true">
 										</div>
 										<a class="contact-list__link" href="mailto:info@traveller.com">info@traveller.com</a>
 									</li>
@@ -324,10 +339,10 @@
 							<h3 class="item-footer__title">Quick Link</h3>
 							<ul class="item-footer__list about-list">
 								<li class="about-list__item">
-									<a class="about-list__link" href="#">Home</a>
+									<a class="about-list__link" href="index.html">Home</a>
 								</li>
 								<li class="about-list__item">
-									<a class="about-list__link" href="#">About Us</a>
+									<a class="about-list__link" href="about.html">About Us</a>
 								</li>
 								<li class="about-list__item">
 									<a class="about-list__link" href="#">Tours</a>

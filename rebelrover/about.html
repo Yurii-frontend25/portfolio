@@ -23,7 +23,7 @@
 				<div class="header__body">
 					<div class="header__logo logo">
 						<a class="logo__link" href="#">
-							<img class="logo__img" src="img/logo.webp" width="345" height="82" alt="Logo Rebel Rover">
+							<img class="logo__img" src="img/logo.webp" width="345" height="82" alt="Rebel Rover">
 						</a>
 					</div>
 					<div class="header__menu menu">
@@ -86,10 +86,10 @@
 							</ul>
 						</nav>
 						<div class="menu__actions actions">
-							<a class="actions__search" href="#" aria-label="Search">
-								<img src="img/icons/search.svg" alt="" aria-hidden="true">
-							</a>
-							<button class="actions__button icon-menu" type="button" aria-label="Open menu">
+							<button class="actions__search" type="button" aria-label="Open search" aria-expanded="false">
+								<img src="img/icons/search.svg" width="21" height="21" alt="" aria-hidden="true">
+							</button>
+							<button class="actions__button icon-menu" type="button" aria-label="Open menu" aria-expanded="false">
 								<span></span>
 							</button>
 						</div>
@@ -102,14 +102,16 @@
 				<div class="hero__container">
 					<div class="hero__content hero__content--about">
 						<h1 class="hero__title hero__title--about">About Us</h1>
-						<ul class="hero__items hero__items--about">
-							<li class="hero__item">
-								<a class="hero__link" href="index.html">Home</a>
-							</li>
-							<li class="hero__item">
-								<a class="hero__link" href="#">About Us</a>
-							</li>
-						</ul>
+						<nav aria-label="Breadcrumb">
+							<ul class="hero__items hero__items--about">
+								<li class="hero__item">
+									<a class="hero__link" href="index.html">Home</a>
+								</li>
+								<li class="hero__item">
+									<span class="hero__link" aria-current="page">About Us</span>
+								</li>
+							</ul>
+						</nav>
 					</div>
 				</div>
 				<picture class="hero__picture">
@@ -188,8 +190,8 @@
 								</div>
 								<div class="advantages__content">
 									<div class="advantages__wrapper-num">
-										<div class="advantages__num">126 </div>
-										<img class="advantages__plus" src="img/advantages/icons/icon-plus.svg" alt="" aria-hidden="true">
+										<div class="advantages__num">126</div>
+										<img class="advantages__plus" src="img/advantages/icons/icon-plus.svg" width="23" height="23" alt="" aria-hidden="true">
 									</div>
 									<div class="advantages__label">Satisfied Clients</div>
 								</div>
@@ -203,7 +205,7 @@
 								<div class="advantages__content">
 									<div class="advantages__wrapper-num">
 										<div class="advantages__num">230</div>
-										<img class="advantages__plus" src="img/advantages/icons/icon-plus.svg" alt="" aria-hidden="true">
+										<img class="advantages__plus" src="img/advantages/icons/icon-plus.svg" width="23" height="23" alt="" aria-hidden="true">
 									</div>
 									<div class="advantages__label">New Travellers</div>
 								</div>
@@ -217,7 +219,7 @@
 								<div class="advantages__content">
 									<div class="advantages__wrapper-num">
 										<div class="advantages__num">230</div>
-										<img class="advantages__plus" src="img/advantages/icons/icon-plus.svg" alt="" aria-hidden="true">
+										<img class="advantages__plus" src="img/advantages/icons/icon-plus.svg" width="23" height="23" alt="" aria-hidden="true">
 									</div>
 									<div class="advantages__label">Destinations</div>
 								</div>
@@ -292,14 +294,14 @@
 					</div>
 					<form class="subscribe__form form" action="#">
 						<div class="form__item">
-							<input class="form__input" type="email" placeholder="Type your email here" name="form[email]" required autocomplete="off">
+							<input class="form__input" type="email" placeholder="Type your email here" name="form[email]" required autocomplete="email">
 						</div>
 						<button class="form__button" type="submit">Subscribe</button>
 					</form>
 				</div>
 				<picture class="subscribe__picture">
 					<source srcset="img/subscribe/subscribe-bg.webp" type="image/webp">
-					<img class="subscribe__image" src="img/subscribe/subscribe-bg.jpg" width="1512" height="542" alt="World map" loading="lazy">
+					<img class="subscribe__image" src="img/subscribe/subscribe-bg.jpg" width="1512" height="542" alt="" aria-hidden="true" loading="lazy">
 				</picture>
 			</section>
 		</main>
@@ -309,7 +311,7 @@
 					<div class="footer__box">
 						<div class="footer__logo">
 							<a class="footer__link-logo" href="#">
-								<img class="footer__img-logo" src="img/footer/footer-logo.webp" width="378" height="91" alt="Logo Rebel Rover" loading="lazy">
+								<img class="footer__img-logo" src="img/footer/footer-logo.webp" width="378" height="91" alt="Rebel Rover" loading="lazy">
 							</a>
 						</div>
 						<div class="footer__text">
@@ -346,7 +348,7 @@
 							<h3 class="item-footer__title">Quick Link</h3>
 							<ul class="item-footer__list about-list">
 								<li class="about-list__item">
-									<a class="about-list__link" href="#">Home</a>
+									<a class="about-list__link" href="index.html">Home</a>
 								</li>
 								<li class="about-list__item">
 									<a class="about-list__link" href="#">About Us</a>
@@ -355,7 +357,7 @@
 									<a class="about-list__link" href="#">Tours</a>
 								</li>
 								<li class="about-list__item">
-									<a class="about-list__link" href="#">Contact</a>
+									<a class="about-list__link" href="contacts.html">Contact</a>
 								</li>
 							</ul>
 						</div>

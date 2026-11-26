@@ -135,6 +135,46 @@ label {
   content: "\e906";
 }
 
+/* poppins-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/poppins-v24-latin-300.woff2") format("woff2");
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v24-latin-regular.woff2") format("woff2");
+}
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/poppins-v24-latin-500.woff2") format("woff2");
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/poppins-v24-latin-600.woff2") format("woff2");
+}
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/poppins-v24-latin-700.woff2") format("woff2");
+}
 @media (min-width: 85.625em) {
   .page__our, .page__blockquote, .page__advantages, .page__gallery {
     margin-bottom: 178px;
@@ -2499,6 +2539,9 @@ label {
 .contacts__text > p:not(:last-child) {
   margin-bottom: 0.625rem;
 }
+.contacts__address {
+  font-style: normal;
+}
 .contacts__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2912,18 +2955,6 @@ label {
 .cards-popular__anchor-image {
   position: relative;
   overflow: hidden;
-}
-.cards-popular__anchor-image:focus-visible {
-  outline: none;
-}
-.cards-popular__anchor-image:focus-visible::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 3;
-  -webkit-box-shadow: inset 0 0 0 0.25rem #000, inset 0 0 0 0.4375rem #fff;
-          box-shadow: inset 0 0 0 0.25rem #000, inset 0 0 0 0.4375rem #fff;
 }
 @media (any-hover: hover) and (any-pointer: fine) {
   .cards-popular__anchor-image:hover .cards-popular__img {
@@ -4062,7 +4093,7 @@ label {
   border-radius: 0.25rem;
 }
 @media (any-hover: hover) and (any-pointer: fine) {
-  .hero__link:hover {
+  .hero__link:not(span):hover {
     color: #c4c4c4;
   }
 }
@@ -5781,7 +5812,7 @@ label {
     margin-bottom: 10px;
   }
 }
-.item-testimonial__text {
+.item-testimonial__blockquote {
   line-height: 1.55;
   color: #737373;
 }
