@@ -55,7 +55,6 @@
 		max-width: toRem(812);
 		width: 100%;
 		aspect-ratio: 812 / 703;
-		// background-color: $grey15;
 	}
 	// .article__img-top
 	&__img-top {
@@ -210,6 +209,11 @@
 	}
 	// .social-article__link
 	&__link {
+		&:focus-visible {
+			outline: toRem(2) solid $black;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 		svg {
 			fill: $black;
 			transition: fill 0.3s ease;
@@ -295,6 +299,11 @@
 				opacity: 0.8;
 			}
 		}
+		&:focus-visible {
+			outline: toRem(2) solid $black;
+			outline-offset: toRem(6);
+			border-radius: toRem(4);
+		}
 	}
 	// .recent__picture
 	&__picture {
@@ -356,13 +365,18 @@
 	}
 	// .categories__item
 	&__item {
+		border-bottom: toRem(1) solid $grey16;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 30, 15);
 		}
-		border-bottom: toRem(1) solid $grey16;
 	}
 	// .categories__link
 	&__link {
+		&:focus-visible {
+			outline: toRem(2) solid $black;
+			outline-offset: toRem(1);
+			border-radius: toRem(4);
+		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				span:before {
@@ -370,7 +384,7 @@
 					opacity: 0.6;
 				}
 				span {
-					color: $grey3; //8
+					color: $grey3;
 				}
 			}
 		}
@@ -456,6 +470,11 @@
 	&__link {
 		line-height: math.div(22, 18);
 		font-weight: 400;
+		&:focus-visible {
+			outline: toRem(2) solid $white;
+			outline-offset: toRem(4);
+			border-radius: toRem(4);
+		}
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				text-decoration: underline;
