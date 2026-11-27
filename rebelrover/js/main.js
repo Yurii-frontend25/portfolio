@@ -401,7 +401,7 @@ function loadSwiperOnInteraction() {
 	document.body.appendChild(script);
 }
 
-['scroll', 'mousemove', 'touchstart', 'keydown'].forEach((event) => {
+['scroll', 'touchstart', 'pointerdown', 'keydown'].forEach((event) => {
 	window.addEventListener(event, loadSwiperOnInteraction, { once: true, passive: true });
 });
 //====================================================================================================
