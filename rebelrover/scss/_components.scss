@@ -258,7 +258,7 @@
 	&__item {
 		aspect-ratio: 1 / 1;
 		flex-shrink: 0;
-		@include adaptiveValue("width", 21, 18);
+		@include adaptiveValue("width", 21, 16);
 		background: url("../img/icons/star.svg") 0 0 / contain no-repeat;
 	}
 }

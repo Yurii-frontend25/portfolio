@@ -6,11 +6,11 @@
 @use "settings" as *;
 // =========================================
 // Pages
-@use "pages/about";
-@use "pages/contacts";
-@use "pages/blog";
-@use "pages/package";
 @use "pages/index";
+@use "pages/about";
+@use "pages/package";
+@use "pages/blog";
+@use "pages/contacts";
 // =========================================
 // Components
 @use "components";

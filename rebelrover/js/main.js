@@ -164,10 +164,10 @@ setTimeout(() => {
 				enabled: true,
 				onlyInViewport: true,
 			},
-			mousewheel: {
-				releaseOnEdges: true,
-				sensitivity: 1,
-			},
+			// mousewheel: {
+			// 	releaseOnEdges: true,
+			// 	sensitivity: 1,
+			// },
 			breakpoints: {
 				576: {
 					slidesPerView: 2,
@@ -202,10 +202,10 @@ setTimeout(() => {
 				enabled: true,
 				onlyInViewport: true,
 			},
-			mousewheel: {
-				releaseOnEdges: true,
-				sensitivity: 1,
-			},
+			// mousewheel: {
+			// 	releaseOnEdges: true,
+			// 	sensitivity: 1,
+			// },
 			breakpoints: {
 				481: {
 					slidesPerView: 2,
@@ -247,10 +247,10 @@ setTimeout(() => {
 				enabled: true,
 				onlyInViewport: true,
 			},
-			mousewheel: {
-				releaseOnEdges: true,
-				sensitivity: 1,
-			},
+			// mousewheel: {
+			// 	releaseOnEdges: true,
+			// 	sensitivity: 1,
+			// },
 			breakpoints: {
 				320: {
 					slidesPerView: 1.10,
@@ -272,17 +272,14 @@ setTimeout(() => {
 					spaceBetween: 20,
 				},
 				1300: {
-					slidesPerView: 3.24,
-					spaceBetween: 48,
+					slidesPerView: 3.24,//3.24
+					spaceBetween: 43,//48
 				},
 			},
 		});
-	}
+	};
 
 }, 1500);
-//====================================================================================================
-// Ленивая загрузка и инициализация слайдеров
-
 //====================================================================================================
 function positionSubMenus() {
 	const header = document.querySelector('.header');
@@ -333,3 +330,4 @@ window.addEventListener('load', positionSubMenus);
 document.querySelectorAll('.menu__item').forEach((item) => {
 	item.addEventListener('mouseenter', positionSubMenus);
 });
+//====================================================================================================

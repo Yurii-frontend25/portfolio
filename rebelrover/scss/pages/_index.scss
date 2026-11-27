@@ -449,10 +449,10 @@
 	&__slider {
 		margin-inline: toRem(-15);
 		padding-inline: toRem(15);
-		@include adaptiveValue("padding-bottom", 50, 30);
 	}
 	// .explore__wrapper
 	&__wrapper {
+		@include adaptiveValue("padding-bottom", 50, 30);
 	}
 	// .explore__slide
 	&__slide {
@@ -509,7 +509,6 @@
 			}
 		}
 	}
-
 	// .explore__item
 	&__item {
 	}
@@ -694,18 +693,20 @@
 	}
 	// .why__slider
 	&__slider {
-		margin-top: toRem(-15);
-		margin-inline: toRem(-15);
-		padding-top: toRem(15);
-		padding-inline: toRem(15);
-		@include adaptiveValue("padding-bottom", 126, 40);
-		@media (min-width: toEm(1198.98)) {
-			max-width: toRem(1201);
-			margin-inline: auto;
+		&.swiper {
+			margin-top: toRem(-15);
+			padding-top: toRem(15);
+			margin-inline: toRem(-25);
+			padding-inline: toRem(25);
+			@media (min-width: toEm(1198.98)) {
+				max-width: toRem(1201);
+				margin-inline: auto;
+			}
 		}
 	}
 	// .why__wrapper
 	&__wrapper {
+		@include adaptiveValue("padding-bottom", 126, 40);
 	}
 	// .why__slide
 	&__slide {
@@ -750,6 +751,8 @@
 	}
 	// .item-why__image
 	&__image {
+		display: flex;
+		align-items: center;
 		background-color: $black;
 		border-radius: toRem(10);
 		@include adaptiveValue("padding-block", 19, 10);
@@ -757,6 +760,11 @@
 		@include adaptiveValue("width", 95, 45);
 		@include adaptiveValue("height", 97, 47);
 		@include adaptiveValue("margin-bottom", 33, 15);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 	// .item-why__title
 	&__title {
@@ -862,7 +870,6 @@
 .page {
 	// .page__testimonial
 	&__testimonial {
-		@include adaptiveValue("margin-bottom", 100, 30);
 	}
 }
 .testimonial {
@@ -871,7 +878,9 @@
 	}
 	// .testimonial__title
 	&__title {
-		margin-bottom: toRem(3);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
 	}
 	// .testimonial__controls
 	&__controls {
@@ -914,17 +923,17 @@
 	}
 	// .testimonial__slider
 	&__slider {
-		@include adaptiveValue("padding-top", 130, 70);
-		@include adaptiveValue("padding-bottom", 40, 30);
-		padding-right: toRem(53);
-		padding-left: toRem(25);
-		@include adaptiveValue("margin-top", -65, -30);
-		@include adaptiveValue("margin-bottom", -40, -30);
-		margin-right: toRem(-53);
-		@include adaptiveValue("margin-left", -55, -25);
+		&.swiper {
+			padding-left: toRem(25);
+			margin-left: toRem(-25);
+			margin-right: toRem(-49);
+			padding-right: toRem(49);
+		}
 	}
 	// .testimonial__wrapper
 	&__wrapper {
+		@include adaptiveValue("padding-top", 65, 30);
+		@include adaptiveValue("padding-bottom", 100, 40);
 	}
 	// .testimonial__slide
 	&__slide {
@@ -935,6 +944,7 @@
 	}
 }
 .item-testimonial {
+	max-width: toRem(399);
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -942,7 +952,7 @@
 	background: $white;
 	box-shadow: toRem(0) toRem(20) toRem(60) rgba(0, 0, 0, 0.1);
 	border-radius: toRem(10);
-	@include adaptiveValue("padding-top", 100, 40);
+	@include adaptiveValue("padding-top", 100, 25);
 	@include adaptiveValue("padding-bottom", 44, 15);
 	@include adaptiveValue("padding-inline", 50, 10);
 	// .item-testimonial__body
@@ -956,14 +966,15 @@
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		@include adaptiveValue("top", -65, -40);
-		@include adaptiveValue("width", 130, 80);
-		@include adaptiveValue("height", 130, 80);
+		@include adaptiveValue("top", -65, -30);
+		@include adaptiveValue("width", 130, 50);
+		@include adaptiveValue("height", 130, 50);
 		border-radius: 50%;
 		overflow: hidden;
 	}
 	// .item-testimonial__picture
 	&__picture {
+		display: block;
 	}
 	// .item-testimonial__img
 	&__img {
@@ -978,7 +989,7 @@
 	}
 	// .item-testimonial__name
 	&__name {
-		@include adaptiveValue("font-size", 24, 18);
+		@include adaptiveValue("font-size", 24, 16);
 		line-height: 1.8;
 		font-weight: 600;
 		color: $black;
