@@ -456,9 +456,9 @@
 	}
 	// .explore__slide
 	&__slide {
-		transition: opacity 0.3s ease;
 		@include adaptiveValue("min-height", 500, 424);
 		&.swiper-slide {
+			transition: opacity 0.5s ease;
 			@media (width < toEm(961)) {
 				opacity: 0.5;
 			}
@@ -860,8 +860,8 @@
 			display: flex;
 		}
 		img {
-			max-width: 100%;
-			width: auto;
+			width: 100%;
+			aspect-ratio: auto;
 			@include adaptiveValue("max-height", 54, 25);
 			object-fit: contain;
 		}
