@@ -997,12 +997,12 @@ label {
 }
 @media (min-width: 20em) and (max-width: 87.5em) {
   .explore__wrapper {
-    padding-bottom: clamp( 30px , 24.0740740741px  +  1.8518518519vw , 50px );
+    padding-bottom: clamp( 40px , 37.037037037px  +  0.9259259259vw , 50px );
   }
 }
 @media (max-width: 20em) {
   .explore__wrapper {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
   }
 }
 .explore__slide {
