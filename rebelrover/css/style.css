@@ -7636,3 +7636,22 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+
+.why,
+.partners,
+.testimonial,
+.subscribe,
+.footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

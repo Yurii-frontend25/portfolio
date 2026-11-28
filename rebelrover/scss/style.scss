@@ -52,3 +52,19 @@ body {
 .wrapper > main {
 	flex-grow: 1;
 }
+
+.why,
+.partners,
+.testimonial,
+.subscribe,
+.footer {
+	content-visibility: auto;
+	contain-intrinsic-size: auto 500px;
+}
+
+.swiper {
+	overflow: hidden;
+}
+.swiper-wrapper {
+	display: flex;
+}
