@@ -383,27 +383,52 @@ function initSliders() {
 	}
 }
 
-let swiperLoaded = false;
-function loadSwiperOnInteraction() {
-	if (swiperLoaded) return;
-	if (
-		!document.querySelector('.explore__slider') &&
-		!document.querySelector('.why__slider') &&
-		!document.querySelector('.testimonial__slider')
-	) {
-		return;
-	}
-	swiperLoaded = true;
+function initSlidersOnVisible() {
+	const sliders = document.querySelectorAll('.explore__slider, .why__slider, .testimonial__slider');
+	if (!sliders.length) return;
 
-	const script = document.createElement('script');
-	script.src = 'js/swiper-bundle.min.js';
-	script.onload = initSliders;
-	document.body.appendChild(script);
+	let swiperLoaded = false;
+	const observer = new IntersectionObserver(
+		(entries) => {
+			if (entries.some((entry) => entry.isIntersecting) && !swiperLoaded) {
+				swiperLoaded = true;
+				observer.disconnect();
+
+				const script = document.createElement('script');
+				script.src = 'js/swiper-bundle.min.js';
+				script.onload = initSliders;
+				document.body.appendChild(script);
+			}
+		},
+		{ rootMargin: '250px' }
+	);
+
+	sliders.forEach((slider) => observer.observe(slider));
 }
 
-['scroll', 'touchstart', 'pointerdown', 'keydown'].forEach((event) => {
-	window.addEventListener(event, loadSwiperOnInteraction, { once: true, passive: true });
-});
+initSlidersOnVisible();
+
+// let swiperLoaded = false;
+// function loadSwiperOnInteraction() {
+// 	if (swiperLoaded) return;
+// 	if (
+// 		!document.querySelector('.explore__slider') &&
+// 		!document.querySelector('.why__slider') &&
+// 		!document.querySelector('.testimonial__slider')
+// 	) {
+// 		return;
+// 	}
+// 	swiperLoaded = true;
+
+// 	const script = document.createElement('script');
+// 	script.src = 'js/swiper-bundle.min.js';
+// 	script.onload = initSliders;
+// 	document.body.appendChild(script);
+// }
+
+// ['scroll', 'touchstart', 'pointerdown', 'keydown'].forEach((event) => {
+// 	window.addEventListener(event, loadSwiperOnInteraction, { once: true, passive: true });
+// });
 //====================================================================================================
 function positionSubMenus() {
 	const header = document.querySelector('.header');
