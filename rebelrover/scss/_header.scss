@@ -184,6 +184,14 @@
 			font-size: toRem(22);
 			color: $grey2;
 		}
+		&--current {
+			cursor: default;
+			pointer-events: none;
+			color: $grey16;
+			& + .menu__button {
+				color: $grey16;
+			}
+		}
 	}
 	// .menu__button
 	&__button {

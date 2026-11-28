@@ -158,9 +158,14 @@
 			border-radius: toRem(4);
 		}
 		@media (any-hover: hover) and (any-pointer: fine) {
-			&:not(span):hover {
+			&:hover {
 				color: $grey16;
 			}
+		}
+		&--current {
+			cursor: default;
+			pointer-events: none;
+			color: $white;
 		}
 	}
 	// .hero__descr
@@ -376,8 +381,6 @@
 		}
 	}
 }
-// select {
-// }
 // =======================================================================================================================
 // Section explore
 .page {

@@ -602,9 +602,14 @@ footer {
   border-radius: 0.25rem;
 }
 @media (any-hover: hover) and (any-pointer: fine) {
-  .hero__link:not(span):hover {
+  .hero__link:hover {
     color: #c4c4c4;
   }
+}
+.hero__link--current {
+  cursor: default;
+  pointer-events: none;
+  color: #fff;
 }
 .hero__descr {
   color: #cfcfcf;
@@ -7081,6 +7086,14 @@ footer {
     font-size: 1.375rem;
     color: #343434;
   }
+}
+.menu__link--current {
+  cursor: default;
+  pointer-events: none;
+  color: #c4c4c4;
+}
+.menu__link--current + .menu__button {
+  color: #c4c4c4;
 }
 .menu__button {
   position: relative;
