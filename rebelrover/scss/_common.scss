@@ -1,0 +1,51 @@
+@use "sass:math";
+@use "settings" as *;
+// =========================================
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+[class*="__container"] {
+	max-width: toRem($containerWidth);
+	padding-inline: toRem(math.div($containerPadding, 2));
+	margin: 0 auto;
+}
+[class*="__container--wide"] {
+	max-width: toRem(1430);
+}
+// =========================================
+body {
+	@include typography("def");
+	font-family: $fontFamily;
+	overflow-x: hidden;
+	.menu-open & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: clip;
+	min-height: 100%;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+// =======================================================================================================================
+.why,
+.partners,
+.testimonial,
+.subscribe,
+.footer {
+	content-visibility: auto;
+	contain-intrinsic-size: auto 500px;
+}
+.swiper {
+	overflow: hidden;
+}
+.swiper-wrapper {
+	display: flex;
+}

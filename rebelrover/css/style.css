@@ -175,6 +175,88 @@ label {
   font-weight: 700;
   src: url("../fonts/poppins-v24-latin-700.woff2") format("woff2");
 }
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+[class*=__container] {
+  max-width: 87.5rem;
+  padding-inline: 0.9375rem;
+  margin: 0 auto;
+}
+
+[class*=__container--wide] {
+  max-width: 89.375rem;
+}
+
+body {
+  font-weight: 500;
+}
+@media (min-width: 87.5em) {
+  body {
+    font-size: 18px;
+  }
+}
+@media (min-width: 20em) and (max-width: 87.5em) {
+  body {
+    font-size: clamp( 15px , 14.1111111111px  +  0.2777777778vw , 18px );
+  }
+}
+@media (max-width: 20em) {
+  body {
+    font-size: 15px;
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+.menu-open body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: clip;
+  min-height: 100%;
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.why,
+.partners,
+.testimonial,
+.subscribe,
+.footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (min-width: 87.5em) {
   .page__hero {
     margin-bottom: 178px;
@@ -7572,86 +7654,4 @@ label {
 
 ._icon-s-instagram {
   font-size: 1.375rem;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-[class*=__container] {
-  max-width: 87.5rem;
-  padding-inline: 0.9375rem;
-  margin: 0 auto;
-}
-
-[class*=__container--wide] {
-  max-width: 89.375rem;
-}
-
-body {
-  font-weight: 500;
-}
-@media (min-width: 87.5em) {
-  body {
-    font-size: 18px;
-  }
-}
-@media (min-width: 20em) and (max-width: 87.5em) {
-  body {
-    font-size: clamp( 15px , 14.1111111111px  +  0.2777777778vw , 18px );
-  }
-}
-@media (max-width: 20em) {
-  body {
-    font-size: 15px;
-  }
-}
-body {
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-}
-.menu-open body {
-  overflow: hidden;
-  -ms-touch-action: none;
-      touch-action: none;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
-}
-
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: clip;
-  min-height: 100%;
-}
-
-.wrapper > main {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.why,
-.partners,
-.testimonial,
-.subscribe,
-.footer {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 500px;
-}
-
-.swiper {
-  overflow: hidden;
-}
-
-.swiper-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
