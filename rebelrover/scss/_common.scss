@@ -35,14 +35,19 @@ body {
 	flex-grow: 1;
 }
 // =======================================================================================================================
-.why,
-.partners,
-.testimonial,
-.subscribe,
-.footer {
+main > *:not(.hero),
+footer {
 	content-visibility: auto;
 	contain-intrinsic-size: auto 500px;
 }
+// .why,
+// .partners,
+// .testimonial,
+// .subscribe,
+// .footer {
+// 	content-visibility: auto;
+// 	contain-intrinsic-size: auto 500px;
+// }
 .swiper {
 	overflow: hidden;
 }
